@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.env
+.env.*
+vector_db/
+logs/
+node_modules/
+*.log
+backend/.pytest_cache/
+dataset/ocr_output/
