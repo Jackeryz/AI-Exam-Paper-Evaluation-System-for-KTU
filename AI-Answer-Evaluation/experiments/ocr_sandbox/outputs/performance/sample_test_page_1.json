@@ -1,0 +1,67 @@
+{
+  "profile": {
+    "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\sample_test.png",
+    "page_number": 1,
+    "width": 800,
+    "height": 220,
+    "dpi": 0,
+    "render_time_seconds": 0.001311600000008184,
+    "original_rgb_bytes": 528000,
+    "preprocessed_width": 800,
+    "preprocessed_height": 220,
+    "preprocessed_rgb_bytes": 528000,
+    "encoded_png_bytes": 2530,
+    "large_image_flag": false,
+    "preprocessing_steps_seconds": {
+      "rgb_conversion": 0.0010473000002093613,
+      "grayscale": 0.009632800000872521,
+      "noise_removal": 0.09769779999987804,
+      "local_contrast": 0.0009325000000899308,
+      "rgb_output": 0.0009817000000111875
+    },
+    "classification_time_seconds": 0.0,
+    "detection_time_seconds": 0.45836659999986296,
+    "recognition_time_seconds": 0.2801190999998653,
+    "angle_classification_time_seconds": 0.0,
+    "postprocessing_time_seconds": 0.002301900000020396,
+    "ocr_time_seconds": 0.7407875999997486,
+    "save_json_time_seconds": 0.0,
+    "save_log_time_seconds": 0.0,
+    "memory_before_mb": 587.89453125,
+    "memory_peak_mb": 609.50390625,
+    "memory_after_mb": 609.5390625,
+    "cpu_percent_average": 0.0,
+    "cpu_percent_max": 0.0,
+    "process_threads_peak": 0,
+    "confidence": 0.997,
+    "total_time_seconds": 0.0
+  },
+  "ocr_result": {
+    "text": "OCRsandbox test",
+    "confidence": 0.997,
+    "bounding_boxes": [
+      {
+        "text": "OCRsandbox test",
+        "confidence": 0.997,
+        "bbox": [
+          [
+            37,
+            77
+          ],
+          [
+            121,
+            77
+          ],
+          [
+            121,
+            93
+          ],
+          [
+            37,
+            93
+          ]
+        ]
+      }
+    ]
+  }
+}

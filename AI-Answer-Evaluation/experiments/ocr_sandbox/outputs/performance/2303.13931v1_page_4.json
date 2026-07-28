@@ -1,0 +1,2580 @@
+{
+  "profile": {
+    "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+    "page_number": 4,
+    "width": 1191,
+    "height": 1684,
+    "dpi": 144,
+    "render_time_seconds": 0.05234429999995882,
+    "original_rgb_bytes": 6016932,
+    "preprocessed_width": 1191,
+    "preprocessed_height": 1684,
+    "preprocessed_rgb_bytes": 6016932,
+    "encoded_png_bytes": 517760,
+    "large_image_flag": false,
+    "preprocessing_steps_seconds": {
+      "rgb_conversion": 0.02080919999980324,
+      "grayscale": 0.0029550999997809413,
+      "noise_removal": 0.42468159999998534,
+      "local_contrast": 0.011306599999898026,
+      "rgb_output": 0.005118600000059814
+    },
+    "classification_time_seconds": 0.027060699999765347,
+    "detection_time_seconds": 4.134148000000096,
+    "recognition_time_seconds": 90.5348843999991,
+    "angle_classification_time_seconds": 0.0,
+    "postprocessing_time_seconds": 0.09650280000096245,
+    "ocr_time_seconds": 94.76553520000016,
+    "save_json_time_seconds": 0.0,
+    "save_log_time_seconds": 0.0,
+    "memory_before_mb": 443.3515625,
+    "memory_peak_mb": 522.2890625,
+    "memory_after_mb": 430.546875,
+    "cpu_percent_average": 0.0,
+    "cpu_percent_max": 0.0,
+    "process_threads_peak": 0,
+    "confidence": 0.923,
+    "detected_text_regions": 115,
+    "recognition_invocations": 20,
+    "average_recognition_time_per_region_seconds": 0.7872598643478183,
+    "longest_recognition_call_seconds": 14.372442999999748,
+    "shortest_recognition_call_seconds": 1.4970422000001236,
+    "total_time_seconds": 0.0
+  },
+  "ocr_result": {
+    "text": "Linear\nHf \u00d7 Wf\nA MOVE to stop Mir. Gaitskell from | nominating any more\nLabour life Peers is to be made at a meeting of Labour M Ps\nsubject and he is to be backed by Mr. Will | Griffiths, M P for\nw. Mr. Michael Foot has put down a resolution on the\nManchester Exchange [END]\nNorm\nK\nFeed Forward\nFlatten f1D\nNorm\n+\nr ao oue\nVisual Context\nSelf-Attention\nNorm\nNorm\n$a}$\n2D Positional Encoding\nOptical Self-\nX\nFeed\nK-\nAttention\nForward\nWf\nNorm\nX\nTransformer Encoder (x2)\nContextual Labelling\n5\nHf\nSelf-Attention\nFeatures f2D\nLinear (1x1 Conv)\n[START] A MOVE to stop Mr. Gaitskell from [ nominating any more\nG\n]Seqten\n\u2191\nLabour life Peers is to be made at a meeting of Labour M Ps\nsubjeet | and he is to be backed by Mr. Wil | Griffiths, M P for\ntomorow. Mr. Michael Foot has put down a resolution on the\n6\n1D Positional Encoding\nResNet50\nHP,\nManchester Exchange.\nEmbedding\nh Moe 1\nSeqlen\n\nFigure 1: Overview of the proposed architecture. Our lite transformer is composed of a transformer encoder combining convolutional layers\nand transformer layers and of a transformer decoder.\ncontains from one to four words. In the second stage,\nits generalization ability on other scripts. Since the model\nthe model is fine-tuned on a more complex dataset con-\nhas already learned the reading order on page-level docu-\ntaining 78k blocks where the number of lines arbitrarily\nments thanks to the curriculum learning strategy, the fine-\nvaries between 3 and 14. The aim of this second pre-\ntuning of new scripts is done on a single stage using the\ntraining stage is to improve the capacities of the model\ntarget script page-level document images. This presents\nto deal with longer sequences corresponding to more com-\nseveral benefits like saving training time and not needing\nplex documents (with a higher number of lines). These\na lot of data.\ntwo pre-training steps are performed only once, they can\nbe done using synthetic data, or using any public dataset\nproviding the segmentation annotation (which is done in\nour case using the IAM dataset). The resulting model\nFine-tuning a transformer-based model consists in\nwill serve then as a starting point for the third training\nadapting it to learn the knowledge of both the visual fea-\nstage where the fine-tuning is performed using the origi-\nture extraction (optical model) and the language model.\nnal page-level document images of the target dataset (even\nFine-tuning the optical model consists in training the\nwhen the training is performed on a different script as ex-\nbackbone and the encoder layers to reduce the domain\nplained in section 3.4). We note that during the inference,\nshift between the source and target domains. In fact, im-\nthe model does not need any line or other lower-level seg-\nages from each domain contain different distributions re-\nmentation step, and the recognition is performed at the\nsulting from irregularities in terms of line spacing, differ-\npage level. We also note that several data augmentation\nent handwriting skew/slant, and different writer styles...\ntechniques are applied in all these previous training stages\nThe second aspect of transfer learning concerns the fine-\nincluding random rotation, brightness, contrast, perspec-\ntuning of the decoder layers to adapt the language model\ntive, and Gaussian noise. Zero padding is used to create\nto capture the inherent nuances of the target text script.\nmini-batches.\nNext, the visual-context self-attention is updated to match\n3.4. Transfer Learning\na newly learned representation of the encoder and the lan-\nguage model. Finally, the last linear layer is replaced with\nIn this section, we investigate the use of transfer learning\na new one, with random weights, to match the number of\nto improve the performance of the transformer model in\ncharacters of the target script. We present in the experi-\nthe context of low-resource multi-script handwriting recog-\nmental section an ablation study exploring the impact of\nnition.\nfine-tuning on the different components of the transformer\nWe propose a simple, yet effective, transfer learning ap-\nand its effect on the model performance. We find that the\nproach. The idea here consists in using the trained model\nfine-tuning of both the optical model and the language\ndescribed in section 3.3 as a starting point and improving\nmodel gives the best results.\n4",
+    "confidence": 0.923,
+    "bounding_boxes": [
+      {
+        "text": "Linear",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            882,
+            179
+          ],
+          [
+            929,
+            179
+          ],
+          [
+            929,
+            196
+          ],
+          [
+            882,
+            196
+          ]
+        ]
+      },
+      {
+        "text": "Hf \u00d7 Wf",
+        "confidence": 0.874,
+        "bbox": [
+          [
+            217,
+            192
+          ],
+          [
+            273,
+            192
+          ],
+          [
+            273,
+            210
+          ],
+          [
+            217,
+            210
+          ]
+        ]
+      },
+      {
+        "text": "A MOVE to stop Mir. Gaitskell from | nominating any more",
+        "confidence": 0.971,
+        "bbox": [
+          [
+            577,
+            189
+          ],
+          [
+            770,
+            189
+          ],
+          [
+            770,
+            202
+          ],
+          [
+            577,
+            202
+          ]
+        ]
+      },
+      {
+        "text": "Labour life Peers is to be made at a meeting of Labour M Ps",
+        "confidence": 0.997,
+        "bbox": [
+          [
+            579,
+            199
+          ],
+          [
+            786,
+            199
+          ],
+          [
+            786,
+            209
+          ],
+          [
+            579,
+            209
+          ]
+        ]
+      },
+      {
+        "text": "subject and he is to be backed by Mr. Will | Griffiths, M P for",
+        "confidence": 0.98,
+        "bbox": [
+          [
+            579,
+            216
+          ],
+          [
+            781,
+            216
+          ],
+          [
+            781,
+            226
+          ],
+          [
+            579,
+            226
+          ]
+        ]
+      },
+      {
+        "text": "w. Mr. Michael Foot has put down a resolution on the",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            605,
+            208
+          ],
+          [
+            783,
+            208
+          ],
+          [
+            783,
+            217
+          ],
+          [
+            605,
+            217
+          ]
+        ]
+      },
+      {
+        "text": "Manchester Exchange [END]",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            576,
+            223
+          ],
+          [
+            679,
+            223
+          ],
+          [
+            679,
+            238
+          ],
+          [
+            576,
+            238
+          ]
+        ]
+      },
+      {
+        "text": "Norm",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            883,
+            215
+          ],
+          [
+            925,
+            215
+          ],
+          [
+            925,
+            234
+          ],
+          [
+            883,
+            234
+          ]
+        ]
+      },
+      {
+        "text": "K",
+        "confidence": 0.319,
+        "bbox": [
+          [
+            901,
+            232
+          ],
+          [
+            917,
+            232
+          ],
+          [
+            917,
+            244
+          ],
+          [
+            901,
+            244
+          ]
+        ]
+      },
+      {
+        "text": "Feed Forward",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            858,
+            247
+          ],
+          [
+            953,
+            247
+          ],
+          [
+            953,
+            260
+          ],
+          [
+            858,
+            260
+          ]
+        ]
+      },
+      {
+        "text": "Flatten f1D",
+        "confidence": 0.947,
+        "bbox": [
+          [
+            209,
+            258
+          ],
+          [
+            288,
+            258
+          ],
+          [
+            288,
+            278
+          ],
+          [
+            209,
+            278
+          ]
+        ]
+      },
+      {
+        "text": "Norm",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            884,
+            275
+          ],
+          [
+            925,
+            275
+          ],
+          [
+            925,
+            290
+          ],
+          [
+            884,
+            290
+          ]
+        ]
+      },
+      {
+        "text": "+",
+        "confidence": 0.5,
+        "bbox": [
+          [
+            903,
+            292
+          ],
+          [
+            916,
+            292
+          ],
+          [
+            916,
+            301
+          ],
+          [
+            903,
+            301
+          ]
+        ]
+      },
+      {
+        "text": "r ao oue",
+        "confidence": 0.364,
+        "bbox": [
+          [
+            1004,
+            284
+          ],
+          [
+            1024,
+            284
+          ],
+          [
+            1024,
+            439
+          ],
+          [
+            1004,
+            439
+          ]
+        ]
+      },
+      {
+        "text": "Visual Context",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            856,
+            314
+          ],
+          [
+            955,
+            314
+          ],
+          [
+            955,
+            328
+          ],
+          [
+            856,
+            328
+          ]
+        ]
+      },
+      {
+        "text": "Self-Attention",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            857,
+            329
+          ],
+          [
+            955,
+            329
+          ],
+          [
+            955,
+            343
+          ],
+          [
+            857,
+            343
+          ]
+        ]
+      },
+      {
+        "text": "Norm",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            544,
+            353
+          ],
+          [
+            559,
+            353
+          ],
+          [
+            559,
+            396
+          ],
+          [
+            544,
+            396
+          ]
+        ]
+      },
+      {
+        "text": "Norm",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            706,
+            353
+          ],
+          [
+            721,
+            353
+          ],
+          [
+            721,
+            396
+          ],
+          [
+            706,
+            396
+          ]
+        ]
+      },
+      {
+        "text": "$a}$",
+        "confidence": 0.572,
+        "bbox": [
+          [
+            876,
+            349
+          ],
+          [
+            934,
+            349
+          ],
+          [
+            934,
+            384
+          ],
+          [
+            876,
+            384
+          ]
+        ]
+      },
+      {
+        "text": "2D Positional Encoding",
+        "confidence": 0.975,
+        "bbox": [
+          [
+            184,
+            365
+          ],
+          [
+            316,
+            365
+          ],
+          [
+            316,
+            383
+          ],
+          [
+            184,
+            383
+          ]
+        ]
+      },
+      {
+        "text": "Optical Self-",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            439,
+            360
+          ],
+          [
+            521,
+            360
+          ],
+          [
+            521,
+            374
+          ],
+          [
+            439,
+            374
+          ]
+        ]
+      },
+      {
+        "text": "X",
+        "confidence": 0.536,
+        "bbox": [
+          [
+            530,
+            367
+          ],
+          [
+            537,
+            367
+          ],
+          [
+            537,
+            378
+          ],
+          [
+            530,
+            378
+          ]
+        ]
+      },
+      {
+        "text": "Feed",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            618,
+            357
+          ],
+          [
+            659,
+            357
+          ],
+          [
+            659,
+            378
+          ],
+          [
+            618,
+            378
+          ]
+        ]
+      },
+      {
+        "text": "K-",
+        "confidence": 0.783,
+        "bbox": [
+          [
+            410,
+            371
+          ],
+          [
+            427,
+            371
+          ],
+          [
+            427,
+            379
+          ],
+          [
+            410,
+            379
+          ]
+        ]
+      },
+      {
+        "text": "Attention",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            445,
+            374
+          ],
+          [
+            514,
+            374
+          ],
+          [
+            514,
+            391
+          ],
+          [
+            445,
+            391
+          ]
+        ]
+      },
+      {
+        "text": "Forward",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            609,
+            374
+          ],
+          [
+            670,
+            374
+          ],
+          [
+            670,
+            391
+          ],
+          [
+            609,
+            391
+          ]
+        ]
+      },
+      {
+        "text": "Wf",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            223,
+            386
+          ],
+          [
+            244,
+            386
+          ],
+          [
+            244,
+            403
+          ],
+          [
+            223,
+            403
+          ]
+        ]
+      },
+      {
+        "text": "Norm",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            885,
+            389
+          ],
+          [
+            926,
+            389
+          ],
+          [
+            926,
+            403
+          ],
+          [
+            885,
+            403
+          ]
+        ]
+      },
+      {
+        "text": "X",
+        "confidence": 0.483,
+        "bbox": [
+          [
+            893,
+            405
+          ],
+          [
+            909,
+            405
+          ],
+          [
+            909,
+            417
+          ],
+          [
+            893,
+            417
+          ]
+        ]
+      },
+      {
+        "text": "Transformer Encoder (x2)",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            486,
+            417
+          ],
+          [
+            637,
+            417
+          ],
+          [
+            637,
+            435
+          ],
+          [
+            486,
+            435
+          ]
+        ]
+      },
+      {
+        "text": "Contextual Labelling",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            834,
+            428
+          ],
+          [
+            974,
+            428
+          ],
+          [
+            974,
+            442
+          ],
+          [
+            834,
+            442
+          ]
+        ]
+      },
+      {
+        "text": "5",
+        "confidence": 0.234,
+        "bbox": [
+          [
+            192,
+            450
+          ],
+          [
+            209,
+            450
+          ],
+          [
+            209,
+            469
+          ],
+          [
+            192,
+            469
+          ]
+        ]
+      },
+      {
+        "text": "Hf",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            292,
+            443
+          ],
+          [
+            310,
+            443
+          ],
+          [
+            310,
+            460
+          ],
+          [
+            292,
+            460
+          ]
+        ]
+      },
+      {
+        "text": "Self-Attention",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            857,
+            442
+          ],
+          [
+            955,
+            442
+          ],
+          [
+            955,
+            458
+          ],
+          [
+            857,
+            458
+          ]
+        ]
+      },
+      {
+        "text": "Features f2D",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            211,
+            484
+          ],
+          [
+            298,
+            484
+          ],
+          [
+            298,
+            505
+          ],
+          [
+            211,
+            505
+          ]
+        ]
+      },
+      {
+        "text": "Linear (1x1 Conv)",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            203,
+            530
+          ],
+          [
+            305,
+            530
+          ],
+          [
+            305,
+            544
+          ],
+          [
+            203,
+            544
+          ]
+        ]
+      },
+      {
+        "text": "[START] A MOVE to stop Mr. Gaitskell from [ nominating any more",
+        "confidence": 0.98,
+        "bbox": [
+          [
+            545,
+            541
+          ],
+          [
+            770,
+            541
+          ],
+          [
+            770,
+            554
+          ],
+          [
+            545,
+            554
+          ]
+        ]
+      },
+      {
+        "text": "G",
+        "confidence": 0.246,
+        "bbox": [
+          [
+            842,
+            537
+          ],
+          [
+            855,
+            537
+          ],
+          [
+            855,
+            550
+          ],
+          [
+            842,
+            550
+          ]
+        ]
+      },
+      {
+        "text": "]Seqten",
+        "confidence": 0.942,
+        "bbox": [
+          [
+            960,
+            537
+          ],
+          [
+            999,
+            537
+          ],
+          [
+            999,
+            557
+          ],
+          [
+            960,
+            557
+          ]
+        ]
+      },
+      {
+        "text": "\u2191",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            247,
+            553
+          ],
+          [
+            262,
+            553
+          ],
+          [
+            262,
+            570
+          ],
+          [
+            247,
+            570
+          ]
+        ]
+      },
+      {
+        "text": "Labour life Peers is to be made at a meeting of Labour M Ps",
+        "confidence": 0.978,
+        "bbox": [
+          [
+            578,
+            551
+          ],
+          [
+            786,
+            551
+          ],
+          [
+            786,
+            561
+          ],
+          [
+            578,
+            561
+          ]
+        ]
+      },
+      {
+        "text": "subjeet | and he is to be backed by Mr. Wil | Griffiths, M P for",
+        "confidence": 0.959,
+        "bbox": [
+          [
+            577,
+            567
+          ],
+          [
+            781,
+            567
+          ],
+          [
+            781,
+            581
+          ],
+          [
+            577,
+            581
+          ]
+        ]
+      },
+      {
+        "text": "tomorow. Mr. Michael Foot has put down a resolution on the",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            578,
+            560
+          ],
+          [
+            783,
+            560
+          ],
+          [
+            783,
+            570
+          ],
+          [
+            578,
+            570
+          ]
+        ]
+      },
+      {
+        "text": "6",
+        "confidence": 0.328,
+        "bbox": [
+          [
+            362,
+            574
+          ],
+          [
+            383,
+            574
+          ],
+          [
+            383,
+            582
+          ],
+          [
+            362,
+            582
+          ]
+        ]
+      },
+      {
+        "text": "1D Positional Encoding",
+        "confidence": 0.997,
+        "bbox": [
+          [
+            828,
+            565
+          ],
+          [
+            986,
+            565
+          ],
+          [
+            986,
+            585
+          ],
+          [
+            828,
+            585
+          ]
+        ]
+      },
+      {
+        "text": "ResNet50",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            224,
+            580
+          ],
+          [
+            284,
+            580
+          ],
+          [
+            284,
+            597
+          ],
+          [
+            224,
+            597
+          ]
+        ]
+      },
+      {
+        "text": "HP,",
+        "confidence": 0.539,
+        "bbox": [
+          [
+            363,
+            585
+          ],
+          [
+            380,
+            585
+          ],
+          [
+            380,
+            592
+          ],
+          [
+            363,
+            592
+          ]
+        ]
+      },
+      {
+        "text": "Manchester Exchange.",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            577,
+            577
+          ],
+          [
+            656,
+            577
+          ],
+          [
+            656,
+            589
+          ],
+          [
+            577,
+            589
+          ]
+        ]
+      },
+      {
+        "text": "Embedding",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            717,
+            597
+          ],
+          [
+            799,
+            597
+          ],
+          [
+            799,
+            616
+          ],
+          [
+            717,
+            616
+          ]
+        ]
+      },
+      {
+        "text": "h Moe 1",
+        "confidence": 0.445,
+        "bbox": [
+          [
+            452,
+            607
+          ],
+          [
+            501,
+            607
+          ],
+          [
+            501,
+            617
+          ],
+          [
+            452,
+            617
+          ]
+        ]
+      },
+      {
+        "text": "Seqlen",
+        "confidence": 0.966,
+        "bbox": [
+          [
+            959,
+            606
+          ],
+          [
+            998,
+            606
+          ],
+          [
+            998,
+            626
+          ],
+          [
+            959,
+            626
+          ]
+        ]
+      },
+      {
+        "text": "",
+        "confidence": 0.0,
+        "bbox": [
+          [
+            360,
+            618
+          ],
+          [
+            392,
+            618
+          ],
+          [
+            392,
+            628
+          ],
+          [
+            360,
+            628
+          ]
+        ]
+      },
+      {
+        "text": "Figure 1: Overview of the proposed architecture. Our lite transformer is composed of a transformer encoder combining convolutional layers",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            74,
+            683
+          ],
+          [
+            1116,
+            683
+          ],
+          [
+            1116,
+            700
+          ],
+          [
+            74,
+            700
+          ]
+        ]
+      },
+      {
+        "text": "and transformer layers and of a transformer decoder.",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            73,
+            702
+          ],
+          [
+            468,
+            702
+          ],
+          [
+            468,
+            719
+          ],
+          [
+            73,
+            719
+          ]
+        ]
+      },
+      {
+        "text": "contains from one to four words. In the second stage,",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            72,
+            761
+          ],
+          [
+            578,
+            761
+          ],
+          [
+            578,
+            784
+          ],
+          [
+            72,
+            784
+          ]
+        ]
+      },
+      {
+        "text": "its generalization ability on other scripts. Since the model",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            611,
+            762
+          ],
+          [
+            1116,
+            762
+          ],
+          [
+            1116,
+            782
+          ],
+          [
+            611,
+            782
+          ]
+        ]
+      },
+      {
+        "text": "the model is fine-tuned on a more complex dataset con-",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            73,
+            785
+          ],
+          [
+            578,
+            785
+          ],
+          [
+            578,
+            806
+          ],
+          [
+            73,
+            806
+          ]
+        ]
+      },
+      {
+        "text": "has already learned the reading order on page-level docu-",
+        "confidence": 0.994,
+        "bbox": [
+          [
+            611,
+            785
+          ],
+          [
+            1115,
+            785
+          ],
+          [
+            1115,
+            807
+          ],
+          [
+            611,
+            807
+          ]
+        ]
+      },
+      {
+        "text": "taining 78k blocks where the number of lines arbitrarily",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            72,
+            809
+          ],
+          [
+            577,
+            809
+          ],
+          [
+            577,
+            830
+          ],
+          [
+            72,
+            830
+          ]
+        ]
+      },
+      {
+        "text": "ments thanks to the curriculum learning strategy, the fine-",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            613,
+            812
+          ],
+          [
+            1113,
+            812
+          ],
+          [
+            1113,
+            829
+          ],
+          [
+            613,
+            829
+          ]
+        ]
+      },
+      {
+        "text": "varies between 3 and 14. The aim of this second pre-",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            74,
+            835
+          ],
+          [
+            576,
+            835
+          ],
+          [
+            576,
+            852
+          ],
+          [
+            74,
+            852
+          ]
+        ]
+      },
+      {
+        "text": "tuning of new scripts is done on a single stage using the",
+        "confidence": 0.982,
+        "bbox": [
+          [
+            611,
+            833
+          ],
+          [
+            1117,
+            833
+          ],
+          [
+            1117,
+            854
+          ],
+          [
+            611,
+            854
+          ]
+        ]
+      },
+      {
+        "text": "training stage is to improve the capacities of the model",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            73,
+            858
+          ],
+          [
+            577,
+            858
+          ],
+          [
+            577,
+            878
+          ],
+          [
+            73,
+            878
+          ]
+        ]
+      },
+      {
+        "text": "target script page-level document images. This presents",
+        "confidence": 0.994,
+        "bbox": [
+          [
+            611,
+            857
+          ],
+          [
+            1117,
+            857
+          ],
+          [
+            1117,
+            878
+          ],
+          [
+            611,
+            878
+          ]
+        ]
+      },
+      {
+        "text": "to deal with longer sequences corresponding to more com-",
+        "confidence": 0.997,
+        "bbox": [
+          [
+            72,
+            881
+          ],
+          [
+            578,
+            881
+          ],
+          [
+            578,
+            903
+          ],
+          [
+            72,
+            903
+          ]
+        ]
+      },
+      {
+        "text": "several benefits like saving training time and not needing",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            610,
+            881
+          ],
+          [
+            1117,
+            881
+          ],
+          [
+            1117,
+            903
+          ],
+          [
+            610,
+            903
+          ]
+        ]
+      },
+      {
+        "text": "plex documents (with a higher number of lines). These",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            72,
+            905
+          ],
+          [
+            578,
+            905
+          ],
+          [
+            578,
+            925
+          ],
+          [
+            72,
+            925
+          ]
+        ]
+      },
+      {
+        "text": "a lot of data.",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            610,
+            904
+          ],
+          [
+            726,
+            904
+          ],
+          [
+            726,
+            925
+          ],
+          [
+            610,
+            925
+          ]
+        ]
+      },
+      {
+        "text": "two pre-training steps are performed only once, they can",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            73,
+            930
+          ],
+          [
+            578,
+            930
+          ],
+          [
+            578,
+            950
+          ],
+          [
+            73,
+            950
+          ]
+        ]
+      },
+      {
+        "text": "be done using synthetic data, or using any public dataset",
+        "confidence": 0.977,
+        "bbox": [
+          [
+            73,
+            952
+          ],
+          [
+            577,
+            952
+          ],
+          [
+            577,
+            974
+          ],
+          [
+            73,
+            974
+          ]
+        ]
+      },
+      {
+        "text": "providing the segmentation annotation (which is done in",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            73,
+            977
+          ],
+          [
+            577,
+            977
+          ],
+          [
+            577,
+            998
+          ],
+          [
+            73,
+            998
+          ]
+        ]
+      },
+      {
+        "text": "our case using the IAM dataset). The resulting model",
+        "confidence": 0.981,
+        "bbox": [
+          [
+            72,
+            1001
+          ],
+          [
+            578,
+            1001
+          ],
+          [
+            578,
+            1022
+          ],
+          [
+            72,
+            1022
+          ]
+        ]
+      },
+      {
+        "text": "Fine-tuning a transformer-based model consists in",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            632,
+            1003
+          ],
+          [
+            1117,
+            1003
+          ],
+          [
+            1117,
+            1023
+          ],
+          [
+            632,
+            1023
+          ]
+        ]
+      },
+      {
+        "text": "will serve then as a starting point for the third training",
+        "confidence": 0.967,
+        "bbox": [
+          [
+            73,
+            1025
+          ],
+          [
+            578,
+            1025
+          ],
+          [
+            578,
+            1047
+          ],
+          [
+            73,
+            1047
+          ]
+        ]
+      },
+      {
+        "text": "adapting it to learn the knowledge of both the visual fea-",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            611,
+            1026
+          ],
+          [
+            1115,
+            1026
+          ],
+          [
+            1115,
+            1047
+          ],
+          [
+            611,
+            1047
+          ]
+        ]
+      },
+      {
+        "text": "stage where the fine-tuning is performed using the origi-",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            72,
+            1050
+          ],
+          [
+            576,
+            1050
+          ],
+          [
+            576,
+            1070
+          ],
+          [
+            72,
+            1070
+          ]
+        ]
+      },
+      {
+        "text": "ture extraction (optical model) and the language model.",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            611,
+            1050
+          ],
+          [
+            1115,
+            1050
+          ],
+          [
+            1115,
+            1070
+          ],
+          [
+            611,
+            1070
+          ]
+        ]
+      },
+      {
+        "text": "nal page-level document images of the target dataset (even",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            74,
+            1075
+          ],
+          [
+            577,
+            1075
+          ],
+          [
+            577,
+            1092
+          ],
+          [
+            74,
+            1092
+          ]
+        ]
+      },
+      {
+        "text": "Fine-tuning the optical model consists in training the",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            613,
+            1076
+          ],
+          [
+            1116,
+            1076
+          ],
+          [
+            1116,
+            1093
+          ],
+          [
+            613,
+            1093
+          ]
+        ]
+      },
+      {
+        "text": "when the training is performed on a different script as ex-",
+        "confidence": 0.982,
+        "bbox": [
+          [
+            73,
+            1095
+          ],
+          [
+            576,
+            1095
+          ],
+          [
+            576,
+            1117
+          ],
+          [
+            73,
+            1117
+          ]
+        ]
+      },
+      {
+        "text": "backbone and the encoder layers to reduce the domain",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            611,
+            1097
+          ],
+          [
+            1116,
+            1097
+          ],
+          [
+            1116,
+            1118
+          ],
+          [
+            611,
+            1118
+          ]
+        ]
+      },
+      {
+        "text": "plained in section 3.4). We note that during the inference,",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            74,
+            1121
+          ],
+          [
+            578,
+            1121
+          ],
+          [
+            578,
+            1141
+          ],
+          [
+            74,
+            1141
+          ]
+        ]
+      },
+      {
+        "text": "shift between the source and target domains. In fact, im-",
+        "confidence": 0.975,
+        "bbox": [
+          [
+            611,
+            1121
+          ],
+          [
+            1116,
+            1121
+          ],
+          [
+            1116,
+            1142
+          ],
+          [
+            611,
+            1142
+          ]
+        ]
+      },
+      {
+        "text": "the model does not need any line or other lower-level seg-",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            73,
+            1143
+          ],
+          [
+            576,
+            1143
+          ],
+          [
+            576,
+            1166
+          ],
+          [
+            73,
+            1166
+          ]
+        ]
+      },
+      {
+        "text": "ages from each domain contain different distributions re-",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            612,
+            1146
+          ],
+          [
+            1115,
+            1146
+          ],
+          [
+            1115,
+            1167
+          ],
+          [
+            612,
+            1167
+          ]
+        ]
+      },
+      {
+        "text": "mentation step, and the recognition is performed at the",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            73,
+            1168
+          ],
+          [
+            577,
+            1168
+          ],
+          [
+            577,
+            1188
+          ],
+          [
+            73,
+            1188
+          ]
+        ]
+      },
+      {
+        "text": "sulting from irregularities in terms of line spacing, differ-",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            613,
+            1172
+          ],
+          [
+            1114,
+            1172
+          ],
+          [
+            1114,
+            1189
+          ],
+          [
+            613,
+            1189
+          ]
+        ]
+      },
+      {
+        "text": "page level. We also note that several data augmentation",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            72,
+            1191
+          ],
+          [
+            579,
+            1191
+          ],
+          [
+            579,
+            1214
+          ],
+          [
+            72,
+            1214
+          ]
+        ]
+      },
+      {
+        "text": "ent handwriting skew/slant, and different writer styles...",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            612,
+            1194
+          ],
+          [
+            1114,
+            1194
+          ],
+          [
+            1114,
+            1214
+          ],
+          [
+            612,
+            1214
+          ]
+        ]
+      },
+      {
+        "text": "techniques are applied in all these previous training stages",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            72,
+            1215
+          ],
+          [
+            579,
+            1215
+          ],
+          [
+            579,
+            1237
+          ],
+          [
+            72,
+            1237
+          ]
+        ]
+      },
+      {
+        "text": "The second aspect of transfer learning concerns the fine-",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            612,
+            1216
+          ],
+          [
+            1115,
+            1216
+          ],
+          [
+            1115,
+            1238
+          ],
+          [
+            612,
+            1238
+          ]
+        ]
+      },
+      {
+        "text": "including random rotation, brightness, contrast, perspec-",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            72,
+            1239
+          ],
+          [
+            577,
+            1239
+          ],
+          [
+            577,
+            1261
+          ],
+          [
+            72,
+            1261
+          ]
+        ]
+      },
+      {
+        "text": "tuning of the decoder layers to adapt the language model",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            611,
+            1240
+          ],
+          [
+            1116,
+            1240
+          ],
+          [
+            1116,
+            1261
+          ],
+          [
+            611,
+            1261
+          ]
+        ]
+      },
+      {
+        "text": "tive, and Gaussian noise. Zero padding is used to create",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            72,
+            1264
+          ],
+          [
+            579,
+            1264
+          ],
+          [
+            579,
+            1285
+          ],
+          [
+            72,
+            1285
+          ]
+        ]
+      },
+      {
+        "text": "to capture the inherent nuances of the target text script.",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            611,
+            1266
+          ],
+          [
+            1113,
+            1266
+          ],
+          [
+            1113,
+            1283
+          ],
+          [
+            611,
+            1283
+          ]
+        ]
+      },
+      {
+        "text": "mini-batches.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            74,
+            1290
+          ],
+          [
+            191,
+            1290
+          ],
+          [
+            191,
+            1307
+          ],
+          [
+            74,
+            1307
+          ]
+        ]
+      },
+      {
+        "text": "Next, the visual-context self-attention is updated to match",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            613,
+            1291
+          ],
+          [
+            1115,
+            1291
+          ],
+          [
+            1115,
+            1308
+          ],
+          [
+            613,
+            1308
+          ]
+        ]
+      },
+      {
+        "text": "3.4. Transfer Learning",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            74,
+            1324
+          ],
+          [
+            277,
+            1324
+          ],
+          [
+            277,
+            1345
+          ],
+          [
+            74,
+            1345
+          ]
+        ]
+      },
+      {
+        "text": "a newly learned representation of the encoder and the lan-",
+        "confidence": 0.981,
+        "bbox": [
+          [
+            611,
+            1314
+          ],
+          [
+            1114,
+            1314
+          ],
+          [
+            1114,
+            1333
+          ],
+          [
+            611,
+            1333
+          ]
+        ]
+      },
+      {
+        "text": "guage model. Finally, the last linear layer is replaced with",
+        "confidence": 0.98,
+        "bbox": [
+          [
+            610,
+            1334
+          ],
+          [
+            1117,
+            1334
+          ],
+          [
+            1117,
+            1360
+          ],
+          [
+            610,
+            1360
+          ]
+        ]
+      },
+      {
+        "text": "In this section, we investigate the use of transfer learning",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            91,
+            1355
+          ],
+          [
+            580,
+            1355
+          ],
+          [
+            580,
+            1382
+          ],
+          [
+            91,
+            1382
+          ]
+        ]
+      },
+      {
+        "text": "a new one, with random weights, to match the number of",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            610,
+            1361
+          ],
+          [
+            1117,
+            1361
+          ],
+          [
+            1117,
+            1380
+          ],
+          [
+            610,
+            1380
+          ]
+        ]
+      },
+      {
+        "text": "to improve the performance of the transformer model in",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            74,
+            1384
+          ],
+          [
+            576,
+            1384
+          ],
+          [
+            576,
+            1401
+          ],
+          [
+            74,
+            1401
+          ]
+        ]
+      },
+      {
+        "text": "characters of the target script. We present in the experi-",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            613,
+            1387
+          ],
+          [
+            1116,
+            1387
+          ],
+          [
+            1116,
+            1404
+          ],
+          [
+            613,
+            1404
+          ]
+        ]
+      },
+      {
+        "text": "the context of low-resource multi-script handwriting recog-",
+        "confidence": 0.977,
+        "bbox": [
+          [
+            72,
+            1407
+          ],
+          [
+            577,
+            1407
+          ],
+          [
+            577,
+            1429
+          ],
+          [
+            72,
+            1429
+          ]
+        ]
+      },
+      {
+        "text": "mental section an ablation study exploring the impact of",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            612,
+            1410
+          ],
+          [
+            1118,
+            1410
+          ],
+          [
+            1118,
+            1430
+          ],
+          [
+            612,
+            1430
+          ]
+        ]
+      },
+      {
+        "text": "nition.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            72,
+            1431
+          ],
+          [
+            134,
+            1431
+          ],
+          [
+            134,
+            1452
+          ],
+          [
+            72,
+            1452
+          ]
+        ]
+      },
+      {
+        "text": "fine-tuning on the different components of the transformer",
+        "confidence": 0.982,
+        "bbox": [
+          [
+            612,
+            1434
+          ],
+          [
+            1117,
+            1434
+          ],
+          [
+            1117,
+            1454
+          ],
+          [
+            612,
+            1454
+          ]
+        ]
+      },
+      {
+        "text": "We propose a simple, yet effective, transfer learning ap-",
+        "confidence": 0.957,
+        "bbox": [
+          [
+            95,
+            1457
+          ],
+          [
+            577,
+            1457
+          ],
+          [
+            577,
+            1478
+          ],
+          [
+            95,
+            1478
+          ]
+        ]
+      },
+      {
+        "text": "and its effect on the model performance. We find that the",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            613,
+            1459
+          ],
+          [
+            1116,
+            1459
+          ],
+          [
+            1116,
+            1475
+          ],
+          [
+            613,
+            1475
+          ]
+        ]
+      },
+      {
+        "text": "proach. The idea here consists in using the trained model",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            71,
+            1476
+          ],
+          [
+            579,
+            1476
+          ],
+          [
+            579,
+            1503
+          ],
+          [
+            71,
+            1503
+          ]
+        ]
+      },
+      {
+        "text": "fine-tuning of both the optical model and the language",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            611,
+            1478
+          ],
+          [
+            1117,
+            1478
+          ],
+          [
+            1117,
+            1501
+          ],
+          [
+            611,
+            1501
+          ]
+        ]
+      },
+      {
+        "text": "described in section 3.3 as a starting point and improving",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            73,
+            1503
+          ],
+          [
+            579,
+            1503
+          ],
+          [
+            579,
+            1525
+          ],
+          [
+            73,
+            1525
+          ]
+        ]
+      },
+      {
+        "text": "model gives the best results.",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            613,
+            1506
+          ],
+          [
+            860,
+            1506
+          ],
+          [
+            860,
+            1523
+          ],
+          [
+            613,
+            1523
+          ]
+        ]
+      },
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            588,
+            1541
+          ],
+          [
+            602,
+            1541
+          ],
+          [
+            602,
+            1558
+          ],
+          [
+            588,
+            1558
+          ]
+        ]
+      }
+    ]
+  }
+}

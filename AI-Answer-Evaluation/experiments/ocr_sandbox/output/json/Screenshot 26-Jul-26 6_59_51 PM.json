@@ -1,0 +1,250 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\Screenshot 26-Jul-26 6_59_51 PM.pdf",
+  "page_number": 1,
+  "text": "AotCn\nOnlt authorzed users have acces tointrace\naccess reauest mustbe a a peoved\nandrran ested bx thr crgahazch\nPoin+ ofccntartc Poc)the eoc seves\nas +he Main point ofconta t fcv\nI mmtrac? relatel matteis and must\ncontoct immtrace cus tomer\nSupPort at (8c0)348 a158 or a+\nimn trac 2dshs.terasov to\nreauct asser acces fcr New ineividr",
+  "confidence": 0.773,
+  "bounding_boxes": [
+    {
+      "text": "AotCn",
+      "confidence": 0.426,
+      "bbox": [
+        [
+          270,
+          317
+        ],
+        [
+          478,
+          317
+        ],
+        [
+          478,
+          380
+        ],
+        [
+          270,
+          380
+        ]
+      ]
+    },
+    {
+      "text": "Onlt authorzed users have acces tointrace",
+      "confidence": 0.799,
+      "bbox": [
+        [
+          222,
+          452
+        ],
+        [
+          1110,
+          452
+        ],
+        [
+          1110,
+          552
+        ],
+        [
+          222,
+          552
+        ]
+      ]
+    },
+    {
+      "text": "access reauest mustbe a a peoved",
+      "confidence": 0.957,
+      "bbox": [
+        [
+          240,
+          622
+        ],
+        [
+          965,
+          622
+        ],
+        [
+          965,
+          701
+        ],
+        [
+          240,
+          701
+        ]
+      ]
+    },
+    {
+      "text": "andrran ested bx thr crgahazch",
+      "confidence": 0.844,
+      "bbox": [
+        [
+          198,
+          687
+        ],
+        [
+          902,
+          687
+        ],
+        [
+          902,
+          758
+        ],
+        [
+          198,
+          758
+        ]
+      ]
+    },
+    {
+      "text": "Poin+ ofccntartc Poc)the eoc seves",
+      "confidence": 0.816,
+      "bbox": [
+        [
+          205,
+          748
+        ],
+        [
+          1020,
+          748
+        ],
+        [
+          1020,
+          812
+        ],
+        [
+          205,
+          812
+        ]
+      ]
+    },
+    {
+      "text": "as +he Main point ofconta t fcv",
+      "confidence": 0.838,
+      "bbox": [
+        [
+          151,
+          804
+        ],
+        [
+          912,
+          804
+        ],
+        [
+          912,
+          858
+        ],
+        [
+          151,
+          858
+        ]
+      ]
+    },
+    {
+      "text": "I mmtrac? relatel matteis and must",
+      "confidence": 0.845,
+      "bbox": [
+        [
+          153,
+          858
+        ],
+        [
+          1012,
+          858
+        ],
+        [
+          1012,
+          918
+        ],
+        [
+          153,
+          918
+        ]
+      ]
+    },
+    {
+      "text": "contoct immtrace cus tomer",
+      "confidence": 0.864,
+      "bbox": [
+        [
+          148,
+          913
+        ],
+        [
+          906,
+          913
+        ],
+        [
+          906,
+          971
+        ],
+        [
+          148,
+          971
+        ]
+      ]
+    },
+    {
+      "text": "SupPort at (8c0)348 a158 or a+",
+      "confidence": 0.777,
+      "bbox": [
+        [
+          138,
+          971
+        ],
+        [
+          977,
+          971
+        ],
+        [
+          977,
+          1040
+        ],
+        [
+          138,
+          1040
+        ]
+      ]
+    },
+    {
+      "text": "imn trac 2dshs.terasov to",
+      "confidence": 0.633,
+      "bbox": [
+        [
+          146,
+          1032
+        ],
+        [
+          936,
+          1032
+        ],
+        [
+          936,
+          1098
+        ],
+        [
+          146,
+          1098
+        ]
+      ]
+    },
+    {
+      "text": "reauct asser acces fcr New ineividr",
+      "confidence": 0.708,
+      "bbox": [
+        [
+          144,
+          1099
+        ],
+        [
+          1118,
+          1099
+        ],
+        [
+          1118,
+          1156
+        ],
+        [
+          144,
+          1156
+        ]
+      ]
+    }
+  ]
+}

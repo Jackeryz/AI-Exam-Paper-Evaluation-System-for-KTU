@@ -1,0 +1,1770 @@
+{
+  "text": "MSdocTr-Lite: A Lite Transformer for Full Page Multi-script Handwriting\nRecognition\nMarwa Dhiafa,b,c,*, Ahmed Cheikh Rouhoua, Yousri Kessentinib,c, Sinda Ben Salema\naInstaDeep\nbDigital Research Center of Sfax, Sfax 3021, Tunisia\ncSM@RTS : Laboratory of Signals, systeMs, aRtificial Intelligence and neTworkS\nAbstract\n2023\nThe Transformer has quickly become the dominant architecture for various pattern recognition tasks due to its capacity\nfor long-range representation. However, transformers are data-hungry models and need large datasets for training. In\nHandwritten Text Recognition (HTR), collecting a massive amount of labeled data is a complicated and expensive task.\nIn this paper, we propose a lite transformer architecture for full-page multi-script handwriting recognition. The proposed\nAAA Ar\nmodel comes with three advantages: First, to solve the common problem of data scarcity, we propose a lite transformer\nmodel that can be trained on a reasonable amount of data, which is the case of most HTR public datasets, without the\nneed for external data. Second, it can learn the reading order at page-level thanks to a curriculum learning strategy,\nallowing it to avoid line segmentation errors, exploit a larger context and reduce the need for costly segmentation\nannotations. Third, it can be easily adapted to other scripts by applying a simple transfer-learning process using only\npage-level labeled images. Extensive experiments on different datasets with different scripts (French, English, Spanish,\nc]\n\nand Arabic) show the effectiveness of the proposed model.\nKeywords: Seq2Seq model, page-level recognition, Handwritten Text Recognition, Multi-script, Transformer, Transfer\nLearning\n1. Introduction\nhave been introduced, where word images are extracted\nHandwritten Text Recognition (HTR) aims to transform\nfrom the document before feeding them into an HTR sys-\nscanned handwritten documents into machine-encoded\ntem. But, this kind of approach faced some problems due\ntext. HTR is still a hard problem due to the high vari-\nto the irregularity of the inter-space and the intra-space\nance of writing styles, illegible handwriting, poor quality,\nbetween words.\nETZ:ZX10\nand degradation. Furthermore, each handwritten script\nIn the last decade, word segmentation-based approaches\nhas specific properties (writing direction, character shapes,\n[31] were abandoned in favor of text line recognition\nligatures, etc) making the problem more challenging.\n[2, 24, 10]: a document can be segmented into individual\nCurrent HTR models are leading to an acceptable per-\nlines to surpass any inconsistency between words and have\nformance [1], especially for modern documents with legi-\nmore context. This kind of approach generally achieves\nble handwriting styles, known languages, vocabulary, and\nstate-of-the-art performance for mostly all types of docu-\nsyntax. However, most of these systems rely on a seg-\nments (modern, historical, multi-script, etc) [3, 4], with-\nmentation phase before the recognition task. The segmen-\nout suffering the heavy burden of character/word segmen-\ntation consists of partitioning the document images into\ntation. Despite their success, line segmentation is also\nhomogeneous components (characters, words, or lines).\nchallenging due to non-uniform text line skew/slant or\nEarly HTR approaches have applied segmentation tech-\nclosely situated and touching text lines. Such problems\nniques to extract character-level images from documents.\ncan considerably affect the performance at the recogni-\nThese techniques suffer from a deficiency in performance\ntion stage. With the recent success of deep learning, the\naccuracy as the segmentation generally fails due to the\nHTR community started exploring handwriting recogni-\ncursive and unconstrained nature of the handwriting. To\ntion at the paragraph or page level to avoid any interme-\novercome this problem, word-based segmentation methods\ndiate segmentation pre-processing step. In [5] an archi-\ntecture for paragraph-level HTR with the use of Multi-\nDimensional Long Short-Term Memory Recurrent Neural\n*Corresponding author\nNetworks (MDLSTM) and the attention mechanism was\nEmail addresses: marwa.dhiaf.doc@enetcom.usf.tn (Marwa\nproposed. However, they later abandoned this approach\nDhiaf), a. cheikhrouhou@instadeep. com (Ahmed Cheikh Rouhou),\nyousri.kessentini@crns.rnrt.tn (Yousri Kessentini),\ndue to high memory requirements, the lack of GPU ac-\ns.bensalem@instadeep.com (Sinda Ben Salem)\nceleration for the training of MDLSTM, and intractable\nPreprint submitted to Pattern Recognition Letters\nMarch 27, 2023",
+  "confidence": 0.947,
+  "processing_time": 110.4116369999997,
+  "engine_used": "paddleocr",
+  "page_number": 1,
+  "bounding_boxes": [
+    {
+      "text": "MSdocTr-Lite: A Lite Transformer for Full Page Multi-script Handwriting",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          135,
+          176
+        ],
+        [
+          1054,
+          176
+        ],
+        [
+          1054,
+          210
+        ],
+        [
+          135,
+          210
+        ]
+      ]
+    },
+    {
+      "text": "Recognition",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          520,
+          214
+        ],
+        [
+          668,
+          214
+        ],
+        [
+          668,
+          244
+        ],
+        [
+          520,
+          244
+        ]
+      ]
+    },
+    {
+      "text": "Marwa Dhiafa,b,c,*, Ahmed Cheikh Rouhoua, Yousri Kessentinib,c, Sinda Ben Salema",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          224,
+          279
+        ],
+        [
+          965,
+          279
+        ],
+        [
+          965,
+          302
+        ],
+        [
+          224,
+          302
+        ]
+      ]
+    },
+    {
+      "text": "aInstaDeep",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          551,
+          318
+        ],
+        [
+          638,
+          318
+        ],
+        [
+          638,
+          344
+        ],
+        [
+          551,
+          344
+        ]
+      ]
+    },
+    {
+      "text": "bDigital Research Center of Sfax, Sfax 3021, Tunisia",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          396,
+          339
+        ],
+        [
+          795,
+          339
+        ],
+        [
+          795,
+          361
+        ],
+        [
+          396,
+          361
+        ]
+      ]
+    },
+    {
+      "text": "cSM@RTS : Laboratory of Signals, systeMs, aRtificial Intelligence and neTworkS",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          289,
+          358
+        ],
+        [
+          901,
+          358
+        ],
+        [
+          901,
+          379
+        ],
+        [
+          289,
+          379
+        ]
+      ]
+    },
+    {
+      "text": "Abstract",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          75,
+          473
+        ],
+        [
+          163,
+          473
+        ],
+        [
+          163,
+          490
+        ],
+        [
+          75,
+          490
+        ]
+      ]
+    },
+    {
+      "text": "2023",
+      "confidence": 0.604,
+      "bbox": [
+        [
+          31,
+          512
+        ],
+        [
+          67,
+          512
+        ],
+        [
+          67,
+          604
+        ],
+        [
+          31,
+          604
+        ]
+      ]
+    },
+    {
+      "text": "The Transformer has quickly become the dominant architecture for various pattern recognition tasks due to its capacity",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          72,
+          505
+        ],
+        [
+          1116,
+          505
+        ],
+        [
+          1116,
+          529
+        ],
+        [
+          72,
+          529
+        ]
+      ]
+    },
+    {
+      "text": "for long-range representation. However, transformers are data-hungry models and need large datasets for training. In",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          72,
+          531
+        ],
+        [
+          1117,
+          531
+        ],
+        [
+          1117,
+          554
+        ],
+        [
+          72,
+          554
+        ]
+      ]
+    },
+    {
+      "text": "Handwritten Text Recognition (HTR), collecting a massive amount of labeled data is a complicated and expensive task.",
+      "confidence": 0.982,
+      "bbox": [
+        [
+          71,
+          554
+        ],
+        [
+          1114,
+          554
+        ],
+        [
+          1114,
+          576
+        ],
+        [
+          71,
+          576
+        ]
+      ]
+    },
+    {
+      "text": "In this paper, we propose a lite transformer architecture for full-page multi-script handwriting recognition. The proposed",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          69,
+          575
+        ],
+        [
+          1118,
+          575
+        ],
+        [
+          1118,
+          605
+        ],
+        [
+          69,
+          605
+        ]
+      ]
+    },
+    {
+      "text": "AAA Ar",
+      "confidence": 0.37,
+      "bbox": [
+        [
+          34,
+          589
+        ],
+        [
+          66,
+          589
+        ],
+        [
+          66,
+          724
+        ],
+        [
+          34,
+          724
+        ]
+      ]
+    },
+    {
+      "text": "model comes with three advantages: First, to solve the common problem of data scarcity, we propose a lite transformer",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          72,
+          603
+        ],
+        [
+          1117,
+          603
+        ],
+        [
+          1117,
+          625
+        ],
+        [
+          72,
+          625
+        ]
+      ]
+    },
+    {
+      "text": "model that can be trained on a reasonable amount of data, which is the case of most HTR public datasets, without the",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          73,
+          627
+        ],
+        [
+          1116,
+          627
+        ],
+        [
+          1116,
+          646
+        ],
+        [
+          73,
+          646
+        ]
+      ]
+    },
+    {
+      "text": "need for external data. Second, it can learn the reading order at page-level thanks to a curriculum learning strategy,",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          71,
+          647
+        ],
+        [
+          1116,
+          647
+        ],
+        [
+          1116,
+          673
+        ],
+        [
+          71,
+          673
+        ]
+      ]
+    },
+    {
+      "text": "allowing it to avoid line segmentation errors, exploit a larger context and reduce the need for costly segmentation",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          74,
+          675
+        ],
+        [
+          1117,
+          675
+        ],
+        [
+          1117,
+          695
+        ],
+        [
+          74,
+          695
+        ]
+      ]
+    },
+    {
+      "text": "annotations. Third, it can be easily adapted to other scripts by applying a simple transfer-learning process using only",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          71,
+          698
+        ],
+        [
+          1115,
+          698
+        ],
+        [
+          1115,
+          720
+        ],
+        [
+          71,
+          720
+        ]
+      ]
+    },
+    {
+      "text": "page-level labeled images. Extensive experiments on different datasets with different scripts (French, English, Spanish,",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          71,
+          720
+        ],
+        [
+          1116,
+          720
+        ],
+        [
+          1116,
+          746
+        ],
+        [
+          71,
+          746
+        ]
+      ]
+    },
+    {
+      "text": "c]",
+      "confidence": 0.288,
+      "bbox": [
+        [
+          30,
+          738
+        ],
+        [
+          72,
+          738
+        ],
+        [
+          72,
+          867
+        ],
+        [
+          30,
+          867
+        ]
+      ]
+    },
+    {
+      "text": "",
+      "confidence": 0.0,
+      "bbox": [
+        [
+          46,
+          737
+        ],
+        [
+          57,
+          737
+        ],
+        [
+          57,
+          744
+        ],
+        [
+          46,
+          744
+        ]
+      ]
+    },
+    {
+      "text": "and Arabic) show the effectiveness of the proposed model.",
+      "confidence": 0.972,
+      "bbox": [
+        [
+          73,
+          747
+        ],
+        [
+          582,
+          747
+        ],
+        [
+          582,
+          768
+        ],
+        [
+          73,
+          768
+        ]
+      ]
+    },
+    {
+      "text": "Keywords: Seq2Seq model, page-level recognition, Handwritten Text Recognition, Multi-script, Transformer, Transfer",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          72,
+          784
+        ],
+        [
+          1111,
+          784
+        ],
+        [
+          1111,
+          807
+        ],
+        [
+          72,
+          807
+        ]
+      ]
+    },
+    {
+      "text": "Learning",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          71,
+          808
+        ],
+        [
+          154,
+          808
+        ],
+        [
+          154,
+          831
+        ],
+        [
+          71,
+          831
+        ]
+      ]
+    },
+    {
+      "text": "1. Introduction",
+      "confidence": 0.998,
+      "bbox": [
+        [
+          76,
+          878
+        ],
+        [
+          234,
+          878
+        ],
+        [
+          234,
+          898
+        ],
+        [
+          76,
+          898
+        ]
+      ]
+    },
+    {
+      "text": "have been introduced, where word images are extracted",
+      "confidence": 0.977,
+      "bbox": [
+        [
+          611,
+          877
+        ],
+        [
+          1116,
+          877
+        ],
+        [
+          1116,
+          898
+        ],
+        [
+          611,
+          898
+        ]
+      ]
+    },
+    {
+      "text": "Handwritten Text Recognition (HTR) aims to transform",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          93,
+          906
+        ],
+        [
+          577,
+          906
+        ],
+        [
+          577,
+          926
+        ],
+        [
+          93,
+          926
+        ]
+      ]
+    },
+    {
+      "text": "from the document before feeding them into an HTR sys-",
+      "confidence": 0.991,
+      "bbox": [
+        [
+          611,
+          900
+        ],
+        [
+          1115,
+          900
+        ],
+        [
+          1115,
+          923
+        ],
+        [
+          611,
+          923
+        ]
+      ]
+    },
+    {
+      "text": "scanned handwritten documents into machine-encoded",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          71,
+          929
+        ],
+        [
+          578,
+          929
+        ],
+        [
+          578,
+          951
+        ],
+        [
+          71,
+          951
+        ]
+      ]
+    },
+    {
+      "text": "tem. But, this kind of approach faced some problems due",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          611,
+          927
+        ],
+        [
+          1115,
+          927
+        ],
+        [
+          1115,
+          944
+        ],
+        [
+          611,
+          944
+        ]
+      ]
+    },
+    {
+      "text": "text. HTR is still a hard problem due to the high vari-",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          74,
+          956
+        ],
+        [
+          574,
+          956
+        ],
+        [
+          574,
+          973
+        ],
+        [
+          74,
+          973
+        ]
+      ]
+    },
+    {
+      "text": "to the irregularity of the inter-space and the intra-space",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          611,
+          950
+        ],
+        [
+          1117,
+          950
+        ],
+        [
+          1117,
+          970
+        ],
+        [
+          611,
+          970
+        ]
+      ]
+    },
+    {
+      "text": "ance of writing styles, illegible handwriting, poor quality,",
+      "confidence": 0.972,
+      "bbox": [
+        [
+          73,
+          980
+        ],
+        [
+          577,
+          980
+        ],
+        [
+          577,
+          1000
+        ],
+        [
+          73,
+          1000
+        ]
+      ]
+    },
+    {
+      "text": "between words.",
+      "confidence": 0.972,
+      "bbox": [
+        [
+          612,
+          974
+        ],
+        [
+          745,
+          974
+        ],
+        [
+          745,
+          993
+        ],
+        [
+          612,
+          993
+        ]
+      ]
+    },
+    {
+      "text": "ETZ:ZX10",
+      "confidence": 0.368,
+      "bbox": [
+        [
+          33,
+          995
+        ],
+        [
+          68,
+          995
+        ],
+        [
+          68,
+          1221
+        ],
+        [
+          33,
+          1221
+        ]
+      ]
+    },
+    {
+      "text": "and degradation. Furthermore, each handwritten script",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          73,
+          1004
+        ],
+        [
+          577,
+          1004
+        ],
+        [
+          577,
+          1024
+        ],
+        [
+          73,
+          1024
+        ]
+      ]
+    },
+    {
+      "text": "In the last decade, word segmentation-based approaches",
+      "confidence": 0.982,
+      "bbox": [
+        [
+          629,
+          1002
+        ],
+        [
+          1116,
+          1002
+        ],
+        [
+          1116,
+          1023
+        ],
+        [
+          629,
+          1023
+        ]
+      ]
+    },
+    {
+      "text": "has specific properties (writing direction, character shapes,",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          73,
+          1028
+        ],
+        [
+          578,
+          1028
+        ],
+        [
+          578,
+          1048
+        ],
+        [
+          73,
+          1048
+        ]
+      ]
+    },
+    {
+      "text": "[31] were abandoned in favor of text line recognition",
+      "confidence": 0.987,
+      "bbox": [
+        [
+          613,
+          1028
+        ],
+        [
+          1117,
+          1028
+        ],
+        [
+          1117,
+          1048
+        ],
+        [
+          613,
+          1048
+        ]
+      ]
+    },
+    {
+      "text": "ligatures, etc) making the problem more challenging.",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          71,
+          1050
+        ],
+        [
+          535,
+          1050
+        ],
+        [
+          535,
+          1074
+        ],
+        [
+          71,
+          1074
+        ]
+      ]
+    },
+    {
+      "text": "[2, 24, 10]: a document can be segmented into individual",
+      "confidence": 0.983,
+      "bbox": [
+        [
+          612,
+          1048
+        ],
+        [
+          1117,
+          1048
+        ],
+        [
+          1117,
+          1073
+        ],
+        [
+          612,
+          1073
+        ]
+      ]
+    },
+    {
+      "text": "Current HTR models are leading to an acceptable per-",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          93,
+          1074
+        ],
+        [
+          577,
+          1074
+        ],
+        [
+          577,
+          1096
+        ],
+        [
+          93,
+          1096
+        ]
+      ]
+    },
+    {
+      "text": "lines to surpass any inconsistency between words and have",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          612,
+          1075
+        ],
+        [
+          1117,
+          1075
+        ],
+        [
+          1117,
+          1095
+        ],
+        [
+          612,
+          1095
+        ]
+      ]
+    },
+    {
+      "text": "formance [1], especially for modern documents with legi-",
+      "confidence": 0.978,
+      "bbox": [
+        [
+          72,
+          1099
+        ],
+        [
+          577,
+          1099
+        ],
+        [
+          577,
+          1119
+        ],
+        [
+          72,
+          1119
+        ]
+      ]
+    },
+    {
+      "text": "more context. This kind of approach generally achieves",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          610,
+          1098
+        ],
+        [
+          1116,
+          1098
+        ],
+        [
+          1116,
+          1118
+        ],
+        [
+          610,
+          1118
+        ]
+      ]
+    },
+    {
+      "text": "ble handwriting styles, known languages, vocabulary, and",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          71,
+          1120
+        ],
+        [
+          580,
+          1120
+        ],
+        [
+          580,
+          1145
+        ],
+        [
+          71,
+          1145
+        ]
+      ]
+    },
+    {
+      "text": "state-of-the-art performance for mostly all types of docu-",
+      "confidence": 0.983,
+      "bbox": [
+        [
+          610,
+          1122
+        ],
+        [
+          1114,
+          1122
+        ],
+        [
+          1114,
+          1142
+        ],
+        [
+          610,
+          1142
+        ]
+      ]
+    },
+    {
+      "text": "syntax. However, most of these systems rely on a seg-",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          72,
+          1147
+        ],
+        [
+          576,
+          1147
+        ],
+        [
+          576,
+          1169
+        ],
+        [
+          72,
+          1169
+        ]
+      ]
+    },
+    {
+      "text": "ments (modern, historical, multi-script, etc) [3, 4], with-",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          611,
+          1147
+        ],
+        [
+          1115,
+          1147
+        ],
+        [
+          1115,
+          1168
+        ],
+        [
+          611,
+          1168
+        ]
+      ]
+    },
+    {
+      "text": "mentation phase before the recognition task. The segmen-",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          71,
+          1170
+        ],
+        [
+          578,
+          1170
+        ],
+        [
+          578,
+          1192
+        ],
+        [
+          71,
+          1192
+        ]
+      ]
+    },
+    {
+      "text": "out suffering the heavy burden of character/word segmen-",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          610,
+          1171
+        ],
+        [
+          1115,
+          1171
+        ],
+        [
+          1115,
+          1192
+        ],
+        [
+          610,
+          1192
+        ]
+      ]
+    },
+    {
+      "text": "tation consists of partitioning the document images into",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          74,
+          1196
+        ],
+        [
+          577,
+          1196
+        ],
+        [
+          577,
+          1213
+        ],
+        [
+          74,
+          1213
+        ]
+      ]
+    },
+    {
+      "text": "tation. Despite their success, line segmentation is also",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          613,
+          1196
+        ],
+        [
+          1115,
+          1196
+        ],
+        [
+          1115,
+          1213
+        ],
+        [
+          613,
+          1213
+        ]
+      ]
+    },
+    {
+      "text": "homogeneous components (characters, words, or lines).",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          73,
+          1219
+        ],
+        [
+          578,
+          1219
+        ],
+        [
+          578,
+          1239
+        ],
+        [
+          73,
+          1239
+        ]
+      ]
+    },
+    {
+      "text": "challenging due to non-uniform text line skew/slant or",
+      "confidence": 0.983,
+      "bbox": [
+        [
+          612,
+          1217
+        ],
+        [
+          1116,
+          1217
+        ],
+        [
+          1116,
+          1237
+        ],
+        [
+          612,
+          1237
+        ]
+      ]
+    },
+    {
+      "text": "Early HTR approaches have applied segmentation tech-",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          73,
+          1243
+        ],
+        [
+          577,
+          1243
+        ],
+        [
+          577,
+          1263
+        ],
+        [
+          73,
+          1263
+        ]
+      ]
+    },
+    {
+      "text": "closely situated and touching text lines. Such problems",
+      "confidence": 0.998,
+      "bbox": [
+        [
+          613,
+          1243
+        ],
+        [
+          1115,
+          1243
+        ],
+        [
+          1115,
+          1260
+        ],
+        [
+          613,
+          1260
+        ]
+      ]
+    },
+    {
+      "text": "niques to extract character-level images from documents.",
+      "confidence": 0.998,
+      "bbox": [
+        [
+          73,
+          1267
+        ],
+        [
+          577,
+          1267
+        ],
+        [
+          577,
+          1287
+        ],
+        [
+          73,
+          1287
+        ]
+      ]
+    },
+    {
+      "text": "can considerably affect the performance at the recogni-",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          610,
+          1265
+        ],
+        [
+          1114,
+          1265
+        ],
+        [
+          1114,
+          1285
+        ],
+        [
+          610,
+          1285
+        ]
+      ]
+    },
+    {
+      "text": "These techniques suffer from a deficiency in performance",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          74,
+          1290
+        ],
+        [
+          578,
+          1290
+        ],
+        [
+          578,
+          1312
+        ],
+        [
+          74,
+          1312
+        ]
+      ]
+    },
+    {
+      "text": "tion stage. With the recent success of deep learning, the",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          612,
+          1291
+        ],
+        [
+          1114,
+          1291
+        ],
+        [
+          1114,
+          1308
+        ],
+        [
+          612,
+          1308
+        ]
+      ]
+    },
+    {
+      "text": "accuracy as the segmentation generally fails due to the",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          72,
+          1314
+        ],
+        [
+          579,
+          1314
+        ],
+        [
+          579,
+          1337
+        ],
+        [
+          72,
+          1337
+        ]
+      ]
+    },
+    {
+      "text": "HTR community started exploring handwriting recogni-",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          611,
+          1313
+        ],
+        [
+          1115,
+          1313
+        ],
+        [
+          1115,
+          1334
+        ],
+        [
+          611,
+          1334
+        ]
+      ]
+    },
+    {
+      "text": "cursive and unconstrained nature of the handwriting. To",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          73,
+          1338
+        ],
+        [
+          578,
+          1338
+        ],
+        [
+          578,
+          1359
+        ],
+        [
+          73,
+          1359
+        ]
+      ]
+    },
+    {
+      "text": "tion at the paragraph or page level to avoid any interme-",
+      "confidence": 0.998,
+      "bbox": [
+        [
+          612,
+          1338
+        ],
+        [
+          1115,
+          1338
+        ],
+        [
+          1115,
+          1358
+        ],
+        [
+          612,
+          1358
+        ]
+      ]
+    },
+    {
+      "text": "overcome this problem, word-based segmentation methods",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          72,
+          1361
+        ],
+        [
+          578,
+          1361
+        ],
+        [
+          578,
+          1382
+        ],
+        [
+          72,
+          1382
+        ]
+      ]
+    },
+    {
+      "text": "diate segmentation pre-processing step. In [5] an archi-",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          612,
+          1361
+        ],
+        [
+          1114,
+          1361
+        ],
+        [
+          1114,
+          1381
+        ],
+        [
+          612,
+          1381
+        ]
+      ]
+    },
+    {
+      "text": "tecture for paragraph-level HTR with the use of Multi-",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          611,
+          1384
+        ],
+        [
+          1115,
+          1384
+        ],
+        [
+          1115,
+          1406
+        ],
+        [
+          611,
+          1406
+        ]
+      ]
+    },
+    {
+      "text": "Dimensional Long Short-Term Memory Recurrent Neural",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          613,
+          1410
+        ],
+        [
+          1117,
+          1410
+        ],
+        [
+          1117,
+          1430
+        ],
+        [
+          613,
+          1430
+        ]
+      ]
+    },
+    {
+      "text": "*Corresponding author",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          96,
+          1430
+        ],
+        [
+          271,
+          1430
+        ],
+        [
+          271,
+          1451
+        ],
+        [
+          96,
+          1451
+        ]
+      ]
+    },
+    {
+      "text": "Networks (MDLSTM) and the attention mechanism was",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          612,
+          1433
+        ],
+        [
+          1117,
+          1433
+        ],
+        [
+          1117,
+          1454
+        ],
+        [
+          612,
+          1454
+        ]
+      ]
+    },
+    {
+      "text": "Email addresses: marwa.dhiaf.doc@enetcom.usf.tn (Marwa",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          104,
+          1449
+        ],
+        [
+          558,
+          1449
+        ],
+        [
+          558,
+          1470
+        ],
+        [
+          104,
+          1470
+        ]
+      ]
+    },
+    {
+      "text": "proposed. However, they later abandoned this approach",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          610,
+          1456
+        ],
+        [
+          1117,
+          1456
+        ],
+        [
+          1117,
+          1481
+        ],
+        [
+          610,
+          1481
+        ]
+      ]
+    },
+    {
+      "text": "Dhiaf), a. cheikhrouhou@instadeep. com (Ahmed Cheikh Rouhou),",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          74,
+          1470
+        ],
+        [
+          568,
+          1470
+        ],
+        [
+          568,
+          1486
+        ],
+        [
+          74,
+          1486
+        ]
+      ]
+    },
+    {
+      "text": "yousri.kessentini@crns.rnrt.tn (Yousri Kessentini),",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          71,
+          1486
+        ],
+        [
+          483,
+          1486
+        ],
+        [
+          483,
+          1508
+        ],
+        [
+          71,
+          1508
+        ]
+      ]
+    },
+    {
+      "text": "due to high memory requirements, the lack of GPU ac-",
+      "confidence": 0.987,
+      "bbox": [
+        [
+          613,
+          1481
+        ],
+        [
+          1113,
+          1481
+        ],
+        [
+          1113,
+          1498
+        ],
+        [
+          613,
+          1498
+        ]
+      ]
+    },
+    {
+      "text": "s.bensalem@instadeep.com (Sinda Ben Salem)",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          73,
+          1508
+        ],
+        [
+          422,
+          1508
+        ],
+        [
+          422,
+          1525
+        ],
+        [
+          73,
+          1525
+        ]
+      ]
+    },
+    {
+      "text": "celeration for the training of MDLSTM, and intractable",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          614,
+          1506
+        ],
+        [
+          1116,
+          1506
+        ],
+        [
+          1116,
+          1523
+        ],
+        [
+          614,
+          1523
+        ]
+      ]
+    },
+    {
+      "text": "Preprint submitted to Pattern Recognition Letters",
+      "confidence": 0.981,
+      "bbox": [
+        [
+          76,
+          1544
+        ],
+        [
+          447,
+          1544
+        ],
+        [
+          447,
+          1561
+        ],
+        [
+          76,
+          1561
+        ]
+      ]
+    },
+    {
+      "text": "March 27, 2023",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          999,
+          1544
+        ],
+        [
+          1117,
+          1544
+        ],
+        [
+          1117,
+          1558
+        ],
+        [
+          999,
+          1558
+        ]
+      ]
+    }
+  ],
+  "page_classification": "HANDWRITTEN"
+}

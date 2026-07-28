@@ -1,0 +1,3398 @@
+{
+  "text": "ten scripts. For future research, we intend to integrate\n[18] L. Kang, P. Riba, M. Rusi\u00f1ol, A. Forn\u00e9s, M. Villegas, Pay at-\na self-supervised training stage, so that, the model can\ntention to what you read: Non-recurrent handwritten text-line\nbenefit from unlabeled page-level handwriting documents\nrecognition, arXiv preprint arXiv:2005.13044.\n[19]\nM. Carbonell, J. Mas, M. Villegas, A. Forn\u00e9s, J. Llad\u00f3s, End-to-\nto reduce the annotation cost. We will also explore the\nend handwritten text detection and transcription in full pages,\ncapacity of our model to recognize mixed-script handwrit-\nin: 2019 International Conference on Document Analysis and\nten documents where many scripts co-exist in the same\nRecognition Workshops (ICDARW), Vol. 5, IEEE, 2019, pp.\nline/document.\n2934.\n[20]\nC. Wigington, C. Tensmeyer, B. Davis, W. Barrett, B. Price,\nReferences\nS. Cohen, Start, follow, read: End-to-end full-page handwriting\nrecognition, in: Proceedings of the European Conference on\n[1] L. Kang, P. Riba, M. Rusi\u00f1ol, A. Forn\u00e9s, M. Villegas, Pay at-\nComputer Vision (ECCV), 2018, pp. 367383.\ntention to what you read: Non-recurrent handwritten text-line\n[21]\nD. Coquenet, C. Chatelain, T. Paquet, Span: A simple predict\nrecognition, arXiv preprint arXiv:2005.13044.\n& align network for handwritten paragraph recognition, in: In-\n[2]\nC. Wigington, S. Stewart, B. Davis, B. Barrett, B. Price, S. Co-\nternational Conference on Document Analysis and Recognition,\nhen, Data augmentation for recognition of handwritten words\nSpringer, 2021, pp. 7084.\nand lines using a cnn-lstm network, in: 2017 14th IAPR In-\n[22]\n] J. Louradour, C. Kermorvant, Curriculum learning for hand-\nternational Conference on Document Analysis and Recognition\nwritten text line recognition, in: 2014 11th IAPR International\n(ICDAR), Vol. 1, IEEE, 2017, pp. 639645.\nWorkshop on Document Analysis Systems, IEEE, 2014, pp. 56\n[3]\nU.-V. Marti, H. Bunke, The iam-database: an english sentence\n60.\ndatabase for offline handwriting recognition, International Jour-\n[23]\nD. Coquenet, C. Chatelain, T. Paquet, End-to-end handwritten\nnal on Document Analysis and Recognition 5 (1) (2002) 3946.\nparagraph text recognition using a vertical attention network,\n[4] E. Grosicki, H. El-Abed, Icdar 2011-french handwriting recog-\nIEEE Transactions on Pattern Analysis and Machine Intelli-\nnition competition, in: 2011 International Conference on Doc-\ngence, vol. 45, no. 1, pp. 508-524, 2023.\nument Analysis and Recognition, IEEE, 2011, pp. 14591463.\n[24]\nS. Khamekhem Jemni, Y. Kessentini, S. Kanoun, Offline Arabic\n[5]\nT. Bluche, J. Louradour, R. Messina, Scan, attend and read:\nHandwriting Recognition Using BLSTMs Combination. 13th in-\nEnd-to-end handwritten paragraph recognition with mdlstm at-\nternational workshop on document analysis systems (DAS), pp\ntention, in: 2017 14th IAPR international conference on doc-\n31-36, Vienna, Austria, 2018.\nument analysis and recognition (ICDAR), Vol. 1, IEEE, 2017,\n[25]\nJ. Puigcerver, Are multidimensional recurrent layers really nec-\npp. 10501055.\nessary for handwritten text recognition?, in: 2017 14th IAPR\n[6]\nS. S. Singh, S. Karayev, Full page handwriting recognition via\nInternational Conference on Document Analysis and Recogni-\nimage to sequence extraction, in: International Conference on\ntion (ICDAR), Vol. 1, IEEE, 2017, pp. 6772.\nDocument Analysis and Recognition, Springer, 2021, pp. 5569.\n[26]\n2\nR. Ahmad, S. Naz, M. Z. Afzal, S. F. Rashid, M. Liwicki,\n[7]\nD. Coquenet, C. Chatelain, T. Paquet, Dan: a segmentation-\nA. Dengel, Khatt: A deep learning benchmark on arabic script,\nfree document attention network for handwritten document\nin: 2017 14th IAPR International Conference on Document\nrecognition, arXiv preprint arXiv:2203.12273.\nAnalysis and Recognition (ICDAR), Vol. 7, IEEE, 2017, pp.\n[8] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones,\n1014.\nA. N. Gomez, L. Kaiser, I. Polosukhin, Attention is all you\n[27]\nR. Ahmad, S. Naz, M. Z. Afzal, S. F. Rashid, M. Liwicki,\nneed, Advances in neural information processing systems 30.\nA. Dengel, A deep learning based arabic script recognition sys-\n[9] A. Graves, J. Schmidhuber, Offline handwriting recognition\ntem: benchmark on khat., Int. Arab J. Inf. Technol. 17 (3)\nwith multidimensional recurrent neural networks, Advances in\n(2020) 299305.\nneural information processing systems 21.\n[28]\nZ. Noubigh, A. Mezghani, M. Kherallah, Contribution on arabic\n[10]\nT. Bluche, Joint line segmentation and transcription for end-\nhandwriting recognition using deep neural network, in: Inter-\nto-end handwritten paragraph recognition, Advances in neural\nnational Conference on Hybrid Intelligent Systems, Springer,\ninformation processing systems 29.\n2019, pp. 123133.\n[11]\nA. C. Rouhou, M. Dhiaf, Y. Kessentini, S. B. Salem,\n[29]\nYousef, Mohamed and Bishop, Tom E, OrigamiNet: weakly-\nTransformer-based approach for joint handwriting and named\nsupervised, segmentation-free, one-step, full page text recogni-\nentity recognition in historical document, Pattern Recognition\ntion by learning to unfold, in: Proceedings of the IEEE/CVF\nLetters 155 (2022) 128134.\nConference on Computer Vision and Pattern Recognition,\n[12]\nK. He, X. Zhang, S. Ren, J. Sun, Deep residual learning for\nSpringer, 2020, pp. 1471014719.\nimage recognition, in: Proceedings of the IEEE conference on\n[30]\nA. Fornes, V. Romero, A. Bar o, J. I. Toledo, J. A. Sanchez,\ncomputer vision and pattern recognition, 2016, pp. 770778.\nE. Vidal, J. Llados, Icdar2017 competition on information ex-\n[13] J. Lee, S. Park, J. Baek, S. J. Oh, S. Kim, H. Lee, On rec-\ntraction in historical handwritten records, in: 2017 14th IAPR\nognizing texts of arbitrary shapes with 2d self-attention, in:\nInternational Conference on Document Analysis and Recogni-\nProceedings of the IEEE/CVF Conference on Computer Vision\ntion (ICDAR), Vol. 01, 2017, pp. 13891394\nand Pattern Recognition Workshops, 2020, pp. 546547.\n[31]\nY. Kessentini, T. Paquet, A. Benhamadou. A Multi-Lingual\n[14] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones,\nRecognition System for Arabic and Latin Handwriting. 10th In-\nA. N. Gomez, u. Kaiser, I. Polosukhin, Attention is all you need,\nternational Conference on Document Analysis and Recognition,\nin: Proceedings of the 31st International Conference on Neural\nICDAR'2009, pp. 1196-1200, 2009.\nInformation Processing Systems, NIPS'17, Curran Associates\nInc., Red Hook, NY, USA, 2017, p. 60006010.\n[15]\nS. A. Mahmoud, I. Ahmad, M. Alshayeb, W. G. Al-Khatib,\nM. T. Parvez, G. A. Fink, V. M\u00e4rgner, H. El Abed, Khatt:\nArabic offline handwritten text database, in: 2012 International\nConference on Frontiers in Handwriting Recognition, IEEE,\n2012, pp. 449454.\n[16]\nV. Romero, A. Forn\u00e9s, N. Serrano, J. A. S\u00e1nchez, A. H. Toselli.\nV. Frinken, E. Vidal, J. Llad\u00f3s, The esposalles database: An\nancient marriage license corpus for off-line handwriting recog-\nnition, Pattern Recognition 46 (6) (2013) 1658 \u2212 1669.\n[17]\nA. Chowdhury, L. Vig, An efficient end-to-end neural model for\nhandwritten text recognition, arXiv preprint arXiv:1807.07965.\n8",
+  "confidence": 0.984,
+  "processing_time": 139.68579379999983,
+  "engine_used": "paddleocr",
+  "page_number": 8,
+  "bounding_boxes": [
+    {
+      "text": "ten scripts. For future research, we intend to integrate",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          72,
+          166
+        ],
+        [
+          579,
+          166
+        ],
+        [
+          579,
+          187
+        ],
+        [
+          72,
+          187
+        ]
+      ]
+    },
+    {
+      "text": "[18] L. Kang, P. Riba, M. Rusi\u00f1ol, A. Forn\u00e9s, M. Villegas, Pay at-",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          611,
+          167
+        ],
+        [
+          1116,
+          167
+        ],
+        [
+          1116,
+          188
+        ],
+        [
+          611,
+          188
+        ]
+      ]
+    },
+    {
+      "text": "a self-supervised training stage, so that, the model can",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          72,
+          191
+        ],
+        [
+          578,
+          191
+        ],
+        [
+          578,
+          210
+        ],
+        [
+          72,
+          210
+        ]
+      ]
+    },
+    {
+      "text": "tention to what you read: Non-recurrent handwritten text-line",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          649,
+          190
+        ],
+        [
+          1116,
+          190
+        ],
+        [
+          1116,
+          204
+        ],
+        [
+          649,
+          204
+        ]
+      ]
+    },
+    {
+      "text": "benefit from unlabeled page-level handwriting documents",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          73,
+          213
+        ],
+        [
+          578,
+          213
+        ],
+        [
+          578,
+          234
+        ],
+        [
+          73,
+          234
+        ]
+      ]
+    },
+    {
+      "text": "recognition, arXiv preprint arXiv:2005.13044.",
+      "confidence": 0.991,
+      "bbox": [
+        [
+          648,
+          208
+        ],
+        [
+          985,
+          208
+        ],
+        [
+          985,
+          224
+        ],
+        [
+          648,
+          224
+        ]
+      ]
+    },
+    {
+      "text": "[19]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          612,
+          224
+        ],
+        [
+          643,
+          224
+        ],
+        [
+          643,
+          244
+        ],
+        [
+          612,
+          244
+        ]
+      ]
+    },
+    {
+      "text": "M. Carbonell, J. Mas, M. Villegas, A. Forn\u00e9s, J. Llad\u00f3s, End-to-",
+      "confidence": 0.974,
+      "bbox": [
+        [
+          639,
+          227
+        ],
+        [
+          1113,
+          227
+        ],
+        [
+          1113,
+          241
+        ],
+        [
+          639,
+          241
+        ]
+      ]
+    },
+    {
+      "text": "to reduce the annotation cost. We will also explore the",
+      "confidence": 0.982,
+      "bbox": [
+        [
+          73,
+          238
+        ],
+        [
+          578,
+          238
+        ],
+        [
+          578,
+          258
+        ],
+        [
+          73,
+          258
+        ]
+      ]
+    },
+    {
+      "text": "end handwritten text detection and transcription in full pages,",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          646,
+          243
+        ],
+        [
+          1117,
+          243
+        ],
+        [
+          1117,
+          264
+        ],
+        [
+          646,
+          264
+        ]
+      ]
+    },
+    {
+      "text": "capacity of our model to recognize mixed-script handwrit-",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          72,
+          261
+        ],
+        [
+          577,
+          261
+        ],
+        [
+          577,
+          283
+        ],
+        [
+          72,
+          283
+        ]
+      ]
+    },
+    {
+      "text": "in: 2019 International Conference on Document Analysis and",
+      "confidence": 0.976,
+      "bbox": [
+        [
+          647,
+          264
+        ],
+        [
+          1116,
+          264
+        ],
+        [
+          1116,
+          281
+        ],
+        [
+          647,
+          281
+        ]
+      ]
+    },
+    {
+      "text": "ten documents where many scripts co-exist in the same",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          72,
+          285
+        ],
+        [
+          578,
+          285
+        ],
+        [
+          578,
+          308
+        ],
+        [
+          72,
+          308
+        ]
+      ]
+    },
+    {
+      "text": "Recognition Workshops (ICDARW), Vol. 5, IEEE, 2019, pp.",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          646,
+          280
+        ],
+        [
+          1117,
+          280
+        ],
+        [
+          1117,
+          303
+        ],
+        [
+          646,
+          303
+        ]
+      ]
+    },
+    {
+      "text": "line/document.",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          72,
+          309
+        ],
+        [
+          208,
+          309
+        ],
+        [
+          208,
+          332
+        ],
+        [
+          72,
+          332
+        ]
+      ]
+    },
+    {
+      "text": "2934.",
+      "confidence": 0.966,
+      "bbox": [
+        [
+          646,
+          300
+        ],
+        [
+          697,
+          300
+        ],
+        [
+          697,
+          320
+        ],
+        [
+          646,
+          320
+        ]
+      ]
+    },
+    {
+      "text": "[20]",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          613,
+          320
+        ],
+        [
+          643,
+          320
+        ],
+        [
+          643,
+          339
+        ],
+        [
+          613,
+          339
+        ]
+      ]
+    },
+    {
+      "text": "C. Wigington, C. Tensmeyer, B. Davis, W. Barrett, B. Price,",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          643,
+          318
+        ],
+        [
+          1116,
+          318
+        ],
+        [
+          1116,
+          340
+        ],
+        [
+          643,
+          340
+        ]
+      ]
+    },
+    {
+      "text": "References",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          77,
+          339
+        ],
+        [
+          187,
+          339
+        ],
+        [
+          187,
+          361
+        ],
+        [
+          77,
+          361
+        ]
+      ]
+    },
+    {
+      "text": "S. Cohen, Start, follow, read: End-to-end full-page handwriting",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          646,
+          338
+        ],
+        [
+          1117,
+          338
+        ],
+        [
+          1117,
+          359
+        ],
+        [
+          646,
+          359
+        ]
+      ]
+    },
+    {
+      "text": "recognition, in: Proceedings of the European Conference on",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          648,
+          359
+        ],
+        [
+          1117,
+          359
+        ],
+        [
+          1117,
+          376
+        ],
+        [
+          648,
+          376
+        ]
+      ]
+    },
+    {
+      "text": "[1] L. Kang, P. Riba, M. Rusi\u00f1ol, A. Forn\u00e9s, M. Villegas, Pay at-",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          81,
+          371
+        ],
+        [
+          577,
+          371
+        ],
+        [
+          577,
+          391
+        ],
+        [
+          81,
+          391
+        ]
+      ]
+    },
+    {
+      "text": "Computer Vision (ECCV), 2018, pp. 367383.",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          649,
+          378
+        ],
+        [
+          991,
+          378
+        ],
+        [
+          991,
+          395
+        ],
+        [
+          649,
+          395
+        ]
+      ]
+    },
+    {
+      "text": "tention to what you read: Non-recurrent handwritten text-line",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          110,
+          392
+        ],
+        [
+          578,
+          392
+        ],
+        [
+          578,
+          409
+        ],
+        [
+          110,
+          409
+        ]
+      ]
+    },
+    {
+      "text": "[21]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          612,
+          396
+        ],
+        [
+          643,
+          396
+        ],
+        [
+          643,
+          415
+        ],
+        [
+          612,
+          415
+        ]
+      ]
+    },
+    {
+      "text": "D. Coquenet, C. Chatelain, T. Paquet, Span: A simple predict",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          646,
+          397
+        ],
+        [
+          1116,
+          397
+        ],
+        [
+          1116,
+          414
+        ],
+        [
+          646,
+          414
+        ]
+      ]
+    },
+    {
+      "text": "recognition, arXiv preprint arXiv:2005.13044.",
+      "confidence": 0.998,
+      "bbox": [
+        [
+          108,
+          409
+        ],
+        [
+          448,
+          409
+        ],
+        [
+          448,
+          427
+        ],
+        [
+          108,
+          427
+        ]
+      ]
+    },
+    {
+      "text": "& align network for handwritten paragraph recognition, in: In-",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          646,
+          413
+        ],
+        [
+          1116,
+          413
+        ],
+        [
+          1116,
+          434
+        ],
+        [
+          646,
+          434
+        ]
+      ]
+    },
+    {
+      "text": "[2]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          83,
+          429
+        ],
+        [
+          103,
+          429
+        ],
+        [
+          103,
+          447
+        ],
+        [
+          83,
+          447
+        ]
+      ]
+    },
+    {
+      "text": "C. Wigington, S. Stewart, B. Davis, B. Barrett, B. Price, S. Co-",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          109,
+          429
+        ],
+        [
+          576,
+          429
+        ],
+        [
+          576,
+          446
+        ],
+        [
+          109,
+          446
+        ]
+      ]
+    },
+    {
+      "text": "ternational Conference on Document Analysis and Recognition,",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          647,
+          433
+        ],
+        [
+          1116,
+          433
+        ],
+        [
+          1116,
+          452
+        ],
+        [
+          647,
+          452
+        ]
+      ]
+    },
+    {
+      "text": "hen, Data augmentation for recognition of handwritten words",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          110,
+          448
+        ],
+        [
+          578,
+          448
+        ],
+        [
+          578,
+          465
+        ],
+        [
+          110,
+          465
+        ]
+      ]
+    },
+    {
+      "text": "Springer, 2021, pp. 7084.",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          647,
+          451
+        ],
+        [
+          844,
+          451
+        ],
+        [
+          844,
+          472
+        ],
+        [
+          647,
+          472
+        ]
+      ]
+    },
+    {
+      "text": "and lines using a cnn-lstm network, in: 2017 14th IAPR In-",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          110,
+          468
+        ],
+        [
+          577,
+          468
+        ],
+        [
+          577,
+          485
+        ],
+        [
+          110,
+          485
+        ]
+      ]
+    },
+    {
+      "text": "[22]",
+      "confidence": 0.949,
+      "bbox": [
+        [
+          615,
+          473
+        ],
+        [
+          642,
+          473
+        ],
+        [
+          642,
+          489
+        ],
+        [
+          615,
+          489
+        ]
+      ]
+    },
+    {
+      "text": "] J. Louradour, C. Kermorvant, Curriculum learning for hand-",
+      "confidence": 0.991,
+      "bbox": [
+        [
+          635,
+          473
+        ],
+        [
+          1114,
+          473
+        ],
+        [
+          1114,
+          490
+        ],
+        [
+          635,
+          490
+        ]
+      ]
+    },
+    {
+      "text": "ternational Conference on Document Analysis and Recognition",
+      "confidence": 0.976,
+      "bbox": [
+        [
+          109,
+          486
+        ],
+        [
+          577,
+          486
+        ],
+        [
+          577,
+          503
+        ],
+        [
+          109,
+          503
+        ]
+      ]
+    },
+    {
+      "text": "written text line recognition, in: 2014 11th IAPR International",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          649,
+          492
+        ],
+        [
+          1115,
+          492
+        ],
+        [
+          1115,
+          506
+        ],
+        [
+          649,
+          506
+        ]
+      ]
+    },
+    {
+      "text": "(ICDAR), Vol. 1, IEEE, 2017, pp. 639645.",
+      "confidence": 0.97,
+      "bbox": [
+        [
+          111,
+          505
+        ],
+        [
+          432,
+          505
+        ],
+        [
+          432,
+          522
+        ],
+        [
+          111,
+          522
+        ]
+      ]
+    },
+    {
+      "text": "Workshop on Document Analysis Systems, IEEE, 2014, pp. 56",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          647,
+          507
+        ],
+        [
+          1115,
+          507
+        ],
+        [
+          1115,
+          528
+        ],
+        [
+          647,
+          528
+        ]
+      ]
+    },
+    {
+      "text": "[3]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          83,
+          524
+        ],
+        [
+          105,
+          524
+        ],
+        [
+          105,
+          542
+        ],
+        [
+          83,
+          542
+        ]
+      ]
+    },
+    {
+      "text": "U.-V. Marti, H. Bunke, The iam-database: an english sentence",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          106,
+          523
+        ],
+        [
+          578,
+          523
+        ],
+        [
+          578,
+          541
+        ],
+        [
+          106,
+          541
+        ]
+      ]
+    },
+    {
+      "text": "60.",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          648,
+          528
+        ],
+        [
+          672,
+          528
+        ],
+        [
+          672,
+          545
+        ],
+        [
+          648,
+          545
+        ]
+      ]
+    },
+    {
+      "text": "database for offline handwriting recognition, International Jour-",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          110,
+          543
+        ],
+        [
+          576,
+          543
+        ],
+        [
+          576,
+          560
+        ],
+        [
+          110,
+          560
+        ]
+      ]
+    },
+    {
+      "text": "[23]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          612,
+          547
+        ],
+        [
+          642,
+          547
+        ],
+        [
+          642,
+          566
+        ],
+        [
+          612,
+          566
+        ]
+      ]
+    },
+    {
+      "text": "D. Coquenet, C. Chatelain, T. Paquet, End-to-end handwritten",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          646,
+          548
+        ],
+        [
+          1116,
+          548
+        ],
+        [
+          1116,
+          565
+        ],
+        [
+          646,
+          565
+        ]
+      ]
+    },
+    {
+      "text": "nal on Document Analysis and Recognition 5 (1) (2002) 3946.",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          110,
+          562
+        ],
+        [
+          577,
+          562
+        ],
+        [
+          577,
+          579
+        ],
+        [
+          110,
+          579
+        ]
+      ]
+    },
+    {
+      "text": "paragraph text recognition using a vertical attention network,",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          647,
+          565
+        ],
+        [
+          1116,
+          565
+        ],
+        [
+          1116,
+          587
+        ],
+        [
+          647,
+          587
+        ]
+      ]
+    },
+    {
+      "text": "[4] E. Grosicki, H. El-Abed, Icdar 2011-french handwriting recog-",
+      "confidence": 0.971,
+      "bbox": [
+        [
+          81,
+          579
+        ],
+        [
+          578,
+          579
+        ],
+        [
+          578,
+          602
+        ],
+        [
+          81,
+          602
+        ]
+      ]
+    },
+    {
+      "text": "IEEE Transactions on Pattern Analysis and Machine Intelli-",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          649,
+          586
+        ],
+        [
+          1116,
+          586
+        ],
+        [
+          1116,
+          603
+        ],
+        [
+          649,
+          603
+        ]
+      ]
+    },
+    {
+      "text": "nition competition, in: 2011 International Conference on Doc-",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          111,
+          602
+        ],
+        [
+          576,
+          602
+        ],
+        [
+          576,
+          616
+        ],
+        [
+          111,
+          616
+        ]
+      ]
+    },
+    {
+      "text": "gence, vol. 45, no. 1, pp. 508-524, 2023.",
+      "confidence": 0.991,
+      "bbox": [
+        [
+          647,
+          603
+        ],
+        [
+          943,
+          603
+        ],
+        [
+          943,
+          625
+        ],
+        [
+          647,
+          625
+        ]
+      ]
+    },
+    {
+      "text": "ument Analysis and Recognition, IEEE, 2011, pp. 14591463.",
+      "confidence": 0.987,
+      "bbox": [
+        [
+          111,
+          621
+        ],
+        [
+          569,
+          621
+        ],
+        [
+          569,
+          634
+        ],
+        [
+          111,
+          634
+        ]
+      ]
+    },
+    {
+      "text": "[24]",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          613,
+          623
+        ],
+        [
+          643,
+          623
+        ],
+        [
+          643,
+          641
+        ],
+        [
+          613,
+          641
+        ]
+      ]
+    },
+    {
+      "text": "S. Khamekhem Jemni, Y. Kessentini, S. Kanoun, Offline Arabic",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          646,
+          624
+        ],
+        [
+          1116,
+          624
+        ],
+        [
+          1116,
+          640
+        ],
+        [
+          646,
+          640
+        ]
+      ]
+    },
+    {
+      "text": "[5]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          83,
+          638
+        ],
+        [
+          105,
+          638
+        ],
+        [
+          105,
+          656
+        ],
+        [
+          83,
+          656
+        ]
+      ]
+    },
+    {
+      "text": "T. Bluche, J. Louradour, R. Messina, Scan, attend and read:",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          107,
+          637
+        ],
+        [
+          577,
+          637
+        ],
+        [
+          577,
+          654
+        ],
+        [
+          107,
+          654
+        ]
+      ]
+    },
+    {
+      "text": "Handwriting Recognition Using BLSTMs Combination. 13th in-",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          648,
+          642
+        ],
+        [
+          1116,
+          642
+        ],
+        [
+          1116,
+          660
+        ],
+        [
+          648,
+          660
+        ]
+      ]
+    },
+    {
+      "text": "End-to-end handwritten paragraph recognition with mdlstm at-",
+      "confidence": 0.983,
+      "bbox": [
+        [
+          111,
+          657
+        ],
+        [
+          577,
+          657
+        ],
+        [
+          577,
+          674
+        ],
+        [
+          111,
+          674
+        ]
+      ]
+    },
+    {
+      "text": "ternational workshop on document analysis systems (DAS), pp",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          646,
+          659
+        ],
+        [
+          1117,
+          659
+        ],
+        [
+          1117,
+          682
+        ],
+        [
+          646,
+          682
+        ]
+      ]
+    },
+    {
+      "text": "tention, in: 2017 14th IAPR international conference on doc-",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          111,
+          675
+        ],
+        [
+          577,
+          675
+        ],
+        [
+          577,
+          692
+        ],
+        [
+          111,
+          692
+        ]
+      ]
+    },
+    {
+      "text": "31-36, Vienna, Austria, 2018.",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          647,
+          678
+        ],
+        [
+          866,
+          678
+        ],
+        [
+          866,
+          698
+        ],
+        [
+          647,
+          698
+        ]
+      ]
+    },
+    {
+      "text": "ument analysis and recognition (ICDAR), Vol. 1, IEEE, 2017,",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          109,
+          694
+        ],
+        [
+          577,
+          694
+        ],
+        [
+          577,
+          712
+        ],
+        [
+          109,
+          712
+        ]
+      ]
+    },
+    {
+      "text": "[25]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          612,
+          698
+        ],
+        [
+          643,
+          698
+        ],
+        [
+          643,
+          717
+        ],
+        [
+          612,
+          717
+        ]
+      ]
+    },
+    {
+      "text": "J. Puigcerver, Are multidimensional recurrent layers really nec-",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          639,
+          699
+        ],
+        [
+          1116,
+          699
+        ],
+        [
+          1116,
+          716
+        ],
+        [
+          639,
+          716
+        ]
+      ]
+    },
+    {
+      "text": "pp. 10501055.",
+      "confidence": 0.998,
+      "bbox": [
+        [
+          109,
+          712
+        ],
+        [
+          221,
+          712
+        ],
+        [
+          221,
+          731
+        ],
+        [
+          109,
+          731
+        ]
+      ]
+    },
+    {
+      "text": "essary for handwritten text recognition?, in: 2017 14th IAPR",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          647,
+          717
+        ],
+        [
+          1116,
+          717
+        ],
+        [
+          1116,
+          736
+        ],
+        [
+          647,
+          736
+        ]
+      ]
+    },
+    {
+      "text": "[6]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          83,
+          732
+        ],
+        [
+          106,
+          732
+        ],
+        [
+          106,
+          750
+        ],
+        [
+          83,
+          750
+        ]
+      ]
+    },
+    {
+      "text": "S. S. Singh, S. Karayev, Full page handwriting recognition via",
+      "confidence": 0.991,
+      "bbox": [
+        [
+          105,
+          730
+        ],
+        [
+          578,
+          730
+        ],
+        [
+          578,
+          751
+        ],
+        [
+          105,
+          751
+        ]
+      ]
+    },
+    {
+      "text": "International Conference on Document Analysis and Recogni-",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          649,
+          739
+        ],
+        [
+          1115,
+          739
+        ],
+        [
+          1115,
+          753
+        ],
+        [
+          649,
+          753
+        ]
+      ]
+    },
+    {
+      "text": "image to sequence extraction, in: International Conference on",
+      "confidence": 0.991,
+      "bbox": [
+        [
+          109,
+          751
+        ],
+        [
+          578,
+          751
+        ],
+        [
+          578,
+          769
+        ],
+        [
+          109,
+          769
+        ]
+      ]
+    },
+    {
+      "text": "tion (ICDAR), Vol. 1, IEEE, 2017, pp. 6772.",
+      "confidence": 0.982,
+      "bbox": [
+        [
+          648,
+          757
+        ],
+        [
+          989,
+          757
+        ],
+        [
+          989,
+          773
+        ],
+        [
+          648,
+          773
+        ]
+      ]
+    },
+    {
+      "text": "Document Analysis and Recognition, Springer, 2021, pp. 5569.",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          111,
+          771
+        ],
+        [
+          576,
+          771
+        ],
+        [
+          576,
+          787
+        ],
+        [
+          111,
+          787
+        ]
+      ]
+    },
+    {
+      "text": "[26]",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          613,
+          773
+        ],
+        [
+          643,
+          773
+        ],
+        [
+          643,
+          792
+        ],
+        [
+          613,
+          792
+        ]
+      ]
+    },
+    {
+      "text": "2",
+      "confidence": 0.337,
+      "bbox": [
+        [
+          643,
+          780
+        ],
+        [
+          648,
+          780
+        ],
+        [
+          648,
+          787
+        ],
+        [
+          643,
+          787
+        ]
+      ]
+    },
+    {
+      "text": "R. Ahmad, S. Naz, M. Z. Afzal, S. F. Rashid, M. Liwicki,",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          644,
+          774
+        ],
+        [
+          1116,
+          774
+        ],
+        [
+          1116,
+          791
+        ],
+        [
+          644,
+          791
+        ]
+      ]
+    },
+    {
+      "text": "[7]",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          83,
+          789
+        ],
+        [
+          106,
+          789
+        ],
+        [
+          106,
+          806
+        ],
+        [
+          83,
+          806
+        ]
+      ]
+    },
+    {
+      "text": "D. Coquenet, C. Chatelain, T. Paquet, Dan: a segmentation-",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          108,
+          789
+        ],
+        [
+          577,
+          789
+        ],
+        [
+          577,
+          806
+        ],
+        [
+          108,
+          806
+        ]
+      ]
+    },
+    {
+      "text": "A. Dengel, Khatt: A deep learning benchmark on arabic script,",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          647,
+          791
+        ],
+        [
+          1116,
+          791
+        ],
+        [
+          1116,
+          813
+        ],
+        [
+          647,
+          813
+        ]
+      ]
+    },
+    {
+      "text": "free document attention network for handwritten document",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          109,
+          807
+        ],
+        [
+          577,
+          807
+        ],
+        [
+          577,
+          825
+        ],
+        [
+          109,
+          825
+        ]
+      ]
+    },
+    {
+      "text": "in: 2017 14th IAPR International Conference on Document",
+      "confidence": 0.983,
+      "bbox": [
+        [
+          647,
+          811
+        ],
+        [
+          1117,
+          811
+        ],
+        [
+          1117,
+          831
+        ],
+        [
+          647,
+          831
+        ]
+      ]
+    },
+    {
+      "text": "recognition, arXiv preprint arXiv:2203.12273.",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          109,
+          827
+        ],
+        [
+          448,
+          827
+        ],
+        [
+          448,
+          844
+        ],
+        [
+          109,
+          844
+        ]
+      ]
+    },
+    {
+      "text": "Analysis and Recognition (ICDAR), Vol. 7, IEEE, 2017, pp.",
+      "confidence": 0.977,
+      "bbox": [
+        [
+          646,
+          829
+        ],
+        [
+          1117,
+          829
+        ],
+        [
+          1117,
+          852
+        ],
+        [
+          646,
+          852
+        ]
+      ]
+    },
+    {
+      "text": "[8] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones,",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          80,
+          843
+        ],
+        [
+          579,
+          843
+        ],
+        [
+          579,
+          866
+        ],
+        [
+          80,
+          866
+        ]
+      ]
+    },
+    {
+      "text": "1014.",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          647,
+          850
+        ],
+        [
+          698,
+          850
+        ],
+        [
+          698,
+          868
+        ],
+        [
+          647,
+          868
+        ]
+      ]
+    },
+    {
+      "text": "A. N. Gomez, L. Kaiser, I. Polosukhin, Attention is all you",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          109,
+          863
+        ],
+        [
+          579,
+          863
+        ],
+        [
+          579,
+          884
+        ],
+        [
+          109,
+          884
+        ]
+      ]
+    },
+    {
+      "text": "[27]",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          613,
+          869
+        ],
+        [
+          643,
+          869
+        ],
+        [
+          643,
+          888
+        ],
+        [
+          613,
+          888
+        ]
+      ]
+    },
+    {
+      "text": "R. Ahmad, S. Naz, M. Z. Afzal, S. F. Rashid, M. Liwicki,",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          644,
+          870
+        ],
+        [
+          1115,
+          870
+        ],
+        [
+          1115,
+          887
+        ],
+        [
+          644,
+          887
+        ]
+      ]
+    },
+    {
+      "text": "need, Advances in neural information processing systems 30.",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          110,
+          884
+        ],
+        [
+          560,
+          884
+        ],
+        [
+          560,
+          901
+        ],
+        [
+          110,
+          901
+        ]
+      ]
+    },
+    {
+      "text": "A. Dengel, A deep learning based arabic script recognition sys-",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          648,
+          888
+        ],
+        [
+          1116,
+          888
+        ],
+        [
+          1116,
+          907
+        ],
+        [
+          648,
+          907
+        ]
+      ]
+    },
+    {
+      "text": "[9] A. Graves, J. Schmidhuber, Offline handwriting recognition",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          80,
+          901
+        ],
+        [
+          580,
+          901
+        ],
+        [
+          580,
+          923
+        ],
+        [
+          80,
+          923
+        ]
+      ]
+    },
+    {
+      "text": "tem: benchmark on khat., Int. Arab J. Inf. Technol. 17 (3)",
+      "confidence": 0.983,
+      "bbox": [
+        [
+          646,
+          905
+        ],
+        [
+          1115,
+          905
+        ],
+        [
+          1115,
+          927
+        ],
+        [
+          646,
+          927
+        ]
+      ]
+    },
+    {
+      "text": "with multidimensional recurrent neural networks, Advances in",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          110,
+          922
+        ],
+        [
+          578,
+          922
+        ],
+        [
+          578,
+          939
+        ],
+        [
+          110,
+          939
+        ]
+      ]
+    },
+    {
+      "text": "(2020) 299305.",
+      "confidence": 0.965,
+      "bbox": [
+        [
+          649,
+          927
+        ],
+        [
+          769,
+          927
+        ],
+        [
+          769,
+          944
+        ],
+        [
+          649,
+          944
+        ]
+      ]
+    },
+    {
+      "text": "neural information processing systems 21.",
+      "confidence": 0.968,
+      "bbox": [
+        [
+          110,
+          940
+        ],
+        [
+          420,
+          940
+        ],
+        [
+          420,
+          957
+        ],
+        [
+          110,
+          957
+        ]
+      ]
+    },
+    {
+      "text": "[28]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          612,
+          944
+        ],
+        [
+          642,
+          944
+        ],
+        [
+          642,
+          963
+        ],
+        [
+          612,
+          963
+        ]
+      ]
+    },
+    {
+      "text": "Z. Noubigh, A. Mezghani, M. Kherallah, Contribution on arabic",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          647,
+          945
+        ],
+        [
+          1116,
+          945
+        ],
+        [
+          1116,
+          962
+        ],
+        [
+          647,
+          962
+        ]
+      ]
+    },
+    {
+      "text": "[10]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          73,
+          958
+        ],
+        [
+          104,
+          958
+        ],
+        [
+          104,
+          977
+        ],
+        [
+          73,
+          977
+        ]
+      ]
+    },
+    {
+      "text": "T. Bluche, Joint line segmentation and transcription for end-",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          107,
+          959
+        ],
+        [
+          576,
+          959
+        ],
+        [
+          576,
+          976
+        ],
+        [
+          107,
+          976
+        ]
+      ]
+    },
+    {
+      "text": "handwriting recognition using deep neural network, in: Inter-",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          647,
+          963
+        ],
+        [
+          1116,
+          963
+        ],
+        [
+          1116,
+          981
+        ],
+        [
+          647,
+          981
+        ]
+      ]
+    },
+    {
+      "text": "to-end handwritten paragraph recognition, Advances in neural",
+      "confidence": 0.98,
+      "bbox": [
+        [
+          110,
+          979
+        ],
+        [
+          577,
+          979
+        ],
+        [
+          577,
+          996
+        ],
+        [
+          110,
+          996
+        ]
+      ]
+    },
+    {
+      "text": "national Conference on Hybrid Intelligent Systems, Springer,",
+      "confidence": 0.981,
+      "bbox": [
+        [
+          646,
+          980
+        ],
+        [
+          1117,
+          980
+        ],
+        [
+          1117,
+          1003
+        ],
+        [
+          646,
+          1003
+        ]
+      ]
+    },
+    {
+      "text": "information processing systems 29.",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          109,
+          996
+        ],
+        [
+          369,
+          996
+        ],
+        [
+          369,
+          1016
+        ],
+        [
+          109,
+          1016
+        ]
+      ]
+    },
+    {
+      "text": "2019, pp. 123133.",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          649,
+          1002
+        ],
+        [
+          788,
+          1002
+        ],
+        [
+          788,
+          1019
+        ],
+        [
+          649,
+          1019
+        ]
+      ]
+    },
+    {
+      "text": "[11]",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          74,
+          1016
+        ],
+        [
+          111,
+          1016
+        ],
+        [
+          111,
+          1034
+        ],
+        [
+          74,
+          1034
+        ]
+      ]
+    },
+    {
+      "text": "A. C. Rouhou, M. Dhiaf, Y. Kessentini, S. B. Salem,",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          103,
+          1014
+        ],
+        [
+          578,
+          1014
+        ],
+        [
+          578,
+          1035
+        ],
+        [
+          103,
+          1035
+        ]
+      ]
+    },
+    {
+      "text": "[29]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          612,
+          1020
+        ],
+        [
+          641,
+          1020
+        ],
+        [
+          641,
+          1040
+        ],
+        [
+          612,
+          1040
+        ]
+      ]
+    },
+    {
+      "text": "Yousef, Mohamed and Bishop, Tom E, OrigamiNet: weakly-",
+      "confidence": 0.981,
+      "bbox": [
+        [
+          654,
+          1021
+        ],
+        [
+          1114,
+          1021
+        ],
+        [
+          1114,
+          1038
+        ],
+        [
+          654,
+          1038
+        ]
+      ]
+    },
+    {
+      "text": "Transformer-based approach for joint handwriting and named",
+      "confidence": 0.984,
+      "bbox": [
+        [
+          111,
+          1036
+        ],
+        [
+          577,
+          1036
+        ],
+        [
+          577,
+          1052
+        ],
+        [
+          111,
+          1052
+        ]
+      ]
+    },
+    {
+      "text": "supervised, segmentation-free, one-step, full page text recogni-",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          648,
+          1041
+        ],
+        [
+          1115,
+          1041
+        ],
+        [
+          1115,
+          1057
+        ],
+        [
+          648,
+          1057
+        ]
+      ]
+    },
+    {
+      "text": "entity recognition in historical document, Pattern Recognition",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          110,
+          1054
+        ],
+        [
+          577,
+          1054
+        ],
+        [
+          577,
+          1071
+        ],
+        [
+          110,
+          1071
+        ]
+      ]
+    },
+    {
+      "text": "tion by learning to unfold, in: Proceedings of the IEEE/CVF",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          646,
+          1056
+        ],
+        [
+          1116,
+          1056
+        ],
+        [
+          1116,
+          1077
+        ],
+        [
+          646,
+          1077
+        ]
+      ]
+    },
+    {
+      "text": "Letters 155 (2022) 128134.",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          111,
+          1074
+        ],
+        [
+          318,
+          1074
+        ],
+        [
+          318,
+          1088
+        ],
+        [
+          111,
+          1088
+        ]
+      ]
+    },
+    {
+      "text": "Conference on Computer Vision and Pattern Recognition,",
+      "confidence": 0.982,
+      "bbox": [
+        [
+          648,
+          1076
+        ],
+        [
+          1116,
+          1076
+        ],
+        [
+          1116,
+          1096
+        ],
+        [
+          648,
+          1096
+        ]
+      ]
+    },
+    {
+      "text": "[12]",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          74,
+          1091
+        ],
+        [
+          106,
+          1091
+        ],
+        [
+          106,
+          1110
+        ],
+        [
+          74,
+          1110
+        ]
+      ]
+    },
+    {
+      "text": "K. He, X. Zhang, S. Ren, J. Sun, Deep residual learning for",
+      "confidence": 0.976,
+      "bbox": [
+        [
+          107,
+          1092
+        ],
+        [
+          578,
+          1092
+        ],
+        [
+          578,
+          1109
+        ],
+        [
+          107,
+          1109
+        ]
+      ]
+    },
+    {
+      "text": "Springer, 2020, pp. 1471014719.",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          648,
+          1097
+        ],
+        [
+          893,
+          1097
+        ],
+        [
+          893,
+          1114
+        ],
+        [
+          648,
+          1114
+        ]
+      ]
+    },
+    {
+      "text": "image recognition, in: Proceedings of the IEEE conference on",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          108,
+          1109
+        ],
+        [
+          579,
+          1109
+        ],
+        [
+          579,
+          1130
+        ],
+        [
+          108,
+          1130
+        ]
+      ]
+    },
+    {
+      "text": "[30]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          612,
+          1115
+        ],
+        [
+          642,
+          1115
+        ],
+        [
+          642,
+          1135
+        ],
+        [
+          612,
+          1135
+        ]
+      ]
+    },
+    {
+      "text": "A. Fornes, V. Romero, A. Bar o, J. I. Toledo, J. A. Sanchez,",
+      "confidence": 0.975,
+      "bbox": [
+        [
+          644,
+          1116
+        ],
+        [
+          1116,
+          1116
+        ],
+        [
+          1116,
+          1133
+        ],
+        [
+          644,
+          1133
+        ]
+      ]
+    },
+    {
+      "text": "computer vision and pattern recognition, 2016, pp. 770778.",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          109,
+          1130
+        ],
+        [
+          557,
+          1130
+        ],
+        [
+          557,
+          1147
+        ],
+        [
+          109,
+          1147
+        ]
+      ]
+    },
+    {
+      "text": "E. Vidal, J. Llados, Icdar2017 competition on information ex-",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          648,
+          1135
+        ],
+        [
+          1116,
+          1135
+        ],
+        [
+          1116,
+          1152
+        ],
+        [
+          648,
+          1152
+        ]
+      ]
+    },
+    {
+      "text": "[13] J. Lee, S. Park, J. Baek, S. J. Oh, S. Kim, H. Lee, On rec-",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          72,
+          1147
+        ],
+        [
+          578,
+          1147
+        ],
+        [
+          578,
+          1170
+        ],
+        [
+          72,
+          1170
+        ]
+      ]
+    },
+    {
+      "text": "traction in historical handwritten records, in: 2017 14th IAPR",
+      "confidence": 0.994,
+      "bbox": [
+        [
+          648,
+          1154
+        ],
+        [
+          1116,
+          1154
+        ],
+        [
+          1116,
+          1171
+        ],
+        [
+          648,
+          1171
+        ]
+      ]
+    },
+    {
+      "text": "ognizing texts of arbitrary shapes with 2d self-attention, in:",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          109,
+          1166
+        ],
+        [
+          579,
+          1166
+        ],
+        [
+          579,
+          1188
+        ],
+        [
+          109,
+          1188
+        ]
+      ]
+    },
+    {
+      "text": "International Conference on Document Analysis and Recogni-",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          648,
+          1174
+        ],
+        [
+          1116,
+          1174
+        ],
+        [
+          1116,
+          1191
+        ],
+        [
+          648,
+          1191
+        ]
+      ]
+    },
+    {
+      "text": "Proceedings of the IEEE/CVF Conference on Computer Vision",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          111,
+          1188
+        ],
+        [
+          578,
+          1188
+        ],
+        [
+          578,
+          1204
+        ],
+        [
+          111,
+          1204
+        ]
+      ]
+    },
+    {
+      "text": "tion (ICDAR), Vol. 01, 2017, pp. 13891394",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          646,
+          1190
+        ],
+        [
+          978,
+          1190
+        ],
+        [
+          978,
+          1210
+        ],
+        [
+          646,
+          1210
+        ]
+      ]
+    },
+    {
+      "text": "and Pattern Recognition Workshops, 2020, pp. 546547.",
+      "confidence": 0.979,
+      "bbox": [
+        [
+          108,
+          1202
+        ],
+        [
+          528,
+          1202
+        ],
+        [
+          528,
+          1223
+        ],
+        [
+          108,
+          1223
+        ]
+      ]
+    },
+    {
+      "text": "[31]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          612,
+          1208
+        ],
+        [
+          645,
+          1208
+        ],
+        [
+          645,
+          1228
+        ],
+        [
+          612,
+          1228
+        ]
+      ]
+    },
+    {
+      "text": "Y. Kessentini, T. Paquet, A. Benhamadou. A Multi-Lingual",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          644,
+          1209
+        ],
+        [
+          1116,
+          1209
+        ],
+        [
+          1116,
+          1226
+        ],
+        [
+          644,
+          1226
+        ]
+      ]
+    },
+    {
+      "text": "[14] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones,",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          72,
+          1221
+        ],
+        [
+          579,
+          1221
+        ],
+        [
+          579,
+          1244
+        ],
+        [
+          72,
+          1244
+        ]
+      ]
+    },
+    {
+      "text": "Recognition System for Arabic and Latin Handwriting. 10th In-",
+      "confidence": 0.988,
+      "bbox": [
+        [
+          648,
+          1229
+        ],
+        [
+          1116,
+          1229
+        ],
+        [
+          1116,
+          1246
+        ],
+        [
+          648,
+          1246
+        ]
+      ]
+    },
+    {
+      "text": "A. N. Gomez, u. Kaiser, I. Polosukhin, Attention is all you need,",
+      "confidence": 0.974,
+      "bbox": [
+        [
+          110,
+          1241
+        ],
+        [
+          577,
+          1241
+        ],
+        [
+          577,
+          1260
+        ],
+        [
+          110,
+          1260
+        ]
+      ]
+    },
+    {
+      "text": "ternational Conference on Document Analysis and Recognition,",
+      "confidence": 0.973,
+      "bbox": [
+        [
+          647,
+          1247
+        ],
+        [
+          1116,
+          1247
+        ],
+        [
+          1116,
+          1266
+        ],
+        [
+          647,
+          1266
+        ]
+      ]
+    },
+    {
+      "text": "in: Proceedings of the 31st International Conference on Neural",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          111,
+          1263
+        ],
+        [
+          576,
+          1263
+        ],
+        [
+          576,
+          1277
+        ],
+        [
+          111,
+          1277
+        ]
+      ]
+    },
+    {
+      "text": "ICDAR'2009, pp. 1196-1200, 2009.",
+      "confidence": 0.973,
+      "bbox": [
+        [
+          648,
+          1267
+        ],
+        [
+          904,
+          1267
+        ],
+        [
+          904,
+          1284
+        ],
+        [
+          648,
+          1284
+        ]
+      ]
+    },
+    {
+      "text": "Information Processing Systems, NIPS'17, Curran Associates",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          109,
+          1280
+        ],
+        [
+          578,
+          1280
+        ],
+        [
+          578,
+          1298
+        ],
+        [
+          109,
+          1298
+        ]
+      ]
+    },
+    {
+      "text": "Inc., Red Hook, NY, USA, 2017, p. 60006010.",
+      "confidence": 0.981,
+      "bbox": [
+        [
+          110,
+          1300
+        ],
+        [
+          460,
+          1300
+        ],
+        [
+          460,
+          1317
+        ],
+        [
+          110,
+          1317
+        ]
+      ]
+    },
+    {
+      "text": "[15]",
+      "confidence": 0.999,
+      "bbox": [
+        [
+          74,
+          1319
+        ],
+        [
+          107,
+          1319
+        ],
+        [
+          107,
+          1337
+        ],
+        [
+          74,
+          1337
+        ]
+      ]
+    },
+    {
+      "text": "S. A. Mahmoud, I. Ahmad, M. Alshayeb, W. G. Al-Khatib,",
+      "confidence": 0.974,
+      "bbox": [
+        [
+          107,
+          1319
+        ],
+        [
+          577,
+          1319
+        ],
+        [
+          577,
+          1335
+        ],
+        [
+          107,
+          1335
+        ]
+      ]
+    },
+    {
+      "text": "M. T. Parvez, G. A. Fink, V. M\u00e4rgner, H. El Abed, Khatt:",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          110,
+          1336
+        ],
+        [
+          577,
+          1336
+        ],
+        [
+          577,
+          1353
+        ],
+        [
+          110,
+          1353
+        ]
+      ]
+    },
+    {
+      "text": "Arabic offline handwritten text database, in: 2012 International",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          111,
+          1356
+        ],
+        [
+          577,
+          1356
+        ],
+        [
+          577,
+          1373
+        ],
+        [
+          111,
+          1373
+        ]
+      ]
+    },
+    {
+      "text": "Conference on Frontiers in Handwriting Recognition, IEEE,",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          110,
+          1375
+        ],
+        [
+          577,
+          1375
+        ],
+        [
+          577,
+          1393
+        ],
+        [
+          110,
+          1393
+        ]
+      ]
+    },
+    {
+      "text": "2012, pp. 449454.",
+      "confidence": 0.957,
+      "bbox": [
+        [
+          110,
+          1395
+        ],
+        [
+          248,
+          1395
+        ],
+        [
+          248,
+          1412
+        ],
+        [
+          110,
+          1412
+        ]
+      ]
+    },
+    {
+      "text": "[16]",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          73,
+          1413
+        ],
+        [
+          103,
+          1413
+        ],
+        [
+          103,
+          1432
+        ],
+        [
+          73,
+          1432
+        ]
+      ]
+    },
+    {
+      "text": "V. Romero, A. Forn\u00e9s, N. Serrano, J. A. S\u00e1nchez, A. H. Toselli.",
+      "confidence": 0.993,
+      "bbox": [
+        [
+          110,
+          1414
+        ],
+        [
+          575,
+          1414
+        ],
+        [
+          575,
+          1428
+        ],
+        [
+          110,
+          1428
+        ]
+      ]
+    },
+    {
+      "text": "V. Frinken, E. Vidal, J. Llad\u00f3s, The esposalles database: An",
+      "confidence": 0.99,
+      "bbox": [
+        [
+          110,
+          1432
+        ],
+        [
+          577,
+          1432
+        ],
+        [
+          577,
+          1451
+        ],
+        [
+          110,
+          1451
+        ]
+      ]
+    },
+    {
+      "text": "ancient marriage license corpus for off-line handwriting recog-",
+      "confidence": 0.982,
+      "bbox": [
+        [
+          108,
+          1449
+        ],
+        [
+          577,
+          1449
+        ],
+        [
+          577,
+          1473
+        ],
+        [
+          108,
+          1473
+        ]
+      ]
+    },
+    {
+      "text": "nition, Pattern Recognition 46 (6) (2013) 1658 \u2212 1669.",
+      "confidence": 0.972,
+      "bbox": [
+        [
+          110,
+          1471
+        ],
+        [
+          514,
+          1471
+        ],
+        [
+          514,
+          1487
+        ],
+        [
+          110,
+          1487
+        ]
+      ]
+    },
+    {
+      "text": "[17]",
+      "confidence": 0.987,
+      "bbox": [
+        [
+          75,
+          1489
+        ],
+        [
+          106,
+          1489
+        ],
+        [
+          106,
+          1505
+        ],
+        [
+          75,
+          1505
+        ]
+      ]
+    },
+    {
+      "text": "A. Chowdhury, L. Vig, An efficient end-to-end neural model for",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          103,
+          1488
+        ],
+        [
+          576,
+          1488
+        ],
+        [
+          576,
+          1505
+        ],
+        [
+          103,
+          1505
+        ]
+      ]
+    },
+    {
+      "text": "handwritten text recognition, arXiv preprint arXiv:1807.07965.",
+      "confidence": 0.987,
+      "bbox": [
+        [
+          111,
+          1508
+        ],
+        [
+          577,
+          1508
+        ],
+        [
+          577,
+          1525
+        ],
+        [
+          111,
+          1525
+        ]
+      ]
+    },
+    {
+      "text": "8",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          588,
+          1541
+        ],
+        [
+          602,
+          1541
+        ],
+        [
+          602,
+          1559
+        ],
+        [
+          588,
+          1559
+        ]
+      ]
+    }
+  ],
+  "page_classification": "HANDWRITTEN"
+}

@@ -1,0 +1,3460 @@
+{
+  "profile": {
+    "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+    "page_number": 7,
+    "width": 1191,
+    "height": 1684,
+    "dpi": 144,
+    "render_time_seconds": 0.01688719999992827,
+    "original_rgb_bytes": 6016932,
+    "preprocessed_width": 1191,
+    "preprocessed_height": 1684,
+    "preprocessed_rgb_bytes": 6016932,
+    "encoded_png_bytes": 464123,
+    "large_image_flag": false,
+    "preprocessing_steps_seconds": {
+      "rgb_conversion": 0.014132600000266393,
+      "grayscale": 0.0008611999996901432,
+      "noise_removal": 0.40338180000026114,
+      "local_contrast": 0.008609200000137207,
+      "rgb_output": 0.0043407999996816216
+    },
+    "classification_time_seconds": 0.019390499999644817,
+    "detection_time_seconds": 4.08561409999993,
+    "recognition_time_seconds": 80.17417799999885,
+    "angle_classification_time_seconds": 0.0,
+    "postprocessing_time_seconds": 0.09674480000103358,
+    "ocr_time_seconds": 84.35653689999981,
+    "save_json_time_seconds": 0.0,
+    "save_log_time_seconds": 0.0,
+    "memory_before_mb": 451.82421875,
+    "memory_peak_mb": 514.93359375,
+    "memory_after_mb": 457.37890625,
+    "cpu_percent_average": 0.0,
+    "cpu_percent_max": 0.0,
+    "process_threads_peak": 0,
+    "confidence": 0.992,
+    "detected_text_regions": 155,
+    "recognition_invocations": 26,
+    "average_recognition_time_per_region_seconds": 0.5172527612903152,
+    "longest_recognition_call_seconds": 9.091954499999702,
+    "shortest_recognition_call_seconds": 1.4685670000003483,
+    "total_time_seconds": 0.0
+  },
+  "ocr_result": {
+    "text": "Table 3: Comparison with transformer models on the test set of the IAM dataset.\nArchitecture\nUsing\nNumber\nSystem\nCER\nheads\nhidden size\nexternal data\nof parameters transformer\nlayers\nFPHR [6]\n6\n4\n260\nyes\n6.3 M\n6.3\nFPHR [6]\n6\n4\n260\nNo\n6.3 M\n6.7\nDAN [7]\n4\n8\n256\nyes\n7.6 M\n-\nOurs\n2\n1\n256\nNo\n3.9 M\n6.4\ncompetitive performance without the need for line segmen-\nTable 4: Comparison on the IAM dataset of the lite transformer with\ntation.\nthe state-of-the-art approaches.\nType\nArchitecture\nCER\nBluche et al [5]\n11.1\nTable 5: Evaluation of the lite transformer on the test set of RIMES\n2011 dataset\nParagraph level\nBluche et al [10]\n7.9\nType\nArchitecture\nCER\nBluche et al* [10]\n5.5\nYousef et al [29]\n4.7\nCoquenet et al [21]\n4.17\nPage level\nBluche et al [10]\n2.9\nChowdhury [17]\n8.10\nOurs\n2.9\nLine level\nBluche et al [5]\n7.00\nCoquenet et al [7]\n1.82\nKang et al [18]\n7.62\nCoquenet et al [23]\n3.04\nPage level\nBluche et al [5]\n16.2\nLine level\nCoquenet et al [7]\n2.63\nCarbonell [19]\n15.6\nPuigcerver et al [25]\n2.3\nFPHR [6]\n6.7\nWigington et al* [20]\n6.4\nFinally, we present in Table 6 the results on the KHATT\nOurs\n6.4\ndataset. Compared to models that require segmentation\n* System using external language model\nat line level [26, 27, 28], our model achieves the best per-\nformance with a CER of 13.48%. This result confirms the\nTable 4 provides the results on the IAM dataset. As one\nability of our model to recognize other handwritten scripts\ncan notice, our lite transformer model surpasses line-based\nby applying a simple transfer-learning process using only\nmethods that use accurate localization information during\npage-level labeled images.\ntraining and shows competitive results compared to page\nand paragraph levels-based systems.\nTable 6: Evaluation of the lite transformer on the test set of KHATT\nIn table 3, we concentrate on the comparison with state-\ndataset.\nof-the-art approaches based on transformer architecture.\nType\nArchitecture\nCER\nA special focus is given to the number of parameters in\nDeepKHATT [26]\n24.2\neach model and to the kind of data used in the train-\nLine level\nDeepLearnig based Arabic script [27]\n19.98\ning stage. Models proposed in [7, 6] have implemented\nCNN+BLSTM [28]\n15.8\nlarger transformer-based architectures, compared to our\nlite model. To train such models, a huge amount of data\nPage level Ours\n13.48\nhas been collected (up to 47 M text images in [6]), includ-\ning synthetic text images. It is interesting to highlight that\nour proposed lite transformer model achieves almost the\n5. Conclusion\nsame performance with a lower quantity of training data\nIn this paper, we proposed MSdocTr-Lite, a lite trans-\nand fewer model parameters. Furthermore, using the same\nformer model for full-page multi-script handwriting recog-\ndata, our model takes 569 seconds per epoch compared to\nnition. To solve the common problem of data scarcity,\n940 and 862 seconds per epoch when trained with [6, 7]\nMSdocTr-Lite can be trained on a reasonable amount of\nrespectively.\ndata thanks to its light architecture. Contrary to the ex-\nNext, we present our results on the RIMES dataset in\nisting segmentation-based approaches, the model can be\ncomparison to the state-of-the-art approaches in Table 5.\neasily fine-tuned on different scripts without using any\nIt can be seen that models from [22, 23, 25, 7] require the\nsegmentation label thanks to a simple transfer learning\nsegmentation bounding boxes annotation to be trained,\nprocess.\nwhich is cost-effective. While the models from [21, 7] and\nInteresting results have been obtained by MSdocTr-\nthe lite transformer are trained on page level to reach a\nLite on English, French, Arabic, and Spanish handwrit-\n7",
+    "confidence": 0.992,
+    "bounding_boxes": [
+      {
+        "text": "Table 3: Comparison with transformer models on the test set of the IAM dataset.",
+        "confidence": 0.976,
+        "bbox": [
+          [
+            285,
+            176
+          ],
+          [
+            894,
+            176
+          ],
+          [
+            894,
+            197
+          ],
+          [
+            285,
+            197
+          ]
+        ]
+      },
+      {
+        "text": "Architecture",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            297,
+            203
+          ],
+          [
+            410,
+            203
+          ],
+          [
+            410,
+            226
+          ],
+          [
+            297,
+            226
+          ]
+        ]
+      },
+      {
+        "text": "Using",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            562,
+            203
+          ],
+          [
+            618,
+            203
+          ],
+          [
+            618,
+            228
+          ],
+          [
+            562,
+            228
+          ]
+        ]
+      },
+      {
+        "text": "Number",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            701,
+            202
+          ],
+          [
+            778,
+            202
+          ],
+          [
+            778,
+            226
+          ],
+          [
+            701,
+            226
+          ]
+        ]
+      },
+      {
+        "text": "System",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            187,
+            214
+          ],
+          [
+            258,
+            214
+          ],
+          [
+            258,
+            239
+          ],
+          [
+            187,
+            239
+          ]
+        ]
+      },
+      {
+        "text": "CER",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            952,
+            213
+          ],
+          [
+            1002,
+            213
+          ],
+          [
+            1002,
+            239
+          ],
+          [
+            952,
+            239
+          ]
+        ]
+      },
+      {
+        "text": "heads",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            366,
+            238
+          ],
+          [
+            427,
+            238
+          ],
+          [
+            427,
+            259
+          ],
+          [
+            366,
+            259
+          ]
+        ]
+      },
+      {
+        "text": "hidden size",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            439,
+            236
+          ],
+          [
+            544,
+            236
+          ],
+          [
+            544,
+            259
+          ],
+          [
+            439,
+            259
+          ]
+        ]
+      },
+      {
+        "text": "external data",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            561,
+            229
+          ],
+          [
+            687,
+            229
+          ],
+          [
+            687,
+            249
+          ],
+          [
+            561,
+            249
+          ]
+        ]
+      },
+      {
+        "text": "of parameters transformer",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            700,
+            229
+          ],
+          [
+            933,
+            229
+          ],
+          [
+            933,
+            249
+          ],
+          [
+            700,
+            249
+          ]
+        ]
+      },
+      {
+        "text": "layers",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            297,
+            239
+          ],
+          [
+            354,
+            239
+          ],
+          [
+            354,
+            260
+          ],
+          [
+            297,
+            260
+          ]
+        ]
+      },
+      {
+        "text": "FPHR [6]",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            187,
+            268
+          ],
+          [
+            278,
+            268
+          ],
+          [
+            278,
+            295
+          ],
+          [
+            187,
+            295
+          ]
+        ]
+      },
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            296,
+            270
+          ],
+          [
+            313,
+            270
+          ],
+          [
+            313,
+            292
+          ],
+          [
+            296,
+            292
+          ]
+        ]
+      },
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            368,
+            271
+          ],
+          [
+            386,
+            271
+          ],
+          [
+            386,
+            292
+          ],
+          [
+            368,
+            292
+          ]
+        ]
+      },
+      {
+        "text": "260",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            441,
+            269
+          ],
+          [
+            479,
+            269
+          ],
+          [
+            479,
+            293
+          ],
+          [
+            441,
+            293
+          ]
+        ]
+      },
+      {
+        "text": "yes",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            559,
+            273
+          ],
+          [
+            597,
+            273
+          ],
+          [
+            597,
+            296
+          ],
+          [
+            559,
+            296
+          ]
+        ]
+      },
+      {
+        "text": "6.3 M",
+        "confidence": 0.929,
+        "bbox": [
+          [
+            701,
+            270
+          ],
+          [
+            759,
+            270
+          ],
+          [
+            759,
+            292
+          ],
+          [
+            701,
+            292
+          ]
+        ]
+      },
+      {
+        "text": "6.3",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            952,
+            269
+          ],
+          [
+            987,
+            269
+          ],
+          [
+            987,
+            293
+          ],
+          [
+            952,
+            293
+          ]
+        ]
+      },
+      {
+        "text": "FPHR [6]",
+        "confidence": 0.94,
+        "bbox": [
+          [
+            187,
+            294
+          ],
+          [
+            279,
+            294
+          ],
+          [
+            279,
+            318
+          ],
+          [
+            187,
+            318
+          ]
+        ]
+      },
+      {
+        "text": "6",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            295,
+            295
+          ],
+          [
+            312,
+            295
+          ],
+          [
+            312,
+            316
+          ],
+          [
+            295,
+            316
+          ]
+        ]
+      },
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            368,
+            296
+          ],
+          [
+            386,
+            296
+          ],
+          [
+            386,
+            316
+          ],
+          [
+            368,
+            316
+          ]
+        ]
+      },
+      {
+        "text": "260",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            442,
+            296
+          ],
+          [
+            479,
+            296
+          ],
+          [
+            479,
+            316
+          ],
+          [
+            442,
+            316
+          ]
+        ]
+      },
+      {
+        "text": "No",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            559,
+            295
+          ],
+          [
+            595,
+            295
+          ],
+          [
+            595,
+            318
+          ],
+          [
+            559,
+            318
+          ]
+        ]
+      },
+      {
+        "text": "6.3 M",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            700,
+            293
+          ],
+          [
+            760,
+            293
+          ],
+          [
+            760,
+            317
+          ],
+          [
+            700,
+            317
+          ]
+        ]
+      },
+      {
+        "text": "6.7",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            952,
+            294
+          ],
+          [
+            986,
+            294
+          ],
+          [
+            986,
+            318
+          ],
+          [
+            952,
+            318
+          ]
+        ]
+      },
+      {
+        "text": "DAN [7]",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            186,
+            317
+          ],
+          [
+            268,
+            317
+          ],
+          [
+            268,
+            344
+          ],
+          [
+            186,
+            344
+          ]
+        ]
+      },
+      {
+        "text": "4",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            296,
+            320
+          ],
+          [
+            313,
+            320
+          ],
+          [
+            313,
+            341
+          ],
+          [
+            296,
+            341
+          ]
+        ]
+      },
+      {
+        "text": "8",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            368,
+            320
+          ],
+          [
+            385,
+            320
+          ],
+          [
+            385,
+            341
+          ],
+          [
+            368,
+            341
+          ]
+        ]
+      },
+      {
+        "text": "256",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            441,
+            318
+          ],
+          [
+            479,
+            318
+          ],
+          [
+            479,
+            341
+          ],
+          [
+            441,
+            341
+          ]
+        ]
+      },
+      {
+        "text": "yes",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            559,
+            318
+          ],
+          [
+            597,
+            318
+          ],
+          [
+            597,
+            344
+          ],
+          [
+            559,
+            344
+          ]
+        ]
+      },
+      {
+        "text": "7.6 M",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            701,
+            319
+          ],
+          [
+            759,
+            319
+          ],
+          [
+            759,
+            341
+          ],
+          [
+            701,
+            341
+          ]
+        ]
+      },
+      {
+        "text": "-",
+        "confidence": 0.943,
+        "bbox": [
+          [
+            955,
+            327
+          ],
+          [
+            965,
+            327
+          ],
+          [
+            965,
+            337
+          ],
+          [
+            955,
+            337
+          ]
+        ]
+      },
+      {
+        "text": "Ours",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            187,
+            341
+          ],
+          [
+            238,
+            341
+          ],
+          [
+            238,
+            367
+          ],
+          [
+            187,
+            367
+          ]
+        ]
+      },
+      {
+        "text": "2",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            295,
+            343
+          ],
+          [
+            314,
+            343
+          ],
+          [
+            314,
+            366
+          ],
+          [
+            295,
+            366
+          ]
+        ]
+      },
+      {
+        "text": "1",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            368,
+            345
+          ],
+          [
+            385,
+            345
+          ],
+          [
+            385,
+            364
+          ],
+          [
+            368,
+            364
+          ]
+        ]
+      },
+      {
+        "text": "256",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            441,
+            342
+          ],
+          [
+            479,
+            342
+          ],
+          [
+            479,
+            365
+          ],
+          [
+            441,
+            365
+          ]
+        ]
+      },
+      {
+        "text": "No",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            559,
+            340
+          ],
+          [
+            596,
+            340
+          ],
+          [
+            596,
+            367
+          ],
+          [
+            559,
+            367
+          ]
+        ]
+      },
+      {
+        "text": "3.9 M",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            701,
+            343
+          ],
+          [
+            759,
+            343
+          ],
+          [
+            759,
+            364
+          ],
+          [
+            701,
+            364
+          ]
+        ]
+      },
+      {
+        "text": "6.4",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            952,
+            342
+          ],
+          [
+            987,
+            342
+          ],
+          [
+            987,
+            365
+          ],
+          [
+            952,
+            365
+          ]
+        ]
+      },
+      {
+        "text": "competitive performance without the need for line segmen-",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            611,
+            416
+          ],
+          [
+            1115,
+            416
+          ],
+          [
+            1115,
+            437
+          ],
+          [
+            611,
+            437
+          ]
+        ]
+      },
+      {
+        "text": "Table 4: Comparison on the IAM dataset of the lite transformer with",
+        "confidence": 0.977,
+        "bbox": [
+          [
+            75,
+            430
+          ],
+          [
+            577,
+            430
+          ],
+          [
+            577,
+            447
+          ],
+          [
+            75,
+            447
+          ]
+        ]
+      },
+      {
+        "text": "tation.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            608,
+            438
+          ],
+          [
+            673,
+            438
+          ],
+          [
+            673,
+            462
+          ],
+          [
+            608,
+            462
+          ]
+        ]
+      },
+      {
+        "text": "the state-of-the-art approaches.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            72,
+            448
+          ],
+          [
+            307,
+            448
+          ],
+          [
+            307,
+            467
+          ],
+          [
+            72,
+            467
+          ]
+        ]
+      },
+      {
+        "text": "Type",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            115,
+            473
+          ],
+          [
+            167,
+            473
+          ],
+          [
+            167,
+            499
+          ],
+          [
+            115,
+            499
+          ]
+        ]
+      },
+      {
+        "text": "Architecture",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            275,
+            472
+          ],
+          [
+            388,
+            472
+          ],
+          [
+            388,
+            496
+          ],
+          [
+            275,
+            496
+          ]
+        ]
+      },
+      {
+        "text": "CER",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            489,
+            473
+          ],
+          [
+            537,
+            473
+          ],
+          [
+            537,
+            495
+          ],
+          [
+            489,
+            495
+          ]
+        ]
+      },
+      {
+        "text": "Bluche et al [5]",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            274,
+            505
+          ],
+          [
+            413,
+            505
+          ],
+          [
+            413,
+            531
+          ],
+          [
+            274,
+            531
+          ]
+        ]
+      },
+      {
+        "text": "11.1",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            488,
+            506
+          ],
+          [
+            531,
+            506
+          ],
+          [
+            531,
+            529
+          ],
+          [
+            488,
+            529
+          ]
+        ]
+      },
+      {
+        "text": "Table 5: Evaluation of the lite transformer on the test set of RIMES",
+        "confidence": 0.979,
+        "bbox": [
+          [
+            613,
+            498
+          ],
+          [
+            1115,
+            498
+          ],
+          [
+            1115,
+            515
+          ],
+          [
+            613,
+            515
+          ]
+        ]
+      },
+      {
+        "text": "2011 dataset",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            612,
+            517
+          ],
+          [
+            710,
+            517
+          ],
+          [
+            710,
+            534
+          ],
+          [
+            612,
+            534
+          ]
+        ]
+      },
+      {
+        "text": "Paragraph level",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            117,
+            531
+          ],
+          [
+            257,
+            531
+          ],
+          [
+            257,
+            552
+          ],
+          [
+            117,
+            552
+          ]
+        ]
+      },
+      {
+        "text": "Bluche et al [10]",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            275,
+            531
+          ],
+          [
+            419,
+            531
+          ],
+          [
+            419,
+            552
+          ],
+          [
+            275,
+            552
+          ]
+        ]
+      },
+      {
+        "text": "7.9",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            488,
+            531
+          ],
+          [
+            523,
+            531
+          ],
+          [
+            523,
+            554
+          ],
+          [
+            488,
+            554
+          ]
+        ]
+      },
+      {
+        "text": "Type",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            684,
+            539
+          ],
+          [
+            736,
+            539
+          ],
+          [
+            736,
+            565
+          ],
+          [
+            684,
+            565
+          ]
+        ]
+      },
+      {
+        "text": "Architecture",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            797,
+            539
+          ],
+          [
+            909,
+            539
+          ],
+          [
+            909,
+            562
+          ],
+          [
+            797,
+            562
+          ]
+        ]
+      },
+      {
+        "text": "CER",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            995,
+            540
+          ],
+          [
+            1043,
+            540
+          ],
+          [
+            1043,
+            562
+          ],
+          [
+            995,
+            562
+          ]
+        ]
+      },
+      {
+        "text": "Bluche et al* [10]",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            277,
+            557
+          ],
+          [
+            429,
+            557
+          ],
+          [
+            429,
+            577
+          ],
+          [
+            277,
+            577
+          ]
+        ]
+      },
+      {
+        "text": "5.5",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            487,
+            555
+          ],
+          [
+            522,
+            555
+          ],
+          [
+            522,
+            578
+          ],
+          [
+            487,
+            578
+          ]
+        ]
+      },
+      {
+        "text": "Yousef et al [29]",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            277,
+            579
+          ],
+          [
+            425,
+            579
+          ],
+          [
+            425,
+            603
+          ],
+          [
+            277,
+            603
+          ]
+        ]
+      },
+      {
+        "text": "4.7",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            487,
+            579
+          ],
+          [
+            522,
+            579
+          ],
+          [
+            522,
+            603
+          ],
+          [
+            487,
+            603
+          ]
+        ]
+      },
+      {
+        "text": "Coquenet et al [21]",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            798,
+            573
+          ],
+          [
+            967,
+            573
+          ],
+          [
+            967,
+            597
+          ],
+          [
+            798,
+            597
+          ]
+        ]
+      },
+      {
+        "text": "4.17",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            994,
+            573
+          ],
+          [
+            1038,
+            573
+          ],
+          [
+            1038,
+            596
+          ],
+          [
+            994,
+            596
+          ]
+        ]
+      },
+      {
+        "text": "Page level",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            685,
+            597
+          ],
+          [
+            781,
+            597
+          ],
+          [
+            781,
+            621
+          ],
+          [
+            685,
+            621
+          ]
+        ]
+      },
+      {
+        "text": "Bluche et al [10]",
+        "confidence": 0.979,
+        "bbox": [
+          [
+            801,
+            599
+          ],
+          [
+            949,
+            599
+          ],
+          [
+            949,
+            620
+          ],
+          [
+            801,
+            620
+          ]
+        ]
+      },
+      {
+        "text": "2.9",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            993,
+            597
+          ],
+          [
+            1028,
+            597
+          ],
+          [
+            1028,
+            621
+          ],
+          [
+            993,
+            621
+          ]
+        ]
+      },
+      {
+        "text": "Chowdhury [17]",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            275,
+            625
+          ],
+          [
+            417,
+            625
+          ],
+          [
+            417,
+            651
+          ],
+          [
+            275,
+            651
+          ]
+        ]
+      },
+      {
+        "text": "8.10",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            488,
+            628
+          ],
+          [
+            530,
+            628
+          ],
+          [
+            530,
+            650
+          ],
+          [
+            488,
+            650
+          ]
+        ]
+      },
+      {
+        "text": "Ours",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            794,
+            619
+          ],
+          [
+            845,
+            619
+          ],
+          [
+            845,
+            644
+          ],
+          [
+            794,
+            644
+          ]
+        ]
+      },
+      {
+        "text": "2.9",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            993,
+            621
+          ],
+          [
+            1028,
+            621
+          ],
+          [
+            1028,
+            643
+          ],
+          [
+            993,
+            643
+          ]
+        ]
+      },
+      {
+        "text": "Line level",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            116,
+            651
+          ],
+          [
+            203,
+            651
+          ],
+          [
+            203,
+            672
+          ],
+          [
+            116,
+            672
+          ]
+        ]
+      },
+      {
+        "text": "Bluche et al [5]",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            275,
+            650
+          ],
+          [
+            411,
+            650
+          ],
+          [
+            411,
+            675
+          ],
+          [
+            275,
+            675
+          ]
+        ]
+      },
+      {
+        "text": "7.00",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            488,
+            651
+          ],
+          [
+            531,
+            651
+          ],
+          [
+            531,
+            673
+          ],
+          [
+            488,
+            673
+          ]
+        ]
+      },
+      {
+        "text": "Coquenet et al [7]",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            797,
+            644
+          ],
+          [
+            956,
+            644
+          ],
+          [
+            956,
+            668
+          ],
+          [
+            797,
+            668
+          ]
+        ]
+      },
+      {
+        "text": "1.82",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            993,
+            644
+          ],
+          [
+            1036,
+            644
+          ],
+          [
+            1036,
+            667
+          ],
+          [
+            993,
+            667
+          ]
+        ]
+      },
+      {
+        "text": "Kang et al [18]",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            274,
+            673
+          ],
+          [
+            409,
+            673
+          ],
+          [
+            409,
+            699
+          ],
+          [
+            274,
+            699
+          ]
+        ]
+      },
+      {
+        "text": "7.62",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            488,
+            675
+          ],
+          [
+            531,
+            675
+          ],
+          [
+            531,
+            698
+          ],
+          [
+            488,
+            698
+          ]
+        ]
+      },
+      {
+        "text": "Coquenet et al [23]",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            798,
+            692
+          ],
+          [
+            966,
+            692
+          ],
+          [
+            966,
+            716
+          ],
+          [
+            798,
+            716
+          ]
+        ]
+      },
+      {
+        "text": "3.04",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            993,
+            692
+          ],
+          [
+            1037,
+            692
+          ],
+          [
+            1037,
+            715
+          ],
+          [
+            993,
+            715
+          ]
+        ]
+      },
+      {
+        "text": "Page level",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            115,
+            722
+          ],
+          [
+            208,
+            722
+          ],
+          [
+            208,
+            746
+          ],
+          [
+            115,
+            746
+          ]
+        ]
+      },
+      {
+        "text": "Bluche et al [5]",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            274,
+            720
+          ],
+          [
+            411,
+            720
+          ],
+          [
+            411,
+            746
+          ],
+          [
+            274,
+            746
+          ]
+        ]
+      },
+      {
+        "text": "16.2",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            488,
+            722
+          ],
+          [
+            531,
+            722
+          ],
+          [
+            531,
+            745
+          ],
+          [
+            488,
+            745
+          ]
+        ]
+      },
+      {
+        "text": "Line level",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            687,
+            719
+          ],
+          [
+            774,
+            719
+          ],
+          [
+            774,
+            737
+          ],
+          [
+            687,
+            737
+          ]
+        ]
+      },
+      {
+        "text": "Coquenet et al [7]",
+        "confidence": 0.976,
+        "bbox": [
+          [
+            798,
+            718
+          ],
+          [
+            958,
+            718
+          ],
+          [
+            958,
+            739
+          ],
+          [
+            798,
+            739
+          ]
+        ]
+      },
+      {
+        "text": "2.63",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            993,
+            716
+          ],
+          [
+            1037,
+            716
+          ],
+          [
+            1037,
+            739
+          ],
+          [
+            993,
+            739
+          ]
+        ]
+      },
+      {
+        "text": "Carbonell [19]",
+        "confidence": 0.979,
+        "bbox": [
+          [
+            274,
+            743
+          ],
+          [
+            403,
+            743
+          ],
+          [
+            403,
+            771
+          ],
+          [
+            274,
+            771
+          ]
+        ]
+      },
+      {
+        "text": "15.6",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            486,
+            744
+          ],
+          [
+            532,
+            744
+          ],
+          [
+            532,
+            770
+          ],
+          [
+            486,
+            770
+          ]
+        ]
+      },
+      {
+        "text": "Puigcerver et al [25]",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            796,
+            741
+          ],
+          [
+            975,
+            741
+          ],
+          [
+            975,
+            765
+          ],
+          [
+            796,
+            765
+          ]
+        ]
+      },
+      {
+        "text": "2.3",
+        "confidence": 0.976,
+        "bbox": [
+          [
+            991,
+            740
+          ],
+          [
+            1028,
+            740
+          ],
+          [
+            1028,
+            764
+          ],
+          [
+            991,
+            764
+          ]
+        ]
+      },
+      {
+        "text": "FPHR [6]",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            273,
+            767
+          ],
+          [
+            365,
+            767
+          ],
+          [
+            365,
+            796
+          ],
+          [
+            273,
+            796
+          ]
+        ]
+      },
+      {
+        "text": "6.7",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            487,
+            770
+          ],
+          [
+            524,
+            770
+          ],
+          [
+            524,
+            793
+          ],
+          [
+            487,
+            793
+          ]
+        ]
+      },
+      {
+        "text": "Wigington et al* [20]",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            276,
+            794
+          ],
+          [
+            463,
+            794
+          ],
+          [
+            463,
+            818
+          ],
+          [
+            276,
+            818
+          ]
+        ]
+      },
+      {
+        "text": "6.4",
+        "confidence": 0.951,
+        "bbox": [
+          [
+            492,
+            794
+          ],
+          [
+            529,
+            794
+          ],
+          [
+            529,
+            817
+          ],
+          [
+            492,
+            817
+          ]
+        ]
+      },
+      {
+        "text": "Finally, we present in Table 6 the results on the KHATT",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            632,
+            800
+          ],
+          [
+            1117,
+            800
+          ],
+          [
+            1117,
+            820
+          ],
+          [
+            632,
+            820
+          ]
+        ]
+      },
+      {
+        "text": "Ours",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            274,
+            818
+          ],
+          [
+            323,
+            818
+          ],
+          [
+            323,
+            842
+          ],
+          [
+            274,
+            842
+          ]
+        ]
+      },
+      {
+        "text": "6.4",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            487,
+            817
+          ],
+          [
+            522,
+            817
+          ],
+          [
+            522,
+            842
+          ],
+          [
+            487,
+            842
+          ]
+        ]
+      },
+      {
+        "text": "dataset. Compared to models that require segmentation",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            612,
+            825
+          ],
+          [
+            1115,
+            825
+          ],
+          [
+            1115,
+            845
+          ],
+          [
+            612,
+            845
+          ]
+        ]
+      },
+      {
+        "text": "* System using external language model",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            179,
+            847
+          ],
+          [
+            475,
+            847
+          ],
+          [
+            475,
+            867
+          ],
+          [
+            179,
+            867
+          ]
+        ]
+      },
+      {
+        "text": "at line level [26, 27, 28], our model achieves the best per-",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            611,
+            848
+          ],
+          [
+            1117,
+            848
+          ],
+          [
+            1117,
+            870
+          ],
+          [
+            611,
+            870
+          ]
+        ]
+      },
+      {
+        "text": "formance with a CER of 13.48%. This result confirms the",
+        "confidence": 0.975,
+        "bbox": [
+          [
+            612,
+            873
+          ],
+          [
+            1117,
+            873
+          ],
+          [
+            1117,
+            893
+          ],
+          [
+            612,
+            893
+          ]
+        ]
+      },
+      {
+        "text": "Table 4 provides the results on the IAM dataset. As one",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            94,
+            901
+          ],
+          [
+            578,
+            901
+          ],
+          [
+            578,
+            922
+          ],
+          [
+            94,
+            922
+          ]
+        ]
+      },
+      {
+        "text": "ability of our model to recognize other handwritten scripts",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            612,
+            898
+          ],
+          [
+            1117,
+            898
+          ],
+          [
+            1117,
+            917
+          ],
+          [
+            612,
+            917
+          ]
+        ]
+      },
+      {
+        "text": "can notice, our lite transformer model surpasses line-based",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            72,
+            924
+          ],
+          [
+            578,
+            924
+          ],
+          [
+            578,
+            946
+          ],
+          [
+            72,
+            946
+          ]
+        ]
+      },
+      {
+        "text": "by applying a simple transfer-learning process using only",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            612,
+            919
+          ],
+          [
+            1115,
+            919
+          ],
+          [
+            1115,
+            941
+          ],
+          [
+            612,
+            941
+          ]
+        ]
+      },
+      {
+        "text": "methods that use accurate localization information during",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            72,
+            949
+          ],
+          [
+            578,
+            949
+          ],
+          [
+            578,
+            971
+          ],
+          [
+            72,
+            971
+          ]
+        ]
+      },
+      {
+        "text": "page-level labeled images.",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            608,
+            941
+          ],
+          [
+            838,
+            941
+          ],
+          [
+            838,
+            968
+          ],
+          [
+            608,
+            968
+          ]
+        ]
+      },
+      {
+        "text": "training and shows competitive results compared to page",
+        "confidence": 0.963,
+        "bbox": [
+          [
+            73,
+            973
+          ],
+          [
+            578,
+            973
+          ],
+          [
+            578,
+            996
+          ],
+          [
+            73,
+            996
+          ]
+        ]
+      },
+      {
+        "text": "and paragraph levels-based systems.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            73,
+            999
+          ],
+          [
+            391,
+            999
+          ],
+          [
+            391,
+            1019
+          ],
+          [
+            73,
+            1019
+          ]
+        ]
+      },
+      {
+        "text": "Table 6: Evaluation of the lite transformer on the test set of KHATT",
+        "confidence": 0.971,
+        "bbox": [
+          [
+            613,
+            1006
+          ],
+          [
+            1116,
+            1006
+          ],
+          [
+            1116,
+            1023
+          ],
+          [
+            613,
+            1023
+          ]
+        ]
+      },
+      {
+        "text": "In table 3, we concentrate on the comparison with state-",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            93,
+            1023
+          ],
+          [
+            578,
+            1023
+          ],
+          [
+            578,
+            1045
+          ],
+          [
+            93,
+            1045
+          ]
+        ]
+      },
+      {
+        "text": "dataset.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            610,
+            1025
+          ],
+          [
+            671,
+            1025
+          ],
+          [
+            671,
+            1042
+          ],
+          [
+            610,
+            1042
+          ]
+        ]
+      },
+      {
+        "text": "of-the-art approaches based on transformer architecture.",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            72,
+            1047
+          ],
+          [
+            578,
+            1047
+          ],
+          [
+            578,
+            1068
+          ],
+          [
+            72,
+            1068
+          ]
+        ]
+      },
+      {
+        "text": "Type",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            607,
+            1045
+          ],
+          [
+            663,
+            1045
+          ],
+          [
+            663,
+            1075
+          ],
+          [
+            607,
+            1075
+          ]
+        ]
+      },
+      {
+        "text": "Architecture",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            722,
+            1047
+          ],
+          [
+            835,
+            1047
+          ],
+          [
+            835,
+            1071
+          ],
+          [
+            722,
+            1071
+          ]
+        ]
+      },
+      {
+        "text": "CER",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1068,
+            1048
+          ],
+          [
+            1118,
+            1048
+          ],
+          [
+            1118,
+            1070
+          ],
+          [
+            1068,
+            1070
+          ]
+        ]
+      },
+      {
+        "text": "A special focus is given to the number of parameters in",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            74,
+            1071
+          ],
+          [
+            578,
+            1071
+          ],
+          [
+            578,
+            1091
+          ],
+          [
+            74,
+            1091
+          ]
+        ]
+      },
+      {
+        "text": "DeepKHATT [26]",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            722,
+            1081
+          ],
+          [
+            879,
+            1081
+          ],
+          [
+            879,
+            1105
+          ],
+          [
+            722,
+            1105
+          ]
+        ]
+      },
+      {
+        "text": "24.2",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1067,
+            1080
+          ],
+          [
+            1113,
+            1080
+          ],
+          [
+            1113,
+            1103
+          ],
+          [
+            1067,
+            1103
+          ]
+        ]
+      },
+      {
+        "text": "each model and to the kind of data used in the train-",
+        "confidence": 0.973,
+        "bbox": [
+          [
+            73,
+            1096
+          ],
+          [
+            578,
+            1096
+          ],
+          [
+            578,
+            1116
+          ],
+          [
+            73,
+            1116
+          ]
+        ]
+      },
+      {
+        "text": "Line level",
+        "confidence": 0.97,
+        "bbox": [
+          [
+            611,
+            1106
+          ],
+          [
+            700,
+            1106
+          ],
+          [
+            700,
+            1127
+          ],
+          [
+            611,
+            1127
+          ]
+        ]
+      },
+      {
+        "text": "DeepLearnig based Arabic script [27]",
+        "confidence": 0.978,
+        "bbox": [
+          [
+            720,
+            1105
+          ],
+          [
+            1049,
+            1105
+          ],
+          [
+            1049,
+            1128
+          ],
+          [
+            720,
+            1128
+          ]
+        ]
+      },
+      {
+        "text": "19.98",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1066,
+            1105
+          ],
+          [
+            1120,
+            1105
+          ],
+          [
+            1120,
+            1127
+          ],
+          [
+            1066,
+            1127
+          ]
+        ]
+      },
+      {
+        "text": "ing stage. Models proposed in [7, 6] have implemented",
+        "confidence": 0.961,
+        "bbox": [
+          [
+            72,
+            1119
+          ],
+          [
+            578,
+            1119
+          ],
+          [
+            578,
+            1141
+          ],
+          [
+            72,
+            1141
+          ]
+        ]
+      },
+      {
+        "text": "CNN+BLSTM [28]",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            722,
+            1129
+          ],
+          [
+            891,
+            1129
+          ],
+          [
+            891,
+            1152
+          ],
+          [
+            722,
+            1152
+          ]
+        ]
+      },
+      {
+        "text": "15.8",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1067,
+            1130
+          ],
+          [
+            1112,
+            1130
+          ],
+          [
+            1112,
+            1152
+          ],
+          [
+            1067,
+            1152
+          ]
+        ]
+      },
+      {
+        "text": "larger transformer-based architectures, compared to our",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            73,
+            1144
+          ],
+          [
+            578,
+            1144
+          ],
+          [
+            578,
+            1165
+          ],
+          [
+            73,
+            1165
+          ]
+        ]
+      },
+      {
+        "text": "lite model. To train such models, a huge amount of data",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            72,
+            1168
+          ],
+          [
+            579,
+            1168
+          ],
+          [
+            579,
+            1189
+          ],
+          [
+            72,
+            1189
+          ]
+        ]
+      },
+      {
+        "text": "Page level Ours",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            611,
+            1177
+          ],
+          [
+            771,
+            1177
+          ],
+          [
+            771,
+            1200
+          ],
+          [
+            611,
+            1200
+          ]
+        ]
+      },
+      {
+        "text": "13.48",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1066,
+            1175
+          ],
+          [
+            1121,
+            1175
+          ],
+          [
+            1121,
+            1200
+          ],
+          [
+            1066,
+            1200
+          ]
+        ]
+      },
+      {
+        "text": "has been collected (up to 47 M text images in [6]), includ-",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            73,
+            1192
+          ],
+          [
+            577,
+            1192
+          ],
+          [
+            577,
+            1211
+          ],
+          [
+            73,
+            1211
+          ]
+        ]
+      },
+      {
+        "text": "ing synthetic text images. It is interesting to highlight that",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            73,
+            1214
+          ],
+          [
+            578,
+            1214
+          ],
+          [
+            578,
+            1236
+          ],
+          [
+            73,
+            1236
+          ]
+        ]
+      },
+      {
+        "text": "our proposed lite transformer model achieves almost the",
+        "confidence": 0.981,
+        "bbox": [
+          [
+            73,
+            1238
+          ],
+          [
+            579,
+            1238
+          ],
+          [
+            579,
+            1260
+          ],
+          [
+            73,
+            1260
+          ]
+        ]
+      },
+      {
+        "text": "5. Conclusion",
+        "confidence": 0.967,
+        "bbox": [
+          [
+            615,
+            1237
+          ],
+          [
+            756,
+            1237
+          ],
+          [
+            756,
+            1257
+          ],
+          [
+            615,
+            1257
+          ]
+        ]
+      },
+      {
+        "text": "same performance with a lower quantity of training data",
+        "confidence": 0.979,
+        "bbox": [
+          [
+            73,
+            1264
+          ],
+          [
+            579,
+            1264
+          ],
+          [
+            579,
+            1284
+          ],
+          [
+            73,
+            1284
+          ]
+        ]
+      },
+      {
+        "text": "In this paper, we proposed MSdocTr-Lite, a lite trans-",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            630,
+            1264
+          ],
+          [
+            1116,
+            1264
+          ],
+          [
+            1116,
+            1287
+          ],
+          [
+            630,
+            1287
+          ]
+        ]
+      },
+      {
+        "text": "and fewer model parameters. Furthermore, using the same",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            73,
+            1286
+          ],
+          [
+            579,
+            1286
+          ],
+          [
+            579,
+            1309
+          ],
+          [
+            73,
+            1309
+          ]
+        ]
+      },
+      {
+        "text": "former model for full-page multi-script handwriting recog-",
+        "confidence": 0.994,
+        "bbox": [
+          [
+            610,
+            1286
+          ],
+          [
+            1115,
+            1286
+          ],
+          [
+            1115,
+            1313
+          ],
+          [
+            610,
+            1313
+          ]
+        ]
+      },
+      {
+        "text": "data, our model takes 569 seconds per epoch compared to",
+        "confidence": 0.977,
+        "bbox": [
+          [
+            73,
+            1312
+          ],
+          [
+            579,
+            1312
+          ],
+          [
+            579,
+            1332
+          ],
+          [
+            73,
+            1332
+          ]
+        ]
+      },
+      {
+        "text": "nition. To solve the common problem of data scarcity,",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            610,
+            1313
+          ],
+          [
+            1115,
+            1313
+          ],
+          [
+            1115,
+            1333
+          ],
+          [
+            610,
+            1333
+          ]
+        ]
+      },
+      {
+        "text": "940 and 862 seconds per epoch when trained with [6, 7]",
+        "confidence": 0.972,
+        "bbox": [
+          [
+            72,
+            1333
+          ],
+          [
+            577,
+            1333
+          ],
+          [
+            577,
+            1355
+          ],
+          [
+            72,
+            1355
+          ]
+        ]
+      },
+      {
+        "text": "MSdocTr-Lite can be trained on a reasonable amount of",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            611,
+            1335
+          ],
+          [
+            1118,
+            1335
+          ],
+          [
+            1118,
+            1356
+          ],
+          [
+            611,
+            1356
+          ]
+        ]
+      },
+      {
+        "text": "respectively.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            71,
+            1358
+          ],
+          [
+            182,
+            1358
+          ],
+          [
+            182,
+            1381
+          ],
+          [
+            71,
+            1381
+          ]
+        ]
+      },
+      {
+        "text": "data thanks to its light architecture. Contrary to the ex-",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            613,
+            1361
+          ],
+          [
+            1117,
+            1361
+          ],
+          [
+            1117,
+            1381
+          ],
+          [
+            613,
+            1381
+          ]
+        ]
+      },
+      {
+        "text": "Next, we present our results on the RIMES dataset in",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            92,
+            1384
+          ],
+          [
+            579,
+            1384
+          ],
+          [
+            579,
+            1407
+          ],
+          [
+            92,
+            1407
+          ]
+        ]
+      },
+      {
+        "text": "isting segmentation-based approaches, the model can be",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            611,
+            1385
+          ],
+          [
+            1117,
+            1385
+          ],
+          [
+            1117,
+            1405
+          ],
+          [
+            611,
+            1405
+          ]
+        ]
+      },
+      {
+        "text": "comparison to the state-of-the-art approaches in Table 5.",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            72,
+            1408
+          ],
+          [
+            579,
+            1408
+          ],
+          [
+            579,
+            1430
+          ],
+          [
+            72,
+            1430
+          ]
+        ]
+      },
+      {
+        "text": "easily fine-tuned on different scripts without using any",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            611,
+            1408
+          ],
+          [
+            1117,
+            1408
+          ],
+          [
+            1117,
+            1431
+          ],
+          [
+            611,
+            1431
+          ]
+        ]
+      },
+      {
+        "text": "It can be seen that models from [22, 23, 25, 7] require the",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            72,
+            1432
+          ],
+          [
+            579,
+            1432
+          ],
+          [
+            579,
+            1453
+          ],
+          [
+            72,
+            1453
+          ]
+        ]
+      },
+      {
+        "text": "segmentation label thanks to a simple transfer learning",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            610,
+            1433
+          ],
+          [
+            1117,
+            1433
+          ],
+          [
+            1117,
+            1455
+          ],
+          [
+            610,
+            1455
+          ]
+        ]
+      },
+      {
+        "text": "segmentation bounding boxes annotation to be trained,",
+        "confidence": 0.979,
+        "bbox": [
+          [
+            72,
+            1456
+          ],
+          [
+            578,
+            1456
+          ],
+          [
+            578,
+            1478
+          ],
+          [
+            72,
+            1478
+          ]
+        ]
+      },
+      {
+        "text": "process.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            609,
+            1459
+          ],
+          [
+            682,
+            1459
+          ],
+          [
+            682,
+            1478
+          ],
+          [
+            609,
+            1478
+          ]
+        ]
+      },
+      {
+        "text": "which is cost-effective. While the models from [21, 7] and",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            75,
+            1481
+          ],
+          [
+            577,
+            1481
+          ],
+          [
+            577,
+            1498
+          ],
+          [
+            75,
+            1498
+          ]
+        ]
+      },
+      {
+        "text": "Interesting results have been obtained by MSdocTr-",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            630,
+            1480
+          ],
+          [
+            1115,
+            1480
+          ],
+          [
+            1115,
+            1500
+          ],
+          [
+            630,
+            1500
+          ]
+        ]
+      },
+      {
+        "text": "the lite transformer are trained on page level to reach a",
+        "confidence": 0.961,
+        "bbox": [
+          [
+            73,
+            1504
+          ],
+          [
+            581,
+            1504
+          ],
+          [
+            581,
+            1524
+          ],
+          [
+            73,
+            1524
+          ]
+        ]
+      },
+      {
+        "text": "Lite on English, French, Arabic, and Spanish handwrit-",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            610,
+            1504
+          ],
+          [
+            1116,
+            1504
+          ],
+          [
+            1116,
+            1524
+          ],
+          [
+            610,
+            1524
+          ]
+        ]
+      },
+      {
+        "text": "7",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            586,
+            1539
+          ],
+          [
+            604,
+            1539
+          ],
+          [
+            604,
+            1560
+          ],
+          [
+            586,
+            1560
+          ]
+        ]
+      }
+    ]
+  }
+}

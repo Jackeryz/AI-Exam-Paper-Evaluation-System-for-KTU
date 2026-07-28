@@ -1,0 +1,32 @@
+{
+  "text": "OCRsandbox test",
+  "confidence": 0.997,
+  "processing_time": 113.48111339999969,
+  "engine_used": "paddleocr",
+  "page_number": 1,
+  "bounding_boxes": [
+    {
+      "text": "OCRsandbox test",
+      "confidence": 0.997,
+      "bbox": [
+        [
+          37,
+          77
+        ],
+        [
+          121,
+          77
+        ],
+        [
+          121,
+          93
+        ],
+        [
+          37,
+          93
+        ]
+      ]
+    }
+  ],
+  "page_classification": "HANDWRITTEN"
+}

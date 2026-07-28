@@ -1,0 +1,1800 @@
+{
+  "model_initialization": {
+    "time_seconds": 19.596012700000074,
+    "load_count": 1,
+    "loaded_once_for_all_pages": true,
+    "angle_classification_enabled": false,
+    "paddle_cpu_num_environment": "1"
+  },
+  "execution": {
+    "page_processing_mode": "sequential",
+    "rendering_library": "PyMuPDF (fitz)",
+    "render_scale": 2,
+    "cpu_count_logical": 4,
+    "cpu_samples": [
+      {
+        "cpu_percent": 249.7,
+        "rss_mb": 697.12890625,
+        "threads": 17
+      },
+      {
+        "cpu_percent": 287.5,
+        "rss_mb": 714.05078125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 79.8,
+        "rss_mb": 700.28515625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 86.0,
+        "rss_mb": 751.375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 149.0,
+        "rss_mb": 792.39453125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.9,
+        "rss_mb": 746.23046875,
+        "threads": 21
+      },
+      {
+        "cpu_percent": 177.2,
+        "rss_mb": 747.296875,
+        "threads": 21
+      },
+      {
+        "cpu_percent": 172.7,
+        "rss_mb": 756.703125,
+        "threads": 23
+      },
+      {
+        "cpu_percent": 170.6,
+        "rss_mb": 761.27734375,
+        "threads": 23
+      },
+      {
+        "cpu_percent": 166.1,
+        "rss_mb": 776.3984375,
+        "threads": 23
+      },
+      {
+        "cpu_percent": 166.8,
+        "rss_mb": 765.92578125,
+        "threads": 23
+      },
+      {
+        "cpu_percent": 172.8,
+        "rss_mb": 763.6171875,
+        "threads": 23
+      },
+      {
+        "cpu_percent": 170.5,
+        "rss_mb": 766.33984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 161.0,
+        "rss_mb": 767.33984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 159.4,
+        "rss_mb": 765.2421875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.1,
+        "rss_mb": 768.33984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 174.9,
+        "rss_mb": 777.51953125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 171.9,
+        "rss_mb": 784.21484375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 174.4,
+        "rss_mb": 759.3671875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 166.9,
+        "rss_mb": 769.671875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 306.2,
+        "rss_mb": 770.7734375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 113.5,
+        "rss_mb": 759.31640625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 147.4,
+        "rss_mb": 741.57421875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 172.7,
+        "rss_mb": 673.73828125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 138.9,
+        "rss_mb": 674.4296875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 140.0,
+        "rss_mb": 675.6640625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 169.7,
+        "rss_mb": 678.19140625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.2,
+        "rss_mb": 676.5859375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 147.4,
+        "rss_mb": 679.69140625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.7,
+        "rss_mb": 679.046875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.4,
+        "rss_mb": 679.9765625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.3,
+        "rss_mb": 682.578125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.7,
+        "rss_mb": 680.29296875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.2,
+        "rss_mb": 680.109375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.0,
+        "rss_mb": 677.91796875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 167.9,
+        "rss_mb": 683.20703125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 167.6,
+        "rss_mb": 683.3125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.6,
+        "rss_mb": 677.97265625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 171.2,
+        "rss_mb": 678.1796875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 162.8,
+        "rss_mb": 678.21484375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.1,
+        "rss_mb": 681.41796875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.3,
+        "rss_mb": 675.59765625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 293.8,
+        "rss_mb": 678.8828125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 342.5,
+        "rss_mb": 679.76171875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 142.7,
+        "rss_mb": 693.13671875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 145.6,
+        "rss_mb": 519.3984375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 163.1,
+        "rss_mb": 451.60546875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.8,
+        "rss_mb": 454.04296875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.0,
+        "rss_mb": 453.76953125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.8,
+        "rss_mb": 456.62109375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.8,
+        "rss_mb": 459.4921875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 156.6,
+        "rss_mb": 457.0703125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.2,
+        "rss_mb": 460.609375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 171.1,
+        "rss_mb": 459.11328125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.2,
+        "rss_mb": 458.41796875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.7,
+        "rss_mb": 456.26953125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.6,
+        "rss_mb": 458.8671875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 176.5,
+        "rss_mb": 458.62890625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 174.5,
+        "rss_mb": 458.80078125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.8,
+        "rss_mb": 456.28515625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.3,
+        "rss_mb": 459.07421875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 172.2,
+        "rss_mb": 459.41015625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 166.2,
+        "rss_mb": 459.34765625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 160.6,
+        "rss_mb": 460.16796875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 181.2,
+        "rss_mb": 455.046875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 240.8,
+        "rss_mb": 456.859375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 327.2,
+        "rss_mb": 458.05078125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 114.2,
+        "rss_mb": 459.07421875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 156.7,
+        "rss_mb": 522.2890625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 163.0,
+        "rss_mb": 454.515625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 131.8,
+        "rss_mb": 454.515625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 163.9,
+        "rss_mb": 458.07421875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 178.5,
+        "rss_mb": 459.28125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 180.6,
+        "rss_mb": 459.28515625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 176.0,
+        "rss_mb": 457.76171875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 154.4,
+        "rss_mb": 457.9453125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.5,
+        "rss_mb": 458.3203125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 169.7,
+        "rss_mb": 462.25390625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 175.7,
+        "rss_mb": 460.22265625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 171.0,
+        "rss_mb": 462.8828125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.3,
+        "rss_mb": 462.97265625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 154.6,
+        "rss_mb": 460.73046875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.5,
+        "rss_mb": 460.74609375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 165.3,
+        "rss_mb": 460.9375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 172.8,
+        "rss_mb": 460.953125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 169.1,
+        "rss_mb": 461.19140625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 138.4,
+        "rss_mb": 460.671875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.0,
+        "rss_mb": 458.40234375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.9,
+        "rss_mb": 456.71875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 246.0,
+        "rss_mb": 450.12890625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 344.0,
+        "rss_mb": 451.5,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 146.3,
+        "rss_mb": 454.1484375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 156.2,
+        "rss_mb": 507.65234375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.1,
+        "rss_mb": 454.78125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 184.4,
+        "rss_mb": 454.78515625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.1,
+        "rss_mb": 460.13671875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 179.4,
+        "rss_mb": 461.48828125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 164.2,
+        "rss_mb": 461.05859375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 172.3,
+        "rss_mb": 464.2890625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.9,
+        "rss_mb": 462.27734375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 176.8,
+        "rss_mb": 464.546875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 173.0,
+        "rss_mb": 465.22265625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.3,
+        "rss_mb": 462.54296875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.3,
+        "rss_mb": 464.94921875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.2,
+        "rss_mb": 465.2109375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.6,
+        "rss_mb": 465.21875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 170.8,
+        "rss_mb": 465.25390625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 172.6,
+        "rss_mb": 462.77734375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.8,
+        "rss_mb": 462.79296875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.1,
+        "rss_mb": 462.98046875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 171.7,
+        "rss_mb": 462.99609375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 167.8,
+        "rss_mb": 470.25,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.2,
+        "rss_mb": 463.12890625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 305.9,
+        "rss_mb": 462.76953125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 299.7,
+        "rss_mb": 463.7734375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 93.2,
+        "rss_mb": 489.4453125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 133.4,
+        "rss_mb": 514.421875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.2,
+        "rss_mb": 459.9609375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 167.8,
+        "rss_mb": 460.5625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.2,
+        "rss_mb": 461.62890625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.1,
+        "rss_mb": 462.68359375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.7,
+        "rss_mb": 465.1875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 171.2,
+        "rss_mb": 463.046875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 167.8,
+        "rss_mb": 463.20703125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 165.8,
+        "rss_mb": 463.87890625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 171.3,
+        "rss_mb": 466.91015625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.3,
+        "rss_mb": 463.88671875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 167.5,
+        "rss_mb": 466.92578125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 162.6,
+        "rss_mb": 464.56640625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 169.6,
+        "rss_mb": 470.265625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 173.3,
+        "rss_mb": 466.9453125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 170.3,
+        "rss_mb": 473.08203125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 166.5,
+        "rss_mb": 466.63671875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 175.2,
+        "rss_mb": 465.9375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 281.2,
+        "rss_mb": 465.08203125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 344.7,
+        "rss_mb": 466.0703125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 111.2,
+        "rss_mb": 512.5,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 155.0,
+        "rss_mb": 514.93359375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 166.3,
+        "rss_mb": 461.953125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 177.6,
+        "rss_mb": 461.97265625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 176.6,
+        "rss_mb": 461.984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 156.2,
+        "rss_mb": 461.984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 180.0,
+        "rss_mb": 461.984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 177.8,
+        "rss_mb": 461.984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 178.9,
+        "rss_mb": 461.99609375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 177.9,
+        "rss_mb": 461.99609375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 176.0,
+        "rss_mb": 462.0,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 175.8,
+        "rss_mb": 462.01171875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 173.2,
+        "rss_mb": 462.01171875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 172.7,
+        "rss_mb": 462.01171875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 174.5,
+        "rss_mb": 462.05859375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 176.8,
+        "rss_mb": 462.05859375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 182.9,
+        "rss_mb": 462.07421875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 177.6,
+        "rss_mb": 462.12890625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 181.0,
+        "rss_mb": 462.25390625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 171.9,
+        "rss_mb": 463.38671875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 173.7,
+        "rss_mb": 469.69921875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 173.1,
+        "rss_mb": 469.10546875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 171.9,
+        "rss_mb": 469.27734375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.4,
+        "rss_mb": 466.984375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 168.4,
+        "rss_mb": 472.4296875,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 166.7,
+        "rss_mb": 467.234375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 171.5,
+        "rss_mb": 467.265625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 150.4,
+        "rss_mb": 473.015625,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 99.9,
+        "rss_mb": 471.703125,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 262.5,
+        "rss_mb": 472.4375,
+        "threads": 18
+      },
+      {
+        "cpu_percent": 306.2,
+        "rss_mb": 473.1328125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 260.4,
+        "rss_mb": 473.51171875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 120.2,
+        "rss_mb": 464.76953125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 87.5,
+        "rss_mb": 462.078125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 62.5,
+        "rss_mb": 486.99609375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 129.2,
+        "rss_mb": 521.93359375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 131.2,
+        "rss_mb": 467.87890625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 87.7,
+        "rss_mb": 468.953125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 130.0,
+        "rss_mb": 468.95703125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 116.1,
+        "rss_mb": 468.95703125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 131.9,
+        "rss_mb": 468.95703125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 135.3,
+        "rss_mb": 468.95703125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 138.7,
+        "rss_mb": 469.5390625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 138.5,
+        "rss_mb": 470.30078125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 148.2,
+        "rss_mb": 471.17578125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 170.3,
+        "rss_mb": 473.6015625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 165.9,
+        "rss_mb": 473.90234375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 167.2,
+        "rss_mb": 473.9921875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 172.3,
+        "rss_mb": 474.1796875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 167.0,
+        "rss_mb": 471.9140625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 171.8,
+        "rss_mb": 475.265625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 170.0,
+        "rss_mb": 475.359375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 167.5,
+        "rss_mb": 472.9609375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 166.0,
+        "rss_mb": 476.2578125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 167.7,
+        "rss_mb": 472.98046875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 167.6,
+        "rss_mb": 472.9921875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 162.0,
+        "rss_mb": 475.58984375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 156.6,
+        "rss_mb": 468.62890625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 160.9,
+        "rss_mb": 476.68359375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 170.9,
+        "rss_mb": 476.19921875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 159.9,
+        "rss_mb": 475.98828125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 166.6,
+        "rss_mb": 473.9296875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 173.5,
+        "rss_mb": 472.390625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 237.5,
+        "rss_mb": 476.0703125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 356.7,
+        "rss_mb": 477.0390625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 99.9,
+        "rss_mb": 498.9453125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 154.0,
+        "rss_mb": 522.5,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 181.7,
+        "rss_mb": 469.37890625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 175.4,
+        "rss_mb": 469.65625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 169.0,
+        "rss_mb": 471.68359375,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 165.4,
+        "rss_mb": 472.765625,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 169.2,
+        "rss_mb": 472.953125,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 162.9,
+        "rss_mb": 475.1171875,
+        "threads": 19
+      },
+      {
+        "cpu_percent": 167.5,
+        "rss_mb": 475.41796875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 171.4,
+        "rss_mb": 473.62890625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 165.6,
+        "rss_mb": 475.26171875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 169.1,
+        "rss_mb": 476.4140625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 173.9,
+        "rss_mb": 476.83203125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 175.2,
+        "rss_mb": 482.58203125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 168.2,
+        "rss_mb": 487.40625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 178.5,
+        "rss_mb": 479.74609375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 227.0,
+        "rss_mb": 476.75390625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 325.8,
+        "rss_mb": 475.796875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 107.0,
+        "rss_mb": 466.23046875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 154.9,
+        "rss_mb": 526.33203125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 148.6,
+        "rss_mb": 476.234375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 168.4,
+        "rss_mb": 480.3984375,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 293.8,
+        "rss_mb": 478.96875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 271.1,
+        "rss_mb": 479.671875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 149.8,
+        "rss_mb": 468.30078125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 150.8,
+        "rss_mb": 542.98828125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 169.4,
+        "rss_mb": 475.94921875,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 169.3,
+        "rss_mb": 476.20703125,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 165.2,
+        "rss_mb": 476.640625,
+        "threads": 20
+      },
+      {
+        "cpu_percent": 174.0,
+        "rss_mb": 475.75,
+        "threads": 20
+      }
+    ],
+    "top_functions": [
+      {
+        "function": "test_ocr.py:125(run_ocr)",
+        "calls": 11,
+        "total_time_seconds": 967.971236
+      },
+      {
+        "function": "ocr.py:208(predict)",
+        "calls": 11,
+        "total_time_seconds": 967.78636
+      },
+      {
+        "function": "_parallel.py:148(predict)",
+        "calls": 22,
+        "total_time_seconds": 967.786049
+      },
+      {
+        "function": "pipeline.py:292(predict)",
+        "calls": 22,
+        "total_time_seconds": 967.774433
+      },
+      {
+        "function": "base_predictor.py:61(__call__)",
+        "calls": 1092,
+        "total_time_seconds": 967.037493
+      },
+      {
+        "function": "base_predictor.py:119(apply)",
+        "calls": 1092,
+        "total_time_seconds": 967.036207
+      },
+      {
+        "function": "profile_adaptive_ocr.py:186(timed_process)",
+        "calls": 192,
+        "total_time_seconds": 966.897162
+      },
+      {
+        "function": "runner.py:289(__call__)",
+        "calls": 192,
+        "total_time_seconds": 963.160153
+      },
+      {
+        "function": "runner.py:261(__call__)",
+        "calls": 192,
+        "total_time_seconds": 962.923302
+      },
+      {
+        "function": "~:0(<built-in method paddle.base.libpaddle.run>)",
+        "calls": 192,
+        "total_time_seconds": 959.901471
+      }
+    ]
+  },
+  "pages": [
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 1,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.06388179999999011,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 559420,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.018475200000011682,
+        "grayscale": 0.025912999999945896,
+        "noise_removal": 0.3955738999998175,
+        "local_contrast": 0.011316200000010213,
+        "rgb_output": 0.02375009999991562
+      },
+      "classification_time_seconds": 0.04756269999984397,
+      "detection_time_seconds": 4.880549900000005,
+      "recognition_time_seconds": 84.26079289999984,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.08701600000017606,
+      "ocr_time_seconds": 89.22835880000002,
+      "save_json_time_seconds": 0.03694040000004861,
+      "save_log_time_seconds": 0.0017178999999032385,
+      "memory_before_mb": 679.87109375,
+      "memory_peak_mb": 792.39453125,
+      "memory_after_mb": 759.3671875,
+      "cpu_percent_average": 169.82777777777778,
+      "cpu_percent_max": 287.5,
+      "process_threads_peak": 23,
+      "confidence": 0.947,
+      "detected_text_regions": 80,
+      "recognition_invocations": 14,
+      "average_recognition_time_per_region_seconds": 1.053259911249998,
+      "longest_recognition_call_seconds": 11.218858299999965,
+      "shortest_recognition_call_seconds": 1.622076899999911,
+      "total_time_seconds": 90.18972029999986
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 2,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.017416299999922558,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 667911,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.026174099999934697,
+        "grayscale": 0.0011724000000867818,
+        "noise_removal": 0.4276814000002105,
+        "local_contrast": 0.005906000000095446,
+        "rgb_output": 0.005686599999989994
+      },
+      "classification_time_seconds": 0.026183599999967555,
+      "detection_time_seconds": 4.163991500000066,
+      "recognition_time_seconds": 100.7906592000013,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.08707399999843801,
+      "ocr_time_seconds": 105.0417246999998,
+      "save_json_time_seconds": 0.016929399999753514,
+      "save_log_time_seconds": 0.0007583000001432083,
+      "memory_before_mb": 759.4140625,
+      "memory_peak_mb": 770.7734375,
+      "memory_after_mb": 668.30859375,
+      "cpu_percent_average": 167.68260869565216,
+      "cpu_percent_max": 306.2,
+      "process_threads_peak": 20,
+      "confidence": 0.989,
+      "detected_text_regions": 110,
+      "recognition_invocations": 19,
+      "average_recognition_time_per_region_seconds": 0.9162787200000119,
+      "longest_recognition_call_seconds": 6.860516900000221,
+      "shortest_recognition_call_seconds": 1.5496553999998923,
+      "total_time_seconds": 105.82047749999947
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 3,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.015779199999997218,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 647770,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.012583900000208814,
+        "grayscale": 0.001091599999654136,
+        "noise_removal": 0.4175963999996384,
+        "local_contrast": 0.0055150999996840255,
+        "rgb_output": 0.009094200000163255
+      },
+      "classification_time_seconds": 0.01917039999989356,
+      "detection_time_seconds": 4.229517400000077,
+      "recognition_time_seconds": 101.92305269999952,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.09635380000054283,
+      "ocr_time_seconds": 106.24892390000014,
+      "save_json_time_seconds": 0.04509469999993598,
+      "save_log_time_seconds": 0.002484000000094966,
+      "memory_before_mb": 668.328125,
+      "memory_peak_mb": 693.13671875,
+      "memory_after_mb": 443.3203125,
+      "cpu_percent_average": 178.9913043478261,
+      "cpu_percent_max": 342.5,
+      "process_threads_peak": 20,
+      "confidence": 0.989,
+      "detected_text_regions": 111,
+      "recognition_invocations": 19,
+      "average_recognition_time_per_region_seconds": 0.9182256999999956,
+      "longest_recognition_call_seconds": 7.183760999999777,
+      "shortest_recognition_call_seconds": 1.600059400000191,
+      "total_time_seconds": 106.93757669999968
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 4,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.05234429999995882,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 517760,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.02080919999980324,
+        "grayscale": 0.0029550999997809413,
+        "noise_removal": 0.42468159999998534,
+        "local_contrast": 0.011306599999898026,
+        "rgb_output": 0.005118600000059814
+      },
+      "classification_time_seconds": 0.027060699999765347,
+      "detection_time_seconds": 4.134148000000096,
+      "recognition_time_seconds": 90.5348843999991,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.09650280000096245,
+      "ocr_time_seconds": 94.76553520000016,
+      "save_json_time_seconds": 0.017483999999967637,
+      "save_log_time_seconds": 0.0005557000004046131,
+      "memory_before_mb": 443.3515625,
+      "memory_peak_mb": 522.2890625,
+      "memory_after_mb": 430.546875,
+      "cpu_percent_average": 172.9125,
+      "cpu_percent_max": 327.2,
+      "process_threads_peak": 20,
+      "confidence": 0.923,
+      "detected_text_regions": 115,
+      "recognition_invocations": 20,
+      "average_recognition_time_per_region_seconds": 0.7872598643478183,
+      "longest_recognition_call_seconds": 14.372442999999748,
+      "shortest_recognition_call_seconds": 1.4970422000001236,
+      "total_time_seconds": 95.45401960000027
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 5,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.014469499999904656,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 636892,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.01650130000007266,
+        "grayscale": 0.0009303000001636974,
+        "noise_removal": 0.41133350000018254,
+        "local_contrast": 0.006206600000041362,
+        "rgb_output": 0.00880730000017138
+      },
+      "classification_time_seconds": 0.023314799999752722,
+      "detection_time_seconds": 4.0639493999997285,
+      "recognition_time_seconds": 98.05359940000108,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.12944069999912244,
+      "ocr_time_seconds": 102.24698949999993,
+      "save_json_time_seconds": 0.015273400000296533,
+      "save_log_time_seconds": 0.000668600000153674,
+      "memory_before_mb": 430.69140625,
+      "memory_peak_mb": 507.65234375,
+      "memory_after_mb": 447.859375,
+      "cpu_percent_average": 179.42083333333335,
+      "cpu_percent_max": 344.0,
+      "process_threads_peak": 18,
+      "confidence": 0.982,
+      "detected_text_regions": 120,
+      "recognition_invocations": 20,
+      "average_recognition_time_per_region_seconds": 0.8171133283333423,
+      "longest_recognition_call_seconds": 7.399540700000216,
+      "shortest_recognition_call_seconds": 1.5074681000000965,
+      "total_time_seconds": 102.91736850000007
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 6,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.019975599999952465,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 600098,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.015703000000030443,
+        "grayscale": 0.0009359000000586093,
+        "noise_removal": 0.3944379999998091,
+        "local_contrast": 0.00504270000010365,
+        "rgb_output": 0.004358700000011595
+      },
+      "classification_time_seconds": 0.023272999999790045,
+      "detection_time_seconds": 4.544569499999852,
+      "recognition_time_seconds": 92.50097239999923,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.08838910000076794,
+      "ocr_time_seconds": 97.13393099999985,
+      "save_json_time_seconds": 0.020058200000221404,
+      "save_log_time_seconds": 0.000706499999978405,
+      "memory_before_mb": 447.9453125,
+      "memory_peak_mb": 514.421875,
+      "memory_after_mb": 451.796875,
+      "cpu_percent_average": 176.17142857142858,
+      "cpu_percent_max": 305.9,
+      "process_threads_peak": 20,
+      "confidence": 0.989,
+      "detected_text_regions": 102,
+      "recognition_invocations": 17,
+      "average_recognition_time_per_region_seconds": 0.906872278431365,
+      "longest_recognition_call_seconds": 7.19091729999991,
+      "shortest_recognition_call_seconds": 1.5454068999997617,
+      "total_time_seconds": 97.77984970000034
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 7,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.01688719999992827,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 464123,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.014132600000266393,
+        "grayscale": 0.0008611999996901432,
+        "noise_removal": 0.40338180000026114,
+        "local_contrast": 0.008609200000137207,
+        "rgb_output": 0.0043407999996816216
+      },
+      "classification_time_seconds": 0.019390499999644817,
+      "detection_time_seconds": 4.08561409999993,
+      "recognition_time_seconds": 80.17417799999885,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.09674480000103358,
+      "ocr_time_seconds": 84.35653689999981,
+      "save_json_time_seconds": 0.07078620000038427,
+      "save_log_time_seconds": 0.001828899999964051,
+      "memory_before_mb": 451.82421875,
+      "memory_peak_mb": 514.93359375,
+      "memory_after_mb": 457.37890625,
+      "cpu_percent_average": 179.66333333333333,
+      "cpu_percent_max": 344.7,
+      "process_threads_peak": 20,
+      "confidence": 0.992,
+      "detected_text_regions": 155,
+      "recognition_invocations": 26,
+      "average_recognition_time_per_region_seconds": 0.5172527612903152,
+      "longest_recognition_call_seconds": 9.091954499999702,
+      "shortest_recognition_call_seconds": 1.4685670000003483,
+      "total_time_seconds": 85.04612009999983
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 8,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.021970699999883436,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 709803,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.0456981000002088,
+        "grayscale": 0.0024842999996508297,
+        "noise_removal": 0.9568448999998509,
+        "local_contrast": 0.021794499999941763,
+        "rgb_output": 0.016809100000045873
+      },
+      "classification_time_seconds": 0.10115250000035303,
+      "detection_time_seconds": 9.320795799999814,
+      "recognition_time_seconds": 162.85772999999972,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.25168420000045444,
+      "ocr_time_seconds": 172.43021,
+      "save_json_time_seconds": 0.026584100000036415,
+      "save_log_time_seconds": 0.0033545999999660125,
+      "memory_before_mb": 457.421875,
+      "memory_peak_mb": 521.93359375,
+      "memory_after_mb": 462.9453125,
+      "cpu_percent_average": 156.84857142857143,
+      "cpu_percent_max": 306.2,
+      "process_threads_peak": 19,
+      "confidence": 0.984,
+      "detected_text_regions": 154,
+      "recognition_invocations": 26,
+      "average_recognition_time_per_region_seconds": 1.0575177272727254,
+      "longest_recognition_call_seconds": 10.173197099999925,
+      "shortest_recognition_call_seconds": 4.255532599999697,
+      "total_time_seconds": 174.01661979999972
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\ocr_verification_sample.pdf",
+      "page_number": 1,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.028637800000069547,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 559420,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.013654800000040268,
+        "grayscale": 0.0009871000002021901,
+        "noise_removal": 0.40712059999987105,
+        "local_contrast": 0.006640999999945052,
+        "rgb_output": 0.004704899999978807
+      },
+      "classification_time_seconds": 0.024942499999724532,
+      "detection_time_seconds": 4.164317200000369,
+      "recognition_time_seconds": 84.38720909999938,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.07275330000038593,
+      "ocr_time_seconds": 88.62427960000014,
+      "save_json_time_seconds": 0.014261899999837624,
+      "save_log_time_seconds": 0.0007375000000138243,
+      "memory_before_mb": 462.95703125,
+      "memory_peak_mb": 522.5,
+      "memory_after_mb": 464.2109375,
+      "cpu_percent_average": 180.0611111111111,
+      "cpu_percent_max": 356.7,
+      "process_threads_peak": 20,
+      "confidence": 0.947,
+      "detected_text_regions": 80,
+      "recognition_invocations": 14,
+      "average_recognition_time_per_region_seconds": 1.0548401137499923,
+      "longest_recognition_call_seconds": 11.515812900000128,
+      "shortest_recognition_call_seconds": 1.5479597999997168,
+      "total_time_seconds": 89.25163320000001
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\Screenshot 26-Jul-26 6_59_51 PM.pdf",
+      "page_number": 1,
+      "width": 1190,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.052080299999943236,
+      "original_rgb_bytes": 6011880,
+      "preprocessed_width": 1190,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6011880,
+      "encoded_png_bytes": 559082,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.01347329999998692,
+        "grayscale": 0.004720599999927799,
+        "noise_removal": 0.4094358000002103,
+        "local_contrast": 0.007760899999993853,
+        "rgb_output": 0.004436799999893992
+      },
+      "classification_time_seconds": 0.019000900000264664,
+      "detection_time_seconds": 3.9569267000001673,
+      "recognition_time_seconds": 7.525221700000202,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.02729869999939183,
+      "ocr_time_seconds": 11.509447099999761,
+      "save_json_time_seconds": 0.007236599999941973,
+      "save_log_time_seconds": 0.0007046000000627828,
+      "memory_before_mb": 464.21484375,
+      "memory_peak_mb": 526.33203125,
+      "memory_after_mb": 472.2734375,
+      "cpu_percent_average": 188.61666666666667,
+      "cpu_percent_max": 325.8,
+      "process_threads_peak": 20,
+      "confidence": 0.79,
+      "detected_text_regions": 11,
+      "recognition_invocations": 2,
+      "average_recognition_time_per_region_seconds": 0.684111063636382,
+      "longest_recognition_call_seconds": 3.876525000000129,
+      "shortest_recognition_call_seconds": 3.648696700000073,
+      "total_time_seconds": 12.292862100000093
+    },
+    {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\Screenshot 26-Jul-26 6_59_51 PM.pdf",
+      "page_number": 2,
+      "width": 1190,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.053019599999970524,
+      "original_rgb_bytes": 6011880,
+      "preprocessed_width": 1190,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6011880,
+      "encoded_png_bytes": 849013,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.014226900000267051,
+        "grayscale": 0.0008400000001529406,
+        "noise_removal": 0.459289699999772,
+        "local_contrast": 0.007259299999986979,
+        "rgb_output": 0.004850099999657687
+      },
+      "classification_time_seconds": 0.018157199999677687,
+      "detection_time_seconds": 4.001493499999924,
+      "recognition_time_seconds": 12.340558200000942,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.05351879999898301,
+      "ocr_time_seconds": 16.39557049999985,
+      "save_json_time_seconds": 0.0035509999997884734,
+      "save_log_time_seconds": 0.00063510000018141,
+      "memory_before_mb": 466.27734375,
+      "memory_peak_mb": 542.98828125,
+      "memory_after_mb": 468.3359375,
+      "cpu_percent_average": 192.925,
+      "cpu_percent_max": 293.8,
+      "process_threads_peak": 20,
+      "confidence": 0.877,
+      "detected_text_regions": 21,
+      "recognition_invocations": 4,
+      "average_recognition_time_per_region_seconds": 0.5876456285714734,
+      "longest_recognition_call_seconds": 4.049907300000086,
+      "shortest_recognition_call_seconds": 2.4037946000003103,
+      "total_time_seconds": 17.22314520000009
+    }
+  ],
+  "summary": {
+    "total_runtime_seconds": 996.5254053999995,
+    "average_page_runtime_seconds": 88.81176297272722,
+    "median_page_runtime_seconds": 95.45401960000027,
+    "slowest_page": {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+      "page_number": 8,
+      "width": 1191,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.021970699999883436,
+      "original_rgb_bytes": 6016932,
+      "preprocessed_width": 1191,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6016932,
+      "encoded_png_bytes": 709803,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.0456981000002088,
+        "grayscale": 0.0024842999996508297,
+        "noise_removal": 0.9568448999998509,
+        "local_contrast": 0.021794499999941763,
+        "rgb_output": 0.016809100000045873
+      },
+      "classification_time_seconds": 0.10115250000035303,
+      "detection_time_seconds": 9.320795799999814,
+      "recognition_time_seconds": 162.85772999999972,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.25168420000045444,
+      "ocr_time_seconds": 172.43021,
+      "save_json_time_seconds": 0.026584100000036415,
+      "save_log_time_seconds": 0.0033545999999660125,
+      "memory_before_mb": 457.421875,
+      "memory_peak_mb": 521.93359375,
+      "memory_after_mb": 462.9453125,
+      "cpu_percent_average": 156.84857142857143,
+      "cpu_percent_max": 306.2,
+      "process_threads_peak": 19,
+      "confidence": 0.984,
+      "detected_text_regions": 154,
+      "recognition_invocations": 26,
+      "average_recognition_time_per_region_seconds": 1.0575177272727254,
+      "longest_recognition_call_seconds": 10.173197099999925,
+      "shortest_recognition_call_seconds": 4.255532599999697,
+      "total_time_seconds": 174.01661979999972
+    },
+    "fastest_page": {
+      "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\Screenshot 26-Jul-26 6_59_51 PM.pdf",
+      "page_number": 1,
+      "width": 1190,
+      "height": 1684,
+      "dpi": 144,
+      "render_time_seconds": 0.052080299999943236,
+      "original_rgb_bytes": 6011880,
+      "preprocessed_width": 1190,
+      "preprocessed_height": 1684,
+      "preprocessed_rgb_bytes": 6011880,
+      "encoded_png_bytes": 559082,
+      "large_image_flag": false,
+      "preprocessing_steps_seconds": {
+        "rgb_conversion": 0.01347329999998692,
+        "grayscale": 0.004720599999927799,
+        "noise_removal": 0.4094358000002103,
+        "local_contrast": 0.007760899999993853,
+        "rgb_output": 0.004436799999893992
+      },
+      "classification_time_seconds": 0.019000900000264664,
+      "detection_time_seconds": 3.9569267000001673,
+      "recognition_time_seconds": 7.525221700000202,
+      "angle_classification_time_seconds": 0.0,
+      "postprocessing_time_seconds": 0.02729869999939183,
+      "ocr_time_seconds": 11.509447099999761,
+      "save_json_time_seconds": 0.007236599999941973,
+      "save_log_time_seconds": 0.0007046000000627828,
+      "memory_before_mb": 464.21484375,
+      "memory_peak_mb": 526.33203125,
+      "memory_after_mb": 472.2734375,
+      "cpu_percent_average": 188.61666666666667,
+      "cpu_percent_max": 325.8,
+      "process_threads_peak": 20,
+      "confidence": 0.79,
+      "detected_text_regions": 11,
+      "recognition_invocations": 2,
+      "average_recognition_time_per_region_seconds": 0.684111063636382,
+      "longest_recognition_call_seconds": 3.876525000000129,
+      "shortest_recognition_call_seconds": 3.648696700000073,
+      "total_time_seconds": 12.292862100000093
+    },
+    "stage_totals_seconds": {
+      "PDF rendering": 0.35646229999952084,
+      "Preprocessing": 5.551016799999161,
+      "Classification metadata": 0.34920879999867793,
+      "OCR detection": 51.54587300000003,
+      "OCR recognition": 915.3488579999992,
+      "Saving": 0.2883516000010786,
+      "Other": 23.085634900001878
+    }
+  },
+  "memory_analysis": {
+    "start_mb": 679.87109375,
+    "final_mb": 468.3359375,
+    "peak_mb": 792.39453125,
+    "growth_mb": -211.53515625,
+    "leak_detected": false
+  },
+  "report_io": {
+    "json_seconds": 0.0,
+    "markdown_seconds": 0.002484300000105577,
+    "charts_seconds": 1.0169737000001078,
+    "annotated_images_seconds": 0.0,
+    "benchmark_reports_seconds": 0.0
+  }
+}

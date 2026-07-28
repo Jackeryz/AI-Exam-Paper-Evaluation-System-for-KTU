@@ -1,0 +1,472 @@
+{
+  "text": "12/201\nTypesofcleint:\nIMMTract aGuit:adult has sishee\naduct consen+ tolave thier immuzatich\nrecove :ntnesystem\nI.C! consented bx their parents\nt0 have their imryzatiah Sovee\ninsxstem (imntroc+cull2)\nP.A: pendehing adult turned 18\nand havent signee adult consent\nMust have a\u00e0ult cousent to\nrelese in fo  atthe age of26\nrecords will be deleter if (onsen\nwasuit Sighed\n. D.C: Disaterconsente when\nGetting Coule Vaccine and Sisuee\nconsent during coud pandenk\ne We only Keepvecor for\nSyears untell diaster has\nended\nteachers and students use to laugh at me saying they can't read my hand writing",
+  "confidence": 0.877,
+  "processing_time": 17.248493600000074,
+  "engine_used": "paddleocr",
+  "page_number": 2,
+  "bounding_boxes": [
+    {
+      "text": "12/201",
+      "confidence": 0.901,
+      "bbox": [
+        [
+          1046,
+          90
+        ],
+        [
+          1186,
+          90
+        ],
+        [
+          1186,
+          146
+        ],
+        [
+          1046,
+          146
+        ]
+      ]
+    },
+    {
+      "text": "Typesofcleint:",
+      "confidence": 0.914,
+      "bbox": [
+        [
+          107,
+          113
+        ],
+        [
+          533,
+          113
+        ],
+        [
+          533,
+          203
+        ],
+        [
+          107,
+          203
+        ]
+      ]
+    },
+    {
+      "text": "IMMTract aGuit:adult has sishee",
+      "confidence": 0.828,
+      "bbox": [
+        [
+          123,
+          187
+        ],
+        [
+          1069,
+          187
+        ],
+        [
+          1069,
+          269
+        ],
+        [
+          123,
+          269
+        ]
+      ]
+    },
+    {
+      "text": "aduct consen+ tolave thier immuzatich",
+      "confidence": 0.866,
+      "bbox": [
+        [
+          105,
+          249
+        ],
+        [
+          1055,
+          249
+        ],
+        [
+          1055,
+          334
+        ],
+        [
+          105,
+          334
+        ]
+      ]
+    },
+    {
+      "text": "recove :ntnesystem",
+      "confidence": 0.851,
+      "bbox": [
+        [
+          119,
+          310
+        ],
+        [
+          629,
+          310
+        ],
+        [
+          629,
+          389
+        ],
+        [
+          119,
+          389
+        ]
+      ]
+    },
+    {
+      "text": "I.C! consented bx their parents",
+      "confidence": 0.908,
+      "bbox": [
+        [
+          134,
+          424
+        ],
+        [
+          1037,
+          424
+        ],
+        [
+          1037,
+          497
+        ],
+        [
+          134,
+          497
+        ]
+      ]
+    },
+    {
+      "text": "t0 have their imryzatiah Sovee",
+      "confidence": 0.868,
+      "bbox": [
+        [
+          102,
+          489
+        ],
+        [
+          986,
+          489
+        ],
+        [
+          986,
+          556
+        ],
+        [
+          102,
+          556
+        ]
+      ]
+    },
+    {
+      "text": "insxstem (imntroc+cull2)",
+      "confidence": 0.753,
+      "bbox": [
+        [
+          101,
+          553
+        ],
+        [
+          861,
+          553
+        ],
+        [
+          861,
+          621
+        ],
+        [
+          101,
+          621
+        ]
+      ]
+    },
+    {
+      "text": "P.A: pendehing adult turned 18",
+      "confidence": 0.885,
+      "bbox": [
+        [
+          115,
+          675
+        ],
+        [
+          1029,
+          675
+        ],
+        [
+          1029,
+          741
+        ],
+        [
+          115,
+          741
+        ]
+      ]
+    },
+    {
+      "text": "and havent signee adult consent",
+      "confidence": 0.888,
+      "bbox": [
+        [
+          99,
+          738
+        ],
+        [
+          1096,
+          738
+        ],
+        [
+          1096,
+          806
+        ],
+        [
+          99,
+          806
+        ]
+      ]
+    },
+    {
+      "text": "Must have a\u00e0ult cousent to",
+      "confidence": 0.873,
+      "bbox": [
+        [
+          97,
+          794
+        ],
+        [
+          1034,
+          794
+        ],
+        [
+          1034,
+          872
+        ],
+        [
+          97,
+          872
+        ]
+      ]
+    },
+    {
+      "text": "relese in fo  atthe age of26",
+      "confidence": 0.861,
+      "bbox": [
+        [
+          111,
+          870
+        ],
+        [
+          1085,
+          870
+        ],
+        [
+          1085,
+          930
+        ],
+        [
+          111,
+          930
+        ]
+      ]
+    },
+    {
+      "text": "records will be deleter if (onsen",
+      "confidence": 0.922,
+      "bbox": [
+        [
+          106,
+          930
+        ],
+        [
+          1177,
+          930
+        ],
+        [
+          1177,
+          991
+        ],
+        [
+          106,
+          991
+        ]
+      ]
+    },
+    {
+      "text": "wasuit Sighed",
+      "confidence": 0.889,
+      "bbox": [
+        [
+          100,
+          1004
+        ],
+        [
+          492,
+          1004
+        ],
+        [
+          492,
+          1065
+        ],
+        [
+          100,
+          1065
+        ]
+      ]
+    },
+    {
+      "text": ". D.C: Disaterconsente when",
+      "confidence": 0.862,
+      "bbox": [
+        [
+          58,
+          1108
+        ],
+        [
+          1009,
+          1108
+        ],
+        [
+          1009,
+          1200
+        ],
+        [
+          58,
+          1200
+        ]
+      ]
+    },
+    {
+      "text": "Getting Coule Vaccine and Sisuee",
+      "confidence": 0.877,
+      "bbox": [
+        [
+          69,
+          1169
+        ],
+        [
+          982,
+          1169
+        ],
+        [
+          982,
+          1276
+        ],
+        [
+          69,
+          1276
+        ]
+      ]
+    },
+    {
+      "text": "consent during coud pandenk",
+      "confidence": 0.876,
+      "bbox": [
+        [
+          84,
+          1234
+        ],
+        [
+          981,
+          1234
+        ],
+        [
+          981,
+          1330
+        ],
+        [
+          84,
+          1330
+        ]
+      ]
+    },
+    {
+      "text": "e We only Keepvecor for",
+      "confidence": 0.802,
+      "bbox": [
+        [
+          108,
+          1309
+        ],
+        [
+          1003,
+          1309
+        ],
+        [
+          1003,
+          1391
+        ],
+        [
+          108,
+          1391
+        ]
+      ]
+    },
+    {
+      "text": "Syears untell diaster has",
+      "confidence": 0.932,
+      "bbox": [
+        [
+          125,
+          1379
+        ],
+        [
+          909,
+          1379
+        ],
+        [
+          909,
+          1452
+        ],
+        [
+          125,
+          1452
+        ]
+      ]
+    },
+    {
+      "text": "ended",
+      "confidence": 0.893,
+      "bbox": [
+        [
+          131,
+          1464
+        ],
+        [
+          307,
+          1464
+        ],
+        [
+          307,
+          1513
+        ],
+        [
+          131,
+          1513
+        ]
+      ]
+    },
+    {
+      "text": "teachers and students use to laugh at me saying they can't read my hand writing",
+      "confidence": 0.971,
+      "bbox": [
+        [
+          1,
+          1506
+        ],
+        [
+          785,
+          1506
+        ],
+        [
+          785,
+          1546
+        ],
+        [
+          1,
+          1546
+        ]
+      ]
+    }
+  ],
+  "page_classification": "HANDWRITTEN"
+}

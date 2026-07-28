@@ -1,0 +1,252 @@
+{
+  "text": "hotcoan\nOnlt authorzed users have acces toimtrace\naccess reauest mustbe a a peoved\nandrran ested bx thr orgahazot\nPoin+ ofcohtartC Poc)the Poc seves\nas the main point ofconta t fce\nI mmtrac? related matters and must\ncontoct immtrace cus tomer\nSupPort at (8c0) 348 a158 0r at\niMn tranc 2dshs.texasol to\nPeauet asser acces fer New ineividhr",
+  "confidence": 0.79,
+  "processing_time": 27.59128809999993,
+  "engine_used": "paddleocr",
+  "page_number": 1,
+  "bounding_boxes": [
+    {
+      "text": "hotcoan",
+      "confidence": 0.628,
+      "bbox": [
+        [
+          277,
+          322
+        ],
+        [
+          473,
+          322
+        ],
+        [
+          473,
+          373
+        ],
+        [
+          277,
+          373
+        ]
+      ]
+    },
+    {
+      "text": "Onlt authorzed users have acces toimtrace",
+      "confidence": 0.811,
+      "bbox": [
+        [
+          223,
+          454
+        ],
+        [
+          1110,
+          454
+        ],
+        [
+          1110,
+          551
+        ],
+        [
+          223,
+          551
+        ]
+      ]
+    },
+    {
+      "text": "access reauest mustbe a a peoved",
+      "confidence": 0.944,
+      "bbox": [
+        [
+          240,
+          622
+        ],
+        [
+          964,
+          622
+        ],
+        [
+          964,
+          702
+        ],
+        [
+          240,
+          702
+        ]
+      ]
+    },
+    {
+      "text": "andrran ested bx thr orgahazot",
+      "confidence": 0.849,
+      "bbox": [
+        [
+          197,
+          686
+        ],
+        [
+          902,
+          686
+        ],
+        [
+          902,
+          759
+        ],
+        [
+          197,
+          759
+        ]
+      ]
+    },
+    {
+      "text": "Poin+ ofcohtartC Poc)the Poc seves",
+      "confidence": 0.832,
+      "bbox": [
+        [
+          203,
+          747
+        ],
+        [
+          1022,
+          747
+        ],
+        [
+          1022,
+          813
+        ],
+        [
+          203,
+          813
+        ]
+      ]
+    },
+    {
+      "text": "as the main point ofconta t fce",
+      "confidence": 0.812,
+      "bbox": [
+        [
+          151,
+          803
+        ],
+        [
+          915,
+          803
+        ],
+        [
+          915,
+          859
+        ],
+        [
+          151,
+          859
+        ]
+      ]
+    },
+    {
+      "text": "I mmtrac? related matters and must",
+      "confidence": 0.861,
+      "bbox": [
+        [
+          151,
+          859
+        ],
+        [
+          1011,
+          859
+        ],
+        [
+          1011,
+          917
+        ],
+        [
+          151,
+          917
+        ]
+      ]
+    },
+    {
+      "text": "contoct immtrace cus tomer",
+      "confidence": 0.881,
+      "bbox": [
+        [
+          147,
+          912
+        ],
+        [
+          907,
+          912
+        ],
+        [
+          907,
+          972
+        ],
+        [
+          147,
+          972
+        ]
+      ]
+    },
+    {
+      "text": "SupPort at (8c0) 348 a158 0r at",
+      "confidence": 0.745,
+      "bbox": [
+        [
+          138,
+          972
+        ],
+        [
+          980,
+          972
+        ],
+        [
+          980,
+          1040
+        ],
+        [
+          138,
+          1040
+        ]
+      ]
+    },
+    {
+      "text": "iMn tranc 2dshs.texasol to",
+      "confidence": 0.621,
+      "bbox": [
+        [
+          144,
+          1032
+        ],
+        [
+          937,
+          1032
+        ],
+        [
+          937,
+          1098
+        ],
+        [
+          144,
+          1098
+        ]
+      ]
+    },
+    {
+      "text": "Peauet asser acces fer New ineividhr",
+      "confidence": 0.71,
+      "bbox": [
+        [
+          142,
+          1098
+        ],
+        [
+          1120,
+          1098
+        ],
+        [
+          1120,
+          1159
+        ],
+        [
+          142,
+          1159
+        ]
+      ]
+    }
+  ],
+  "page_classification": "MIXED"
+}

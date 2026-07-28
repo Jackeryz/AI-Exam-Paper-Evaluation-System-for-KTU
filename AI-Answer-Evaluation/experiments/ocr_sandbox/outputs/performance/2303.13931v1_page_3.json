@@ -1,0 +1,2492 @@
+{
+  "profile": {
+    "input_file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+    "page_number": 3,
+    "width": 1191,
+    "height": 1684,
+    "dpi": 144,
+    "render_time_seconds": 0.015779199999997218,
+    "original_rgb_bytes": 6016932,
+    "preprocessed_width": 1191,
+    "preprocessed_height": 1684,
+    "preprocessed_rgb_bytes": 6016932,
+    "encoded_png_bytes": 647770,
+    "large_image_flag": false,
+    "preprocessing_steps_seconds": {
+      "rgb_conversion": 0.012583900000208814,
+      "grayscale": 0.001091599999654136,
+      "noise_removal": 0.4175963999996384,
+      "local_contrast": 0.0055150999996840255,
+      "rgb_output": 0.009094200000163255
+    },
+    "classification_time_seconds": 0.01917039999989356,
+    "detection_time_seconds": 4.229517400000077,
+    "recognition_time_seconds": 101.92305269999952,
+    "angle_classification_time_seconds": 0.0,
+    "postprocessing_time_seconds": 0.09635380000054283,
+    "ocr_time_seconds": 106.24892390000014,
+    "save_json_time_seconds": 0.0,
+    "save_log_time_seconds": 0.0,
+    "memory_before_mb": 668.328125,
+    "memory_peak_mb": 693.13671875,
+    "memory_after_mb": 443.3203125,
+    "cpu_percent_average": 0.0,
+    "cpu_percent_max": 0.0,
+    "process_threads_peak": 0,
+    "confidence": 0.989,
+    "detected_text_regions": 111,
+    "recognition_invocations": 19,
+    "average_recognition_time_per_region_seconds": 0.9182256999999956,
+    "longest_recognition_call_seconds": 7.183760999999777,
+    "shortest_recognition_call_seconds": 1.600059400000191,
+    "total_time_seconds": 0.0
+  },
+  "ocr_result": {
+    "text": "Other approaches [6, 11] proposed different models\nwith these features to add positional information to each\nwhich are based on an attention mechanism to predict the\nfeature vector. Next, the 2D features map is transformed\ntext in a character-by-character way. Those are trained\ninto 1D sequential features using tensor reshaping flatten-\nwith the cross-entropy loss and using a special end-of-\ning operation. At this level, the output of the flattened\ntranscription token. Authors of [11] used a transformer\nlayer matches the requirements of the transformer layers.\nto evaluate their approach to paragraph-level images. [6]\nAfter performing these steps on a page-level image, we ob-\nintroduced an encoder-decoder architecture, using a Resid-\ntain a feature sequence of the image. The feature sequence\nual Networks (ResNet) [12] for encoding the image, and\nis then passed to a stack of 2 transformer layers (as shown\na transformer [8] for decoding the encoded representation\nin Figure 1).\ninto text. This model is trained to recognize, in addition to\n3.2. Transformer-Decoder\nthe text, the presence of non-textual areas (such as tables\nor drawings). This model has been trained to recognize\nThe decoder is similar in structure to the transformer\nfull pages of handwritten or printed text without image\nlayers of the encoder except that it includes a masked lan-\nsegmentation. Despite the good results achieved using this\nguage model. The masked language modeling approach is\nconfiguration, this model is data-hungry and requires a lot\nintroduced to model the relation of the characters that\nof memory and computation resources.\nare output from the decoder. It learns the correlation\nIn [7], a new end-to-end segmentation-free architecture\nbetween visual encoded features and their corresponding\ncharacters. There are two types of symbols in our ap-\nwas created to address document image recognition in\nterms of both text and layouts. They proposed Document\nproach: visual labels and contextual labels. The visual\nlabels (Vlabels ) are the readable characters from texts in\nAttention Network (DAN), an end-to-end transformer-\nbased model for handwritten document recognition, in-\nimages. The contextual labels (Clabels)are the start of page\n(< sop >), the end of line (< eol >), and the end of page\ncluding the textual components and the logical layout in-\nThe model has been evaluated using two\n(< eop >). The number of classes (N Bclass) of the out-\nformation.\ndifferent datasets where competitive results have been re-\nput layer includes the number of visual labels (Vlabels )\nported at page and double-page levels. However, the main\nand the contextual labels (Clabels). We used the teacher\ndrawback of this work is that the model architecture is very\nforcing strategy during the training, which means that the\nlarge and requires a huge quantity of data for the training\nmodel uses the ground truth as input instead of model out-\nphase. In addition, the model involves an auto-regressive\nputs from prior time steps. The input of the decoder is the\nattention-based character-level prediction process, which\ntextual contents of the image surrounded by < sop > and\nleads to high prediction times (a few seconds per docu-\n< eop > tags. After preparing the input text, the charac-\nters are embedded into a vector of h values as mentioned\nment image).\nConsidering the limitations of previous works, we pro-\nin equation 1.\npose in this paper MSdocTr-Lite, an end-to-end lite\nEmbed = Embedding(N Bclass, h)\n(1)\ntransformer-based model for multi-script handwritten doc-\nument recognition.\nThen, the final input of the transformer decoder (Flabels)\n3. Proposed approach\nis prepared by applying 1D Positional encoding [14] to the\nThe proposed model is depicted in Figure 1. It is\nembedded labels.\ncomposed of two parts: a Transformer-Encoder and a\nFlabels = 1DPE(Embed(labels))\n(2)\nTransformer-Decoder, intending to map an inputted im-\nage that contains text into a sequence of characters, i.e,\nThe shape of Flabels is (h, N) where N represents the\nan image-to-sequence architecture. [8].\nlength of the input labels sequence.\n3.1. Transformer-Encoder\n3.3. The curriculum learning strategy\nThe main objective of the encoder is to extract high-level\nTransformers are data-hungry models and need large\nfeature representations from the sequence of features and\ndatasets for training. In the ideal case where a huge\nencode the visual information. This component is mainly\nquantity of full-page document images is available, it was\ncomposed of a backbone and 2 transformer layers. The\nproven in [6] that a large transformer model can be trained\nbackbone consists of the feature extraction architecture\nwithout the need for a curriculum learning strategy. In\nto represent the input image into high-dimensional vec-\nour case, where only a limited amount of training data is\ntors. It uses the ResNet-50 [12] architecture without its\navailable, the lite transformer model fails to converge (as\nlast two layers( the average pool and linear projection).\ndescribed in table 2) without an adapted learning strat-\nThe ResNet produces a feature representation of the full-\negy. For this aim, we propose a curriculum learning strat-\npage image. A 2D-convolutional layer (Conv2D) with a\negy that involves 3 stages: in the first stage, the model is\nkernel size of (1 \u00d7 1) is added, to match the number of\ntrained using a generated dataset composed of 50k small\nfeatures from the backbone network and the transformer\nblock images, where each block is composed of a mini-\ninput. After, the 2D positions encoding [13] are merged\nmum of 1 line and a maximum of 4 lines and each line\n3",
+    "confidence": 0.989,
+    "bounding_boxes": [
+      {
+        "text": "Other approaches [6, 11] proposed different models",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            96,
+            166
+          ],
+          [
+            578,
+            166
+          ],
+          [
+            578,
+            186
+          ],
+          [
+            96,
+            186
+          ]
+        ]
+      },
+      {
+        "text": "with these features to add positional information to each",
+        "confidence": 0.966,
+        "bbox": [
+          [
+            612,
+            166
+          ],
+          [
+            1113,
+            166
+          ],
+          [
+            1113,
+            183
+          ],
+          [
+            612,
+            183
+          ]
+        ]
+      },
+      {
+        "text": "which are based on an attention mechanism to predict the",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            74,
+            190
+          ],
+          [
+            578,
+            190
+          ],
+          [
+            578,
+            210
+          ],
+          [
+            74,
+            210
+          ]
+        ]
+      },
+      {
+        "text": "feature vector. Next, the 2D features map is transformed",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            611,
+            189
+          ],
+          [
+            1116,
+            189
+          ],
+          [
+            1116,
+            210
+          ],
+          [
+            611,
+            210
+          ]
+        ]
+      },
+      {
+        "text": "text in a character-by-character way. Those are trained",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            74,
+            215
+          ],
+          [
+            575,
+            215
+          ],
+          [
+            575,
+            232
+          ],
+          [
+            74,
+            232
+          ]
+        ]
+      },
+      {
+        "text": "into 1D sequential features using tensor reshaping flatten-",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            611,
+            213
+          ],
+          [
+            1115,
+            213
+          ],
+          [
+            1115,
+            234
+          ],
+          [
+            611,
+            234
+          ]
+        ]
+      },
+      {
+        "text": "with the cross-entropy loss and using a special end-of-",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            75,
+            238
+          ],
+          [
+            577,
+            238
+          ],
+          [
+            577,
+            258
+          ],
+          [
+            75,
+            258
+          ]
+        ]
+      },
+      {
+        "text": "ing operation. At this level, the output of the flattened",
+        "confidence": 0.98,
+        "bbox": [
+          [
+            611,
+            237
+          ],
+          [
+            1116,
+            237
+          ],
+          [
+            1116,
+            258
+          ],
+          [
+            611,
+            258
+          ]
+        ]
+      },
+      {
+        "text": "transcription token. Authors of [11] used a transformer",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            72,
+            261
+          ],
+          [
+            578,
+            261
+          ],
+          [
+            578,
+            282
+          ],
+          [
+            72,
+            282
+          ]
+        ]
+      },
+      {
+        "text": "layer matches the requirements of the transformer layers.",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            611,
+            261
+          ],
+          [
+            1114,
+            261
+          ],
+          [
+            1114,
+            281
+          ],
+          [
+            611,
+            281
+          ]
+        ]
+      },
+      {
+        "text": "to evaluate their approach to paragraph-level images. [6]",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            72,
+            285
+          ],
+          [
+            577,
+            285
+          ],
+          [
+            577,
+            308
+          ],
+          [
+            72,
+            308
+          ]
+        ]
+      },
+      {
+        "text": "After performing these steps on a page-level image, we ob-",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            612,
+            285
+          ],
+          [
+            1116,
+            285
+          ],
+          [
+            1116,
+            308
+          ],
+          [
+            612,
+            308
+          ]
+        ]
+      },
+      {
+        "text": "introduced an encoder-decoder architecture, using a Resid-",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            73,
+            310
+          ],
+          [
+            577,
+            310
+          ],
+          [
+            577,
+            330
+          ],
+          [
+            73,
+            330
+          ]
+        ]
+      },
+      {
+        "text": "tain a feature sequence of the image. The feature sequence",
+        "confidence": 0.978,
+        "bbox": [
+          [
+            611,
+            310
+          ],
+          [
+            1117,
+            310
+          ],
+          [
+            1117,
+            331
+          ],
+          [
+            611,
+            331
+          ]
+        ]
+      },
+      {
+        "text": "ual Networks (ResNet) [12] for encoding the image, and",
+        "confidence": 0.994,
+        "bbox": [
+          [
+            73,
+            333
+          ],
+          [
+            579,
+            333
+          ],
+          [
+            579,
+            355
+          ],
+          [
+            73,
+            355
+          ]
+        ]
+      },
+      {
+        "text": "is then passed to a stack of 2 transformer layers (as shown",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            610,
+            333
+          ],
+          [
+            1116,
+            333
+          ],
+          [
+            1116,
+            354
+          ],
+          [
+            610,
+            354
+          ]
+        ]
+      },
+      {
+        "text": "a transformer [8] for decoding the encoded representation",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            72,
+            358
+          ],
+          [
+            578,
+            358
+          ],
+          [
+            578,
+            378
+          ],
+          [
+            72,
+            378
+          ]
+        ]
+      },
+      {
+        "text": "in Figure 1).",
+        "confidence": 0.972,
+        "bbox": [
+          [
+            609,
+            354
+          ],
+          [
+            723,
+            354
+          ],
+          [
+            723,
+            380
+          ],
+          [
+            609,
+            380
+          ]
+        ]
+      },
+      {
+        "text": "into text. This model is trained to recognize, in addition to",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            72,
+            381
+          ],
+          [
+            578,
+            381
+          ],
+          [
+            578,
+            402
+          ],
+          [
+            72,
+            402
+          ]
+        ]
+      },
+      {
+        "text": "3.2. Transformer-Decoder",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            613,
+            390
+          ],
+          [
+            841,
+            390
+          ],
+          [
+            841,
+            410
+          ],
+          [
+            613,
+            410
+          ]
+        ]
+      },
+      {
+        "text": "the text, the presence of non-textual areas (such as tables",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            73,
+            405
+          ],
+          [
+            579,
+            405
+          ],
+          [
+            579,
+            425
+          ],
+          [
+            73,
+            425
+          ]
+        ]
+      },
+      {
+        "text": "or drawings). This model has been trained to recognize",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            72,
+            428
+          ],
+          [
+            578,
+            428
+          ],
+          [
+            578,
+            450
+          ],
+          [
+            72,
+            450
+          ]
+        ]
+      },
+      {
+        "text": "The decoder is similar in structure to the transformer",
+        "confidence": 0.997,
+        "bbox": [
+          [
+            632,
+            422
+          ],
+          [
+            1116,
+            422
+          ],
+          [
+            1116,
+            444
+          ],
+          [
+            632,
+            444
+          ]
+        ]
+      },
+      {
+        "text": "full pages of handwritten or printed text without image",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            73,
+            454
+          ],
+          [
+            578,
+            454
+          ],
+          [
+            578,
+            474
+          ],
+          [
+            73,
+            474
+          ]
+        ]
+      },
+      {
+        "text": "layers of the encoder except that it includes a masked lan-",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            612,
+            448
+          ],
+          [
+            1115,
+            448
+          ],
+          [
+            1115,
+            468
+          ],
+          [
+            612,
+            468
+          ]
+        ]
+      },
+      {
+        "text": "segmentation. Despite the good results achieved using this",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            72,
+            476
+          ],
+          [
+            578,
+            476
+          ],
+          [
+            578,
+            498
+          ],
+          [
+            72,
+            498
+          ]
+        ]
+      },
+      {
+        "text": "guage model. The masked language modeling approach is",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            611,
+            470
+          ],
+          [
+            1117,
+            470
+          ],
+          [
+            1117,
+            495
+          ],
+          [
+            611,
+            495
+          ]
+        ]
+      },
+      {
+        "text": "configuration, this model is data-hungry and requires a lot",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            73,
+            501
+          ],
+          [
+            576,
+            501
+          ],
+          [
+            576,
+            521
+          ],
+          [
+            73,
+            521
+          ]
+        ]
+      },
+      {
+        "text": "introduced to model the relation of the characters that",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            612,
+            497
+          ],
+          [
+            1115,
+            497
+          ],
+          [
+            1115,
+            514
+          ],
+          [
+            612,
+            514
+          ]
+        ]
+      },
+      {
+        "text": "of memory and computation resources.",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            73,
+            525
+          ],
+          [
+            414,
+            525
+          ],
+          [
+            414,
+            545
+          ],
+          [
+            73,
+            545
+          ]
+        ]
+      },
+      {
+        "text": "are output from the decoder. It learns the correlation",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            611,
+            519
+          ],
+          [
+            1117,
+            519
+          ],
+          [
+            1117,
+            540
+          ],
+          [
+            611,
+            540
+          ]
+        ]
+      },
+      {
+        "text": "In [7], a new end-to-end segmentation-free architecture",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            91,
+            549
+          ],
+          [
+            579,
+            549
+          ],
+          [
+            579,
+            573
+          ],
+          [
+            91,
+            573
+          ]
+        ]
+      },
+      {
+        "text": "between visual encoded features and their corresponding",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            611,
+            542
+          ],
+          [
+            1116,
+            542
+          ],
+          [
+            1116,
+            565
+          ],
+          [
+            611,
+            565
+          ]
+        ]
+      },
+      {
+        "text": "characters. There are two types of symbols in our ap-",
+        "confidence": 0.965,
+        "bbox": [
+          [
+            612,
+            566
+          ],
+          [
+            1115,
+            566
+          ],
+          [
+            1115,
+            589
+          ],
+          [
+            612,
+            589
+          ]
+        ]
+      },
+      {
+        "text": "was created to address document image recognition in",
+        "confidence": 0.982,
+        "bbox": [
+          [
+            74,
+            576
+          ],
+          [
+            578,
+            576
+          ],
+          [
+            578,
+            596
+          ],
+          [
+            74,
+            596
+          ]
+        ]
+      },
+      {
+        "text": "terms of both text and layouts. They proposed Document",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            73,
+            599
+          ],
+          [
+            578,
+            599
+          ],
+          [
+            578,
+            621
+          ],
+          [
+            73,
+            621
+          ]
+        ]
+      },
+      {
+        "text": "proach: visual labels and contextual labels. The visual",
+        "confidence": 0.999,
+        "bbox": [
+          [
+            610,
+            588
+          ],
+          [
+            1118,
+            588
+          ],
+          [
+            1118,
+            614
+          ],
+          [
+            610,
+            614
+          ]
+        ]
+      },
+      {
+        "text": "labels (Vlabels ) are the readable characters from texts in",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            610,
+            613
+          ],
+          [
+            1118,
+            613
+          ],
+          [
+            1118,
+            636
+          ],
+          [
+            610,
+            636
+          ]
+        ]
+      },
+      {
+        "text": "Attention Network (DAN), an end-to-end transformer-",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            75,
+            623
+          ],
+          [
+            576,
+            623
+          ],
+          [
+            576,
+            642
+          ],
+          [
+            75,
+            642
+          ]
+        ]
+      },
+      {
+        "text": "based model for handwritten document recognition, in-",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            73,
+            646
+          ],
+          [
+            578,
+            646
+          ],
+          [
+            578,
+            668
+          ],
+          [
+            73,
+            668
+          ]
+        ]
+      },
+      {
+        "text": "images. The contextual labels (Clabels)are the start of page",
+        "confidence": 0.967,
+        "bbox": [
+          [
+            611,
+            637
+          ],
+          [
+            1117,
+            637
+          ],
+          [
+            1117,
+            661
+          ],
+          [
+            611,
+            661
+          ]
+        ]
+      },
+      {
+        "text": "(< sop >), the end of line (< eol >), and the end of page",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            611,
+            661
+          ],
+          [
+            1118,
+            661
+          ],
+          [
+            1118,
+            686
+          ],
+          [
+            611,
+            686
+          ]
+        ]
+      },
+      {
+        "text": "cluding the textual components and the logical layout in-",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            73,
+            671
+          ],
+          [
+            577,
+            671
+          ],
+          [
+            577,
+            691
+          ],
+          [
+            73,
+            691
+          ]
+        ]
+      },
+      {
+        "text": "The model has been evaluated using two",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            199,
+            693
+          ],
+          [
+            578,
+            693
+          ],
+          [
+            578,
+            716
+          ],
+          [
+            199,
+            716
+          ]
+        ]
+      },
+      {
+        "text": "(< eop >). The number of classes (N Bclass) of the out-",
+        "confidence": 0.974,
+        "bbox": [
+          [
+            611,
+            685
+          ],
+          [
+            1118,
+            685
+          ],
+          [
+            1118,
+            710
+          ],
+          [
+            611,
+            710
+          ]
+        ]
+      },
+      {
+        "text": "formation.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            74,
+            696
+          ],
+          [
+            167,
+            696
+          ],
+          [
+            167,
+            713
+          ],
+          [
+            74,
+            713
+          ]
+        ]
+      },
+      {
+        "text": "different datasets where competitive results have been re-",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            73,
+            719
+          ],
+          [
+            577,
+            719
+          ],
+          [
+            577,
+            739
+          ],
+          [
+            73,
+            739
+          ]
+        ]
+      },
+      {
+        "text": "put layer includes the number of visual labels (Vlabels )",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            609,
+            709
+          ],
+          [
+            1116,
+            709
+          ],
+          [
+            1116,
+            734
+          ],
+          [
+            609,
+            734
+          ]
+        ]
+      },
+      {
+        "text": "ported at page and double-page levels. However, the main",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            72,
+            743
+          ],
+          [
+            578,
+            743
+          ],
+          [
+            578,
+            765
+          ],
+          [
+            72,
+            765
+          ]
+        ]
+      },
+      {
+        "text": "and the contextual labels (Clabels). We used the teacher",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            610,
+            734
+          ],
+          [
+            1116,
+            734
+          ],
+          [
+            1116,
+            756
+          ],
+          [
+            610,
+            756
+          ]
+        ]
+      },
+      {
+        "text": "drawback of this work is that the model architecture is very",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            72,
+            765
+          ],
+          [
+            576,
+            765
+          ],
+          [
+            576,
+            788
+          ],
+          [
+            72,
+            788
+          ]
+        ]
+      },
+      {
+        "text": "forcing strategy during the training, which means that the",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            612,
+            760
+          ],
+          [
+            1117,
+            760
+          ],
+          [
+            1117,
+            779
+          ],
+          [
+            612,
+            779
+          ]
+        ]
+      },
+      {
+        "text": "large and requires a huge quantity of data for the training",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            72,
+            789
+          ],
+          [
+            578,
+            789
+          ],
+          [
+            578,
+            812
+          ],
+          [
+            72,
+            812
+          ]
+        ]
+      },
+      {
+        "text": "model uses the ground truth as input instead of model out-",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            612,
+            783
+          ],
+          [
+            1116,
+            783
+          ],
+          [
+            1116,
+            803
+          ],
+          [
+            612,
+            803
+          ]
+        ]
+      },
+      {
+        "text": "phase. In addition, the model involves an auto-regressive",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            73,
+            815
+          ],
+          [
+            579,
+            815
+          ],
+          [
+            579,
+            835
+          ],
+          [
+            73,
+            835
+          ]
+        ]
+      },
+      {
+        "text": "puts from prior time steps. The input of the decoder is the",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            611,
+            805
+          ],
+          [
+            1117,
+            805
+          ],
+          [
+            1117,
+            828
+          ],
+          [
+            611,
+            828
+          ]
+        ]
+      },
+      {
+        "text": "attention-based character-level prediction process, which",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            73,
+            839
+          ],
+          [
+            578,
+            839
+          ],
+          [
+            578,
+            859
+          ],
+          [
+            73,
+            859
+          ]
+        ]
+      },
+      {
+        "text": "textual contents of the image surrounded by < sop > and",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            610,
+            829
+          ],
+          [
+            1116,
+            829
+          ],
+          [
+            1116,
+            851
+          ],
+          [
+            610,
+            851
+          ]
+        ]
+      },
+      {
+        "text": "leads to high prediction times (a few seconds per docu-",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            73,
+            863
+          ],
+          [
+            577,
+            863
+          ],
+          [
+            577,
+            883
+          ],
+          [
+            73,
+            883
+          ]
+        ]
+      },
+      {
+        "text": "< eop > tags. After preparing the input text, the charac-",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            613,
+            855
+          ],
+          [
+            1115,
+            855
+          ],
+          [
+            1115,
+            875
+          ],
+          [
+            613,
+            875
+          ]
+        ]
+      },
+      {
+        "text": "ters are embedded into a vector of h values as mentioned",
+        "confidence": 0.986,
+        "bbox": [
+          [
+            612,
+            878
+          ],
+          [
+            1116,
+            878
+          ],
+          [
+            1116,
+            898
+          ],
+          [
+            612,
+            898
+          ]
+        ]
+      },
+      {
+        "text": "ment image).",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            73,
+            888
+          ],
+          [
+            189,
+            888
+          ],
+          [
+            189,
+            908
+          ],
+          [
+            73,
+            908
+          ]
+        ]
+      },
+      {
+        "text": "Considering the limitations of previous works, we pro-",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            94,
+            911
+          ],
+          [
+            576,
+            911
+          ],
+          [
+            576,
+            933
+          ],
+          [
+            94,
+            933
+          ]
+        ]
+      },
+      {
+        "text": "in equation 1.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            612,
+            903
+          ],
+          [
+            733,
+            903
+          ],
+          [
+            733,
+            922
+          ],
+          [
+            612,
+            922
+          ]
+        ]
+      },
+      {
+        "text": "pose in this paper MSdocTr-Lite, an end-to-end lite",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            72,
+            935
+          ],
+          [
+            578,
+            935
+          ],
+          [
+            578,
+            959
+          ],
+          [
+            72,
+            959
+          ]
+        ]
+      },
+      {
+        "text": "Embed = Embedding(N Bclass, h)",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            715,
+            943
+          ],
+          [
+            1012,
+            943
+          ],
+          [
+            1012,
+            970
+          ],
+          [
+            715,
+            970
+          ]
+        ]
+      },
+      {
+        "text": "(1)",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1087,
+            944
+          ],
+          [
+            1117,
+            944
+          ],
+          [
+            1117,
+            971
+          ],
+          [
+            1087,
+            971
+          ]
+        ]
+      },
+      {
+        "text": "transformer-based model for multi-script handwritten doc-",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            73,
+            961
+          ],
+          [
+            577,
+            961
+          ],
+          [
+            577,
+            981
+          ],
+          [
+            73,
+            981
+          ]
+        ]
+      },
+      {
+        "text": "ument recognition.",
+        "confidence": 0.99,
+        "bbox": [
+          [
+            76,
+            988
+          ],
+          [
+            237,
+            988
+          ],
+          [
+            237,
+            1005
+          ],
+          [
+            76,
+            1005
+          ]
+        ]
+      },
+      {
+        "text": "Then, the final input of the transformer decoder (Flabels)",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            613,
+            990
+          ],
+          [
+            1114,
+            990
+          ],
+          [
+            1114,
+            1012
+          ],
+          [
+            613,
+            1012
+          ]
+        ]
+      },
+      {
+        "text": "3. Proposed approach",
+        "confidence": 0.968,
+        "bbox": [
+          [
+            77,
+            1016
+          ],
+          [
+            309,
+            1016
+          ],
+          [
+            309,
+            1037
+          ],
+          [
+            77,
+            1037
+          ]
+        ]
+      },
+      {
+        "text": "is prepared by applying 1D Positional encoding [14] to the",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            611,
+            1014
+          ],
+          [
+            1116,
+            1014
+          ],
+          [
+            1116,
+            1036
+          ],
+          [
+            611,
+            1036
+          ]
+        ]
+      },
+      {
+        "text": "The proposed model is depicted in Figure 1. It is",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            96,
+            1047
+          ],
+          [
+            579,
+            1047
+          ],
+          [
+            579,
+            1066
+          ],
+          [
+            96,
+            1066
+          ]
+        ]
+      },
+      {
+        "text": "embedded labels.",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            610,
+            1037
+          ],
+          [
+            762,
+            1037
+          ],
+          [
+            762,
+            1060
+          ],
+          [
+            610,
+            1060
+          ]
+        ]
+      },
+      {
+        "text": "composed of two parts: a Transformer-Encoder and a",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            73,
+            1070
+          ],
+          [
+            578,
+            1070
+          ],
+          [
+            578,
+            1090
+          ],
+          [
+            73,
+            1090
+          ]
+        ]
+      },
+      {
+        "text": "Flabels = 1DPE(Embed(labels))",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            721,
+            1083
+          ],
+          [
+            1005,
+            1083
+          ],
+          [
+            1005,
+            1106
+          ],
+          [
+            721,
+            1106
+          ]
+        ]
+      },
+      {
+        "text": "(2)",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            1087,
+            1081
+          ],
+          [
+            1117,
+            1081
+          ],
+          [
+            1117,
+            1108
+          ],
+          [
+            1087,
+            1108
+          ]
+        ]
+      },
+      {
+        "text": "Transformer-Decoder, intending to map an inputted im-",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            73,
+            1093
+          ],
+          [
+            576,
+            1093
+          ],
+          [
+            576,
+            1116
+          ],
+          [
+            73,
+            1116
+          ]
+        ]
+      },
+      {
+        "text": "age that contains text into a sequence of characters, i.e,",
+        "confidence": 0.97,
+        "bbox": [
+          [
+            71,
+            1118
+          ],
+          [
+            579,
+            1118
+          ],
+          [
+            579,
+            1142
+          ],
+          [
+            71,
+            1142
+          ]
+        ]
+      },
+      {
+        "text": "The shape of Flabels is (h, N) where N represents the",
+        "confidence": 0.993,
+        "bbox": [
+          [
+            610,
+            1123
+          ],
+          [
+            1117,
+            1123
+          ],
+          [
+            1117,
+            1152
+          ],
+          [
+            610,
+            1152
+          ]
+        ]
+      },
+      {
+        "text": "an image-to-sequence architecture. [8].",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            73,
+            1144
+          ],
+          [
+            412,
+            1144
+          ],
+          [
+            412,
+            1164
+          ],
+          [
+            73,
+            1164
+          ]
+        ]
+      },
+      {
+        "text": "length of the input labels sequence.",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            611,
+            1152
+          ],
+          [
+            921,
+            1152
+          ],
+          [
+            921,
+            1173
+          ],
+          [
+            611,
+            1173
+          ]
+        ]
+      },
+      {
+        "text": "3.1. Transformer-Encoder",
+        "confidence": 0.997,
+        "bbox": [
+          [
+            75,
+            1182
+          ],
+          [
+            305,
+            1182
+          ],
+          [
+            305,
+            1201
+          ],
+          [
+            75,
+            1201
+          ]
+        ]
+      },
+      {
+        "text": "3.3. The curriculum learning strategy",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            612,
+            1184
+          ],
+          [
+            943,
+            1184
+          ],
+          [
+            943,
+            1206
+          ],
+          [
+            612,
+            1206
+          ]
+        ]
+      },
+      {
+        "text": "The main objective of the encoder is to extract high-level",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            96,
+            1217
+          ],
+          [
+            578,
+            1217
+          ],
+          [
+            578,
+            1237
+          ],
+          [
+            96,
+            1237
+          ]
+        ]
+      },
+      {
+        "text": "Transformers are data-hungry models and need large",
+        "confidence": 0.996,
+        "bbox": [
+          [
+            632,
+            1215
+          ],
+          [
+            1116,
+            1215
+          ],
+          [
+            1116,
+            1240
+          ],
+          [
+            632,
+            1240
+          ]
+        ]
+      },
+      {
+        "text": "feature representations from the sequence of features and",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            73,
+            1242
+          ],
+          [
+            578,
+            1242
+          ],
+          [
+            578,
+            1262
+          ],
+          [
+            73,
+            1262
+          ]
+        ]
+      },
+      {
+        "text": "datasets for training. In the ideal case where a huge",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            611,
+            1241
+          ],
+          [
+            1117,
+            1241
+          ],
+          [
+            1117,
+            1263
+          ],
+          [
+            611,
+            1263
+          ]
+        ]
+      },
+      {
+        "text": "encode the visual information. This component is mainly",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            72,
+            1265
+          ],
+          [
+            578,
+            1265
+          ],
+          [
+            578,
+            1287
+          ],
+          [
+            72,
+            1287
+          ]
+        ]
+      },
+      {
+        "text": "quantity of full-page document images is available, it was",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            610,
+            1263
+          ],
+          [
+            1118,
+            1263
+          ],
+          [
+            1118,
+            1289
+          ],
+          [
+            610,
+            1289
+          ]
+        ]
+      },
+      {
+        "text": "composed of a backbone and 2 transformer layers. The",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            72,
+            1289
+          ],
+          [
+            580,
+            1289
+          ],
+          [
+            580,
+            1312
+          ],
+          [
+            72,
+            1312
+          ]
+        ]
+      },
+      {
+        "text": "proven in [6] that a large transformer model can be trained",
+        "confidence": 0.995,
+        "bbox": [
+          [
+            611,
+            1289
+          ],
+          [
+            1116,
+            1289
+          ],
+          [
+            1116,
+            1312
+          ],
+          [
+            611,
+            1312
+          ]
+        ]
+      },
+      {
+        "text": "backbone consists of the feature extraction architecture",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            72,
+            1313
+          ],
+          [
+            579,
+            1313
+          ],
+          [
+            579,
+            1335
+          ],
+          [
+            72,
+            1335
+          ]
+        ]
+      },
+      {
+        "text": "without the need for a curriculum learning strategy. In",
+        "confidence": 0.98,
+        "bbox": [
+          [
+            612,
+            1315
+          ],
+          [
+            1117,
+            1315
+          ],
+          [
+            1117,
+            1334
+          ],
+          [
+            612,
+            1334
+          ]
+        ]
+      },
+      {
+        "text": "to represent the input image into high-dimensional vec-",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            73,
+            1337
+          ],
+          [
+            576,
+            1337
+          ],
+          [
+            576,
+            1357
+          ],
+          [
+            73,
+            1357
+          ]
+        ]
+      },
+      {
+        "text": "our case, where only a limited amount of training data is",
+        "confidence": 0.987,
+        "bbox": [
+          [
+            611,
+            1338
+          ],
+          [
+            1117,
+            1338
+          ],
+          [
+            1117,
+            1358
+          ],
+          [
+            611,
+            1358
+          ]
+        ]
+      },
+      {
+        "text": "tors. It uses the ResNet-50 [12] architecture without its",
+        "confidence": 0.988,
+        "bbox": [
+          [
+            73,
+            1361
+          ],
+          [
+            579,
+            1361
+          ],
+          [
+            579,
+            1381
+          ],
+          [
+            73,
+            1381
+          ]
+        ]
+      },
+      {
+        "text": "available, the lite transformer model fails to converge (as",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            611,
+            1360
+          ],
+          [
+            1117,
+            1360
+          ],
+          [
+            1117,
+            1382
+          ],
+          [
+            611,
+            1382
+          ]
+        ]
+      },
+      {
+        "text": "last two layers( the average pool and linear projection).",
+        "confidence": 0.992,
+        "bbox": [
+          [
+            73,
+            1386
+          ],
+          [
+            577,
+            1386
+          ],
+          [
+            577,
+            1406
+          ],
+          [
+            73,
+            1406
+          ]
+        ]
+      },
+      {
+        "text": "described in table 2) without an adapted learning strat-",
+        "confidence": 0.983,
+        "bbox": [
+          [
+            612,
+            1386
+          ],
+          [
+            1117,
+            1386
+          ],
+          [
+            1117,
+            1406
+          ],
+          [
+            612,
+            1406
+          ]
+        ]
+      },
+      {
+        "text": "The ResNet produces a feature representation of the full-",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            74,
+            1410
+          ],
+          [
+            578,
+            1410
+          ],
+          [
+            578,
+            1430
+          ],
+          [
+            74,
+            1430
+          ]
+        ]
+      },
+      {
+        "text": "egy. For this aim, we propose a curriculum learning strat-",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            610,
+            1408
+          ],
+          [
+            1117,
+            1408
+          ],
+          [
+            1117,
+            1433
+          ],
+          [
+            610,
+            1433
+          ]
+        ]
+      },
+      {
+        "text": "page image. A 2D-convolutional layer (Conv2D) with a",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            72,
+            1433
+          ],
+          [
+            579,
+            1433
+          ],
+          [
+            579,
+            1456
+          ],
+          [
+            72,
+            1456
+          ]
+        ]
+      },
+      {
+        "text": "egy that involves 3 stages: in the first stage, the model is",
+        "confidence": 0.984,
+        "bbox": [
+          [
+            611,
+            1432
+          ],
+          [
+            1117,
+            1432
+          ],
+          [
+            1117,
+            1457
+          ],
+          [
+            611,
+            1457
+          ]
+        ]
+      },
+      {
+        "text": "kernel size of (1 \u00d7 1) is added, to match the number of",
+        "confidence": 0.98,
+        "bbox": [
+          [
+            73,
+            1458
+          ],
+          [
+            580,
+            1458
+          ],
+          [
+            580,
+            1477
+          ],
+          [
+            73,
+            1477
+          ]
+        ]
+      },
+      {
+        "text": "trained using a generated dataset composed of 50k small",
+        "confidence": 0.991,
+        "bbox": [
+          [
+            610,
+            1457
+          ],
+          [
+            1116,
+            1457
+          ],
+          [
+            1116,
+            1478
+          ],
+          [
+            610,
+            1478
+          ]
+        ]
+      },
+      {
+        "text": "features from the backbone network and the transformer",
+        "confidence": 0.994,
+        "bbox": [
+          [
+            74,
+            1482
+          ],
+          [
+            577,
+            1482
+          ],
+          [
+            577,
+            1499
+          ],
+          [
+            74,
+            1499
+          ]
+        ]
+      },
+      {
+        "text": "block images, where each block is composed of a mini-",
+        "confidence": 0.989,
+        "bbox": [
+          [
+            611,
+            1479
+          ],
+          [
+            1116,
+            1479
+          ],
+          [
+            1116,
+            1502
+          ],
+          [
+            611,
+            1502
+          ]
+        ]
+      },
+      {
+        "text": "input. After, the 2D positions encoding [13] are merged",
+        "confidence": 0.998,
+        "bbox": [
+          [
+            73,
+            1505
+          ],
+          [
+            578,
+            1505
+          ],
+          [
+            578,
+            1525
+          ],
+          [
+            73,
+            1525
+          ]
+        ]
+      },
+      {
+        "text": "mum of 1 line and a maximum of 4 lines and each line",
+        "confidence": 0.985,
+        "bbox": [
+          [
+            613,
+            1506
+          ],
+          [
+            1116,
+            1506
+          ],
+          [
+            1116,
+            1523
+          ],
+          [
+            613,
+            1523
+          ]
+        ]
+      },
+      {
+        "text": "3",
+        "confidence": 1.0,
+        "bbox": [
+          [
+            586,
+            1539
+          ],
+          [
+            603,
+            1539
+          ],
+          [
+            603,
+            1560
+          ],
+          [
+            586,
+            1560
+          ]
+        ]
+      }
+    ]
+  }
+}
