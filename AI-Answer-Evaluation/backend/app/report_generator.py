@@ -1,3 +1,5 @@
-"""Report generation module placeholder."""
+"""Report generator module delegating to app.services.report_generator."""
 
-# TODO: Implement report generation logic.
+from app.services.report_generator.exporter import ReportExporter
+
+__all__ = ["ReportExporter"]

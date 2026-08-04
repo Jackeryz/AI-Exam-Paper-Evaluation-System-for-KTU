@@ -1,3 +1,5 @@
-"""Question segmentation module placeholder."""
+"""Question segmentation module delegating to app.services.question_segmentation."""
 
-# TODO: Implement question segmentation logic.
+from app.services.question_segmentation.question_segmenter import QuestionSegmenter, SegmentedQuestion
+
+__all__ = ["QuestionSegmenter", "SegmentedQuestion"]

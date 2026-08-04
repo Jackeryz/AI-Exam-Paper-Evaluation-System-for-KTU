@@ -1,3 +1,5 @@
-"""RAG-related module placeholder."""
+"""RAG Engine module delegating to app.services.rag."""
 
-# TODO: Implement retrieval-augmented generation logic.
+from app.services.rag.rag_engine import RAGEngine, RAGContext
+
+__all__ = ["RAGEngine", "RAGContext"]

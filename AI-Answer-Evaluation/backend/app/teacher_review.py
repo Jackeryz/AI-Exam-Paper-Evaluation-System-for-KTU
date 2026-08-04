@@ -1,3 +1,5 @@
-"""Teacher review workflow placeholder."""
+"""Teacher review module delegating to app.services.teacher_review."""
 
-# TODO: Implement teacher review workflow logic.
+from app.services.teacher_review.review_manager import TeacherReviewManager, ReviewOverrideRequest
+
+__all__ = ["TeacherReviewManager", "ReviewOverrideRequest"]
