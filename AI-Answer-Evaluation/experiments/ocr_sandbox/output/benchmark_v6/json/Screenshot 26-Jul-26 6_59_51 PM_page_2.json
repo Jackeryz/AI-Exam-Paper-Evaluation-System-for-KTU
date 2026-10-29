@@ -1,0 +1,492 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\Screenshot 26-Jul-26 6_59_51 PM.pdf",
+  "page_number": 2,
+  "text": "101201\nTxpesofcleint:\nIMMTract agult: aault has signee\naduct consent touave thier immuzation\nVecore :n tuesystem\nI.C: consented bx their parents\nto have their imnyzatian Sove\ninsxstem (immtractcull2)\nP.A: pendcning adult turned 18\nandhavent signezadultcousent\nMust have aault cousent\nto\nrelcse info atthe age of26\nrecoras will bedeletes ifconsen\nWasuit Sighed\n, D.Ci Disaterconsented wnen\ngetting Covlz Vaccine and sisuez\nconsent auring covdpaudemk\nWeouly Keepvecor for\nsyears untell diasterhas\noude2\nteachers and students use to laugh at me saying they can't read my hand writing",
+  "confidence": 0.9081,
+  "bounding_boxes": [
+    {
+      "text": "101201",
+      "confidence": 0.8266,
+      "bbox": [
+        [
+          1049.0,
+          90.0
+        ],
+        [
+          1186.0,
+          90.0
+        ],
+        [
+          1186.0,
+          144.0
+        ],
+        [
+          1049.0,
+          144.0
+        ]
+      ]
+    },
+    {
+      "text": "Txpesofcleint:",
+      "confidence": 0.959,
+      "bbox": [
+        [
+          102.0,
+          108.0
+        ],
+        [
+          533.0,
+          108.0
+        ],
+        [
+          533.0,
+          204.0
+        ],
+        [
+          102.0,
+          204.0
+        ]
+      ]
+    },
+    {
+      "text": "IMMTract agult: aault has signee",
+      "confidence": 0.8411,
+      "bbox": [
+        [
+          127.0,
+          188.0
+        ],
+        [
+          1067.0,
+          188.0
+        ],
+        [
+          1067.0,
+          266.0
+        ],
+        [
+          127.0,
+          266.0
+        ]
+      ]
+    },
+    {
+      "text": "aduct consent touave thier immuzation",
+      "confidence": 0.9217,
+      "bbox": [
+        [
+          105.0,
+          251.0
+        ],
+        [
+          1053.0,
+          251.0
+        ],
+        [
+          1053.0,
+          331.0
+        ],
+        [
+          105.0,
+          331.0
+        ]
+      ]
+    },
+    {
+      "text": "Vecore :n tuesystem",
+      "confidence": 0.8844,
+      "bbox": [
+        [
+          119.0,
+          310.0
+        ],
+        [
+          629.0,
+          310.0
+        ],
+        [
+          629.0,
+          389.0
+        ],
+        [
+          119.0,
+          389.0
+        ]
+      ]
+    },
+    {
+      "text": "I.C: consented bx their parents",
+      "confidence": 0.9422,
+      "bbox": [
+        [
+          133.0,
+          423.0
+        ],
+        [
+          1038.0,
+          423.0
+        ],
+        [
+          1038.0,
+          497.0
+        ],
+        [
+          133.0,
+          497.0
+        ]
+      ]
+    },
+    {
+      "text": "to have their imnyzatian Sove",
+      "confidence": 0.9617,
+      "bbox": [
+        [
+          106.0,
+          491.0
+        ],
+        [
+          984.0,
+          491.0
+        ],
+        [
+          984.0,
+          555.0
+        ],
+        [
+          106.0,
+          555.0
+        ]
+      ]
+    },
+    {
+      "text": "insxstem (immtractcull2)",
+      "confidence": 0.8974,
+      "bbox": [
+        [
+          105.0,
+          554.0
+        ],
+        [
+          859.0,
+          554.0
+        ],
+        [
+          859.0,
+          624.0
+        ],
+        [
+          105.0,
+          624.0
+        ]
+      ]
+    },
+    {
+      "text": "P.A: pendcning adult turned 18",
+      "confidence": 0.8942,
+      "bbox": [
+        [
+          115.0,
+          675.0
+        ],
+        [
+          1030.0,
+          675.0
+        ],
+        [
+          1030.0,
+          742.0
+        ],
+        [
+          115.0,
+          742.0
+        ]
+      ]
+    },
+    {
+      "text": "andhavent signezadultcousent",
+      "confidence": 0.9295,
+      "bbox": [
+        [
+          99.0,
+          739.0
+        ],
+        [
+          1093.0,
+          739.0
+        ],
+        [
+          1093.0,
+          805.0
+        ],
+        [
+          99.0,
+          805.0
+        ]
+      ]
+    },
+    {
+      "text": "Must have aault cousent",
+      "confidence": 0.9664,
+      "bbox": [
+        [
+          96.0,
+          794.0
+        ],
+        [
+          938.0,
+          794.0
+        ],
+        [
+          938.0,
+          872.0
+        ],
+        [
+          96.0,
+          872.0
+        ]
+      ]
+    },
+    {
+      "text": "to",
+      "confidence": 0.9949,
+      "bbox": [
+        [
+          947.0,
+          805.0
+        ],
+        [
+          1033.0,
+          805.0
+        ],
+        [
+          1033.0,
+          871.0
+        ],
+        [
+          947.0,
+          871.0
+        ]
+      ]
+    },
+    {
+      "text": "relcse info atthe age of26",
+      "confidence": 0.9301,
+      "bbox": [
+        [
+          110.0,
+          867.0
+        ],
+        [
+          1087.0,
+          867.0
+        ],
+        [
+          1087.0,
+          931.0
+        ],
+        [
+          110.0,
+          931.0
+        ]
+      ]
+    },
+    {
+      "text": "recoras will bedeletes ifconsen",
+      "confidence": 0.917,
+      "bbox": [
+        [
+          108.0,
+          930.0
+        ],
+        [
+          1176.0,
+          930.0
+        ],
+        [
+          1176.0,
+          990.0
+        ],
+        [
+          108.0,
+          990.0
+        ]
+      ]
+    },
+    {
+      "text": "Wasuit Sighed",
+      "confidence": 0.8268,
+      "bbox": [
+        [
+          101.0,
+          1005.0
+        ],
+        [
+          489.0,
+          1005.0
+        ],
+        [
+          489.0,
+          1063.0
+        ],
+        [
+          101.0,
+          1063.0
+        ]
+      ]
+    },
+    {
+      "text": ", D.Ci Disaterconsented wnen",
+      "confidence": 0.8727,
+      "bbox": [
+        [
+          67.0,
+          1107.0
+        ],
+        [
+          1006.0,
+          1107.0
+        ],
+        [
+          1006.0,
+          1201.0
+        ],
+        [
+          67.0,
+          1201.0
+        ]
+      ]
+    },
+    {
+      "text": "getting Covlz Vaccine and sisuez",
+      "confidence": 0.8978,
+      "bbox": [
+        [
+          72.0,
+          1170.0
+        ],
+        [
+          979.0,
+          1170.0
+        ],
+        [
+          979.0,
+          1271.0
+        ],
+        [
+          72.0,
+          1271.0
+        ]
+      ]
+    },
+    {
+      "text": "consent auring covdpaudemk",
+      "confidence": 0.895,
+      "bbox": [
+        [
+          84.0,
+          1237.0
+        ],
+        [
+          976.0,
+          1237.0
+        ],
+        [
+          976.0,
+          1326.0
+        ],
+        [
+          84.0,
+          1326.0
+        ]
+      ]
+    },
+    {
+      "text": "Weouly Keepvecor for",
+      "confidence": 0.9197,
+      "bbox": [
+        [
+          106.0,
+          1308.0
+        ],
+        [
+          997.0,
+          1308.0
+        ],
+        [
+          997.0,
+          1390.0
+        ],
+        [
+          106.0,
+          1390.0
+        ]
+      ]
+    },
+    {
+      "text": "syears untell diasterhas",
+      "confidence": 0.9545,
+      "bbox": [
+        [
+          123.0,
+          1378.0
+        ],
+        [
+          909.0,
+          1378.0
+        ],
+        [
+          909.0,
+          1453.0
+        ],
+        [
+          123.0,
+          1453.0
+        ]
+      ]
+    },
+    {
+      "text": "oude2",
+      "confidence": 0.7523,
+      "bbox": [
+        [
+          138.0,
+          1468.0
+        ],
+        [
+          306.0,
+          1468.0
+        ],
+        [
+          306.0,
+          1512.0
+        ],
+        [
+          138.0,
+          1512.0
+        ]
+      ]
+    },
+    {
+      "text": "teachers and students use to laugh at me saying they can't read my hand writing",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          1.0,
+          1508.0
+        ],
+        [
+          785.0,
+          1508.0
+        ],
+        [
+          785.0,
+          1544.0
+        ],
+        [
+          1.0,
+          1544.0
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2252 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
+  "page_number": 6,
+  "text": "choice to adopt a lite model in the context of low-resource\ntransfer learning strategy consists in fine-tuning all the\nhandwriting recognition.\nmodel components. The model reaches a competitive re-\n4.4. Evaluation of the transfer learning process\nsult on the RIMES dataset as presented in section 4.5.\nIn this section, we report the evaluation of the trans-\nfer learning process considering the IAM dataset (English\nTo explore the capacity of the model to be adapted to\nscript) as a source domain and the RIMES dataset (French\nother scripts, additional experiments are conducted con-\nscript) as a target domain. In this scenario, we initialized\nsidering as a target domain the Esposalles dataset con-\nthe model parameters by the weights of the original model\ntaining historical handwritten documents written in Span-\ntrained on the IAM dataset, then we fine-tune just a subset\nish script. We note the size of images is reduced for this\nof layers going from the last transformer layer to the first\ndataset, to decrease the feature map sequence length and\none. We start by learning the FC layer and the embed-\nconsequently speed up the convergence. A CER of 1.7%\nding weights for the decoder while keeping the other parts\nis obtained on the Esposalles test set which confirms the\nof the model frozen. For example, FC + embed, Decod[L1],\ncapacity of the model to transfer the knowledge acquired\nin table 2, indicates that the second layer of the decoder.\nfrom learning English handwritten text to recognize Span-\nthe embedding weights, and the Fully connected layer are\nish handwriting, even in the case of high domain shift be-\nfine-tuned while keeping the rest of the layers frozen. Next.\ntween the source and the target datasets.\nthe first layer of the decoder (L0) is included in the set of\nlayers to be re-trained. The remaining steps follow the\nsame logic. An upper layer is added to the set of layers to\nThe last and the most challenging experiment consists\nbe retrained until reaching the whole architecture.\nin fine-tuning the model trained on English handwriting\nThe results of table 2 correspond to a transfer learn-\nto recognize Arabic handwriting (KHATT dataset). The\ning from English to French handwritten text. We notice\nchallenge here consists in the fact that English and Ara-\nthat by fine-tuning only the embedding layer and the FC\nbic use completely different alphabets, and are naturally\nlayers, a CER of 30.7% was obtained on the test set. By\nwritten in different directions (from right to left for Arabic\nfine-tuning the decoder layers, an improvement of 5.3% in\nand from left to right for English\nterms of CER is obtained due to the adaptation of the lan-\nguage model, initially trained on English text, to capture\nthe inherent nuances of the target text (French). We note\nTo exploit the reading order knowledge acquired by the\nhere that English and French scripts share multiple simi-\nmodel on English script, we apply a horizontal flipping\nlarities, notably most of their character sets and a number\npre-processing to the images of the KHATT dataset be-\nof true word cognates. This can explain why the obtained\nfore inferring them to the model. Additionally, the im-\ngain is not so high and it can be more important when\nages are resized to 2048 × 512 as the maximum number\nthe scripts of the source and the target domains present\nof lines per image is 6. This helps the model to capture\nmore dissimilarity. The second aspect concerns the fine-\nmore contextual information and to map the high-level\ntuning of the optical model, which includes the backbone\nfeature to the text of the ground truth during decoding.\nand the encoder layers. As shown in Table 2, a gain of\nAs reported in table 6, our model achieved competitive\n12.7% in terms of CER is obtained which confirms that\nresults on the KHATT dataset. which confirms that the\nthe transfer learning allows the model to reduce the do-\nmodel benefits from the knowledge acquired from the IAM\nmain shift between the source and target domains as IAM\ndataset to learn the reading order at a record level, but is\nimages and RIMES images contain different distribution\nalso able to improve its generalization ability to learn the\nresulting from irregularities in term of line spacing, differ-\nspecificity of the target script by transfer learning.\nent handwriting skew/slant and different writer styles.\nTable 2: Evaluation of the transfer learning process on RIMES\ndataset\nTrainable layers\nCER\nFC+embed\n30.7\n4.5. Comparison with state-of-the-art\nFC+embed,Decod[L1]\n37.9\nFC+embed,Decod[L1,L0]\n25.4\nFC+embed,Decod[L1,L0],Encod[L1]\n17.3\nFC+embed,Decod[L1,L0],Encod[L1,L0]\n15.6\nIn this subsection, we compare the performance of\nFC+embed,Decod[L1,L0],Encod[L1,L0],Backbone\n2.9\nour model with the state-of-the-art models on different\ndatasets. Note that our lite transformer model is evalu-\nated without the use of an external language model and\nFrom this ablation study, we can conclude that the best\nany lexicon constraint.\n6",
+  "confidence": 0.9943,
+  "bounding_boxes": [
+    {
+      "text": "choice to adopt a lite model in the context of low-resource",
+      "confidence": 0.9943,
+      "bbox": [
+        [
+          75.0,
+          167.0
+        ],
+        [
+          578.0,
+          167.0
+        ],
+        [
+          578.0,
+          184.0
+        ],
+        [
+          75.0,
+          184.0
+        ]
+      ]
+    },
+    {
+      "text": "transfer learning strategy consists in fine-tuning all the",
+      "confidence": 0.9823,
+      "bbox": [
+        [
+          612.0,
+          168.0
+        ],
+        [
+          1115.0,
+          168.0
+        ],
+        [
+          1115.0,
+          185.0
+        ],
+        [
+          612.0,
+          185.0
+        ]
+      ]
+    },
+    {
+      "text": "handwriting recognition.",
+      "confidence": 0.9986,
+      "bbox": [
+        [
+          74.0,
+          192.0
+        ],
+        [
+          288.0,
+          192.0
+        ],
+        [
+          288.0,
+          209.0
+        ],
+        [
+          74.0,
+          209.0
+        ]
+      ]
+    },
+    {
+      "text": "model components. The model reaches a competitive re-",
+      "confidence": 0.9834,
+      "bbox": [
+        [
+          611.0,
+          192.0
+        ],
+        [
+          1114.0,
+          192.0
+        ],
+        [
+          1114.0,
+          209.0
+        ],
+        [
+          611.0,
+          209.0
+        ]
+      ]
+    },
+    {
+      "text": "4.4. Evaluation of the transfer learning process",
+      "confidence": 0.9976,
+      "bbox": [
+        [
+          73.0,
+          223.0
+        ],
+        [
+          488.0,
+          223.0
+        ],
+        [
+          488.0,
+          244.0
+        ],
+        [
+          73.0,
+          244.0
+        ]
+      ]
+    },
+    {
+      "text": "sult on the RIMES dataset as presented in section 4.5.",
+      "confidence": 0.9945,
+      "bbox": [
+        [
+          612.0,
+          215.0
+        ],
+        [
+          1089.0,
+          215.0
+        ],
+        [
+          1089.0,
+          232.0
+        ],
+        [
+          612.0,
+          232.0
+        ]
+      ]
+    },
+    {
+      "text": "In this section, we report the evaluation of the trans-",
+      "confidence": 0.9908,
+      "bbox": [
+        [
+          94.0,
+          258.0
+        ],
+        [
+          576.0,
+          258.0
+        ],
+        [
+          576.0,
+          275.0
+        ],
+        [
+          94.0,
+          275.0
+        ]
+      ]
+    },
+    {
+      "text": "fer learning process considering the IAM dataset (English",
+      "confidence": 0.9974,
+      "bbox": [
+        [
+          74.0,
+          282.0
+        ],
+        [
+          576.0,
+          282.0
+        ],
+        [
+          576.0,
+          299.0
+        ],
+        [
+          74.0,
+          299.0
+        ]
+      ]
+    },
+    {
+      "text": "To explore the capacity of the model to be adapted to",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          633.0,
+          290.0
+        ],
+        [
+          1116.0,
+          290.0
+        ],
+        [
+          1116.0,
+          307.0
+        ],
+        [
+          633.0,
+          307.0
+        ]
+      ]
+    },
+    {
+      "text": "script) as a source domain and the RIMES dataset (French",
+      "confidence": 0.9917,
+      "bbox": [
+        [
+          72.0,
+          304.0
+        ],
+        [
+          577.0,
+          304.0
+        ],
+        [
+          577.0,
+          325.0
+        ],
+        [
+          72.0,
+          325.0
+        ]
+      ]
+    },
+    {
+      "text": "other scripts, additional experiments are conducted con-",
+      "confidence": 0.9992,
+      "bbox": [
+        [
+          613.0,
+          315.0
+        ],
+        [
+          1115.0,
+          315.0
+        ],
+        [
+          1115.0,
+          332.0
+        ],
+        [
+          613.0,
+          332.0
+        ]
+      ]
+    },
+    {
+      "text": "script) as a target domain. In this scenario, we initialized",
+      "confidence": 0.9912,
+      "bbox": [
+        [
+          74.0,
+          331.0
+        ],
+        [
+          577.0,
+          331.0
+        ],
+        [
+          577.0,
+          348.0
+        ],
+        [
+          74.0,
+          348.0
+        ]
+      ]
+    },
+    {
+      "text": "sidering as a target domain the Esposalles dataset con-",
+      "confidence": 0.9931,
+      "bbox": [
+        [
+          612.0,
+          339.0
+        ],
+        [
+          1115.0,
+          339.0
+        ],
+        [
+          1115.0,
+          355.0
+        ],
+        [
+          612.0,
+          355.0
+        ]
+      ]
+    },
+    {
+      "text": "the model parameters by the weights of the original model",
+      "confidence": 0.9955,
+      "bbox": [
+        [
+          74.0,
+          354.0
+        ],
+        [
+          576.0,
+          354.0
+        ],
+        [
+          576.0,
+          371.0
+        ],
+        [
+          74.0,
+          371.0
+        ]
+      ]
+    },
+    {
+      "text": "taining historical handwritten documents written in Span-",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          612.0,
+          362.0
+        ],
+        [
+          1115.0,
+          362.0
+        ],
+        [
+          1115.0,
+          379.0
+        ],
+        [
+          612.0,
+          379.0
+        ]
+      ]
+    },
+    {
+      "text": "trained on the IAM dataset, then we fine-tune just a subset",
+      "confidence": 0.9981,
+      "bbox": [
+        [
+          74.0,
+          378.0
+        ],
+        [
+          577.0,
+          378.0
+        ],
+        [
+          577.0,
+          395.0
+        ],
+        [
+          74.0,
+          395.0
+        ]
+      ]
+    },
+    {
+      "text": "ish script. We note the size of images is reduced for this",
+      "confidence": 0.9974,
+      "bbox": [
+        [
+          612.0,
+          386.0
+        ],
+        [
+          1116.0,
+          386.0
+        ],
+        [
+          1116.0,
+          403.0
+        ],
+        [
+          612.0,
+          403.0
+        ]
+      ]
+    },
+    {
+      "text": "of layers going from the last transformer layer to the first",
+      "confidence": 0.9816,
+      "bbox": [
+        [
+          74.0,
+          402.0
+        ],
+        [
+          576.0,
+          402.0
+        ],
+        [
+          576.0,
+          419.0
+        ],
+        [
+          74.0,
+          419.0
+        ]
+      ]
+    },
+    {
+      "text": "dataset, to decrease the feature map sequence length and",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          611.0,
+          407.0
+        ],
+        [
+          1117.0,
+          407.0
+        ],
+        [
+          1117.0,
+          428.0
+        ],
+        [
+          611.0,
+          428.0
+        ]
+      ]
+    },
+    {
+      "text": "one. We start by learning the FC layer and the embed-",
+      "confidence": 0.9823,
+      "bbox": [
+        [
+          74.0,
+          425.0
+        ],
+        [
+          576.0,
+          425.0
+        ],
+        [
+          576.0,
+          442.0
+        ],
+        [
+          74.0,
+          442.0
+        ]
+      ]
+    },
+    {
+      "text": "consequently speed up the convergence. A CER of 1.7%",
+      "confidence": 0.9939,
+      "bbox": [
+        [
+          610.0,
+          431.0
+        ],
+        [
+          1116.0,
+          431.0
+        ],
+        [
+          1116.0,
+          452.0
+        ],
+        [
+          610.0,
+          452.0
+        ]
+      ]
+    },
+    {
+      "text": "ding weights for the decoder while keeping the other parts",
+      "confidence": 0.9998,
+      "bbox": [
+        [
+          75.0,
+          450.0
+        ],
+        [
+          577.0,
+          450.0
+        ],
+        [
+          577.0,
+          467.0
+        ],
+        [
+          75.0,
+          467.0
+        ]
+      ]
+    },
+    {
+      "text": "is obtained on the Esposalles test set which confirms the",
+      "confidence": 0.9977,
+      "bbox": [
+        [
+          610.0,
+          457.0
+        ],
+        [
+          1114.0,
+          457.0
+        ],
+        [
+          1114.0,
+          474.0
+        ],
+        [
+          610.0,
+          474.0
+        ]
+      ]
+    },
+    {
+      "text": "of the model frozen. For example, FC + embed, Decod[L1],",
+      "confidence": 0.9905,
+      "bbox": [
+        [
+          72.0,
+          471.0
+        ],
+        [
+          576.0,
+          471.0
+        ],
+        [
+          576.0,
+          492.0
+        ],
+        [
+          72.0,
+          492.0
+        ]
+      ]
+    },
+    {
+      "text": "capacity of the model to transfer the knowledge acquired",
+      "confidence": 0.9988,
+      "bbox": [
+        [
+          612.0,
+          482.0
+        ],
+        [
+          1116.0,
+          482.0
+        ],
+        [
+          1116.0,
+          498.0
+        ],
+        [
+          612.0,
+          498.0
+        ]
+      ]
+    },
+    {
+      "text": "in table 2, indicates that the second layer of the decoder.",
+      "confidence": 0.9989,
+      "bbox": [
+        [
+          74.0,
+          497.0
+        ],
+        [
+          575.0,
+          497.0
+        ],
+        [
+          575.0,
+          514.0
+        ],
+        [
+          74.0,
+          514.0
+        ]
+      ]
+    },
+    {
+      "text": "from learning English handwritten text to recognize Span-",
+      "confidence": 0.9956,
+      "bbox": [
+        [
+          612.0,
+          505.0
+        ],
+        [
+          1115.0,
+          505.0
+        ],
+        [
+          1115.0,
+          522.0
+        ],
+        [
+          612.0,
+          522.0
+        ]
+      ]
+    },
+    {
+      "text": "the embedding weights, and the Fully connected layer are",
+      "confidence": 0.9837,
+      "bbox": [
+        [
+          74.0,
+          520.0
+        ],
+        [
+          576.0,
+          520.0
+        ],
+        [
+          576.0,
+          537.0
+        ],
+        [
+          74.0,
+          537.0
+        ]
+      ]
+    },
+    {
+      "text": "ish handwriting, even in the case of high domain shift be-",
+      "confidence": 0.9989,
+      "bbox": [
+        [
+          612.0,
+          529.0
+        ],
+        [
+          1115.0,
+          529.0
+        ],
+        [
+          1115.0,
+          546.0
+        ],
+        [
+          612.0,
+          546.0
+        ]
+      ]
+    },
+    {
+      "text": "fine-tuned while keeping the rest of the layers frozen. Next.",
+      "confidence": 0.985,
+      "bbox": [
+        [
+          74.0,
+          544.0
+        ],
+        [
+          575.0,
+          544.0
+        ],
+        [
+          575.0,
+          561.0
+        ],
+        [
+          74.0,
+          561.0
+        ]
+      ]
+    },
+    {
+      "text": "tween the source and the target datasets.",
+      "confidence": 0.9981,
+      "bbox": [
+        [
+          612.0,
+          553.0
+        ],
+        [
+          972.0,
+          553.0
+        ],
+        [
+          972.0,
+          570.0
+        ],
+        [
+          612.0,
+          570.0
+        ]
+      ]
+    },
+    {
+      "text": "the first layer of the decoder (L0) is included in the set of",
+      "confidence": 0.9963,
+      "bbox": [
+        [
+          74.0,
+          568.0
+        ],
+        [
+          577.0,
+          568.0
+        ],
+        [
+          577.0,
+          585.0
+        ],
+        [
+          74.0,
+          585.0
+        ]
+      ]
+    },
+    {
+      "text": "layers to be re-trained. The remaining steps follow the",
+      "confidence": 0.996,
+      "bbox": [
+        [
+          71.0,
+          591.0
+        ],
+        [
+          578.0,
+          591.0
+        ],
+        [
+          578.0,
+          612.0
+        ],
+        [
+          71.0,
+          612.0
+        ]
+      ]
+    },
+    {
+      "text": "same logic. An upper layer is added to the set of layers to",
+      "confidence": 0.9976,
+      "bbox": [
+        [
+          73.0,
+          618.0
+        ],
+        [
+          576.0,
+          618.0
+        ],
+        [
+          576.0,
+          634.0
+        ],
+        [
+          73.0,
+          634.0
+        ]
+      ]
+    },
+    {
+      "text": "The last and the most challenging experiment consists",
+      "confidence": 0.9816,
+      "bbox": [
+        [
+          631.0,
+          626.0
+        ],
+        [
+          1117.0,
+          626.0
+        ],
+        [
+          1117.0,
+          646.0
+        ],
+        [
+          631.0,
+          646.0
+        ]
+      ]
+    },
+    {
+      "text": "be retrained until reaching the whole architecture.",
+      "confidence": 0.9994,
+      "bbox": [
+        [
+          73.0,
+          641.0
+        ],
+        [
+          513.0,
+          641.0
+        ],
+        [
+          513.0,
+          658.0
+        ],
+        [
+          73.0,
+          658.0
+        ]
+      ]
+    },
+    {
+      "text": "in fine-tuning the model trained on English handwriting",
+      "confidence": 0.9963,
+      "bbox": [
+        [
+          612.0,
+          652.0
+        ],
+        [
+          1116.0,
+          652.0
+        ],
+        [
+          1116.0,
+          669.0
+        ],
+        [
+          612.0,
+          669.0
+        ]
+      ]
+    },
+    {
+      "text": "The results of table 2 correspond to a transfer learn-",
+      "confidence": 0.9784,
+      "bbox": [
+        [
+          95.0,
+          665.0
+        ],
+        [
+          576.0,
+          665.0
+        ],
+        [
+          576.0,
+          682.0
+        ],
+        [
+          95.0,
+          682.0
+        ]
+      ]
+    },
+    {
+      "text": "to recognize Arabic handwriting (KHATT dataset). The",
+      "confidence": 0.9872,
+      "bbox": [
+        [
+          612.0,
+          675.0
+        ],
+        [
+          1115.0,
+          675.0
+        ],
+        [
+          1115.0,
+          692.0
+        ],
+        [
+          612.0,
+          692.0
+        ]
+      ]
+    },
+    {
+      "text": "ing from English to French handwritten text. We notice",
+      "confidence": 0.9967,
+      "bbox": [
+        [
+          74.0,
+          689.0
+        ],
+        [
+          576.0,
+          689.0
+        ],
+        [
+          576.0,
+          706.0
+        ],
+        [
+          74.0,
+          706.0
+        ]
+      ]
+    },
+    {
+      "text": "challenge here consists in the fact that English and Ara-",
+      "confidence": 0.9907,
+      "bbox": [
+        [
+          613.0,
+          699.0
+        ],
+        [
+          1115.0,
+          699.0
+        ],
+        [
+          1115.0,
+          716.0
+        ],
+        [
+          613.0,
+          716.0
+        ]
+      ]
+    },
+    {
+      "text": "that by fine-tuning only the embedding layer and the FC",
+      "confidence": 0.9895,
+      "bbox": [
+        [
+          74.0,
+          712.0
+        ],
+        [
+          576.0,
+          712.0
+        ],
+        [
+          576.0,
+          729.0
+        ],
+        [
+          74.0,
+          729.0
+        ]
+      ]
+    },
+    {
+      "text": "bic use completely different alphabets, and are naturally",
+      "confidence": 0.9959,
+      "bbox": [
+        [
+          612.0,
+          724.0
+        ],
+        [
+          1114.0,
+          724.0
+        ],
+        [
+          1114.0,
+          741.0
+        ],
+        [
+          612.0,
+          741.0
+        ]
+      ]
+    },
+    {
+      "text": "layers, a CER of 30.7% was obtained on the test set. By",
+      "confidence": 0.9989,
+      "bbox": [
+        [
+          72.0,
+          735.0
+        ],
+        [
+          577.0,
+          735.0
+        ],
+        [
+          577.0,
+          756.0
+        ],
+        [
+          72.0,
+          756.0
+        ]
+      ]
+    },
+    {
+      "text": "written in different directions (from right to left for Arabic",
+      "confidence": 0.9997,
+      "bbox": [
+        [
+          613.0,
+          748.0
+        ],
+        [
+          1115.0,
+          748.0
+        ],
+        [
+          1115.0,
+          765.0
+        ],
+        [
+          613.0,
+          765.0
+        ]
+      ]
+    },
+    {
+      "text": "fine-tuning the decoder layers, an improvement of 5.3% in",
+      "confidence": 0.9979,
+      "bbox": [
+        [
+          72.0,
+          759.0
+        ],
+        [
+          578.0,
+          759.0
+        ],
+        [
+          578.0,
+          779.0
+        ],
+        [
+          72.0,
+          779.0
+        ]
+      ]
+    },
+    {
+      "text": "and from left to right for English",
+      "confidence": 0.9949,
+      "bbox": [
+        [
+          613.0,
+          772.0
+        ],
+        [
+          905.0,
+          772.0
+        ],
+        [
+          905.0,
+          788.0
+        ],
+        [
+          613.0,
+          788.0
+        ]
+      ]
+    },
+    {
+      "text": "terms of CER is obtained due to the adaptation of the lan-",
+      "confidence": 0.9881,
+      "bbox": [
+        [
+          74.0,
+          785.0
+        ],
+        [
+          576.0,
+          785.0
+        ],
+        [
+          576.0,
+          802.0
+        ],
+        [
+          74.0,
+          802.0
+        ]
+      ]
+    },
+    {
+      "text": "guage model, initially trained on English text, to capture",
+      "confidence": 0.989,
+      "bbox": [
+        [
+          72.0,
+          806.0
+        ],
+        [
+          578.0,
+          806.0
+        ],
+        [
+          578.0,
+          827.0
+        ],
+        [
+          72.0,
+          827.0
+        ]
+      ]
+    },
+    {
+      "text": "the inherent nuances of the target text (French). We note",
+      "confidence": 0.9983,
+      "bbox": [
+        [
+          74.0,
+          832.0
+        ],
+        [
+          576.0,
+          832.0
+        ],
+        [
+          576.0,
+          849.0
+        ],
+        [
+          74.0,
+          849.0
+        ]
+      ]
+    },
+    {
+      "text": "To exploit the reading order knowledge acquired by the",
+      "confidence": 0.9961,
+      "bbox": [
+        [
+          631.0,
+          844.0
+        ],
+        [
+          1116.0,
+          844.0
+        ],
+        [
+          1116.0,
+          865.0
+        ],
+        [
+          631.0,
+          865.0
+        ]
+      ]
+    },
+    {
+      "text": "here that English and French scripts share multiple simi-",
+      "confidence": 0.9921,
+      "bbox": [
+        [
+          73.0,
+          856.0
+        ],
+        [
+          575.0,
+          856.0
+        ],
+        [
+          575.0,
+          873.0
+        ],
+        [
+          73.0,
+          873.0
+        ]
+      ]
+    },
+    {
+      "text": "model on English script, we apply a horizontal flipping",
+      "confidence": 0.9928,
+      "bbox": [
+        [
+          611.0,
+          870.0
+        ],
+        [
+          1117.0,
+          870.0
+        ],
+        [
+          1117.0,
+          890.0
+        ],
+        [
+          611.0,
+          890.0
+        ]
+      ]
+    },
+    {
+      "text": "larities, notably most of their character sets and a number",
+      "confidence": 0.9972,
+      "bbox": [
+        [
+          75.0,
+          882.0
+        ],
+        [
+          575.0,
+          882.0
+        ],
+        [
+          575.0,
+          896.0
+        ],
+        [
+          75.0,
+          896.0
+        ]
+      ]
+    },
+    {
+      "text": "pre-processing to the images of the KHATT dataset be-",
+      "confidence": 0.9856,
+      "bbox": [
+        [
+          610.0,
+          892.0
+        ],
+        [
+          1116.0,
+          892.0
+        ],
+        [
+          1116.0,
+          914.0
+        ],
+        [
+          610.0,
+          914.0
+        ]
+      ]
+    },
+    {
+      "text": "of true word cognates. This can explain why the obtained",
+      "confidence": 0.9912,
+      "bbox": [
+        [
+          74.0,
+          905.0
+        ],
+        [
+          577.0,
+          905.0
+        ],
+        [
+          577.0,
+          921.0
+        ],
+        [
+          74.0,
+          921.0
+        ]
+      ]
+    },
+    {
+      "text": "fore inferring them to the model. Additionally, the im-",
+      "confidence": 0.9947,
+      "bbox": [
+        [
+          612.0,
+          918.0
+        ],
+        [
+          1115.0,
+          918.0
+        ],
+        [
+          1115.0,
+          935.0
+        ],
+        [
+          612.0,
+          935.0
+        ]
+      ]
+    },
+    {
+      "text": "gain is not so high and it can be more important when",
+      "confidence": 0.9852,
+      "bbox": [
+        [
+          74.0,
+          928.0
+        ],
+        [
+          575.0,
+          928.0
+        ],
+        [
+          575.0,
+          945.0
+        ],
+        [
+          74.0,
+          945.0
+        ]
+      ]
+    },
+    {
+      "text": "ages are resized to 2048 × 512 as the maximum number",
+      "confidence": 0.9956,
+      "bbox": [
+        [
+          610.0,
+          939.0
+        ],
+        [
+          1117.0,
+          939.0
+        ],
+        [
+          1117.0,
+          960.0
+        ],
+        [
+          610.0,
+          960.0
+        ]
+      ]
+    },
+    {
+      "text": "the scripts of the source and the target domains present",
+      "confidence": 0.9991,
+      "bbox": [
+        [
+          74.0,
+          952.0
+        ],
+        [
+          576.0,
+          952.0
+        ],
+        [
+          576.0,
+          969.0
+        ],
+        [
+          74.0,
+          969.0
+        ]
+      ]
+    },
+    {
+      "text": "of lines per image is 6. This helps the model to capture",
+      "confidence": 0.9831,
+      "bbox": [
+        [
+          611.0,
+          965.0
+        ],
+        [
+          1115.0,
+          965.0
+        ],
+        [
+          1115.0,
+          982.0
+        ],
+        [
+          611.0,
+          982.0
+        ]
+      ]
+    },
+    {
+      "text": "more dissimilarity. The second aspect concerns the fine-",
+      "confidence": 0.9838,
+      "bbox": [
+        [
+          74.0,
+          976.0
+        ],
+        [
+          575.0,
+          976.0
+        ],
+        [
+          575.0,
+          993.0
+        ],
+        [
+          74.0,
+          993.0
+        ]
+      ]
+    },
+    {
+      "text": "more contextual information and to map the high-level",
+      "confidence": 0.9833,
+      "bbox": [
+        [
+          610.0,
+          989.0
+        ],
+        [
+          1115.0,
+          989.0
+        ],
+        [
+          1115.0,
+          1006.0
+        ],
+        [
+          610.0,
+          1006.0
+        ]
+      ]
+    },
+    {
+      "text": "tuning of the optical model, which includes the backbone",
+      "confidence": 0.9973,
+      "bbox": [
+        [
+          73.0,
+          999.0
+        ],
+        [
+          577.0,
+          999.0
+        ],
+        [
+          577.0,
+          1018.0
+        ],
+        [
+          73.0,
+          1018.0
+        ]
+      ]
+    },
+    {
+      "text": "feature to the text of the ground truth during decoding.",
+      "confidence": 0.9908,
+      "bbox": [
+        [
+          611.0,
+          1012.0
+        ],
+        [
+          1114.0,
+          1012.0
+        ],
+        [
+          1114.0,
+          1031.0
+        ],
+        [
+          611.0,
+          1031.0
+        ]
+      ]
+    },
+    {
+      "text": "and the encoder layers. As shown in Table 2, a gain of",
+      "confidence": 0.9908,
+      "bbox": [
+        [
+          74.0,
+          1025.0
+        ],
+        [
+          578.0,
+          1025.0
+        ],
+        [
+          578.0,
+          1042.0
+        ],
+        [
+          74.0,
+          1042.0
+        ]
+      ]
+    },
+    {
+      "text": "As reported in table 6, our model achieved competitive",
+      "confidence": 0.9912,
+      "bbox": [
+        [
+          613.0,
+          1038.0
+        ],
+        [
+          1116.0,
+          1038.0
+        ],
+        [
+          1116.0,
+          1054.0
+        ],
+        [
+          613.0,
+          1054.0
+        ]
+      ]
+    },
+    {
+      "text": "12.7% in terms of CER is obtained which confirms that",
+      "confidence": 0.9879,
+      "bbox": [
+        [
+          74.0,
+          1048.0
+        ],
+        [
+          577.0,
+          1048.0
+        ],
+        [
+          577.0,
+          1064.0
+        ],
+        [
+          74.0,
+          1064.0
+        ]
+      ]
+    },
+    {
+      "text": "results on the KHATT dataset. which confirms that the",
+      "confidence": 0.9919,
+      "bbox": [
+        [
+          611.0,
+          1061.0
+        ],
+        [
+          1113.0,
+          1061.0
+        ],
+        [
+          1113.0,
+          1075.0
+        ],
+        [
+          611.0,
+          1075.0
+        ]
+      ]
+    },
+    {
+      "text": "the transfer learning allows the model to reduce the do-",
+      "confidence": 0.9944,
+      "bbox": [
+        [
+          74.0,
+          1072.0
+        ],
+        [
+          576.0,
+          1072.0
+        ],
+        [
+          576.0,
+          1089.0
+        ],
+        [
+          74.0,
+          1089.0
+        ]
+      ]
+    },
+    {
+      "text": "model benefits from the knowledge acquired from the IAM",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          611.0,
+          1084.0
+        ],
+        [
+          1115.0,
+          1084.0
+        ],
+        [
+          1115.0,
+          1101.0
+        ],
+        [
+          611.0,
+          1101.0
+        ]
+      ]
+    },
+    {
+      "text": "main shift between the source and target domains as IAM",
+      "confidence": 0.9997,
+      "bbox": [
+        [
+          74.0,
+          1095.0
+        ],
+        [
+          577.0,
+          1095.0
+        ],
+        [
+          577.0,
+          1112.0
+        ],
+        [
+          74.0,
+          1112.0
+        ]
+      ]
+    },
+    {
+      "text": "dataset to learn the reading order at a record level, but is",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          611.0,
+          1108.0
+        ],
+        [
+          1115.0,
+          1108.0
+        ],
+        [
+          1115.0,
+          1125.0
+        ],
+        [
+          611.0,
+          1125.0
+        ]
+      ]
+    },
+    {
+      "text": "images and RIMES images contain different distribution",
+      "confidence": 0.9965,
+      "bbox": [
+        [
+          74.0,
+          1119.0
+        ],
+        [
+          577.0,
+          1119.0
+        ],
+        [
+          577.0,
+          1136.0
+        ],
+        [
+          74.0,
+          1136.0
+        ]
+      ]
+    },
+    {
+      "text": "also able to improve its generalization ability to learn the",
+      "confidence": 0.9898,
+      "bbox": [
+        [
+          613.0,
+          1134.0
+        ],
+        [
+          1115.0,
+          1134.0
+        ],
+        [
+          1115.0,
+          1151.0
+        ],
+        [
+          613.0,
+          1151.0
+        ]
+      ]
+    },
+    {
+      "text": "resulting from irregularities in term of line spacing, differ-",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          74.0,
+          1144.0
+        ],
+        [
+          576.0,
+          1144.0
+        ],
+        [
+          576.0,
+          1161.0
+        ],
+        [
+          74.0,
+          1161.0
+        ]
+      ]
+    },
+    {
+      "text": "specificity of the target script by transfer learning.",
+      "confidence": 0.9991,
+      "bbox": [
+        [
+          610.0,
+          1156.0
+        ],
+        [
+          1053.0,
+          1156.0
+        ],
+        [
+          1053.0,
+          1177.0
+        ],
+        [
+          610.0,
+          1177.0
+        ]
+      ]
+    },
+    {
+      "text": "ent handwriting skew/slant and different writer styles.",
+      "confidence": 0.9923,
+      "bbox": [
+        [
+          74.0,
+          1168.0
+        ],
+        [
+          548.0,
+          1168.0
+        ],
+        [
+          548.0,
+          1185.0
+        ],
+        [
+          74.0,
+          1185.0
+        ]
+      ]
+    },
+    {
+      "text": "Table 2: Evaluation of the transfer learning process on RIMES",
+      "confidence": 0.9947,
+      "bbox": [
+        [
+          73.0,
+          1229.0
+        ],
+        [
+          577.0,
+          1229.0
+        ],
+        [
+          577.0,
+          1246.0
+        ],
+        [
+          73.0,
+          1246.0
+        ]
+      ]
+    },
+    {
+      "text": "dataset",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          72.0,
+          1248.0
+        ],
+        [
+          131.0,
+          1248.0
+        ],
+        [
+          131.0,
+          1266.0
+        ],
+        [
+          72.0,
+          1266.0
+        ]
+      ]
+    },
+    {
+      "text": "Trainable layers",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          84.0,
+          1289.0
+        ],
+        [
+          227.0,
+          1289.0
+        ],
+        [
+          227.0,
+          1309.0
+        ],
+        [
+          84.0,
+          1309.0
+        ]
+      ]
+    },
+    {
+      "text": "CER",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          539.0,
+          1285.0
+        ],
+        [
+          590.0,
+          1285.0
+        ],
+        [
+          590.0,
+          1310.0
+        ],
+        [
+          539.0,
+          1310.0
+        ]
+      ]
+    },
+    {
+      "text": "FC+embed",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          83.0,
+          1313.0
+        ],
+        [
+          188.0,
+          1313.0
+        ],
+        [
+          188.0,
+          1333.0
+        ],
+        [
+          83.0,
+          1333.0
+        ]
+      ]
+    },
+    {
+      "text": "30.7",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          539.0,
+          1312.0
+        ],
+        [
+          582.0,
+          1312.0
+        ],
+        [
+          582.0,
+          1334.0
+        ],
+        [
+          539.0,
+          1334.0
+        ]
+      ]
+    },
+    {
+      "text": "4.5. Comparison with state-of-the-art",
+      "confidence": 0.992,
+      "bbox": [
+        [
+          613.0,
+          1307.0
+        ],
+        [
+          942.0,
+          1307.0
+        ],
+        [
+          942.0,
+          1324.0
+        ],
+        [
+          613.0,
+          1324.0
+        ]
+      ]
+    },
+    {
+      "text": "FC+embed,Decod[L1]",
+      "confidence": 0.9998,
+      "bbox": [
+        [
+          84.0,
+          1337.0
+        ],
+        [
+          279.0,
+          1337.0
+        ],
+        [
+          279.0,
+          1357.0
+        ],
+        [
+          84.0,
+          1357.0
+        ]
+      ]
+    },
+    {
+      "text": "37.9",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          539.0,
+          1335.0
+        ],
+        [
+          582.0,
+          1335.0
+        ],
+        [
+          582.0,
+          1358.0
+        ],
+        [
+          539.0,
+          1358.0
+        ]
+      ]
+    },
+    {
+      "text": "FC+embed,Decod[L1,L0]",
+      "confidence": 0.9996,
+      "bbox": [
+        [
+          86.0,
+          1363.0
+        ],
+        [
+          306.0,
+          1363.0
+        ],
+        [
+          306.0,
+          1380.0
+        ],
+        [
+          86.0,
+          1380.0
+        ]
+      ]
+    },
+    {
+      "text": "25.4",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          539.0,
+          1359.0
+        ],
+        [
+          582.0,
+          1359.0
+        ],
+        [
+          582.0,
+          1382.0
+        ],
+        [
+          539.0,
+          1382.0
+        ]
+      ]
+    },
+    {
+      "text": "FC+embed,Decod[L1,L0],Encod[L1]",
+      "confidence": 0.9998,
+      "bbox": [
+        [
+          86.0,
+          1386.0
+        ],
+        [
+          401.0,
+          1386.0
+        ],
+        [
+          401.0,
+          1406.0
+        ],
+        [
+          86.0,
+          1406.0
+        ]
+      ]
+    },
+    {
+      "text": "17.3",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          539.0,
+          1384.0
+        ],
+        [
+          582.0,
+          1384.0
+        ],
+        [
+          582.0,
+          1406.0
+        ],
+        [
+          539.0,
+          1406.0
+        ]
+      ]
+    },
+    {
+      "text": "FC+embed,Decod[L1,L0],Encod[L1,L0]",
+      "confidence": 0.9999,
+      "bbox": [
+        [
+          84.0,
+          1410.0
+        ],
+        [
+          429.0,
+          1410.0
+        ],
+        [
+          429.0,
+          1430.0
+        ],
+        [
+          84.0,
+          1430.0
+        ]
+      ]
+    },
+    {
+      "text": "15.6",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          539.0,
+          1408.0
+        ],
+        [
+          582.0,
+          1408.0
+        ],
+        [
+          582.0,
+          1431.0
+        ],
+        [
+          539.0,
+          1431.0
+        ]
+      ]
+    },
+    {
+      "text": "In this subsection, we compare the performance of",
+      "confidence": 0.9778,
+      "bbox": [
+        [
+          630.0,
+          1410.0
+        ],
+        [
+          1118.0,
+          1410.0
+        ],
+        [
+          1118.0,
+          1429.0
+        ],
+        [
+          630.0,
+          1429.0
+        ]
+      ]
+    },
+    {
+      "text": "FC+embed,Decod[L1,L0],Encod[L1,L0],Backbone",
+      "confidence": 0.9997,
+      "bbox": [
+        [
+          84.0,
+          1434.0
+        ],
+        [
+          523.0,
+          1434.0
+        ],
+        [
+          523.0,
+          1454.0
+        ],
+        [
+          84.0,
+          1454.0
+        ]
+      ]
+    },
+    {
+      "text": "2.9",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          537.0,
+          1433.0
+        ],
+        [
+          571.0,
+          1433.0
+        ],
+        [
+          571.0,
+          1453.0
+        ],
+        [
+          537.0,
+          1453.0
+        ]
+      ]
+    },
+    {
+      "text": "our model with the state-of-the-art models on different",
+      "confidence": 0.9993,
+      "bbox": [
+        [
+          612.0,
+          1435.0
+        ],
+        [
+          1115.0,
+          1435.0
+        ],
+        [
+          1115.0,
+          1452.0
+        ],
+        [
+          612.0,
+          1452.0
+        ]
+      ]
+    },
+    {
+      "text": "datasets. Note that our lite transformer model is evalu-",
+      "confidence": 0.9935,
+      "bbox": [
+        [
+          613.0,
+          1460.0
+        ],
+        [
+          1113.0,
+          1460.0
+        ],
+        [
+          1113.0,
+          1474.0
+        ],
+        [
+          613.0,
+          1474.0
+        ]
+      ]
+    },
+    {
+      "text": "ated without the use of an external language model and",
+      "confidence": 0.9919,
+      "bbox": [
+        [
+          612.0,
+          1481.0
+        ],
+        [
+          1115.0,
+          1481.0
+        ],
+        [
+          1115.0,
+          1498.0
+        ],
+        [
+          612.0,
+          1498.0
+        ]
+      ]
+    },
+    {
+      "text": "From this ablation study, we can conclude that the best",
+      "confidence": 0.995,
+      "bbox": [
+        [
+          94.0,
+          1505.0
+        ],
+        [
+          576.0,
+          1505.0
+        ],
+        [
+          576.0,
+          1522.0
+        ],
+        [
+          94.0,
+          1522.0
+        ]
+      ]
+    },
+    {
+      "text": "any lexicon constraint.",
+      "confidence": 0.9988,
+      "bbox": [
+        [
+          613.0,
+          1508.0
+        ],
+        [
+          809.0,
+          1508.0
+        ],
+        [
+          809.0,
+          1522.0
+        ],
+        [
+          613.0,
+          1522.0
+        ]
+      ]
+    },
+    {
+      "text": "6",
+      "confidence": 1.0,
+      "bbox": [
+        [
+          586.0,
+          1539.0
+        ],
+        [
+          603.0,
+          1539.0
+        ],
+        [
+          603.0,
+          1560.0
+        ],
+        [
+          586.0,
+          1560.0
+        ]
+      ]
+    }
+  ]
+}

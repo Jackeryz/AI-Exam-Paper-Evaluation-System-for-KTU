@@ -38,6 +38,9 @@ class Settings(BaseSettings):
     CHROMA_PERSIST_DIR: str = "./vector_db/chroma"
 
     # Optional Cloud API Keys
+    ALLOW_CLOUD_LLM: bool = Field(default=False, description="Explicit authorization required for external cloud LLMs")
+    REFINEMENT_ENABLED: bool = Field(default=True, description="Enable LLM-assisted OCR refinement")
+    REFINEMENT_TIMEOUT_SECONDS: float = Field(default=30.0, description="Max timeout in seconds for LLM refinement")
     GEMINI_API_KEY: Optional[str] = None
     OPENAI_API_KEY: Optional[str] = None
     ANTHROPIC_API_KEY: Optional[str] = None

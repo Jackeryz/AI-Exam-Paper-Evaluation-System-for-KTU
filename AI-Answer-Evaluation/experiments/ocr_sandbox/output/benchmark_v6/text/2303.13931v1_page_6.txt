@@ -1,0 +1,102 @@
+choice to adopt a lite model in the context of low-resource
+transfer learning strategy consists in fine-tuning all the
+handwriting recognition.
+model components. The model reaches a competitive re-
+4.4. Evaluation of the transfer learning process
+sult on the RIMES dataset as presented in section 4.5.
+In this section, we report the evaluation of the trans-
+fer learning process considering the IAM dataset (English
+To explore the capacity of the model to be adapted to
+script) as a source domain and the RIMES dataset (French
+other scripts, additional experiments are conducted con-
+script) as a target domain. In this scenario, we initialized
+sidering as a target domain the Esposalles dataset con-
+the model parameters by the weights of the original model
+taining historical handwritten documents written in Span-
+trained on the IAM dataset, then we fine-tune just a subset
+ish script. We note the size of images is reduced for this
+of layers going from the last transformer layer to the first
+dataset, to decrease the feature map sequence length and
+one. We start by learning the FC layer and the embed-
+consequently speed up the convergence. A CER of 1.7%
+ding weights for the decoder while keeping the other parts
+is obtained on the Esposalles test set which confirms the
+of the model frozen. For example, FC + embed, Decod[L1],
+capacity of the model to transfer the knowledge acquired
+in table 2, indicates that the second layer of the decoder.
+from learning English handwritten text to recognize Span-
+the embedding weights, and the Fully connected layer are
+ish handwriting, even in the case of high domain shift be-
+fine-tuned while keeping the rest of the layers frozen. Next.
+tween the source and the target datasets.
+the first layer of the decoder (L0) is included in the set of
+layers to be re-trained. The remaining steps follow the
+same logic. An upper layer is added to the set of layers to
+The last and the most challenging experiment consists
+be retrained until reaching the whole architecture.
+in fine-tuning the model trained on English handwriting
+The results of table 2 correspond to a transfer learn-
+to recognize Arabic handwriting (KHATT dataset). The
+ing from English to French handwritten text. We notice
+challenge here consists in the fact that English and Ara-
+that by fine-tuning only the embedding layer and the FC
+bic use completely different alphabets, and are naturally
+layers, a CER of 30.7% was obtained on the test set. By
+written in different directions (from right to left for Arabic
+fine-tuning the decoder layers, an improvement of 5.3% in
+and from left to right for English
+terms of CER is obtained due to the adaptation of the lan-
+guage model, initially trained on English text, to capture
+the inherent nuances of the target text (French). We note
+To exploit the reading order knowledge acquired by the
+here that English and French scripts share multiple simi-
+model on English script, we apply a horizontal flipping
+larities, notably most of their character sets and a number
+pre-processing to the images of the KHATT dataset be-
+of true word cognates. This can explain why the obtained
+fore inferring them to the model. Additionally, the im-
+gain is not so high and it can be more important when
+ages are resized to 2048 × 512 as the maximum number
+the scripts of the source and the target domains present
+of lines per image is 6. This helps the model to capture
+more dissimilarity. The second aspect concerns the fine-
+more contextual information and to map the high-level
+tuning of the optical model, which includes the backbone
+feature to the text of the ground truth during decoding.
+and the encoder layers. As shown in Table 2, a gain of
+As reported in table 6, our model achieved competitive
+12.7% in terms of CER is obtained which confirms that
+results on the KHATT dataset. which confirms that the
+the transfer learning allows the model to reduce the do-
+model benefits from the knowledge acquired from the IAM
+main shift between the source and target domains as IAM
+dataset to learn the reading order at a record level, but is
+images and RIMES images contain different distribution
+also able to improve its generalization ability to learn the
+resulting from irregularities in term of line spacing, differ-
+specificity of the target script by transfer learning.
+ent handwriting skew/slant and different writer styles.
+Table 2: Evaluation of the transfer learning process on RIMES
+dataset
+Trainable layers
+CER
+FC+embed
+30.7
+4.5. Comparison with state-of-the-art
+FC+embed,Decod[L1]
+37.9
+FC+embed,Decod[L1,L0]
+25.4
+FC+embed,Decod[L1,L0],Encod[L1]
+17.3
+FC+embed,Decod[L1,L0],Encod[L1,L0]
+15.6
+In this subsection, we compare the performance of
+FC+embed,Decod[L1,L0],Encod[L1,L0],Backbone
+2.9
+our model with the state-of-the-art models on different
+datasets. Note that our lite transformer model is evalu-
+ated without the use of an external language model and
+From this ablation study, we can conclude that the best
+any lexicon constraint.
+6

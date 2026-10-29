@@ -1,6 +1,7 @@
 """Embedding Provider interface and concrete implementations."""
 
 from abc import ABC, abstractmethod
+import re
 from typing import List, Optional
 import numpy as np
 
@@ -36,19 +37,26 @@ class BGEProvider(EmbeddingProvider):
     def _get_model(self):
         if self._model is None:
             try:
+                import os
+                os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
                 from sentence_transformers import SentenceTransformer
                 self._model = SentenceTransformer(self.model_name)
-            except Exception as exc:
+            except BaseException as exc:
                 logger.info(f"SentenceTransformer not loaded ({exc}). Using normalized hash vector generator.")
                 self._model = "fallback"
         return self._model
 
     def _hash_vector(self, text: str, dim: int = 384) -> List[float]:
-        """Deterministic pseudo-embedding fallback vector calculation for offline execution."""
-        rng = np.random.RandomState(abs(hash(text)) % (2**32))
-        vec = rng.randn(dim)
+        """Deterministic feature-hashed bag-of-words vector calculation for offline execution."""
+        words = [w for w in re.findall(r"\w+", text.lower()) if len(w) > 1]
+        if not words:
+            return [0.0] * dim
+        vec = np.zeros(dim, dtype=float)
+        for w in words:
+            idx = abs(hash(w)) % dim
+            vec[idx] += 1.0
         norm = np.linalg.norm(vec)
-        return (vec / (norm if norm > 0 else 1.0)).tolist()
+        return (vec / (norm if norm > 0.0 else 1.0)).tolist()
 
     def embed_query(self, text: str) -> List[float]:
         model = self._get_model()

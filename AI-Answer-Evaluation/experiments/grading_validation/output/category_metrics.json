@@ -1,0 +1,102 @@
+{
+  "1. Fully correct answers": {
+    "case_count": 3,
+    "mae_marks": 0.333,
+    "norm_mae_pct": 3.33,
+    "rmse_marks": 0.408,
+    "exact_agreement_pct": 33.33,
+    "within_0_5_pct": 100.0,
+    "flagged_for_review_count": 0,
+    "flagged_rate_pct": 0.0
+  },
+  "10. Cases where the rubric or answer is ambiguous and teacher review is appropriate": {
+    "case_count": 1,
+    "mae_marks": 1.65,
+    "norm_mae_pct": 16.5,
+    "rmse_marks": 1.65,
+    "exact_agreement_pct": 0.0,
+    "within_0_5_pct": 0.0,
+    "flagged_for_review_count": 1,
+    "flagged_rate_pct": 100.0
+  },
+  "2. Partially correct answers": {
+    "case_count": 3,
+    "mae_marks": 0.817,
+    "norm_mae_pct": 10.17,
+    "rmse_marks": 0.954,
+    "exact_agreement_pct": 0.0,
+    "within_0_5_pct": 33.33,
+    "flagged_for_review_count": 0,
+    "flagged_rate_pct": 0.0
+  },
+  "3. Answers with correct concepts but missing explanations": {
+    "case_count": 2,
+    "mae_marks": 0.5,
+    "norm_mae_pct": 5.0,
+    "rmse_marks": 0.5,
+    "exact_agreement_pct": 0.0,
+    "within_0_5_pct": 100.0,
+    "flagged_for_review_count": 0,
+    "flagged_rate_pct": 0.0
+  },
+  "4. Technically incorrect answers": {
+    "case_count": 3,
+    "mae_marks": 0.667,
+    "norm_mae_pct": 8.33,
+    "rmse_marks": 0.707,
+    "exact_agreement_pct": 0.0,
+    "within_0_5_pct": 66.67,
+    "flagged_for_review_count": 3,
+    "flagged_rate_pct": 100.0
+  },
+  "5. Answers with irrelevant content": {
+    "case_count": 2,
+    "mae_marks": 0.0,
+    "norm_mae_pct": 0.0,
+    "rmse_marks": 0.0,
+    "exact_agreement_pct": 100.0,
+    "within_0_5_pct": 100.0,
+    "flagged_for_review_count": 2,
+    "flagged_rate_pct": 100.0
+  },
+  "6. Blank answers": {
+    "case_count": 2,
+    "mae_marks": 0.0,
+    "norm_mae_pct": 0.0,
+    "rmse_marks": 0.0,
+    "exact_agreement_pct": 100.0,
+    "within_0_5_pct": 100.0,
+    "flagged_for_review_count": 2,
+    "flagged_rate_pct": 100.0
+  },
+  "7. Answers with alternative valid terminology": {
+    "case_count": 2,
+    "mae_marks": 0.0,
+    "norm_mae_pct": 0.0,
+    "rmse_marks": 0.0,
+    "exact_agreement_pct": 100.0,
+    "within_0_5_pct": 100.0,
+    "flagged_for_review_count": 0,
+    "flagged_rate_pct": 0.0
+  },
+  "8. Answers with formulas, units or numerical reasoning": {
+    "case_count": 2,
+    "mae_marks": 0.25,
+    "norm_mae_pct": 5.0,
+    "rmse_marks": 0.354,
+    "exact_agreement_pct": 50.0,
+    "within_0_5_pct": 100.0,
+    "flagged_for_review_count": 0,
+    "flagged_rate_pct": 0.0
+  },
+  "9. Answers that match keywords but misunderstand the concept": {
+    "case_count": 2,
+    "mae_marks": 1.5,
+    "norm_mae_pct": 15.0,
+    "rmse_marks": 1.803,
+    "exact_agreement_pct": 0.0,
+    "within_0_5_pct": 50.0,
+    "flagged_for_review_count": 2,
+    "flagged_rate_pct": 100.0
+  }
+}

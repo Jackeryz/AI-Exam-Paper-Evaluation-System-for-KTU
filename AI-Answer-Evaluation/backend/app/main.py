@@ -62,6 +62,11 @@ async def root():
     }
 
 
+@app.get("/api", tags=["Health"])
+async def api_root():
+    return await root()
+
+
 @app.get("/health", tags=["Health"])
 async def health_check():
     """Detailed health check endpoint."""
@@ -70,3 +75,8 @@ async def health_check():
         "supported_subjects": settings.subject_list,
         "confidence_threshold": settings.CONFIDENCE_THRESHOLD,
     }
+
+
+@app.get("/api/health", tags=["Health"])
+async def api_health_check():
+    return await health_check()

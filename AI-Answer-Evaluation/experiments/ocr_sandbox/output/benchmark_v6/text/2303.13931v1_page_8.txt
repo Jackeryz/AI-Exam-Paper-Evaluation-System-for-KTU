@@ -1,0 +1,128 @@
+ten scripts. For future research, we intend to integrate
+[18] L. Kang, P. Riba, M. Rusiñol, A. Fornés, M. Villegas, Pay at-
+a self-supervised training stage, so that, the model can
+tention to what you read: Non-recurrent handwritten text-line
+benefit from unlabeled page-level handwriting documents
+recognition, arXiv preprint arXiv:2005.13044.
+[19] M. Carbonell, J. Mas, M. Villegas, A. Fornés, J. Lladós, End-to-
+to reduce the annotation cost. We will also explore the
+end handwritten text detection and transcription in full pages,
+capacity of our model to recognize mixed-script handwrit-
+in: 2019 International Conference on Document Analysis and
+ten documents where many scripts co-exist in the same
+Recognition Workshops (ICDARW), Vol. 5, IEEE, 2019, pp.
+line/document.
+29-34.
+[20] C. Wigington, C. Tensmeyer, B. Davis, W. Barrett, B. Price,
+References
+S. Cohen, Start, follow, read: End-to-end full-page handwriting
+recognition, in: Proceedings of the European Conference on
+[1] L. Kang, P. Riba, M. Rusiñol, A. Fornés, M. Villegas, Pay at-
+Computer Vision (ECCV), 2018, pp. 367–383.
+tention to what you read: Non-recurrent handwritten text-line
+[21] D. Coquenet, C. Chatelain, T. Paquet, Span: A simple predict
+recognition, arXiv preprint arXiv:2005.13044.
+& align network for handwritten paragraph recognition, in: In-
+ternational Conference on Document Analysis and Recognition
+hen, Data augmentation for recognition of handwritten words
+Springer, 2021, pp. 70–84.
+and lines using a cnn-lstm network, in: 2017 14th IAPR In-
+[22] J. Louradour, C. Kermorvant, Curriculum learning for hand-
+ternational Conference on Document Analysis and Recognition
+written text line recognition, in: 2014 11th IAPR International
+(ICDAR), Vol. 1, IEEE, 2017, pp. 639–645.
+Workshop on Document Analysis Systems, IEEE, 2014, pp. 56–
+[3] U.-V. Marti, H. Bunke, The iam-database: an english sentence
+60.
+database for offline handwriting recognition, International Jour-
+[23] D. Coquenet, C. Chatelain, T. Paquet, End-to-end handwritten
+nal on Document Analysis and Recognition 5 (1) (2002) 39–46.
+paragraph text recognition using a vertical attention network,
+[4] E. Grosicki, H. El-Abed, Icdar 2011-french handwriting recog-
+IEEE Transactions on Pattern Analysis and Machine Intelli-
+nition competition, in: 2011 International Conference on Doc-
+gence, vol. 45, no. 1, pp. 508-524, 2023.
+ument Analysis and Recognition, IEEE, 2011, pp. 1459–1463.
+[24] S. Khamekhem Jemni, Y. Kessentini, S. Kanoun, Offline Arabic
+[5] T. Bluche, J. Louradour, R. Messina, Scan, attend and read:
+Handwriting Recognition Using BLSTMs Combination. 13th in-
+End-to-end handwritten paragraph recognition with mdlstm at-
+ternational workshop on document analysis systems (DAS), pp
+tention, in: 2017 14th IAPR international conference on doc-
+31-36, Vienna, Austria, 2018.
+ument analysis and recognition (ICDAR), Vol. 1, IEEE, 2017,
+[25] J. Puigcerver, Are multidimensional recurrent layers really nec-
+pp. 1050–1055.
+essary for handwritten text recognition?, in: 2017 14th IAPR
+[6] S. S. Singh, S. Karayev, Full page handwriting recognition via
+International Conference on Document Analysis and Recogni-
+image to sequence extraction, in: International Conference on
+tion (ICDAR), Vol. 1, IEEE, 2017, pp. 67–72.
+Document Analysis and Recognition, Springer, 2021, pp. 55–69.
+[26] R. Ahmad, S. Naz, M. Z. Afzal, S. F. Rashid, M. Liwicki,
+[7] D. Coquenet, C. Chatelain, T. Paquet, Dan: a segmentation-
+A. Dengel, Khatt: A deep learning benchmark on arabic script,
+free document attention network for handwritten document
+in: 2017 14th IAPR International Conference on Document
+recognition, arXiv preprint arXiv:2203.12273.
+Analysis and Recognition (ICDAR), Vol. 7, IEEE, 2017, pp.
+[8] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones,
+10-14.
+A. N. Gomez, L. Kaiser, I. Polosukhin, Attention is all you
+[27] R. Ahmad, S. Naz, M. Z. Afzal, S. F. Rashid, M. Liwicki,
+need, Advances in neural information processing systems 30
+A. Dengel, A deep learning based arabic script recognition sys-
+[9] A. Graves, J. Schmidhuber, Offline handwriting recognition
+tem: benchmark on khat., Int. Arab J. Inf. Technol. 17 (3)
+with multidimensional recurrent neural networks, Advances in
+(2020) 299–305.
+neural information processing systems 21.
+[28] Ż. Noubigh, A. Mezghani, M. Kherallah, Contribution on arabic
+[10] T. Bluche, Joint line segmentation and transcription for end-
+handwriting recognition using deep neural network, in: Inter-
+to-end handwritten paragraph recognition, Advances in neural
+national Conference on Hybrid Intelligent Systems, Springer,
+information processing systems 29.
+2019, pp. 123–133.
+[11] A. C. Rouhou, M. Dhiaf, Y. Kessentini, S. B. Salem,
+[29] Yousef, Mohamed and Bishop, Tom E, OrigamiNet: weakly-
+Transformer-based approach for joint handwriting and named
+supervised, segmentation-free, one-step, full page text recogni-
+entity recognition in historical document, Pattern Recognition
+tion by learning to unfold, in: Proceedings of the IEEE/CVF
+Letters 155 (2022) 128–134.
+Conference on Computer Vision and Pattern Recognition,
+[12] K. He, X. Zhang, S. Ren, J. Sun, Deep residual learning for
+Springer, 2020, pp. 14710–14719.
+image recognition, in: Proceedings of the IEEE conference on
+[30] A. Fornes, V. Romero, A. Bar o, J. I. Toledo, J. A. Sanchez,
+computer vision and pattern recognition, 2016, pp. 770–778.
+E. Vidal, J. Llados, Icdar2017 competition on information ex-
+[13] J. Lee, S. Park, J. Baek, S. J. Oh, S. Kim, H. Lee, On rec-
+traction in historical handwritten records, in: 2017 14th IAPR
+ognizing texts of arbitrary shapes with 2d self-attention, in:
+International Conference on Document Analysis and Recogni-
+Proceedings of the IEEE/CVF Conference on Computer Vision
+tion (ICDAR), Vol. 01, 2017, pp. 1389–1394
+and Pattern Recognition Workshops, 2020, pp. 546–547.
+[31] Y. Kessentini, T. Paquet, A. Benhamadou. A Multi-Lingual
+[14] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones,
+Recognition System for Arabic and Latin Handwriting. 10th In-
+A. N. Gomez, u. Kaiser, I. Polosukhin, Attention is all you need,
+ternational Conference on Document Analysis and Recognition,
+in: Proceedings of the 31st International Conference on Neural
+ICDAR'2009, pp. 1196-1200, 2009.
+Information Processing Systems, NIPS'17, Curran Associates
+Inc., Red Hook, NY, USA, 2017, p. 6000–6010.
+[15] S. A. Mahmoud, I. Ahmad, M. Alshayeb, W. G. Al-Khatib,
+M. T. Parvez, G. A. Fink, V. Märgner, H. El Abed, Khatt:
+Arabic offline handwritten text database, in: 2012 International
+Conference on Frontiers in Handwriting Recognition, IEEE.
+2012, pp. 449–454.
+[16] V. Romero, A. Fornés, N. Serrano, J. A. Sánchez, A. H. Toselli,
+V. Frinken, E. Vidal, J. Lladós, The esposalles database: An
+ancient marriage license corpus for off-line handwriting recog-
+nition, Pattern Recognition 46 (6) (2013) 1658 – 1669.
+[17] A. Chowdhury, L. Vig, An efficient end-to-end neural model for
+handwritten text recognition, arXiv preprint arXiv:1807.07965.
+8

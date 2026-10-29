@@ -2,27 +2,27 @@
   "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\Screenshot 26-Jul-26 6_59_51 PM.pdf",
   "page_number": 2,
   "text": "121201\nTypesofcleint:\nIMMTract aGult:adult has sishee\naduct consen+ tohave thier imnuzatich\nrecore :n thesystem\nI.C! consented bx their parents\nt0 have their imnyzatiah Sover\ninsxstem (imntroctcull2)\nP.A: pendehing adult turned 18\nand havent signee adult consent\nMust have adul+ cousent to\nrelese in fo  atthe age ofz6\nrecords will be deleter if (onsen\nwashit Sighed\n.D.C: Disaterconsente wnen\nGetting Covle Vaccine and Sisuee\nconsent during coud pandenk\ne we only Keep vecore for\nSxears untell diaster has\nonded\nteachers and students use to laugh at me saying they can't read my hand writing\nn",
-  "confidence": 0.862,
+  "confidence": 0.8616,
   "bounding_boxes": [
     {
       "text": "121201",
-      "confidence": 0.931,
+      "confidence": 0.9308,
       "bbox": [
         [
-          1047,
-          88
+          1047.0,
+          88.0
         ],
         [
-          1184,
-          88
+          1184.0,
+          88.0
         ],
         [
-          1184,
-          148
+          1184.0,
+          148.0
         ],
         [
-          1047,
-          148
+          1047.0,
+          148.0
         ]
       ]
     },
@@ -31,42 +31,42 @@
       "confidence": 0.93,
       "bbox": [
         [
-          106,
-          112
+          106.0,
+          112.0
         ],
         [
-          531,
-          112
+          531.0,
+          112.0
         ],
         [
-          531,
-          203
+          531.0,
+          203.0
         ],
         [
-          106,
-          203
+          106.0,
+          203.0
         ]
       ]
     },
     {
       "text": "IMMTract aGult:adult has sishee",
-      "confidence": 0.81,
+      "confidence": 0.8097,
       "bbox": [
         [
-          125,
-          185
+          125.0,
+          185.0
         ],
         [
-          1069,
-          185
+          1069.0,
+          185.0
         ],
         [
-          1069,
-          269
+          1069.0,
+          269.0
         ],
         [
-          125,
-          269
+          125.0,
+          269.0
         ]
       ]
     },
@@ -75,42 +75,42 @@
       "confidence": 0.859,
       "bbox": [
         [
-          104,
-          248
+          104.0,
+          248.0
         ],
         [
-          1056,
-          248
+          1056.0,
+          248.0
         ],
         [
-          1056,
-          335
+          1056.0,
+          335.0
         ],
         [
-          104,
-          335
+          104.0,
+          335.0
         ]
       ]
     },
     {
       "text": "recore :n thesystem",
-      "confidence": 0.801,
+      "confidence": 0.8009,
       "bbox": [
         [
-          119,
-          309
+          119.0,
+          309.0
         ],
         [
-          628,
-          309
+          628.0,
+          309.0
         ],
         [
-          628,
-          389
+          628.0,
+          389.0
         ],
         [
-          119,
-          389
+          119.0,
+          389.0
         ]
       ]
     },
@@ -119,372 +119,372 @@
       "confidence": 0.932,
       "bbox": [
         [
-          132,
-          423
+          132.0,
+          423.0
         ],
         [
-          1036,
-          423
+          1036.0,
+          423.0
         ],
         [
-          1036,
-          498
+          1036.0,
+          498.0
         ],
         [
-          132,
-          498
+          132.0,
+          498.0
         ]
       ]
     },
     {
       "text": "t0 have their imnyzatiah Sover",
-      "confidence": 0.853,
+      "confidence": 0.8534,
       "bbox": [
         [
-          104,
-          488
+          104.0,
+          488.0
         ],
         [
-          985,
-          488
+          985.0,
+          488.0
         ],
         [
-          985,
-          555
+          985.0,
+          555.0
         ],
         [
-          104,
-          555
+          104.0,
+          555.0
         ]
       ]
     },
     {
       "text": "insxstem (imntroctcull2)",
-      "confidence": 0.815,
+      "confidence": 0.8152,
       "bbox": [
         [
-          103,
-          552
+          103.0,
+          552.0
         ],
         [
-          858,
-          552
+          858.0,
+          552.0
         ],
         [
-          858,
-          621
+          858.0,
+          621.0
         ],
         [
-          103,
-          621
+          103.0,
+          621.0
         ]
       ]
     },
     {
       "text": "P.A: pendehing adult turned 18",
-      "confidence": 0.918,
+      "confidence": 0.9178,
       "bbox": [
         [
-          113,
-          673
+          113.0,
+          673.0
         ],
         [
-          1030,
-          673
+          1030.0,
+          673.0
         ],
         [
-          1030,
-          743
+          1030.0,
+          743.0
         ],
         [
-          113,
-          743
+          113.0,
+          743.0
         ]
       ]
     },
     {
       "text": "and havent signee adult consent",
-      "confidence": 0.88,
+      "confidence": 0.8797,
       "bbox": [
         [
-          99,
-          740
+          99.0,
+          740.0
         ],
         [
-          1093,
-          740
+          1093.0,
+          740.0
         ],
         [
-          1093,
-          803
+          1093.0,
+          803.0
         ],
         [
-          99,
-          803
+          99.0,
+          803.0
         ]
       ]
     },
     {
       "text": "Must have adul+ cousent to",
-      "confidence": 0.892,
+      "confidence": 0.8925,
       "bbox": [
         [
-          96,
-          795
+          96.0,
+          795.0
         ],
         [
-          1035,
-          795
+          1035.0,
+          795.0
         ],
         [
-          1035,
-          873
+          1035.0,
+          873.0
         ],
         [
-          96,
-          873
+          96.0,
+          873.0
         ]
       ]
     },
     {
       "text": "relese in fo  atthe age ofz6",
-      "confidence": 0.86,
+      "confidence": 0.8595,
       "bbox": [
         [
-          107,
-          867
+          107.0,
+          867.0
         ],
         [
-          1086,
-          867
+          1086.0,
+          867.0
         ],
         [
-          1086,
-          932
+          1086.0,
+          932.0
         ],
         [
-          107,
-          932
+          107.0,
+          932.0
         ]
       ]
     },
     {
       "text": "records will be deleter if (onsen",
-      "confidence": 0.916,
+      "confidence": 0.9156,
       "bbox": [
         [
-          106,
-          929
+          106.0,
+          929.0
         ],
         [
-          1177,
-          929
+          1177.0,
+          929.0
         ],
         [
-          1177,
-          990
+          1177.0,
+          990.0
         ],
         [
-          106,
-          990
+          106.0,
+          990.0
         ]
       ]
     },
     {
       "text": "washit Sighed",
-      "confidence": 0.919,
+      "confidence": 0.9185,
       "bbox": [
         [
-          101,
-          1004
+          101.0,
+          1004.0
         ],
         [
-          491,
-          1004
+          491.0,
+          1004.0
         ],
         [
-          491,
-          1064
+          491.0,
+          1064.0
         ],
         [
-          101,
-          1064
+          101.0,
+          1064.0
         ]
       ]
     },
     {
       "text": ".D.C: Disaterconsente wnen",
-      "confidence": 0.844,
+      "confidence": 0.8442,
       "bbox": [
         [
-          61,
-          1104
+          61.0,
+          1104.0
         ],
         [
-          1009,
-          1104
+          1009.0,
+          1104.0
         ],
         [
-          1009,
-          1203
+          1009.0,
+          1203.0
         ],
         [
-          61,
-          1203
+          61.0,
+          1203.0
         ]
       ]
     },
     {
       "text": "Getting Covle Vaccine and Sisuee",
-      "confidence": 0.869,
+      "confidence": 0.8692,
       "bbox": [
         [
-          69,
-          1167
+          69.0,
+          1167.0
         ],
         [
-          982,
-          1167
+          982.0,
+          1167.0
         ],
         [
-          982,
-          1275
+          982.0,
+          1275.0
         ],
         [
-          69,
-          1275
+          69.0,
+          1275.0
         ]
       ]
     },
     {
       "text": "consent during coud pandenk",
-      "confidence": 0.895,
+      "confidence": 0.8947,
       "bbox": [
         [
-          85,
-          1232
+          85.0,
+          1232.0
         ],
         [
-          981,
-          1232
+          981.0,
+          1232.0
         ],
         [
-          981,
-          1330
+          981.0,
+          1330.0
         ],
         [
-          85,
-          1330
+          85.0,
+          1330.0
         ]
       ]
     },
     {
       "text": "e we only Keep vecore for",
-      "confidence": 0.804,
+      "confidence": 0.8042,
       "bbox": [
         [
-          110,
-          1309
+          110.0,
+          1309.0
         ],
         [
-          1001,
-          1309
+          1001.0,
+          1309.0
         ],
         [
-          1001,
-          1389
+          1001.0,
+          1389.0
         ],
         [
-          110,
-          1389
+          110.0,
+          1389.0
         ]
       ]
     },
     {
       "text": "Sxears untell diaster has",
-      "confidence": 0.911,
+      "confidence": 0.9114,
       "bbox": [
         [
-          124,
-          1378
+          124.0,
+          1378.0
         ],
         [
-          909,
-          1378
+          909.0,
+          1378.0
         ],
         [
-          909,
-          1451
+          909.0,
+          1451.0
         ],
         [
-          124,
-          1451
+          124.0,
+          1451.0
         ]
       ]
     },
     {
       "text": "onded",
-      "confidence": 0.895,
+      "confidence": 0.8954,
       "bbox": [
         [
-          131,
-          1464
+          131.0,
+          1464.0
         ],
         [
-          307,
-          1464
+          307.0,
+          1464.0
         ],
         [
-          307,
-          1516
+          307.0,
+          1516.0
         ],
         [
-          131,
-          1516
+          131.0,
+          1516.0
         ]
       ]
     },
     {
       "text": "teachers and students use to laugh at me saying they can't read my hand writing",
-      "confidence": 0.984,
+      "confidence": 0.9836,
       "bbox": [
         [
-          1,
-          1506
+          1.0,
+          1506.0
         ],
         [
-          787,
-          1506
+          787.0,
+          1506.0
         ],
         [
-          787,
-          1545
+          787.0,
+          1545.0
         ],
         [
-          1,
-          1545
+          1.0,
+          1545.0
         ]
       ]
     },
     {
       "text": "n",
-      "confidence": 0.438,
+      "confidence": 0.4382,
       "bbox": [
         [
-          601,
-          1565
+          601.0,
+          1565.0
         ],
         [
-          612,
-          1565
+          612.0,
+          1565.0
         ],
         [
-          612,
-          1574
+          612.0,
+          1574.0
         ],
         [
-          601,
-          1574
+          601.0,
+          1574.0
         ]
       ]
     }

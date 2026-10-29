@@ -15,6 +15,7 @@ class CriterionDeduction(BaseModel):
     awarded_marks: float
     deducted_marks: float
     reason: str
+    evidence: Optional[str] = None
 
 
 class ScoreWeights(BaseModel):
@@ -63,6 +64,8 @@ class ScoreAggregator:
         semantic_similarity: float,# 0.0 to 1.0 ratio
         parsed_rubric: Optional[ParsedRubric] = None,
         max_marks: float = 10.0,
+        section_performance: Optional[Dict[str, float]] = None,
+        section_evidence: Optional[Dict[str, Optional[str]]] = None,
     ) -> ScoreBreakdown:
         """Compute final marks deterministically and produce criterion-wise deductions."""
         # Convert ratios to 0-10 scale
@@ -101,19 +104,26 @@ class ScoreAggregator:
             total_rubric_marks = sum(s.allocated_marks for s in parsed_rubric.sections) or max_marks
             scale_factor = max_marks / total_rubric_marks
 
+            base_ratio = max(0.0, min(1.0, weighted_score_10 / 10.0))
+
             for sec in parsed_rubric.sections:
                 sec_allocated = round(sec.allocated_marks * scale_factor, 2)
-                # Section awarded score based on concept & correctness
-                performance_ratio = ((c_score_10 * 0.5) + (corr_score_10 * 0.5)) / 10.0
-                sec_awarded = round(sec_allocated * performance_ratio, 2)
+                # Section awarded score based on calibrated weighted performance ratio
+                if section_performance and sec.name in section_performance:
+                    sec_ratio = max(0.0, min(1.0, section_performance[sec.name]))
+                else:
+                    sec_ratio = base_ratio
+
+                sec_awarded = round(sec_allocated * sec_ratio, 2)
                 sec_deducted = round(sec_allocated - sec_awarded, 2)
+                sec_ev = section_evidence.get(sec.name) if section_evidence else None
 
                 if sec_deducted <= 0.0:
                     reason = f"{sec.name} criteria fully met."
                 elif sec_awarded > 0.0:
-                    reason = f"{sec.name} was partially addressed; minor details missing."
+                    reason = f"{sec.name} was partially addressed; required explanations or key concepts were incomplete."
                 else:
-                    reason = f"{sec.name} section was missing or incorrect."
+                    reason = f"{sec.name} section was missing, omitted, or incorrect."
 
                 deductions.append(
                     CriterionDeduction(
@@ -122,8 +132,14 @@ class ScoreAggregator:
                         awarded_marks=sec_awarded,
                         deducted_marks=sec_deducted,
                         reason=reason,
+                        evidence=sec_ev,
                     )
                 )
+
+            # Ensure final_marks perfectly matches sum of criterion deductions
+            sum_awarded = sum(d.awarded_marks for d in deductions)
+            final_marks = float(round(min(max_marks, max(0.0, sum_awarded)), 2))
+            percentage = float(round((final_marks / max_marks) * 100.0, 2)) if max_marks > 0 else 0.0
         else:
             # Default Categories: Concept, Correctness, Completeness, Keyword Coverage, Semantic Similarity
             cat_allocations = [
@@ -153,6 +169,7 @@ class ScoreAggregator:
                         awarded_marks=award_m,
                         deducted_marks=ded_m,
                         reason=reason,
+                        evidence=None,
                     )
                 )
 
@@ -170,3 +187,4 @@ class ScoreAggregator:
             weights_used=weights_dict,
             criterion_deductions=deductions,
         )
+

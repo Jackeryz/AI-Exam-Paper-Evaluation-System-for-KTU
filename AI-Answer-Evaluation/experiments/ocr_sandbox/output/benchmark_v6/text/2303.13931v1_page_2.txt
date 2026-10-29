@@ -1,0 +1,110 @@
+inference time.
+2. Related works
+Other approaches [6, 7] have developed sequence-to-
+2.1. Line-level HTR systems
+sequence (Seq2Seq) models, based on the transformer
+[8] architecture, for page-level handwritten-document text
+In the literature, using line-level segmented images to
+recognition. These systems have reported state-of-the-art
+perform handwritten text recognition has gained a lot of
+performances compared to line-level HTR ones. Never-
+interest. Systems following this approach benefit from
+theless, training such models requires a huge amount of
+the minor segmentation effort compared to the word or
+annotated data. Moreover, the length of extracted fea-
+character-level systems.
+ture sequences, compared to line-level approaches, can be
+With the rise of deep learning, many deep neural net-
+very large resulting in weeks of training consuming an im-
+works have been proposed based mostly on the recurrent
+mersive amount of GPU resources. Finally, porting these
+architectures [9, 10]. However, such models require a large
+models to low-resource languages can be a difficult task as
+amount of annotated data to be trained. To this end, au-
+it requires a huge quantity of data to retrain the model
+thors in [2], proposed data augmentation and normaliza-
+from scratch.
+tion techniques using Convolution Neural Networks com-
+Motivated by the above observations, we propose a lite
+bined with Long-Short-Term Memory CNN-LSTM, which
+transformer model for page-level handwritten document
+significantly reduces the error rate on handwriting recog-
+image recognition. The proposed model involves a limited
+nition tasks. Having unlimited annotated data, in turn,
+number of parameters and can be trained without the use
+does not alleviate the issue of parallelization during the
+of external data. Our system is trained with a curriculum
+training stage. They suffer from the lack of computation
+learning strategy, allowing it to learn the reading order
+parallelization inherently due to recurrent layers, which
+and to scale to large input text images. This curriculum
+impact both training and inference time. Consciously, the
+learning strategy is performed only once and the resulting
+next methods have focused on training systems without a
+model will serve as a starting point to train models with
+recurrent process.
+real page-level data even on different scripts. The pro-
+One can notice some latest trends, based on transformer
+posed architecture can be trained using standard GPUs as
+architecture, in which, authors in [1] propose an end-to-
+it requires lower memory allocation, compared to similar
+end model, which dispenses any recurrent network for
+proposed systems. The major contributions of this paper
+HTR of text-line images. The architecture is based on
+can be therefore summarized as follows:
+multi-head self-attention layers both at the visual and tex-
+tual stages. Such a model aims to tackle both the proper
+• We propose an end-to-end lite transformer-based
+step of character recognition from images, as well as to
+model for handwritten text recognition. The pro-
+learn language-related dependencies of the character se-
+posed model works at the page level to avoid unrecov-
+quences to be decoded. The proposed work reaches com-
+erable early line segmentation errors, exploit a larger
+petitive state-of-the-art performance at the line level. In
+context and reduce the need for costly segmentation
+brief, line-level methods require segmentation and throw-
+annotations.
+ing away useful context.
+• We propose to use a curriculum learning strategy that
+2.2. Page level HTR systems
+allows the model to be trained using a limited amount
+of annotated data and can learn the reading order at
+To avoid unrecoverable errors of segmentation, and to
+the page level.
+exploit larger context information, some approaches are
+moving from line-level recognition to paragraph-level and
+• We demonstrate that our lite transformer, built with
+even page-level recognition.
+only two layers and a single head of self-attention,
+Methods like [10], [5] applied an encoder-decoder with
+can be easily adapted to other scripts by applying a
+attention mechanisms to the task of multi-line text recog-
+simple transfer-learning process using only page-level
+nition. Both architectures use a CNN+MDLSTM encoder
+labeled images.
+and an MDLSTM-based attention module. The encoder
+produces feature maps from the input image while the
+• Extensive comparative experiments are conducted to
+validate the effectiveness of our approach. We have
+attention module recurrently generates line or character
+tested our model on multiple scripts and languages,
+representations applying a weighted sum between the at-
+tention weights and the features. Finally, the decoder out-
+including English, French, Spanish, and Arabic. The
+obtained results confirm the effectiveness of the pro-
+puts character probabilities from this representation. Both
+posed model.
+those two approaches present interesting implicit segmen-
+tation reaching competitive results. Nonetheless, they are
+The remaining parts of this paper are structured as fol-
+computationally expensive due to the MDLSTM layers,
+lows. Related works are presented in Section 2. Section
+which lead to long training and inference time. In addi-
+3 describes the proposed approach. Section 4 displays the
+tion to the complexity of the MDLSTM convolutions, the
+experimental results. The conclusion and perspectives are
+MDLSTM-based attention needed to be recomputed for
+stated in section 5.
+each predicted character.
+2

@@ -38,6 +38,24 @@ class RubricParser:
                 raw_rubric_text="Default Standard Rubric",
             )
 
+        if isinstance(rubric_data, list):
+            sections = []
+            for item in rubric_data:
+                if isinstance(item, dict):
+                    name = item.get("name") or item.get("criterion") or item.get("title") or "Criterion"
+                    marks = float(item.get("marks", item.get("allocated_marks", item.get("max_marks", 2.0))))
+                    desc = str(item.get("description", ""))
+                    kws = item.get("keywords", item.get("mandatory_keywords", []))
+                    sections.append(RubricSection(name=name, allocated_marks=marks, description=desc, mandatory_keywords=kws if isinstance(kws, list) else []))
+            total = sum(s.allocated_marks for s in sections) or default_max_marks
+            return ParsedRubric(
+                total_marks=total,
+                sections=sections or [RubricSection(name="Main Content", allocated_marks=default_max_marks)],
+                scoring_rules=["Scored based on section allocations."],
+                mandatory_keywords=[],
+                raw_rubric_text=str(rubric_data),
+            )
+
         if isinstance(rubric_data, dict):
             sections = []
             rules = rubric_data.get("scoring_rules", [])
@@ -58,6 +76,14 @@ class RubricParser:
                                 mandatory_keywords=sec_val.get("keywords", []),
                             )
                         )
+            elif isinstance(sections_dict, list):
+                for item in sections_dict:
+                    if isinstance(item, dict):
+                        name = item.get("name") or item.get("criterion") or "Criterion"
+                        marks = float(item.get("marks", item.get("allocated_marks", item.get("max_marks", 2.0))))
+                        desc = str(item.get("description", ""))
+                        kws = item.get("keywords", item.get("mandatory_keywords", []))
+                        sections.append(RubricSection(name=name, allocated_marks=marks, description=desc, mandatory_keywords=kws if isinstance(kws, list) else []))
 
             if not sections:
                 sections = [
@@ -71,6 +97,7 @@ class RubricParser:
                 mandatory_keywords=keywords if isinstance(keywords, list) else [],
                 raw_rubric_text=str(rubric_data),
             )
+
 
         # Parse text string (e.g. "Definition: 2 marks, Advantages: 3 marks, Applications: 5 marks")
         rubric_text = str(rubric_data)

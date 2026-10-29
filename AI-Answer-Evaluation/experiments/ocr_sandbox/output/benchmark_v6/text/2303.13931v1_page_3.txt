@@ -1,0 +1,110 @@
+Other approaches [6, 11] proposed different models
+with these features to add positional information to each
+which are based on an attention mechanism to predict the
+feature vector. Next, the 2D features map is transformed
+text in a character-by-character way. Those are trained
+into 1D sequential features using tensor reshaping flatten-
+with the cross-entropy loss and using a special end-of-
+ing operation. At this level, the output of the flattened
+transcription token. Authors of [11] used a transformer
+layer matches the requirements of the transformer layers.
+to evaluate their approach to paragraph-level images. [6]
+After performing these steps on a page-level image, we ob-
+introduced an encoder-decoder architecture, using a Resid-
+tain a feature sequence of the image. The feature sequence
+ual Networks (ResNet) [12] for encoding the image, and
+is then passed to a stack of 2 transformer layers (as shown
+a transformer [8] for decoding the encoded representation
+in Figure 1).
+into text. This model is trained to recognize, in addition to
+3.2. Transformer-Decoder
+the text, the presence of non-textual areas (such as tables
+or drawings). This model has been trained to recognize
+The decoder is similar in structure to the transformer
+full pages of handwritten or printed text without image
+layers of the encoder except that it includes a masked lan-
+segmentation. Despite the good results achieved using this
+guage model. The masked language modeling approach is
+configuration, this model is data-hungry and requires a lot
+introduced to model the relation of the characters that
+of memory and computation resources.
+are output from the decoder. It learns the correlation
+In [7], a new end-to-end segmentation-free architecture
+between visual encoded features and their corresponding
+was created to address document image recognition in
+characters. There are two types of symbols in our ap-
+proach: visual labels and contextual labels. The visual
+terms of both text and layouts. They proposed Document
+labels (Viabels ) are the readable characters from texts in
+Attention Network (DAN), an end-to-end transformer-
+based model for handwritten document recognition, in-
+images. The contextual labels (Clabels)are the start of page
+cluding the textual components and the logical layout in-
+(< sop >), the end of line (< eol >), and the end of page
+formation. The model has been evaluated using two
+(< eop >). The number of classes (NBclass) of the out-
+different datasets where competitive results have been re-
+put layer includes the number of visual labels (Viabels )
+ported at page and double-page levels. However, the main
+and the contextual labels (Clabels). We used the teacher
+drawback of this work is that the model architecture is very
+forcing strategy during the training, which means that the
+model uses the ground truth as input instead of model out-
+large and requires a huge quantity of data for the training
+phase. In addition, the model involves an auto-regressive
+puts from prior time steps. The input of the decoder is the
+attention-based character-level prediction process, which
+textual contents of the image surrounded by < sop > and
+< eop > tags. After preparing the input text, the charac-
+leads to high prediction times (a few seconds per docu-
+ment image).
+ters are embedded into a vector of h values as mentioned
+Considering the limitations of previous works, we pro-
+in equation 1.
+pose in this paper MSdocTr-Lite, an end-to-end lite
+Embed = Embedding(NBclass, h)
+(1)
+transformer-based model for multi-script handwritten doc-
+ument recognition.
+Then, the final input of the transformer decoder (Flabels)
+3. Proposed approach
+is prepared by applying 1D Positional encoding [14] to the
+The proposed model is depicted in Figure 1. It is
+embedded labels.
+composed of two parts: a Transformer-Encoder and a
+Flabels = 1DPE(Embed(labels))
+(2)
+Transformer-Decoder, intending to map an inputted im-
+age that contains text into a sequence of characters, i.e,
+The shape of Flabels is (h, N) where N represents the
+an image-to-sequence architecture. [8].
+length of the input labels sequence.
+3.1. Transformer-Encoder
+3.3. The curriculum learning strategy
+The main objective of the encoder is to extract high-level
+Transformers are data-hungry models and need large
+feature representations from the sequence of features and
+datasets for training. In the ideal case where a huge
+encode the visual information. This component is mainly
+quantity of full-page document images is available, it was
+composed of a backbone and 2 transformer layers. The
+proven in [6] that a large transformer model can be trained
+backbone consists of the feature extraction architecture
+without the need for a curriculum learning strategy. In
+to represent the input image into high-dimensional vec-
+our case, where only a limited amount of training data is
+tors. It uses the ResNet-50 [12] architecture without its
+available, the lite transformer model fails to converge (as
+last two layers( the average pool and linear projection).
+described in table 2) without an adapted learning strat-
+The ResNet produces a feature representation of the full-
+egy. For this aim, we propose a curriculum learning strat-
+page image. A 2D-convolutional layer (Conv2D) with a
+egy that involves 3 stages: in the first stage, the model is
+kernel size of (1 × 1) is added, to match the number of
+trained using a generated dataset composed of 50k small
+features from the backbone network and the transformer
+block images, where each block is composed of a mini-
+input. After, the 2D positions encoding [13] are merged
+mum of 1 line and a maximum of 4 lines and each line
+3

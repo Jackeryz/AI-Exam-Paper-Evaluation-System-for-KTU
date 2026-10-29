@@ -1,0 +1,910 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\1000131267 - Jackson Tom Joseph.jpg",
+  "page_number": 1,
+  "text": "an O2 rich air. So it can take any\namount of 02.\nan area of aboout 80 mi which is\n13. How is exygen and carben dioxide\nmearly the size of a tennis court.\ntransported in human beings?\n15. What are the components of the\nIn human beings, oxygen is carried.\ntransport system in plants ? whet\nans\nare the functions of theser components?\nfrom the lungs ly the respiratory\npigment haemoglobin present in red\nThe two components are xylem and\nAns\nbelood corpuscles. Haemoglobin has a\nphloem.\nwery high affinity for O 2. earbon\ndioxide is more soluble ins water\n• Xylem tissues which are made of\nthan oxygen. So, it is transported in\ndead cells in the form of rylem\nthe dissolwed form in our body\nwessels and tracheids. It transports\nwater and dissolved minerals from roots\n14. tow are the lungs designed in humom!\nto all the ports of the plant:\nbeings to maximise the area for\nPhloem tissue is made up of sieve tubes\nexchange of gases?\nand compamion cells. Fts tranports\nAns\nfood made in leaf to all the parts of\nThere are milliors of alveoli in the\na plant.\nlungs, it provides a large area for\nthe exchange of. or gases. For example,\n16. How are water and minerals transported\nif all aliveoli from the two humam\nin plants?\nlungs were unyolded, they would give",
+  "confidence": 0.953,
+  "bounding_boxes": [
+    {
+      "text": "an O2 rich air. So it can take any",
+      "confidence": 0.9391,
+      "bbox": [
+        [
+          696.0,
+          401.0
+        ],
+        [
+          2130.0,
+          401.0
+        ],
+        [
+          2130.0,
+          620.0
+        ],
+        [
+          696.0,
+          620.0
+        ]
+      ]
+    },
+    {
+      "text": "amount of 02.",
+      "confidence": 0.9773,
+      "bbox": [
+        [
+          695.0,
+          521.0
+        ],
+        [
+          1344.0,
+          521.0
+        ],
+        [
+          1344.0,
+          660.0
+        ],
+        [
+          695.0,
+          660.0
+        ]
+      ]
+    },
+    {
+      "text": "an area of aboout 80 mi which is",
+      "confidence": 0.9246,
+      "bbox": [
+        [
+          2503.0,
+          592.0
+        ],
+        [
+          3679.0,
+          592.0
+        ],
+        [
+          3679.0,
+          818.0
+        ],
+        [
+          2503.0,
+          818.0
+        ]
+      ]
+    },
+    {
+      "text": "13. How is exygen and carben dioxide",
+      "confidence": 0.9521,
+      "bbox": [
+        [
+          525.0,
+          658.0
+        ],
+        [
+          2094.0,
+          658.0
+        ],
+        [
+          2094.0,
+          868.0
+        ],
+        [
+          525.0,
+          868.0
+        ]
+      ]
+    },
+    {
+      "text": "mearly the size of a tennis court.",
+      "confidence": 0.9603,
+      "bbox": [
+        [
+          2489.0,
+          678.0
+        ],
+        [
+          3725.0,
+          678.0
+        ],
+        [
+          3725.0,
+          907.0
+        ],
+        [
+          2489.0,
+          907.0
+        ]
+      ]
+    },
+    {
+      "text": "transported in human beings?",
+      "confidence": 0.974,
+      "bbox": [
+        [
+          658.0,
+          767.0
+        ],
+        [
+          1891.0,
+          767.0
+        ],
+        [
+          1891.0,
+          939.0
+        ],
+        [
+          658.0,
+          939.0
+        ]
+      ]
+    },
+    {
+      "text": "15. What are the components of the",
+      "confidence": 0.9489,
+      "bbox": [
+        [
+          2351.0,
+          817.0
+        ],
+        [
+          3719.0,
+          817.0
+        ],
+        [
+          3719.0,
+          1058.0
+        ],
+        [
+          2351.0,
+          1058.0
+        ]
+      ]
+    },
+    {
+      "text": "In human beings, oxygen is carried.",
+      "confidence": 0.9408,
+      "bbox": [
+        [
+          635.0,
+          930.0
+        ],
+        [
+          2125.0,
+          930.0
+        ],
+        [
+          2125.0,
+          1134.0
+        ],
+        [
+          635.0,
+          1134.0
+        ]
+      ]
+    },
+    {
+      "text": "transport system in plants ? whet",
+      "confidence": 0.9376,
+      "bbox": [
+        [
+          2488.0,
+          926.0
+        ],
+        [
+          3730.0,
+          926.0
+        ],
+        [
+          3730.0,
+          1133.0
+        ],
+        [
+          2488.0,
+          1133.0
+        ]
+      ]
+    },
+    {
+      "text": "ans",
+      "confidence": 0.8054,
+      "bbox": [
+        [
+          396.0,
+          949.0
+        ],
+        [
+          567.0,
+          949.0
+        ],
+        [
+          567.0,
+          1059.0
+        ],
+        [
+          396.0,
+          1059.0
+        ]
+      ]
+    },
+    {
+      "text": "are the functions of theser components?",
+      "confidence": 0.9597,
+      "bbox": [
+        [
+          2488.0,
+          1005.0
+        ],
+        [
+          3882.0,
+          1005.0
+        ],
+        [
+          3882.0,
+          1244.0
+        ],
+        [
+          2488.0,
+          1244.0
+        ]
+      ]
+    },
+    {
+      "text": "from the lungs ly the respiratory",
+      "confidence": 0.9639,
+      "bbox": [
+        [
+          633.0,
+          1033.0
+        ],
+        [
+          2036.0,
+          1033.0
+        ],
+        [
+          2036.0,
+          1218.0
+        ],
+        [
+          633.0,
+          1218.0
+        ]
+      ]
+    },
+    {
+      "text": "pigment haemoglobin present in red",
+      "confidence": 0.9976,
+      "bbox": [
+        [
+          608.0,
+          1127.0
+        ],
+        [
+          2072.0,
+          1127.0
+        ],
+        [
+          2072.0,
+          1310.0
+        ],
+        [
+          608.0,
+          1310.0
+        ]
+      ]
+    },
+    {
+      "text": "The two components are xylem and",
+      "confidence": 0.9556,
+      "bbox": [
+        [
+          2464.0,
+          1167.0
+        ],
+        [
+          3804.0,
+          1167.0
+        ],
+        [
+          3804.0,
+          1405.0
+        ],
+        [
+          2464.0,
+          1405.0
+        ]
+      ]
+    },
+    {
+      "text": "Ans",
+      "confidence": 0.9556,
+      "bbox": [
+        [
+          2291.0,
+          1181.0
+        ],
+        [
+          2473.0,
+          1181.0
+        ],
+        [
+          2473.0,
+          1283.0
+        ],
+        [
+          2291.0,
+          1283.0
+        ]
+      ]
+    },
+    {
+      "text": "belood corpuscles. Haemoglobin has a",
+      "confidence": 0.9472,
+      "bbox": [
+        [
+          598.0,
+          1218.0
+        ],
+        [
+          2106.0,
+          1218.0
+        ],
+        [
+          2106.0,
+          1408.0
+        ],
+        [
+          598.0,
+          1408.0
+        ]
+      ]
+    },
+    {
+      "text": "phloem.",
+      "confidence": 0.9529,
+      "bbox": [
+        [
+          2491.0,
+          1279.0
+        ],
+        [
+          2988.0,
+          1279.0
+        ],
+        [
+          2988.0,
+          1400.0
+        ],
+        [
+          2491.0,
+          1400.0
+        ]
+      ]
+    },
+    {
+      "text": "wery high affinity for O 2. earbon",
+      "confidence": 0.941,
+      "bbox": [
+        [
+          599.0,
+          1316.0
+        ],
+        [
+          2019.0,
+          1316.0
+        ],
+        [
+          2019.0,
+          1493.0
+        ],
+        [
+          599.0,
+          1493.0
+        ]
+      ]
+    },
+    {
+      "text": "dioxide is more soluble ins water",
+      "confidence": 0.9666,
+      "bbox": [
+        [
+          588.0,
+          1412.0
+        ],
+        [
+          2013.0,
+          1412.0
+        ],
+        [
+          2013.0,
+          1580.0
+        ],
+        [
+          588.0,
+          1580.0
+        ]
+      ]
+    },
+    {
+      "text": "• Xylem tissues which are made of",
+      "confidence": 0.9521,
+      "bbox": [
+        [
+          2394.0,
+          1434.0
+        ],
+        [
+          3731.0,
+          1434.0
+        ],
+        [
+          3731.0,
+          1634.0
+        ],
+        [
+          2394.0,
+          1634.0
+        ]
+      ]
+    },
+    {
+      "text": "than oxygen. So, it is transported in",
+      "confidence": 0.949,
+      "bbox": [
+        [
+          565.0,
+          1506.0
+        ],
+        [
+          2060.0,
+          1506.0
+        ],
+        [
+          2060.0,
+          1685.0
+        ],
+        [
+          565.0,
+          1685.0
+        ]
+      ]
+    },
+    {
+      "text": "dead cells in the form of rylem",
+      "confidence": 0.9448,
+      "bbox": [
+        [
+          2486.0,
+          1529.0
+        ],
+        [
+          3761.0,
+          1529.0
+        ],
+        [
+          3761.0,
+          1729.0
+        ],
+        [
+          2486.0,
+          1729.0
+        ]
+      ]
+    },
+    {
+      "text": "the dissolwed form in our body",
+      "confidence": 0.9558,
+      "bbox": [
+        [
+          558.0,
+          1605.0
+        ],
+        [
+          1909.0,
+          1605.0
+        ],
+        [
+          1909.0,
+          1787.0
+        ],
+        [
+          558.0,
+          1787.0
+        ]
+      ]
+    },
+    {
+      "text": "wessels and tracheids. It transports",
+      "confidence": 0.9776,
+      "bbox": [
+        [
+          2488.0,
+          1627.0
+        ],
+        [
+          3771.0,
+          1627.0
+        ],
+        [
+          3771.0,
+          1810.0
+        ],
+        [
+          2488.0,
+          1810.0
+        ]
+      ]
+    },
+    {
+      "text": "water and dissolved minerals from roots",
+      "confidence": 0.9635,
+      "bbox": [
+        [
+          2485.0,
+          1717.0
+        ],
+        [
+          3895.0,
+          1717.0
+        ],
+        [
+          3895.0,
+          1906.0
+        ],
+        [
+          2485.0,
+          1906.0
+        ]
+      ]
+    },
+    {
+      "text": "14. tow are the lungs designed in humom!",
+      "confidence": 0.956,
+      "bbox": [
+        [
+          368.0,
+          1777.0
+        ],
+        [
+          2123.0,
+          1777.0
+        ],
+        [
+          2123.0,
+          1996.0
+        ],
+        [
+          368.0,
+          1996.0
+        ]
+      ]
+    },
+    {
+      "text": "to all the ports of the plant:",
+      "confidence": 0.9487,
+      "bbox": [
+        [
+          2474.0,
+          1804.0
+        ],
+        [
+          3582.0,
+          1804.0
+        ],
+        [
+          3582.0,
+          1994.0
+        ],
+        [
+          2474.0,
+          1994.0
+        ]
+      ]
+    },
+    {
+      "text": "beings to maximise the area for",
+      "confidence": 0.9598,
+      "bbox": [
+        [
+          521.0,
+          1896.0
+        ],
+        [
+          1980.0,
+          1896.0
+        ],
+        [
+          1980.0,
+          2082.0
+        ],
+        [
+          521.0,
+          2082.0
+        ]
+      ]
+    },
+    {
+      "text": "Phloem tissue is made up of sieve tubes",
+      "confidence": 0.9323,
+      "bbox": [
+        [
+          2451.0,
+          1979.0
+        ],
+        [
+          3868.0,
+          1979.0
+        ],
+        [
+          3868.0,
+          2180.0
+        ],
+        [
+          2451.0,
+          2180.0
+        ]
+      ]
+    },
+    {
+      "text": "exchange of gases?",
+      "confidence": 0.9789,
+      "bbox": [
+        [
+          503.0,
+          1994.0
+        ],
+        [
+          1294.0,
+          1994.0
+        ],
+        [
+          1294.0,
+          2166.0
+        ],
+        [
+          503.0,
+          2166.0
+        ]
+      ]
+    },
+    {
+      "text": "and compamion cells. Fts tranports",
+      "confidence": 0.9446,
+      "bbox": [
+        [
+          2469.0,
+          2090.0
+        ],
+        [
+          3906.0,
+          2090.0
+        ],
+        [
+          3906.0,
+          2264.0
+        ],
+        [
+          2469.0,
+          2264.0
+        ]
+      ]
+    },
+    {
+      "text": "Ans",
+      "confidence": 0.9971,
+      "bbox": [
+        [
+          227.0,
+          2185.0
+        ],
+        [
+          407.0,
+          2185.0
+        ],
+        [
+          407.0,
+          2307.0
+        ],
+        [
+          227.0,
+          2307.0
+        ]
+      ]
+    },
+    {
+      "text": "food made in leaf to all the parts of",
+      "confidence": 0.9718,
+      "bbox": [
+        [
+          2467.0,
+          2180.0
+        ],
+        [
+          3986.0,
+          2180.0
+        ],
+        [
+          3986.0,
+          2377.0
+        ],
+        [
+          2467.0,
+          2377.0
+        ]
+      ]
+    },
+    {
+      "text": "There are milliors of alveoli in the",
+      "confidence": 0.9749,
+      "bbox": [
+        [
+          468.0,
+          2190.0
+        ],
+        [
+          2008.0,
+          2190.0
+        ],
+        [
+          2008.0,
+          2391.0
+        ],
+        [
+          468.0,
+          2391.0
+        ]
+      ]
+    },
+    {
+      "text": "a plant.",
+      "confidence": 0.9415,
+      "bbox": [
+        [
+          2461.0,
+          2291.0
+        ],
+        [
+          2801.0,
+          2291.0
+        ],
+        [
+          2801.0,
+          2412.0
+        ],
+        [
+          2461.0,
+          2412.0
+        ]
+      ]
+    },
+    {
+      "text": "lungs, it provides a large area for",
+      "confidence": 0.9626,
+      "bbox": [
+        [
+          463.0,
+          2307.0
+        ],
+        [
+          2048.0,
+          2307.0
+        ],
+        [
+          2048.0,
+          2495.0
+        ],
+        [
+          463.0,
+          2495.0
+        ]
+      ]
+    },
+    {
+      "text": "the exchange of. or gases. For example,",
+      "confidence": 0.9427,
+      "bbox": [
+        [
+          450.0,
+          2401.0
+        ],
+        [
+          2109.0,
+          2401.0
+        ],
+        [
+          2109.0,
+          2603.0
+        ],
+        [
+          450.0,
+          2603.0
+        ]
+      ]
+    },
+    {
+      "text": "16. How are water and minerals transported",
+      "confidence": 0.9388,
+      "bbox": [
+        [
+          2310.0,
+          2463.0
+        ],
+        [
+          4040.0,
+          2463.0
+        ],
+        [
+          4040.0,
+          2659.0
+        ],
+        [
+          2310.0,
+          2659.0
+        ]
+      ]
+    },
+    {
+      "text": "if all aliveoli from the two humam",
+      "confidence": 0.9337,
+      "bbox": [
+        [
+          447.0,
+          2508.0
+        ],
+        [
+          1989.0,
+          2508.0
+        ],
+        [
+          1989.0,
+          2700.0
+        ],
+        [
+          447.0,
+          2700.0
+        ]
+      ]
+    },
+    {
+      "text": "in plants?",
+      "confidence": 0.9928,
+      "bbox": [
+        [
+          2474.0,
+          2588.0
+        ],
+        [
+          2912.0,
+          2588.0
+        ],
+        [
+          2912.0,
+          2709.0
+        ],
+        [
+          2474.0,
+          2709.0
+        ]
+      ]
+    },
+    {
+      "text": "lungs were unyolded, they would give",
+      "confidence": 0.955,
+      "bbox": [
+        [
+          422.0,
+          2611.0
+        ],
+        [
+          2116.0,
+          2611.0
+        ],
+        [
+          2116.0,
+          2841.0
+        ],
+        [
+          422.0,
+          2841.0
+        ]
+      ]
+    }
+  ]
+}

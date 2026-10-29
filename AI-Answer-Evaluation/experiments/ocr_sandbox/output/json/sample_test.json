@@ -1,0 +1,30 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\sample_test.png",
+  "page_number": 1,
+  "text": "OCRsandbox test",
+  "confidence": 0.9971,
+  "bounding_boxes": [
+    {
+      "text": "OCRsandbox test",
+      "confidence": 0.9971,
+      "bbox": [
+        [
+          37.0,
+          77.0
+        ],
+        [
+          121.0,
+          77.0
+        ],
+        [
+          121.0,
+          93.0
+        ],
+        [
+          37.0,
+          93.0
+        ]
+      ]
+    }
+  ]
+}

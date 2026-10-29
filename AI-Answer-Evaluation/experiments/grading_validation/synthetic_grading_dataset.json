@@ -1,0 +1,574 @@
+[
+  {
+    "id": "CASE-01",
+    "category": "1. Fully correct answers",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution. Key features comprising this basic structure include the supremacy of the Constitution, republican and democratic form of government, secularism, separation of powers, and judicial review. The significance lies in preserving constitutionalism by preventing Parliament from transforming into a totalitarian legislature, preserving fundamental freedoms, and maintaining judicial review as an indispensable check on legislative overreach.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "The Basic Structure Doctrine was established by the Supreme Court of India in the landmark Kesavananda Bharati v. State of Kerala case (1973). The doctrine states that Parliament has the constituent power under Article 368 to amend provisions of the Constitution, but this power is not unlimited; Parliament cannot destroy or alter the basic structure or essential framework of the Constitution. Core elements of basic structure include constitutional supremacy, secularism, democracy, federalism, separation of powers, and judicial review. The significance of this doctrine is that it ensures constitutional supremacy over parliamentary sovereignty, safeguards fundamental rights, and protects democracy and judicial review from authoritarian legislative amendments.",
+    "human_marks": 10.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 3.0,
+      "Limitation on Article 368 Amending Power": 4.0,
+      "Significance & Preservation of Judicial Review": 3.0
+    },
+    "human_rationale": "Comprehensive, precise, and completely addresses case origin, Article 368 boundary, core features, and constitutional significance."
+  },
+  {
+    "id": "CASE-02",
+    "category": "1. Fully correct answers",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price. That is, there is an inverse relationship between price and quantity demanded. Primary assumptions include constant consumer income, unchanged consumer tastes and preferences, stable prices of related goods (substitutes and complements), and no expectation of future price changes. Two exceptions include: 1. Giffen Goods (inferior staple goods where negative income effect outweighs substitution effect, leading to upward sloping demand); 2. Veblen Goods (conspicuous consumption items where higher price increases prestige and quantity demanded).",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "The Law of Demand states that keeping other factors constant (ceteris paribus), quantity demanded is inversely related to price: when price rises, quantity demanded falls, and when price falls, quantity demanded rises. Assumptions of the law include: 1. Consumer income remains constant. 2. Prices of substitute and complementary goods remain constant. 3. Consumer tastes, preferences, and fashions do not change. 4. No expectation of future price changes. Two main exceptions: 1. Giffen Goods: Inferior goods where demand rises as price rises due to large negative income effect. 2. Veblen Goods / Conspicuous Consumption: Luxury goods purchased for status where high price increases desirability.",
+    "human_marks": 10.0,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 3.0,
+      "Ceteris Paribus Assumptions": 4.0,
+      "Two Exceptions (Giffen & Veblen goods)": 3.0
+    },
+    "human_rationale": "Full coverage of law statement, inverse relationship, all major ceteris paribus assumptions, and clear explanation of Giffen and Veblen goods."
+  },
+  {
+    "id": "CASE-03",
+    "category": "1. Fully correct answers",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Ohm's Law and calculate the power dissipated in a resistor of 10 ohms when a current of 2 amperes flows through it.",
+    "max_marks": 5.0,
+    "ideal_answer": "Ohm's Law states that at constant temperature and physical conditions, the current flowing through a conductor between two points is directly proportional to the potential difference across the two points: V = I * R. Power calculation: Given Resistance R = 10 ohms, Current I = 2 A. Power dissipated is P = I^2 * R = (2)^2 * 10 = 4 * 10 = 40 Watts (W). Alternatively, V = I * R = 2 * 10 = 20 V; P = V * I = 20 * 2 = 40 W.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Ohm's Law & Formula": 2.0,
+        "Power Dissipation Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Ohm's Law", "V = IR", "constant temperature", "P = I^2 R", "40 Watts"]
+    },
+    "student_answer": "Ohm's Law: At constant temperature, electric current flowing through a metallic conductor is directly proportional to the voltage applied across it. V = I * R. Power dissipated calculation: Given R = 10 ohms, I = 2 A. Power formula P = I^2 * R. P = (2 A)^2 * 10 ohms = 4 * 10 = 40 Watts (W).",
+    "human_marks": 5.0,
+    "human_criterion_marks": {
+      "Statement of Ohm's Law & Formula": 2.0,
+      "Power Dissipation Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 1.5
+    },
+    "human_rationale": "Clear statement with constant temperature condition, correct power formula, and accurate calculation with proper units."
+  },
+  {
+    "id": "CASE-04",
+    "category": "2. Partially correct answers",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution. Key features comprising this basic structure include the supremacy of the Constitution, republican and democratic form of government, secularism, separation of powers, and judicial review. The significance lies in preserving constitutionalism by preventing Parliament from transforming into a totalitarian legislature, preserving fundamental freedoms, and maintaining judicial review as an indispensable check on legislative overreach.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "The Basic Structure Doctrine was introduced in the Kesavananda Bharati case in 1973. It says that Parliament can amend any provision of the Constitution under Article 368, but it cannot alter or destroy the basic structure. Features of basic structure include supremacy of constitution, democracy, and secularism.",
+    "human_marks": 7.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 3.0,
+      "Limitation on Article 368 Amending Power": 3.5,
+      "Significance & Preservation of Judicial Review": 0.5
+    },
+    "human_rationale": "Student accurately states the case and the Article 368 boundary, but completely omits the significance section and judicial review."
+  },
+  {
+    "id": "CASE-05",
+    "category": "2. Partially correct answers",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price. That is, there is an inverse relationship between price and quantity demanded. Primary assumptions include constant consumer income, unchanged consumer tastes and preferences, stable prices of related goods (substitutes and complements), and no expectation of future price changes. Two exceptions include: 1. Giffen Goods; 2. Veblen Goods.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "The Law of Demand states that when price of a good increases, demand decreases, and when price decreases, demand increases, assuming other things remain constant. Assumptions: 1. Income of consumers is constant. 2. Prices of substitute and complementary goods do not change. 3. Tastes and habits of buyers remain identical. One exception is Giffen goods, where poor people buy more when the price rises because it is a staple food like bread.",
+    "human_marks": 8.0,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 3.0,
+      "Ceteris Paribus Assumptions": 3.5,
+      "Two Exceptions (Giffen & Veblen goods)": 1.5
+    },
+    "human_rationale": "Correct statement and assumptions; only provides one exception (Giffen goods) instead of the two requested."
+  },
+  {
+    "id": "CASE-06",
+    "category": "2. Partially correct answers",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Ohm's Law and calculate the power dissipated in a resistor of 10 ohms when a current of 2 amperes flows through it.",
+    "max_marks": 5.0,
+    "ideal_answer": "Ohm's Law states that at constant temperature and physical conditions, the current flowing through a conductor between two points is directly proportional to the potential difference across the two points: V = I * R. Power calculation: Given Resistance R = 10 ohms, Current I = 2 A. Power dissipated is P = I^2 * R = (2)^2 * 10 = 4 * 10 = 40 Watts (W).",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Ohm's Law & Formula": 2.0,
+        "Power Dissipation Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Ohm's Law", "V = IR", "constant temperature", "P = I^2 R", "40 Watts"]
+    },
+    "student_answer": "Ohm's law states that current is directly proportional to voltage across a conductor at constant temperature, V = I * R. Power calculation: P = V * I. Here V = 2 * 10 = 20 V. Then P = 20 * 1 = 20 W (used wrong current in power calculation).",
+    "human_marks": 3.5,
+    "human_criterion_marks": {
+      "Statement of Ohm's Law & Formula": 2.0,
+      "Power Dissipation Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 0.0
+    },
+    "human_rationale": "Ohm's law and formula selection are correct, but calculation step uses I=1A instead of I=2A, yielding 20 W instead of 40 W."
+  },
+  {
+    "id": "CASE-07",
+    "category": "3. Answers with correct concepts but missing explanations",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "- Kesavananda Bharati v State of Kerala (1973)\n- Basic structure doctrine\n- Article 368 cannot destroy basic features\n- Secularism, democracy, judicial review\n- Significance: protects Constitution",
+    "human_marks": 4.5,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 1.5,
+      "Limitation on Article 368 Amending Power": 1.5,
+      "Significance & Preservation of Judicial Review": 1.5
+    },
+    "human_rationale": "Student lists the key concepts and keywords as bullet points, but offers no substantive explanations or constitutional reasoning."
+  },
+  {
+    "id": "CASE-08",
+    "category": "3. Answers with correct concepts but missing explanations",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "Law of demand: Price up -> Demand down. Assumptions: Income constant, tastes constant, substitute price constant. Exceptions: Giffen goods, prestige goods.",
+    "human_marks": 4.5,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 1.5,
+      "Ceteris Paribus Assumptions": 2.0,
+      "Two Exceptions (Giffen & Veblen goods)": 1.0
+    },
+    "human_rationale": "Key terms and arrows provided without complete sentences, definitions, or explanations of why exceptions violate the law."
+  },
+  {
+    "id": "CASE-09",
+    "category": "4. Technically incorrect answers",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "The basic structure doctrine was established in the Golaknath case where the Supreme Court ruled that Parliament has supreme power under Article 368 to change anything it wants including removing judicial review and fundamental rights without any restriction.",
+    "human_marks": 1.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 0.5,
+      "Limitation on Article 368 Amending Power": 0.5,
+      "Significance & Preservation of Judicial Review": 0.0
+    },
+    "human_rationale": "Technically incorrect. Attributes doctrine to Golaknath and claims Parliament has unlimited power, contradicting the doctrine's actual rule."
+  },
+  {
+    "id": "CASE-10",
+    "category": "4. Technically incorrect answers",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "The law of demand states that when price increases, demand also increases proportionally. Price and quantity demanded have a direct relationship. An assumption is that supply is always equal to demand. Exceptions are when goods become very cheap nobody buys them.",
+    "human_marks": 0.5,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 0.0,
+      "Ceteris Paribus Assumptions": 0.5,
+      "Two Exceptions (Giffen & Veblen goods)": 0.0
+    },
+    "human_rationale": "States direct relationship instead of inverse relationship; confuses demand with supply; incorrect assumptions and exception rationale."
+  },
+  {
+    "id": "CASE-11",
+    "category": "4. Technically incorrect answers",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Ohm's Law and calculate the power dissipated in a resistor of 10 ohms when a current of 2 amperes flows through it.",
+    "max_marks": 5.0,
+    "ideal_answer": "Ohm's Law states V = I * R. Power P = I^2 * R = 40 W.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Ohm's Law & Formula": 2.0,
+        "Power Dissipation Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Ohm's Law", "V = IR", "constant temperature", "P = I^2 R", "40 Watts"]
+    },
+    "student_answer": "Ohm's Law states that current is resistance divided by voltage, I = R / V. Power dissipated is P = V / I = 10 / 2 = 5 Watts.",
+    "human_marks": 0.5,
+    "human_criterion_marks": {
+      "Statement of Ohm's Law & Formula": 0.5,
+      "Power Dissipation Formula Selection": 0.0,
+      "Correct Numerical Calculation & Units": 0.0
+    },
+    "human_rationale": "Inverted formulas for both Ohm's law (I=R/V) and power (P=V/I), producing an incorrect answer of 5 W."
+  },
+  {
+    "id": "CASE-12",
+    "category": "5. Answers with irrelevant content",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "Photosynthesis is the biological process by which green plants convert light energy into chemical energy. During photosynthesis in green plants, light energy is captured and used to convert water, carbon dioxide, and minerals into oxygen and energy-rich organic compounds.",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 0.0,
+      "Limitation on Article 368 Amending Power": 0.0,
+      "Significance & Preservation of Judicial Review": 0.0
+    },
+    "human_rationale": "Completely off-topic biology text with zero relevance to the constitutional question."
+  },
+  {
+    "id": "CASE-13",
+    "category": "5. Answers with irrelevant content",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "Football is the most popular sport in the world. The FIFA World Cup is held every four years and was won by Argentina in 2022. Lionel Messi scored multiple goals in the tournament.",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 0.0,
+      "Ceteris Paribus Assumptions": 0.0,
+      "Two Exceptions (Giffen & Veblen goods)": 0.0
+    },
+    "human_rationale": "Completely off-topic sports commentary with zero economic relevance."
+  },
+  {
+    "id": "CASE-14",
+    "category": "6. Blank answers",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 0.0,
+      "Limitation on Article 368 Amending Power": 0.0,
+      "Significance & Preservation of Judicial Review": 0.0
+    },
+    "human_rationale": "Empty response. No attempt was made."
+  },
+  {
+    "id": "CASE-15",
+    "category": "6. Blank answers",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Ohm's Law and calculate the power dissipated in a resistor of 10 ohms when a current of 2 amperes flows through it.",
+    "max_marks": 5.0,
+    "ideal_answer": "Ohm's Law states V = I * R. Power P = I^2 * R = 40 W.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Ohm's Law & Formula": 2.0,
+        "Power Dissipation Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Ohm's Law", "V = IR", "constant temperature", "P = I^2 R", "40 Watts"]
+    },
+    "student_answer": "   \n  \t  ",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Statement of Ohm's Law & Formula": 0.0,
+      "Power Dissipation Formula Selection": 0.0,
+      "Correct Numerical Calculation & Units": 0.0
+    },
+    "human_rationale": "Whitespace-only input. Zero marks awarded."
+  },
+  {
+    "id": "CASE-16",
+    "category": "7. Answers with alternative valid terminology",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "The fundamental framework canon of the Indian constitutional charter was articulated by the apex judiciary in the 1973 Kesavananda adjudication. The constitutional bench decided that although the national legislature holds wide revising authority pursuant to Article 368, such amending jurisdiction is inherently qualified and cannot abrogate the irreducible core principles of the constitutional edifice. Indispensable components comprise democratic governance, secular identity, separation of powers, and supervisory scrutiny by courts. This jurisprudence is crucial to maintain constitutionalism and forestall legislative supremacy over the charter.",
+    "human_marks": 9.5,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 3.0,
+      "Limitation on Article 368 Amending Power": 3.5,
+      "Significance & Preservation of Judicial Review": 3.0
+    },
+    "human_rationale": "Employs high-level legal synonyms ('apex judiciary', 'fundamental framework canon', 'supervisory scrutiny by courts') but accurately conveys all core constitutional ideas."
+  },
+  {
+    "id": "CASE-17",
+    "category": "7. Answers with alternative valid terminology",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "According to the fundamental postulate of consumer demand theory, a negative price elasticity of quantity purchased operates under the ceteris paribus clause: price and consumer intake move in opposite directions. The core prerequisites assume unchanged buyer budget/income, fixed consumer taste profiles, and steady market rates for competing or complementary wares. Exceptions: 1. Inferior necessity paradox (Giffen paradox) where impoverished households purchase more when price escalates. 2. Snob effect goods (conspicuous consumption) where exclusivity confers utility at elevated price points.",
+    "human_marks": 9.5,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 3.0,
+      "Ceteris Paribus Assumptions": 3.5,
+      "Two Exceptions (Giffen & Veblen goods)": 3.0
+    },
+    "human_rationale": "Valid alternative microeconomic terminology ('negative price elasticity', 'snob effect goods', 'fixed buyer budget') demonstrating thorough conceptual mastery."
+  },
+  {
+    "id": "CASE-18",
+    "category": "8. Answers with formulas, units or numerical reasoning",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Ohm's Law and calculate the power dissipated in a resistor of 10 ohms when a current of 2 amperes flows through it.",
+    "max_marks": 5.0,
+    "ideal_answer": "Ohm's Law states V = I * R. Power P = I^2 * R = 40 W.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Ohm's Law & Formula": 2.0,
+        "Power Dissipation Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Ohm's Law", "V = IR", "constant temperature", "P = I^2 R", "40 Watts"]
+    },
+    "student_answer": "Ohm's law: At constant temperature, V=I*R. Given R=10Ω, I=2A. Power dissipated P=I^2*R = (2A)^2 * (10Ω) = 4 * 10 = 40W.",
+    "human_marks": 5.0,
+    "human_criterion_marks": {
+      "Statement of Ohm's Law & Formula": 2.0,
+      "Power Dissipation Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 1.5
+    },
+    "human_rationale": "Condensed mathematical notation and symbols (Ω, W, ^2, *) with flawless numerical steps and units."
+  },
+  {
+    "id": "CASE-19",
+    "category": "8. Answers with formulas, units or numerical reasoning",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Ohm's Law and calculate the power dissipated in a resistor of 10 ohms when a current of 2 amperes flows through it.",
+    "max_marks": 5.0,
+    "ideal_answer": "Ohm's Law states V = I * R. Power P = I^2 * R = 40 W.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Ohm's Law & Formula": 2.0,
+        "Power Dissipation Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Ohm's Law", "V = IR", "constant temperature", "P = I^2 R", "40 Watts"]
+    },
+    "student_answer": "Ohm's law: V = IR at uniform temperature. R = 10, I = 2. P = I^2 * R = 2 * 2 * 10 = 40.",
+    "human_marks": 4.5,
+    "human_criterion_marks": {
+      "Statement of Ohm's Law & Formula": 2.0,
+      "Power Dissipation Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 1.0
+    },
+    "human_rationale": "Sound calculation and formula, but final numerical result omits the physical unit of power (Watts)."
+  },
+  {
+    "id": "CASE-20",
+    "category": "9. Answers that match keywords but misunderstand the concept",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "In the Kesavananda Bharati case (1973), the Supreme Court interpreted the basic structure of the Constitution under Article 368. The judgment declared that Parliament has absolute sovereign constituent power and can amend, repeal, or replace any part of the Constitution, including democracy and secularism, without any limitation by judicial review.",
+    "human_marks": 2.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 1.5,
+      "Limitation on Article 368 Amending Power": 0.5,
+      "Significance & Preservation of Judicial Review": 0.0
+    },
+    "human_rationale": "High keyword density ('Kesavananda Bharati', 'Article 368', 'basic structure', 'judicial review'), but states the diametric opposite of the constitutional holding."
+  },
+  {
+    "id": "CASE-21",
+    "category": "9. Answers that match keywords but misunderstand the concept",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "2(a)",
+    "question_text": "State the Law of Demand, list its primary assumptions, and describe two major exceptions to the law.",
+    "max_marks": 10.0,
+    "ideal_answer": "The Law of Demand states that, other things remaining equal (ceteris paribus), the quantity demanded of a commodity expands with a fall in its price and contracts with a rise in its price.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Statement of Law of Demand & Inverse Relation": 3.0,
+        "Ceteris Paribus Assumptions": 4.0,
+        "Two Exceptions (Giffen & Veblen goods)": 3.0
+      },
+      "mandatory_keywords": ["Law of Demand", "ceteris paribus", "inverse relationship", "price", "Giffen Goods", "Veblen Goods"]
+    },
+    "student_answer": "The Law of Demand explains that price and demand change together under ceteris paribus. When price goes up, buyers purchase more goods because higher price implies superior quality. Assumptions include changing tastes and varying income. Giffen goods and Veblen goods are exceptions because their demand falls when price goes up.",
+    "human_marks": 2.5,
+    "human_criterion_marks": {
+      "Statement of Law of Demand & Inverse Relation": 1.0,
+      "Ceteris Paribus Assumptions": 1.0,
+      "Two Exceptions (Giffen & Veblen goods)": 0.5
+    },
+    "human_rationale": "Matches economic keywords ('Law of Demand', 'ceteris paribus', 'Giffen goods', 'Veblen goods') but reverses the definitions and economic relationships."
+  },
+  {
+    "id": "CASE-22",
+    "category": "10. Cases where the rubric or answer is ambiguous and teacher review is appropriate",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "1(a)",
+    "question_text": "Explain the Basic Structure Doctrine as propounded in the Kesavananda Bharati case and state its significance in Indian Constitutional Law.",
+    "max_marks": 10.0,
+    "ideal_answer": "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court ruled that while Parliament possesses broad constituent powers under Article 368 to amend the Constitution, it cannot alter, destroy, or emasculate the Basic Structure or essential framework of the Constitution.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Basic Structure Principle & Landmark Case": 3.0,
+        "Limitation on Article 368 Amending Power": 4.0,
+        "Significance & Preservation of Judicial Review": 3.0
+      },
+      "mandatory_keywords": ["Kesavananda Bharati", "Basic Structure", "Article 368", "amendment", "judicial review", "supremacy"]
+    },
+    "student_answer": "Kesavananda case 1973 created the doctrine... Parliament has power under 368 but limited... cannot change the identity... some basic aspects like secularism and court powers cannot be removed. (Incomplete fragmentary handwriting transcript requiring manual teacher inspection).",
+    "human_marks": 5.0,
+    "human_criterion_marks": {
+      "Basic Structure Principle & Landmark Case": 2.0,
+      "Limitation on Article 368 Amending Power": 2.0,
+      "Significance & Preservation of Judicial Review": 1.0
+    },
+    "human_rationale": "Fragmentary and ambiguous phrasing where student grasps concepts ('cannot change the identity', 'court powers cannot be removed') but expression is borderline, necessitating human discretion."
+  }
+]

@@ -2,203 +2,203 @@
   "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
   "page_number": 2,
   "text": "inference time.\n2. Related works\nOther approaches [6, 7] have developed sequence-to-\n2.1. Line-level HTR systems\nsequence (Seq2Seq) models, based on the transformer\n[8] architecture, for page-level handwritten-document text\nIn the literature, using line-level segmented images to\nrecognition. These systems have reported state-of-the-art\nperform handwritten text recognition has gained a lot of\nperformances compared to line-level HTR ones. Never-\ninterest. Systems following this approach benefit from\ntheless, training such models requires a huge amount of\nthe minor segmentation effort compared to the word or\nannotated data. Moreover, the length of extracted fea-\ncharacter-level systems.\nture sequences, compared to line-level approaches, can be\nWith the rise of deep learning, many deep neural net-\nvery large resulting in weeks of training consuming an im-\nworks have been proposed based mostly on the recurrent\nmersive amount of GPU resources. Finally, porting these\narchitectures [9, 10]. However, such models require a large\nmodels to low-resource languages can be a difficult task as\namount of annotated data to be trained. To this end, au-\nit requires a huge quantity of data to retrain the model\nthors in [2], proposed data augmentation and normaliza-\nfrom scratch.\ntion techniques using Convolution Neural Networks com-\nMotivated by the above observations, we propose a lite\nbined with Long-Short-Term Memory CNN-LSTM, which\ntransformer model for page-level handwritten document\nsignificantly reduces the error rate on handwriting recog-\nimage recognition. The proposed model involves a limited\nnition tasks. Having unlimited annotated data, in turn,\nnumber of parameters and can be trained without the use\ndoes not alleviate the issue of parallelization during the\nof external data. Our system is trained with a curriculum\ntraining stage. They suffer from the lack of computation\nlearning strategy, allowing it to learn the reading order\nparallelization inherently due to recurrent layers, which\nand to scale to large input text images. This curriculum\nimpact both training and inference time. Consciously, the\nlearning strategy is performed only once and the resulting\nnext methods have focused on training systems without a\nmodel will serve as a starting point to train models with\nrecurrent process.\nreal page-level data even on different scripts. The pro-\nOne can notice some latest trends, based on transformer\nposed architecture can be trained using standard GPUs as\narchitecture, in which, authors in [1] propose an end-to-\nit requires lower memory allocation, compared to similar\nend model, which dispenses any recurrent network for\nproposed systems. The major contributions of this paper\nHTR of text-line images. The architecture is based on\ncan be therefore summarized as follows:\nmulti-head self-attention layers both at the visual and tex-\ntual stages. Such a model aims to tackle both the proper\n• We propose an end-to-end lite transformer-based\nstep of character recognition from images, as well as to\nmodel for handwritten text recognition. The pro-\nlearn language-related dependencies of the character se-\nposed model works at the page level to avoid unrecov-\nquences to be decoded. The proposed work reaches com-\nerable early line segmentation errors, exploit a larger\npetitive state-of-the-art performance at the line level. In\ncontext and reduce the need for costly segmentation\nbrief, line-level methods require segmentation and throw-\nannotations.\ning away useful context.\n• We propose to use a curriculum learning strategy that\n2.2. Page level HTR systems\nallows the model to be trained using a limited amount\nof annotated data and can learn the reading order at\nTo avoid unrecoverable errors of segmentation, and to\nthe page level.\nexploit larger context information, some approaches are\nmoving from line-level recognition to paragraph-level and\n• We demonstrate that our lite transformer, built with\neven page-level recognition.\nonly two layers and a single head of self-attention,\nMethods like [10], [5] applied an encoder-decoder with\ncan be easily adapted to other scripts by applying a\nattention mechanisms to the task of multi-line text recog-\nsimple transfer-learning process using only page-level\nnition. Both architectures use a CNN+MDLSTM encoder\nlabeled images.\nand an MDLSTM-based attention module. The encoder\n• Extensive comparative experiments are conducted to\nproduces feature maps from the input image while the\nvalidate the effectiveness of our approach. We have\nattention module recurrently generates line or character\ntested our model on multiple scripts and languages,\nrepresentations applying a weighted sum between the at-\nincluding English, French, Spanish, and Arabic. The\ntention weights and the features. Finally, the decoder out-\nobtained results confirm the effectiveness of the pro-\nputs character probabilities from this representation. Both\nposed model.\nthose two approaches present interesting implicit segmen-\ntation reaching competitive results. Nonetheless, they are\nThe remaining parts of this paper are structured as fol-\ncomputationally expensive due to the MDLSTM layers,\nlows. Related works are presented in Section 2. Section\nwhich lead to long training and inference time. In addi-\n3 describes the proposed approach. Section 4 displays the\ntion to the complexity of the MDLSTM convolutions, the\nexperimental results. The conclusion and perspectives are\nMDLSTM-based attention needed to be recomputed for\nstated in section 5.\neach predicted character.\n2",
-  "confidence": 0.989,
+  "confidence": 0.9892,
   "bounding_boxes": [
     {
       "text": "inference time.",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          73,
-          165
+          73.0,
+          165.0
         ],
         [
-          202,
-          165
+          202.0,
+          165.0
         ],
         [
-          202,
-          185
+          202.0,
+          185.0
         ],
         [
-          73,
-          185
+          73.0,
+          185.0
         ]
       ]
     },
     {
       "text": "2. Related works",
-      "confidence": 0.992,
+      "confidence": 0.9916,
       "bbox": [
         [
-          616,
-          167
+          616.0,
+          167.0
         ],
         [
-          789,
-          167
+          789.0,
+          167.0
         ],
         [
-          789,
-          184
+          789.0,
+          184.0
         ],
         [
-          616,
-          184
+          616.0,
+          184.0
         ]
       ]
     },
     {
       "text": "Other approaches [6, 7] have developed sequence-to-",
-      "confidence": 0.998,
+      "confidence": 0.9977,
       "bbox": [
         [
-          94,
-          189
+          94.0,
+          189.0
         ],
         [
-          576,
-          189
+          576.0,
+          189.0
         ],
         [
-          576,
-          211
+          576.0,
+          211.0
         ],
         [
-          94,
-          211
+          94.0,
+          211.0
         ]
       ]
     },
     {
       "text": "2.1. Line-level HTR systems",
-      "confidence": 0.996,
+      "confidence": 0.9962,
       "bbox": [
         [
-          612,
-          195
+          612.0,
+          195.0
         ],
         [
-          866,
-          195
+          866.0,
+          195.0
         ],
         [
-          866,
-          216
+          866.0,
+          216.0
         ],
         [
-          612,
-          216
+          612.0,
+          216.0
         ]
       ]
     },
     {
       "text": "sequence (Seq2Seq) models, based on the transformer",
-      "confidence": 0.987,
+      "confidence": 0.9868,
       "bbox": [
         [
-          71,
-          212
+          71.0,
+          212.0
         ],
         [
-          578,
-          212
+          578.0,
+          212.0
         ],
         [
-          578,
-          235
+          578.0,
+          235.0
         ],
         [
-          71,
-          235
+          71.0,
+          235.0
         ]
       ]
     },
     {
       "text": "[8] architecture, for page-level handwritten-document text",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          74,
-          237
+          74.0,
+          237.0
         ],
         [
-          579,
-          237
+          579.0,
+          237.0
         ],
         [
-          579,
-          260
+          579.0,
+          260.0
         ],
         [
-          74,
-          260
+          74.0,
+          260.0
         ]
       ]
     },
     {
       "text": "In the literature, using line-level segmented images to",
-      "confidence": 0.992,
+      "confidence": 0.9922,
       "bbox": [
         [
-          630,
-          230
+          630.0,
+          230.0
         ],
         [
-          1117,
-          230
+          1117.0,
+          230.0
         ],
         [
-          1117,
-          252
+          1117.0,
+          252.0
         ],
         [
-          630,
-          252
+          630.0,
+          252.0
         ]
       ]
     },
     {
       "text": "recognition. These systems have reported state-of-the-art",
-      "confidence": 0.995,
+      "confidence": 0.9952,
       "bbox": [
         [
-          72,
-          261
+          72.0,
+          261.0
         ],
         [
-          577,
-          261
+          577.0,
+          261.0
         ],
         [
-          577,
-          282
+          577.0,
+          282.0
         ],
         [
-          72,
-          282
+          72.0,
+          282.0
         ]
       ]
     },
     {
       "text": "perform handwritten text recognition has gained a lot of",
-      "confidence": 0.975,
+      "confidence": 0.9745,
       "bbox": [
         [
-          611,
-          255
+          611.0,
+          255.0
         ],
         [
-          1117,
-          255
+          1117.0,
+          255.0
         ],
         [
-          1117,
-          275
+          1117.0,
+          275.0
         ],
         [
-          611,
-          275
+          611.0,
+          275.0
         ]
       ]
     },
@@ -207,438 +207,438 @@
       "confidence": 0.988,
       "bbox": [
         [
-          72,
-          285
+          72.0,
+          285.0
         ],
         [
-          578,
-          285
+          578.0,
+          285.0
         ],
         [
-          578,
-          307
+          578.0,
+          307.0
         ],
         [
-          72,
-          307
+          72.0,
+          307.0
         ]
       ]
     },
     {
       "text": "interest. Systems following this approach benefit from",
-      "confidence": 0.997,
+      "confidence": 0.9965,
       "bbox": [
         [
-          610,
-          277
+          610.0,
+          277.0
         ],
         [
-          1115,
-          277
+          1115.0,
+          277.0
         ],
         [
-          1115,
-          301
+          1115.0,
+          301.0
         ],
         [
-          610,
-          301
+          610.0,
+          301.0
         ]
       ]
     },
     {
       "text": "theless, training such models requires a huge amount of",
-      "confidence": 0.983,
+      "confidence": 0.9827,
       "bbox": [
         [
-          73,
-          309
+          73.0,
+          309.0
         ],
         [
-          578,
-          309
+          578.0,
+          309.0
         ],
         [
-          578,
-          329
+          578.0,
+          329.0
         ],
         [
-          73,
-          329
+          73.0,
+          329.0
         ]
       ]
     },
     {
       "text": "the minor segmentation effort compared to the word or",
-      "confidence": 0.997,
+      "confidence": 0.9966,
       "bbox": [
         [
-          612,
-          304
+          612.0,
+          304.0
         ],
         [
-          1115,
-          304
+          1115.0,
+          304.0
         ],
         [
-          1115,
-          324
+          1115.0,
+          324.0
         ],
         [
-          612,
-          324
+          612.0,
+          324.0
         ]
       ]
     },
     {
       "text": "annotated data. Moreover, the length of extracted fea-",
-      "confidence": 0.976,
+      "confidence": 0.9763,
       "bbox": [
         [
-          72,
-          334
+          72.0,
+          334.0
         ],
         [
-          577,
-          334
+          577.0,
+          334.0
         ],
         [
-          577,
-          354
+          577.0,
+          354.0
         ],
         [
-          72,
-          354
+          72.0,
+          354.0
         ]
       ]
     },
     {
       "text": "character-level systems.",
-      "confidence": 1.0,
+      "confidence": 0.9996,
       "bbox": [
         [
-          612,
-          327
+          612.0,
+          327.0
         ],
         [
-          819,
-          327
+          819.0,
+          327.0
         ],
         [
-          819,
-          348
+          819.0,
+          348.0
         ],
         [
-          612,
-          348
+          612.0,
+          348.0
         ]
       ]
     },
     {
       "text": "ture sequences, compared to line-level approaches, can be",
-      "confidence": 0.986,
+      "confidence": 0.9856,
       "bbox": [
         [
-          73,
-          358
+          73.0,
+          358.0
         ],
         [
-          578,
-          358
+          578.0,
+          358.0
         ],
         [
-          578,
-          378
+          578.0,
+          378.0
         ],
         [
-          73,
-          378
+          73.0,
+          378.0
         ]
       ]
     },
     {
       "text": "With the rise of deep learning, many deep neural net-",
-      "confidence": 0.983,
+      "confidence": 0.9827,
       "bbox": [
         [
-          634,
-          354
+          634.0,
+          354.0
         ],
         [
-          1114,
-          354
+          1114.0,
+          354.0
         ],
         [
-          1114,
-          371
+          1114.0,
+          371.0
         ],
         [
-          634,
-          371
+          634.0,
+          371.0
         ]
       ]
     },
     {
       "text": "very large resulting in weeks of training consuming an im-",
-      "confidence": 0.994,
+      "confidence": 0.9939,
       "bbox": [
         [
-          75,
-          383
+          75.0,
+          383.0
         ],
         [
-          577,
-          383
+          577.0,
+          383.0
         ],
         [
-          577,
-          403
+          577.0,
+          403.0
         ],
         [
-          75,
-          403
+          75.0,
+          403.0
         ]
       ]
     },
     {
       "text": "works have been proposed based mostly on the recurrent",
-      "confidence": 0.981,
+      "confidence": 0.9812,
       "bbox": [
         [
-          613,
-          377
+          613.0,
+          377.0
         ],
         [
-          1116,
-          377
+          1116.0,
+          377.0
         ],
         [
-          1116,
-          397
+          1116.0,
+          397.0
         ],
         [
-          613,
-          397
+          613.0,
+          397.0
         ]
       ]
     },
     {
       "text": "mersive amount of GPU resources. Finally, porting these",
-      "confidence": 0.997,
+      "confidence": 0.9966,
       "bbox": [
         [
-          72,
-          404
+          72.0,
+          404.0
         ],
         [
-          578,
-          404
+          578.0,
+          404.0
         ],
         [
-          578,
-          427
+          578.0,
+          427.0
         ],
         [
-          72,
-          427
+          72.0,
+          427.0
         ]
       ]
     },
     {
       "text": "architectures [9, 10]. However, such models require a large",
-      "confidence": 0.994,
+      "confidence": 0.9935,
       "bbox": [
         [
-          611,
-          400
+          611.0,
+          400.0
         ],
         [
-          1117,
-          400
+          1117.0,
+          400.0
         ],
         [
-          1117,
-          423
+          1117.0,
+          423.0
         ],
         [
-          611,
-          423
+          611.0,
+          423.0
         ]
       ]
     },
     {
       "text": "models to low-resource languages can be a difficult task as",
-      "confidence": 0.981,
+      "confidence": 0.9814,
       "bbox": [
         [
-          73,
-          429
+          73.0,
+          429.0
         ],
         [
-          578,
-          429
+          578.0,
+          429.0
         ],
         [
-          578,
-          449
+          578.0,
+          449.0
         ],
         [
-          73,
-          449
+          73.0,
+          449.0
         ]
       ]
     },
     {
       "text": "amount of annotated data to be trained. To this end, au-",
-      "confidence": 0.989,
+      "confidence": 0.9887,
       "bbox": [
         [
-          611,
-          423
+          611.0,
+          423.0
         ],
         [
-          1115,
-          423
+          1115.0,
+          423.0
         ],
         [
-          1115,
-          447
+          1115.0,
+          447.0
         ],
         [
-          611,
-          447
+          611.0,
+          447.0
         ]
       ]
     },
     {
       "text": "it requires a huge quantity of data to retrain the model",
-      "confidence": 0.984,
+      "confidence": 0.9841,
       "bbox": [
         [
-          71,
-          452
+          71.0,
+          452.0
         ],
         [
-          578,
-          452
+          578.0,
+          452.0
         ],
         [
-          578,
-          474
+          578.0,
+          474.0
         ],
         [
-          71,
-          474
+          71.0,
+          474.0
         ]
       ]
     },
     {
       "text": "thors in [2], proposed data augmentation and normaliza-",
-      "confidence": 0.995,
+      "confidence": 0.9947,
       "bbox": [
         [
-          612,
-          450
+          612.0,
+          450.0
         ],
         [
-          1115,
-          450
+          1115.0,
+          450.0
         ],
         [
-          1115,
-          470
+          1115.0,
+          470.0
         ],
         [
-          612,
-          470
+          612.0,
+          470.0
         ]
       ]
     },
     {
       "text": "from scratch.",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          73,
-          477
+          73.0,
+          477.0
         ],
         [
-          188,
-          477
+          188.0,
+          477.0
         ],
         [
-          188,
-          496
+          188.0,
+          496.0
         ],
         [
-          73,
-          496
+          73.0,
+          496.0
         ]
       ]
     },
     {
       "text": "tion techniques using Convolution Neural Networks com-",
-      "confidence": 0.995,
+      "confidence": 0.9947,
       "bbox": [
         [
-          612,
-          473
+          612.0,
+          473.0
         ],
         [
-          1115,
-          473
+          1115.0,
+          473.0
         ],
         [
-          1115,
-          492
+          1115.0,
+          492.0
         ],
         [
-          612,
-          492
+          612.0,
+          492.0
         ]
       ]
     },
     {
       "text": "Motivated by the above observations, we propose a lite",
-      "confidence": 0.997,
+      "confidence": 0.9972,
       "bbox": [
         [
-          94,
-          499
+          94.0,
+          499.0
         ],
         [
-          578,
-          499
+          578.0,
+          499.0
         ],
         [
-          578,
-          521
+          578.0,
+          521.0
         ],
         [
-          94,
-          521
+          94.0,
+          521.0
         ]
       ]
     },
     {
       "text": "bined with Long-Short-Term Memory CNN-LSTM, which",
-      "confidence": 0.989,
+      "confidence": 0.9887,
       "bbox": [
         [
-          612,
-          495
+          612.0,
+          495.0
         ],
         [
-          1115,
-          495
+          1115.0,
+          495.0
         ],
         [
-          1115,
-          517
+          1115.0,
+          517.0
         ],
         [
-          612,
-          517
+          612.0,
+          517.0
         ]
       ]
     },
@@ -647,20 +647,20 @@
       "confidence": 0.99,
       "bbox": [
         [
-          73,
-          525
+          73.0,
+          525.0
         ],
         [
-          578,
-          525
+          578.0,
+          525.0
         ],
         [
-          578,
-          545
+          578.0,
+          545.0
         ],
         [
-          73,
-          545
+          73.0,
+          545.0
         ]
       ]
     },
@@ -669,64 +669,64 @@
       "confidence": 0.987,
       "bbox": [
         [
-          609,
-          516
+          609.0,
+          516.0
         ],
         [
-          1116,
-          516
+          1116.0,
+          516.0
         ],
         [
-          1116,
-          545
+          1116.0,
+          545.0
         ],
         [
-          609,
-          545
+          609.0,
+          545.0
         ]
       ]
     },
     {
       "text": "image recognition. The proposed model involves a limited",
-      "confidence": 0.991,
+      "confidence": 0.9912,
       "bbox": [
         [
-          72,
-          547
+          72.0,
+          547.0
         ],
         [
-          578,
-          547
+          578.0,
+          547.0
         ],
         [
-          578,
-          570
+          578.0,
+          570.0
         ],
         [
-          72,
-          570
+          72.0,
+          570.0
         ]
       ]
     },
     {
       "text": "nition tasks. Having unlimited annotated data, in turn,",
-      "confidence": 0.992,
+      "confidence": 0.9916,
       "bbox": [
         [
-          611,
-          543
+          611.0,
+          543.0
         ],
         [
-          1116,
-          543
+          1116.0,
+          543.0
         ],
         [
-          1116,
-          565
+          1116.0,
+          565.0
         ],
         [
-          611,
-          565
+          611.0,
+          565.0
         ]
       ]
     },
@@ -735,86 +735,86 @@
       "confidence": 0.981,
       "bbox": [
         [
-          73,
-          573
+          73.0,
+          573.0
         ],
         [
-          578,
-          573
+          578.0,
+          573.0
         ],
         [
-          578,
-          593
+          578.0,
+          593.0
         ],
         [
-          73,
-          593
+          73.0,
+          593.0
         ]
       ]
     },
     {
       "text": "does not alleviate the issue of parallelization during the",
-      "confidence": 0.994,
+      "confidence": 0.9936,
       "bbox": [
         [
-          611,
-          567
+          611.0,
+          567.0
         ],
         [
-          1116,
-          567
+          1116.0,
+          567.0
         ],
         [
-          1116,
-          587
+          1116.0,
+          587.0
         ],
         [
-          611,
-          587
+          611.0,
+          587.0
         ]
       ]
     },
     {
       "text": "of external data. Our system is trained with a curriculum",
-      "confidence": 0.986,
+      "confidence": 0.9862,
       "bbox": [
         [
-          73,
-          596
+          73.0,
+          596.0
         ],
         [
-          578,
-          596
+          578.0,
+          596.0
         ],
         [
-          578,
-          617
+          578.0,
+          617.0
         ],
         [
-          73,
-          617
+          73.0,
+          617.0
         ]
       ]
     },
     {
       "text": "training stage. They suffer from the lack of computation",
-      "confidence": 0.976,
+      "confidence": 0.9762,
       "bbox": [
         [
-          611,
-          591
+          611.0,
+          591.0
         ],
         [
-          1116,
-          591
+          1116.0,
+          591.0
         ],
         [
-          1116,
-          613
+          1116.0,
+          613.0
         ],
         [
-          611,
-          613
+          611.0,
+          613.0
         ]
       ]
     },
@@ -823,86 +823,86 @@
       "confidence": 0.989,
       "bbox": [
         [
-          73,
-          622
+          73.0,
+          622.0
         ],
         [
-          578,
-          622
+          578.0,
+          622.0
         ],
         [
-          578,
-          641
+          578.0,
+          641.0
         ],
         [
-          73,
-          641
+          73.0,
+          641.0
         ]
       ]
     },
     {
       "text": "parallelization inherently due to recurrent layers, which",
-      "confidence": 0.97,
+      "confidence": 0.9697,
       "bbox": [
         [
-          611,
-          614
+          611.0,
+          614.0
         ],
         [
-          1116,
-          614
+          1116.0,
+          614.0
         ],
         [
-          1116,
-          638
+          1116.0,
+          638.0
         ],
         [
-          611,
-          638
+          611.0,
+          638.0
         ]
       ]
     },
     {
       "text": "and to scale to large input text images. This curriculum",
-      "confidence": 0.998,
+      "confidence": 0.9982,
       "bbox": [
         [
-          73,
-          644
+          73.0,
+          644.0
         ],
         [
-          577,
-          644
+          577.0,
+          644.0
         ],
         [
-          577,
-          664
+          577.0,
+          664.0
         ],
         [
-          73,
-          664
+          73.0,
+          664.0
         ]
       ]
     },
     {
       "text": "impact both training and inference time. Consciously, the",
-      "confidence": 0.991,
+      "confidence": 0.9913,
       "bbox": [
         [
-          611,
-          639
+          611.0,
+          639.0
         ],
         [
-          1117,
-          639
+          1117.0,
+          639.0
         ],
         [
-          1117,
-          661
+          1117.0,
+          661.0
         ],
         [
-          611,
-          661
+          611.0,
+          661.0
         ]
       ]
     },
@@ -911,328 +911,328 @@
       "confidence": 0.98,
       "bbox": [
         [
-          74,
-          668
+          74.0,
+          668.0
         ],
         [
-          578,
-          668
+          578.0,
+          668.0
         ],
         [
-          578,
-          688
+          578.0,
+          688.0
         ],
         [
-          74,
-          688
+          74.0,
+          688.0
         ]
       ]
     },
     {
       "text": "next methods have focused on training systems without a",
-      "confidence": 0.997,
+      "confidence": 0.9971,
       "bbox": [
         [
-          610,
-          663
+          610.0,
+          663.0
         ],
         [
-          1117,
-          663
+          1117.0,
+          663.0
         ],
         [
-          1117,
-          683
+          1117.0,
+          683.0
         ],
         [
-          610,
-          683
+          610.0,
+          683.0
         ]
       ]
     },
     {
       "text": "model will serve as a starting point to train models with",
-      "confidence": 0.974,
+      "confidence": 0.9744,
       "bbox": [
         [
-          73,
-          692
+          73.0,
+          692.0
         ],
         [
-          578,
-          692
+          578.0,
+          692.0
         ],
         [
-          578,
-          712
+          578.0,
+          712.0
         ],
         [
-          73,
-          712
+          73.0,
+          712.0
         ]
       ]
     },
     {
       "text": "recurrent process.",
-      "confidence": 0.978,
+      "confidence": 0.9783,
       "bbox": [
         [
-          613,
-          692
+          613.0,
+          692.0
         ],
         [
-          765,
-          692
+          765.0,
+          692.0
         ],
         [
-          765,
-          706
+          765.0,
+          706.0
         ],
         [
-          613,
-          706
+          613.0,
+          706.0
         ]
       ]
     },
     {
       "text": "real page-level data even on different scripts. The pro-",
-      "confidence": 0.991,
+      "confidence": 0.9914,
       "bbox": [
         [
-          72,
-          715
+          72.0,
+          715.0
         ],
         [
-          577,
-          715
+          577.0,
+          715.0
         ],
         [
-          577,
-          737
+          577.0,
+          737.0
         ],
         [
-          72,
-          737
+          72.0,
+          737.0
         ]
       ]
     },
     {
       "text": "One can notice some latest trends, based on transformer",
-      "confidence": 0.999,
+      "confidence": 0.9986,
       "bbox": [
         [
-          632,
-          713
+          632.0,
+          713.0
         ],
         [
-          1115,
-          713
+          1115.0,
+          713.0
         ],
         [
-          1115,
-          734
+          1115.0,
+          734.0
         ],
         [
-          632,
-          734
+          632.0,
+          734.0
         ]
       ]
     },
     {
       "text": "posed architecture can be trained using standard GPUs as",
-      "confidence": 0.994,
+      "confidence": 0.9945,
       "bbox": [
         [
-          73,
-          739
+          73.0,
+          739.0
         ],
         [
-          579,
-          739
+          579.0,
+          739.0
         ],
         [
-          579,
-          761
+          579.0,
+          761.0
         ],
         [
-          73,
-          761
+          73.0,
+          761.0
         ]
       ]
     },
     {
       "text": "architecture, in which, authors in [1] propose an end-to-",
-      "confidence": 0.969,
+      "confidence": 0.9686,
       "bbox": [
         [
-          612,
-          739
+          612.0,
+          739.0
         ],
         [
-          1115,
-          739
+          1115.0,
+          739.0
         ],
         [
-          1115,
-          759
+          1115.0,
+          759.0
         ],
         [
-          612,
-          759
+          612.0,
+          759.0
         ]
       ]
     },
     {
       "text": "it requires lower memory allocation, compared to similar",
-      "confidence": 0.99,
+      "confidence": 0.9898,
       "bbox": [
         [
-          72,
-          765
+          72.0,
+          765.0
         ],
         [
-          578,
-          765
+          578.0,
+          765.0
         ],
         [
-          578,
-          784
+          578.0,
+          784.0
         ],
         [
-          72,
-          784
+          72.0,
+          784.0
         ]
       ]
     },
     {
       "text": "end model, which dispenses any recurrent network for",
-      "confidence": 0.991,
+      "confidence": 0.9914,
       "bbox": [
         [
-          612,
-          763
+          612.0,
+          763.0
         ],
         [
-          1116,
-          763
+          1116.0,
+          763.0
         ],
         [
-          1116,
-          782
+          1116.0,
+          782.0
         ],
         [
-          612,
-          782
+          612.0,
+          782.0
         ]
       ]
     },
     {
       "text": "proposed systems. The major contributions of this paper",
-      "confidence": 0.982,
+      "confidence": 0.9824,
       "bbox": [
         [
-          71,
-          786
+          71.0,
+          786.0
         ],
         [
-          579,
-          786
+          579.0,
+          786.0
         ],
         [
-          579,
-          811
+          579.0,
+          811.0
         ],
         [
-          71,
-          811
+          71.0,
+          811.0
         ]
       ]
     },
     {
       "text": "HTR of text-line images. The architecture is based on",
-      "confidence": 0.982,
+      "confidence": 0.9816,
       "bbox": [
         [
-          611,
-          784
+          611.0,
+          784.0
         ],
         [
-          1117,
-          784
+          1117.0,
+          784.0
         ],
         [
-          1117,
-          805
+          1117.0,
+          805.0
         ],
         [
-          611,
-          805
+          611.0,
+          805.0
         ]
       ]
     },
     {
       "text": "can be therefore summarized as follows:",
-      "confidence": 0.987,
+      "confidence": 0.9875,
       "bbox": [
         [
-          73,
-          812
+          73.0,
+          812.0
         ],
         [
-          423,
-          812
+          423.0,
+          812.0
         ],
         [
-          423,
-          832
+          423.0,
+          832.0
         ],
         [
-          73,
-          832
+          73.0,
+          832.0
         ]
       ]
     },
     {
       "text": "multi-head self-attention layers both at the visual and tex-",
-      "confidence": 0.987,
+      "confidence": 0.9871,
       "bbox": [
         [
-          612,
-          808
+          612.0,
+          808.0
         ],
         [
-          1115,
-          808
+          1115.0,
+          808.0
         ],
         [
-          1115,
-          829
+          1115.0,
+          829.0
         ],
         [
-          612,
-          829
+          612.0,
+          829.0
         ]
       ]
     },
     {
       "text": "tual stages. Such a model aims to tackle both the proper",
-      "confidence": 0.988,
+      "confidence": 0.9876,
       "bbox": [
         [
-          612,
-          831
+          612.0,
+          831.0
         ],
         [
-          1116,
-          831
+          1116.0,
+          831.0
         ],
         [
-          1116,
-          854
+          1116.0,
+          854.0
         ],
         [
-          612,
-          854
+          612.0,
+          854.0
         ]
       ]
     },
@@ -1241,218 +1241,218 @@
       "confidence": 0.993,
       "bbox": [
         [
-          94,
-          850
+          94.0,
+          850.0
         ],
         [
-          579,
-          850
+          579.0,
+          850.0
         ],
         [
-          579,
-          873
+          579.0,
+          873.0
         ],
         [
-          94,
-          873
+          94.0,
+          873.0
         ]
       ]
     },
     {
       "text": "step of character recognition from images, as well as to",
-      "confidence": 0.99,
+      "confidence": 0.9896,
       "bbox": [
         [
-          613,
-          859
+          613.0,
+          859.0
         ],
         [
-          1116,
-          859
+          1116.0,
+          859.0
         ],
         [
-          1116,
-          876
+          1116.0,
+          876.0
         ],
         [
-          613,
-          876
+          613.0,
+          876.0
         ]
       ]
     },
     {
       "text": "model for handwritten text recognition. The pro-",
-      "confidence": 0.984,
+      "confidence": 0.9838,
       "bbox": [
         [
-          112,
-          874
+          112.0,
+          874.0
         ],
         [
-          577,
-          874
+          577.0,
+          874.0
         ],
         [
-          577,
-          897
+          577.0,
+          897.0
         ],
         [
-          112,
-          897
+          112.0,
+          897.0
         ]
       ]
     },
     {
       "text": "learn language-related dependencies of the character se-",
-      "confidence": 0.981,
+      "confidence": 0.9807,
       "bbox": [
         [
-          612,
-          882
+          612.0,
+          882.0
         ],
         [
-          1116,
-          882
+          1116.0,
+          882.0
         ],
         [
-          1116,
-          902
+          1116.0,
+          902.0
         ],
         [
-          612,
-          902
+          612.0,
+          902.0
         ]
       ]
     },
     {
       "text": "posed model works at the page level to avoid unrecov-",
-      "confidence": 0.993,
+      "confidence": 0.9929,
       "bbox": [
         [
-          113,
-          898
+          113.0,
+          898.0
         ],
         [
-          578,
-          898
+          578.0,
+          898.0
         ],
         [
-          578,
-          921
+          578.0,
+          921.0
         ],
         [
-          113,
-          921
+          113.0,
+          921.0
         ]
       ]
     },
     {
       "text": "quences to be decoded. The proposed work reaches com-",
-      "confidence": 0.997,
+      "confidence": 0.9969,
       "bbox": [
         [
-          611,
-          904
+          611.0,
+          904.0
         ],
         [
-          1116,
-          904
+          1116.0,
+          904.0
         ],
         [
-          1116,
-          927
+          1116.0,
+          927.0
         ],
         [
-          611,
-          927
+          611.0,
+          927.0
         ]
       ]
     },
     {
       "text": "erable early line segmentation errors, exploit a larger",
-      "confidence": 0.976,
+      "confidence": 0.9762,
       "bbox": [
         [
-          113,
-          922
+          113.0,
+          922.0
         ],
         [
-          577,
-          922
+          577.0,
+          922.0
         ],
         [
-          577,
-          944
+          577.0,
+          944.0
         ],
         [
-          113,
-          944
+          113.0,
+          944.0
         ]
       ]
     },
     {
       "text": "petitive state-of-the-art performance at the line level. In",
-      "confidence": 0.989,
+      "confidence": 0.9888,
       "bbox": [
         [
-          611,
-          928
+          611.0,
+          928.0
         ],
         [
-          1116,
-          928
+          1116.0,
+          928.0
         ],
         [
-          1116,
-          950
+          1116.0,
+          950.0
         ],
         [
-          611,
-          950
+          611.0,
+          950.0
         ]
       ]
     },
     {
       "text": "context and reduce the need for costly segmentation",
-      "confidence": 0.989,
+      "confidence": 0.9887,
       "bbox": [
         [
-          113,
-          946
+          113.0,
+          946.0
         ],
         [
-          578,
-          946
+          578.0,
+          946.0
         ],
         [
-          578,
-          966
+          578.0,
+          966.0
         ],
         [
-          113,
-          966
+          113.0,
+          966.0
         ]
       ]
     },
     {
       "text": "brief, line-level methods require segmentation and throw-",
-      "confidence": 0.985,
+      "confidence": 0.9849,
       "bbox": [
         [
-          613,
-          953
+          613.0,
+          953.0
         ],
         [
-          1117,
-          953
+          1117.0,
+          953.0
         ],
         [
-          1117,
-          973
+          1117.0,
+          973.0
         ],
         [
-          613,
-          973
+          613.0,
+          973.0
         ]
       ]
     },
@@ -1461,416 +1461,416 @@
       "confidence": 1.0,
       "bbox": [
         [
-          114,
-          972
+          114.0,
+          972.0
         ],
         [
-          223,
-          972
+          223.0,
+          972.0
         ],
         [
-          223,
-          989
+          223.0,
+          989.0
         ],
         [
-          114,
-          989
+          114.0,
+          989.0
         ]
       ]
     },
     {
       "text": "ing away useful context.",
-      "confidence": 0.98,
+      "confidence": 0.9796,
       "bbox": [
         [
-          611,
-          977
+          611.0,
+          977.0
         ],
         [
-          824,
-          977
+          824.0,
+          977.0
         ],
         [
-          824,
-          998
+          824.0,
+          998.0
         ],
         [
-          611,
-          998
+          611.0,
+          998.0
         ]
       ]
     },
     {
       "text": "• We propose to use a curriculum learning strategy that",
-      "confidence": 0.998,
+      "confidence": 0.9984,
       "bbox": [
         [
-          93,
-          1005
+          93.0,
+          1005.0
         ],
         [
-          578,
-          1005
+          578.0,
+          1005.0
         ],
         [
-          578,
-          1030
+          578.0,
+          1030.0
         ],
         [
-          93,
-          1030
+          93.0,
+          1030.0
         ]
       ]
     },
     {
       "text": "2.2. Page level HTR systems",
-      "confidence": 0.986,
+      "confidence": 0.9856,
       "bbox": [
         [
-          613,
-          1013
+          613.0,
+          1013.0
         ],
         [
-          869,
-          1013
+          869.0,
+          1013.0
         ],
         [
-          869,
-          1035
+          869.0,
+          1035.0
         ],
         [
-          613,
-          1035
+          613.0,
+          1035.0
         ]
       ]
     },
     {
       "text": "allows the model to be trained using a limited amount",
-      "confidence": 0.984,
+      "confidence": 0.9837,
       "bbox": [
         [
-          113,
-          1031
+          113.0,
+          1031.0
         ],
         [
-          577,
-          1031
+          577.0,
+          1031.0
         ],
         [
-          577,
-          1052
+          577.0,
+          1052.0
         ],
         [
-          113,
-          1052
+          113.0,
+          1052.0
         ]
       ]
     },
     {
       "text": "of annotated data and can learn the reading order at",
-      "confidence": 0.982,
+      "confidence": 0.9824,
       "bbox": [
         [
-          113,
-          1054
+          113.0,
+          1054.0
         ],
         [
-          577,
-          1054
+          577.0,
+          1054.0
         ],
         [
-          577,
-          1075
+          577.0,
+          1075.0
         ],
         [
-          113,
-          1075
+          113.0,
+          1075.0
         ]
       ]
     },
     {
       "text": "To avoid unrecoverable errors of segmentation, and to",
-      "confidence": 0.992,
+      "confidence": 0.9921,
       "bbox": [
         [
-          632,
-          1048
+          632.0,
+          1048.0
         ],
         [
-          1116,
-          1048
+          1116.0,
+          1048.0
         ],
         [
-          1116,
-          1069
+          1116.0,
+          1069.0
         ],
         [
-          632,
-          1069
+          632.0,
+          1069.0
         ]
       ]
     },
     {
       "text": "the page level.",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          114,
-          1079
+          114.0,
+          1079.0
         ],
         [
-          240,
-          1079
+          240.0,
+          1079.0
         ],
         [
-          240,
-          1099
+          240.0,
+          1099.0
         ],
         [
-          114,
-          1099
+          114.0,
+          1099.0
         ]
       ]
     },
     {
       "text": "exploit larger context information, some approaches are",
-      "confidence": 0.997,
+      "confidence": 0.9969,
       "bbox": [
         [
-          613,
-          1073
+          613.0,
+          1073.0
         ],
         [
-          1117,
-          1073
+          1117.0,
+          1073.0
         ],
         [
-          1117,
-          1093
+          1117.0,
+          1093.0
         ],
         [
-          613,
-          1093
+          613.0,
+          1093.0
         ]
       ]
     },
     {
       "text": "moving from line-level recognition to paragraph-level and",
-      "confidence": 0.99,
+      "confidence": 0.9901,
       "bbox": [
         [
-          612,
-          1097
+          612.0,
+          1097.0
         ],
         [
-          1115,
-          1097
+          1115.0,
+          1097.0
         ],
         [
-          1115,
-          1117
+          1115.0,
+          1117.0
         ],
         [
-          612,
-          1117
+          612.0,
+          1117.0
         ]
       ]
     },
     {
       "text": "• We demonstrate that our lite transformer, built with",
-      "confidence": 0.985,
+      "confidence": 0.9852,
       "bbox": [
         [
-          93,
-          1116
+          93.0,
+          1116.0
         ],
         [
-          578,
-          1116
+          578.0,
+          1116.0
         ],
         [
-          578,
-          1137
+          578.0,
+          1137.0
         ],
         [
-          93,
-          1137
+          93.0,
+          1137.0
         ]
       ]
     },
     {
       "text": "even page-level recognition.",
-      "confidence": 0.999,
+      "confidence": 0.9988,
       "bbox": [
         [
-          612,
-          1122
+          612.0,
+          1122.0
         ],
         [
-          851,
-          1122
+          851.0,
+          1122.0
         ],
         [
-          851,
-          1142
+          851.0,
+          1142.0
         ],
         [
-          612,
-          1142
+          612.0,
+          1142.0
         ]
       ]
     },
     {
       "text": "only two layers and a single head of self-attention,",
-      "confidence": 0.988,
+      "confidence": 0.9881,
       "bbox": [
         [
-          112,
-          1142
+          112.0,
+          1142.0
         ],
         [
-          577,
-          1142
+          577.0,
+          1142.0
         ],
         [
-          577,
-          1163
+          577.0,
+          1163.0
         ],
         [
-          112,
-          1163
+          112.0,
+          1163.0
         ]
       ]
     },
     {
       "text": "Methods like [10], [5] applied an encoder-decoder with",
-      "confidence": 0.995,
+      "confidence": 0.9948,
       "bbox": [
         [
-          632,
-          1147
+          632.0,
+          1147.0
         ],
         [
-          1115,
-          1147
+          1115.0,
+          1147.0
         ],
         [
-          1115,
-          1167
+          1115.0,
+          1167.0
         ],
         [
-          632,
-          1167
+          632.0,
+          1167.0
         ]
       ]
     },
     {
       "text": "can be easily adapted to other scripts by applying a",
-      "confidence": 0.981,
+      "confidence": 0.9814,
       "bbox": [
         [
-          112,
-          1165
+          112.0,
+          1165.0
         ],
         [
-          580,
-          1165
+          580.0,
+          1165.0
         ],
         [
-          580,
-          1189
+          580.0,
+          1189.0
         ],
         [
-          112,
-          1189
+          112.0,
+          1189.0
         ]
       ]
     },
     {
       "text": "attention mechanisms to the task of multi-line text recog-",
-      "confidence": 0.989,
+      "confidence": 0.9893,
       "bbox": [
         [
-          610,
-          1168
+          610.0,
+          1168.0
         ],
         [
-          1116,
-          1168
+          1116.0,
+          1168.0
         ],
         [
-          1116,
-          1194
+          1116.0,
+          1194.0
         ],
         [
-          610,
-          1194
+          610.0,
+          1194.0
         ]
       ]
     },
     {
       "text": "simple transfer-learning process using only page-level",
-      "confidence": 0.998,
+      "confidence": 0.9982,
       "bbox": [
         [
-          113,
-          1191
+          113.0,
+          1191.0
         ],
         [
-          578,
-          1191
+          578.0,
+          1191.0
         ],
         [
-          578,
-          1210
+          578.0,
+          1210.0
         ],
         [
-          113,
-          1210
+          113.0,
+          1210.0
         ]
       ]
     },
     {
       "text": "nition. Both architectures use a CNN+MDLSTM encoder",
-      "confidence": 0.999,
+      "confidence": 0.9989,
       "bbox": [
         [
-          613,
-          1194
+          613.0,
+          1194.0
         ],
         [
-          1115,
-          1194
+          1115.0,
+          1194.0
         ],
         [
-          1115,
-          1214
+          1115.0,
+          1214.0
         ],
         [
-          613,
-          1214
+          613.0,
+          1214.0
         ]
       ]
     },
     {
       "text": "labeled images.",
-      "confidence": 0.99,
+      "confidence": 0.9903,
       "bbox": [
         [
-          111,
-          1211
+          111.0,
+          1211.0
         ],
         [
-          248,
-          1211
+          248.0,
+          1211.0
         ],
         [
-          248,
-          1235
+          248.0,
+          1235.0
         ],
         [
-          111,
-          1235
+          111.0,
+          1235.0
         ]
       ]
     },
@@ -1879,42 +1879,42 @@
       "confidence": 0.992,
       "bbox": [
         [
-          611,
-          1217
+          611.0,
+          1217.0
         ],
         [
-          1115,
-          1217
+          1115.0,
+          1217.0
         ],
         [
-          1115,
-          1238
+          1115.0,
+          1238.0
         ],
         [
-          611,
-          1238
+          611.0,
+          1238.0
         ]
       ]
     },
     {
       "text": "• Extensive comparative experiments are conducted to",
-      "confidence": 0.984,
+      "confidence": 0.9844,
       "bbox": [
         [
-          99,
-          1250
+          99.0,
+          1250.0
         ],
         [
-          577,
-          1250
+          577.0,
+          1250.0
         ],
         [
-          577,
-          1270
+          577.0,
+          1270.0
         ],
         [
-          99,
-          1270
+          99.0,
+          1270.0
         ]
       ]
     },
@@ -1923,504 +1923,504 @@
       "confidence": 0.978,
       "bbox": [
         [
-          611,
-          1242
+          611.0,
+          1242.0
         ],
         [
-          1117,
-          1242
+          1117.0,
+          1242.0
         ],
         [
-          1117,
-          1263
+          1117.0,
+          1263.0
         ],
         [
-          611,
-          1263
+          611.0,
+          1263.0
         ]
       ]
     },
     {
       "text": "validate the effectiveness of our approach. We have",
-      "confidence": 0.992,
+      "confidence": 0.9916,
       "bbox": [
         [
-          114,
-          1275
+          114.0,
+          1275.0
         ],
         [
-          578,
-          1275
+          578.0,
+          1275.0
         ],
         [
-          578,
-          1295
+          578.0,
+          1295.0
         ],
         [
-          114,
-          1295
+          114.0,
+          1295.0
         ]
       ]
     },
     {
       "text": "attention module recurrently generates line or character",
-      "confidence": 0.995,
+      "confidence": 0.9946,
       "bbox": [
         [
-          612,
-          1267
+          612.0,
+          1267.0
         ],
         [
-          1115,
-          1267
+          1115.0,
+          1267.0
         ],
         [
-          1115,
-          1284
+          1115.0,
+          1284.0
         ],
         [
-          612,
-          1284
+          612.0,
+          1284.0
         ]
       ]
     },
     {
       "text": "tested our model on multiple scripts and languages,",
-      "confidence": 0.972,
+      "confidence": 0.9719,
       "bbox": [
         [
-          112,
-          1296
+          112.0,
+          1296.0
         ],
         [
-          578,
-          1296
+          578.0,
+          1296.0
         ],
         [
-          578,
-          1323
+          578.0,
+          1323.0
         ],
         [
-          112,
-          1323
+          112.0,
+          1323.0
         ]
       ]
     },
     {
       "text": "representations applying a weighted sum between the at-",
-      "confidence": 0.983,
+      "confidence": 0.9828,
       "bbox": [
         [
-          611,
-          1290
+          611.0,
+          1290.0
         ],
         [
-          1116,
-          1290
+          1116.0,
+          1290.0
         ],
         [
-          1116,
-          1311
+          1116.0,
+          1311.0
         ],
         [
-          611,
-          1311
+          611.0,
+          1311.0
         ]
       ]
     },
     {
       "text": "including English, French, Spanish, and Arabic. The",
-      "confidence": 1.0,
+      "confidence": 0.9995,
       "bbox": [
         [
-          114,
-          1323
+          114.0,
+          1323.0
         ],
         [
-          578,
-          1323
+          578.0,
+          1323.0
         ],
         [
-          578,
-          1342
+          578.0,
+          1342.0
         ],
         [
-          114,
-          1342
+          114.0,
+          1342.0
         ]
       ]
     },
     {
       "text": "tention weights and the features. Finally, the decoder out-",
-      "confidence": 0.986,
+      "confidence": 0.9856,
       "bbox": [
         [
-          613,
-          1316
+          613.0,
+          1316.0
         ],
         [
-          1114,
-          1316
+          1114.0,
+          1316.0
         ],
         [
-          1114,
-          1333
+          1114.0,
+          1333.0
         ],
         [
-          613,
-          1333
+          613.0,
+          1333.0
         ]
       ]
     },
     {
       "text": "obtained results confirm the effectiveness of the pro-",
-      "confidence": 0.988,
+      "confidence": 0.9885,
       "bbox": [
         [
-          112,
-          1345
+          112.0,
+          1345.0
         ],
         [
-          577,
-          1345
+          577.0,
+          1345.0
         ],
         [
-          577,
-          1368
+          577.0,
+          1368.0
         ],
         [
-          112,
-          1368
+          112.0,
+          1368.0
         ]
       ]
     },
     {
       "text": "puts character probabilities from this representation. Both",
-      "confidence": 0.989,
+      "confidence": 0.9887,
       "bbox": [
         [
-          610,
-          1334
+          610.0,
+          1334.0
         ],
         [
-          1117,
-          1334
+          1117.0,
+          1334.0
         ],
         [
-          1117,
-          1361
+          1117.0,
+          1361.0
         ],
         [
-          610,
-          1361
+          610.0,
+          1361.0
         ]
       ]
     },
     {
       "text": "posed model.",
-      "confidence": 1.0,
+      "confidence": 0.9998,
       "bbox": [
         [
-          111,
-          1368
+          111.0,
+          1368.0
         ],
         [
-          230,
-          1368
+          230.0,
+          1368.0
         ],
         [
-          230,
-          1392
+          230.0,
+          1392.0
         ],
         [
-          111,
-          1392
+          111.0,
+          1392.0
         ]
       ]
     },
     {
       "text": "those two approaches present interesting implicit segmen-",
-      "confidence": 0.993,
+      "confidence": 0.9931,
       "bbox": [
         [
-          613,
-          1362
+          613.0,
+          1362.0
         ],
         [
-          1116,
-          1362
+          1116.0,
+          1362.0
         ],
         [
-          1116,
-          1382
+          1116.0,
+          1382.0
         ],
         [
-          613,
-          1382
+          613.0,
+          1382.0
         ]
       ]
     },
     {
       "text": "tation reaching competitive results. Nonetheless, they are",
-      "confidence": 0.995,
+      "confidence": 0.9947,
       "bbox": [
         [
-          612,
-          1387
+          612.0,
+          1387.0
         ],
         [
-          1114,
-          1387
+          1114.0,
+          1387.0
         ],
         [
-          1114,
-          1404
+          1114.0,
+          1404.0
         ],
         [
-          612,
-          1404
+          612.0,
+          1404.0
         ]
       ]
     },
     {
       "text": "The remaining parts of this paper are structured as fol-",
-      "confidence": 0.99,
+      "confidence": 0.9897,
       "bbox": [
         [
-          95,
-          1408
+          95.0,
+          1408.0
         ],
         [
-          578,
-          1408
+          578.0,
+          1408.0
         ],
         [
-          578,
-          1430
+          578.0,
+          1430.0
         ],
         [
-          95,
-          1430
+          95.0,
+          1430.0
         ]
       ]
     },
     {
       "text": "computationally expensive due to the MDLSTM layers,",
-      "confidence": 0.989,
+      "confidence": 0.9892,
       "bbox": [
         [
-          611,
-          1409
+          611.0,
+          1409.0
         ],
         [
-          1116,
-          1409
+          1116.0,
+          1409.0
         ],
         [
-          1116,
-          1432
+          1116.0,
+          1432.0
         ],
         [
-          611,
-          1432
+          611.0,
+          1432.0
         ]
       ]
     },
     {
       "text": "lows. Related works are presented in Section 2. Section",
-      "confidence": 0.984,
+      "confidence": 0.9839,
       "bbox": [
         [
-          72,
-          1433
+          72.0,
+          1433.0
         ],
         [
-          578,
-          1433
+          578.0,
+          1433.0
         ],
         [
-          578,
-          1454
+          578.0,
+          1454.0
         ],
         [
-          72,
-          1454
+          72.0,
+          1454.0
         ]
       ]
     },
     {
       "text": "which lead to long training and inference time. In addi-",
-      "confidence": 0.978,
+      "confidence": 0.9784,
       "bbox": [
         [
-          613,
-          1436
+          613.0,
+          1436.0
         ],
         [
-          1114,
-          1436
+          1114.0,
+          1436.0
         ],
         [
-          1114,
-          1453
+          1114.0,
+          1453.0
         ],
         [
-          613,
-          1453
+          613.0,
+          1453.0
         ]
       ]
     },
     {
       "text": "3 describes the proposed approach. Section 4 displays the",
-      "confidence": 0.992,
+      "confidence": 0.9924,
       "bbox": [
         [
-          71,
-          1457
+          71.0,
+          1457.0
         ],
         [
-          579,
-          1457
+          579.0,
+          1457.0
         ],
         [
-          579,
-          1478
+          579.0,
+          1478.0
         ],
         [
-          71,
-          1478
+          71.0,
+          1478.0
         ]
       ]
     },
     {
       "text": "tion to the complexity of the MDLSTM convolutions, the",
-      "confidence": 0.985,
+      "confidence": 0.9853,
       "bbox": [
         [
-          611,
-          1457
+          611.0,
+          1457.0
         ],
         [
-          1116,
-          1457
+          1116.0,
+          1457.0
         ],
         [
-          1116,
-          1476
+          1116.0,
+          1476.0
         ],
         [
-          611,
-          1476
+          611.0,
+          1476.0
         ]
       ]
     },
     {
       "text": "experimental results. The conclusion and perspectives are",
-      "confidence": 0.998,
+      "confidence": 0.9979,
       "bbox": [
         [
-          73,
-          1481
+          73.0,
+          1481.0
         ],
         [
-          578,
-          1481
+          578.0,
+          1481.0
         ],
         [
-          578,
-          1501
+          578.0,
+          1501.0
         ],
         [
-          73,
-          1501
+          73.0,
+          1501.0
         ]
       ]
     },
     {
       "text": "MDLSTM-based attention needed to be recomputed for",
-      "confidence": 1.0,
+      "confidence": 0.9998,
       "bbox": [
         [
-          611,
-          1479
+          611.0,
+          1479.0
         ],
         [
-          1115,
-          1479
+          1115.0,
+          1479.0
         ],
         [
-          1115,
-          1500
+          1115.0,
+          1500.0
         ],
         [
-          611,
-          1500
+          611.0,
+          1500.0
         ]
       ]
     },
     {
       "text": "stated in section 5.",
-      "confidence": 0.999,
+      "confidence": 0.9986,
       "bbox": [
         [
-          73,
-          1506
+          73.0,
+          1506.0
         ],
         [
-          240,
-          1506
+          240.0,
+          1506.0
         ],
         [
-          240,
-          1523
+          240.0,
+          1523.0
         ],
         [
-          73,
-          1523
+          73.0,
+          1523.0
         ]
       ]
     },
     {
       "text": "each predicted character.",
-      "confidence": 0.974,
+      "confidence": 0.9743,
       "bbox": [
         [
-          612,
-          1505
+          612.0,
+          1505.0
         ],
         [
-          833,
-          1505
+          833.0,
+          1505.0
         ],
         [
-          833,
-          1525
+          833.0,
+          1525.0
         ],
         [
-          612,
-          1525
+          612.0,
+          1525.0
         ]
       ]
     },
     {
       "text": "2",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          586,
-          1539
+          586.0,
+          1539.0
         ],
         [
-          603,
-          1539
+          603.0,
+          1539.0
         ],
         [
-          603,
-          1560
+          603.0,
+          1560.0
         ],
         [
-          586,
-          1560
+          586.0,
+          1560.0
         ]
       ]
     }

@@ -2,18 +2,21 @@
 
 from datetime import datetime, timedelta
 from typing import Any, Dict, Optional
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, Header, Query, status
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
 
 from app.core.config import get_settings
-from app.models.user import UserRole
+from app.database.session import get_db
+from app.models.user import User, UserRole
 
 settings = get_settings()
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login", auto_error=False)
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
@@ -54,6 +57,73 @@ def decode_token(token: str) -> Dict[str, Any]:
             detail="Could not validate credentials",
             headers={"WWW-Authenticate": "Bearer"},
         ) from exc
+
+
+async def get_current_user(
+    bearer_token: Optional[str] = Depends(oauth2_scheme),
+    auth_header: Optional[str] = Header(None, alias="Authorization"),
+    token_query: Optional[str] = Query(None, alias="token"),
+    db: AsyncSession = Depends(get_db),
+) -> User:
+    """Resolve and verify current user identity exclusively from validated JWT token."""
+    token = None
+    if bearer_token:
+        token = bearer_token
+    elif auth_header and auth_header.strip().startswith("Bearer "):
+        token = auth_header.strip()[7:].strip()
+    elif token_query:
+        token = token_query.strip()
+
+    if not token:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Authentication credentials were not provided",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    payload = decode_token(token)
+    email: Optional[str] = payload.get("sub")
+    if not email:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Token missing subject identifier",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    result = await db.execute(select(User).where(User.email == email))
+    user = result.scalars().first()
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="User account no longer exists",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+
+    return user
+
+
+async def get_current_teacher_or_admin(
+    current_user: User = Depends(get_current_user),
+) -> User:
+    """Enforce Teacher or Admin privilege."""
+    if current_user.role not in [UserRole.TEACHER, UserRole.ADMIN]:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Operation requires Teacher or Admin privileges.",
+        )
+    return current_user
+
+
+async def get_current_admin(
+    current_user: User = Depends(get_current_user),
+) -> User:
+    """Enforce Admin privilege."""
+    if current_user.role != UserRole.ADMIN:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Operation requires Admin privileges.",
+        )
+    return current_user
 
 
 def require_roles(allowed_roles: list[UserRole]):

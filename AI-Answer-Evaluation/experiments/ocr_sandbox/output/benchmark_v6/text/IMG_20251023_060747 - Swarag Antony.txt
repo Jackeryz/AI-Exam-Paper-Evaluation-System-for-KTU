@@ -1,0 +1,20 @@
+PDA with n=2.
+L=anbnIn>03. Trace yow
+人=abb,aabbb,.
+a,zo/az.
+a,alaa
+E,20/a
+b, ala
+b,ale
+Transilionfunction (d) b ala
+S(910, a, z0) = 90, azo
+S(a0, a,a) = 90, aa
+s(avo, b, a) = a, a
+8(a1,b,a).= a2,E
+8(92,b,a) = a,,a
+8(92, E,20) =auf, E
+PDA= (Q,≤, , δ, 90,20,F)
+when n=2，= a2b4=aabbbb
+(avo,abbb, )(a,abbb,azo)(a0,bb,azo)
+(a,bb,aazo)(a2,bb,az)(a,b,azo)(a2
+1(900,2)

@@ -33,18 +33,40 @@ class QuestionSegmenter:
         start_idx = 1
 
         for idx, line in enumerate(lines, start=1):
-            match = re.search(r"^(?:Question|Q)?\s*(\d{1,2})\s*(?:\(([a-d])\))?\s*(?:\(([i-v]+)\))?", line, re.IGNORECASE)
-            if match and len(line) < 80:
-                q_main = match.group(1) or current_q_num
-                q_sub = match.group(2)
-                q_roman = match.group(3)
-                
-                full_num = f"{q_main}"
-                if q_sub:
-                    full_num += f"({q_sub.lower()})"
-                if q_roman:
-                    full_num += f"({q_roman.lower()})"
+            full_num = None
+            if len(line) < 80:
+                # 1. "Question 1", "Q.1", "Q1", "Q1(a)"
+                m_q = re.match(r"^(?:Question|Q\.?)\s*(\d{1,2})(?:\s*[\.\:\-])?\s*(?:\(([a-zA-Z0-9]+)\))?\s*(?:\(([ivxlcdm]+)\))?", line, re.IGNORECASE)
+                # 2. "1(a)", "1(b)", "1(a)(i)"
+                m_np = re.match(r"^(\d{1,2})\s*\(([a-zA-Z0-9]+)\)\s*(?:\(([ivxlcdm]+)\))?", line, re.IGNORECASE)
+                # 3. "1.", "1)", "1:", "1 -" followed by whitespace
+                m_nd = re.match(r"^(\d{1,2})\s*[\.\:\)\-](?:\s+|$)", line, re.IGNORECASE)
+                # 4. Standalone subquestion "(a)", "(b)"
+                m_sub = re.match(r"^\(([a-zA-Z0-9]+)\)(?:\s+|$)", line, re.IGNORECASE)
 
+                if m_q:
+                    q_main = m_q.group(1)
+                    q_sub = m_q.group(2)
+                    q_rom = m_q.group(3)
+                    full_num = f"{q_main}"
+                    if q_sub:
+                        full_num += f"({q_sub.lower()})"
+                    if q_rom:
+                        full_num += f"({q_rom.lower()})"
+                elif m_np:
+                    q_main = m_np.group(1)
+                    q_sub = m_np.group(2)
+                    q_rom = m_np.group(3)
+                    full_num = f"{q_main}({q_sub.lower()})"
+                    if q_rom:
+                        full_num += f"({q_rom.lower()})"
+                elif m_nd:
+                    full_num = m_nd.group(1)
+                elif m_sub:
+                    main_part = current_q_num.split("(")[0] if current_q_num else "1"
+                    full_num = f"{main_part}({m_sub.group(1).lower()})"
+
+            if full_num:
                 if current_lines:
                     segments.append(
                         SegmentedQuestion(

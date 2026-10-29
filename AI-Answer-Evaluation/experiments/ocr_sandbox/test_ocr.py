@@ -11,13 +11,17 @@ import argparse
 import json
 import os
 import sys
+import types
 from pathlib import Path
 from typing import Any, List, Tuple
+
+# Bypass broken optional modelscope/torch DLL dependency on Windows if uninitialized
+if "modelscope" not in sys.modules:
+    sys.modules["modelscope"] = types.ModuleType("modelscope")
 
 import fitz
 import numpy as np
 from PIL import Image
-
 
 BASE_DIR = Path(__file__).resolve().parent
 TEXT_OUTPUT_DIR = BASE_DIR / "output" / "text"
@@ -63,8 +67,9 @@ def initialize_ocr(
     use_doc_orientation_classify: bool = False,
     use_doc_unwarping: bool = False,
     use_textline_orientation: bool = False,
+    ocr_version: str = "v5",
 ) -> Any:
-    """Create a PaddleOCR engine configured for English text using local model directories."""
+    """Create a PaddleOCR engine configured for English text using local model directories (v5 or v6)."""
     os.environ.setdefault("FLAGS_use_onednn", "false")
     os.environ.setdefault("FLAGS_use_mkldnn", "false")
     os.environ.setdefault("PADDLE_DISABLE_MKL", "True")
@@ -73,8 +78,22 @@ def initialize_ocr(
     project_root = Path(__file__).resolve().parents[2]
     configured_model_root = os.environ.get("PADDLEOCR_MODEL_ROOT")
     local_model_root = Path(configured_model_root).expanduser().resolve() if configured_model_root else project_root / "models" / "paddleocr"
-    det_dir = local_model_root / "det"
-    rec_dir = local_model_root / "rec"
+
+    version_clean = ocr_version.lower()
+    if version_clean == "v6":
+        det_dir = local_model_root / "v6" / "det"
+        rec_dir = local_model_root / "v6" / "rec"
+        det_model_name = "PP-OCRv6_small_det"
+        rec_model_name = "PP-OCRv6_small_rec"
+    else:
+        # Default v5
+        v5_det = local_model_root / "v5" / "det"
+        det_dir = v5_det if v5_det.exists() else local_model_root / "det"
+        v5_rec = local_model_root / "v5" / "rec"
+        rec_dir = v5_rec if v5_rec.exists() else local_model_root / "rec"
+        det_model_name = "PP-OCRv5_mobile_det"
+        rec_model_name = "en_PP-OCRv5_mobile_rec"
+
     cls_dir = local_model_root / "cls"
 
     required_dirs = {
@@ -89,13 +108,13 @@ def initialize_ocr(
     for directory in required_dirs.values():
         if not directory.exists() or not any(directory.iterdir()):
             print(
-                "PaddleOCR models not found.\n\n"
+                f"PaddleOCR {ocr_version.upper()} models not found.\n\n"
                 "Expected:\n"
                 f"{expected_paths}\n\n"
                 "Please place the official PaddleOCR model files in these folders before running the sandbox.",
                 file=sys.stderr,
             )
-            raise RuntimeError("Local PaddleOCR model directories are missing or empty")
+            raise RuntimeError(f"Local PaddleOCR {ocr_version.upper()} model directories are missing or empty")
 
     try:
         from paddleocr import PaddleOCR
@@ -104,9 +123,9 @@ def initialize_ocr(
 
     try:
         return PaddleOCR(
-            text_detection_model_name="PP-OCRv5_mobile_det",
+            text_detection_model_name=det_model_name,
             text_detection_model_dir=str(det_dir),
-            text_recognition_model_name="en_PP-OCRv5_mobile_rec",
+            text_recognition_model_name=rec_model_name,
             text_recognition_model_dir=str(rec_dir),
             use_doc_orientation_classify=use_doc_orientation_classify,
             use_doc_unwarping=use_doc_unwarping,
@@ -129,147 +148,165 @@ def run_ocr(ocr_engine: Any, image: Image.Image) -> dict:
     try:
         result = list(ocr_engine.predict(image_array))
     except TypeError:
-        result = ocr_engine.ocr(image_array)
+        result = ocr_engine.predict(image_array)
 
-    lines = []
-    texts = []
-    confidences = []
+    if not result:
+        return {
+            "text": "",
+            "confidence": 0.0,
+            "bounding_boxes": [],
+        }
 
-    if result:
-        detected = result[0] if isinstance(result, (list, tuple)) else result
-        # PaddleOCR 3.x returns an OCRResult mapping rather than the legacy
-        # ``[[box, (text, score)], ...]`` structure.
-        if isinstance(detected, dict) and "rec_texts" in detected:
-            for text, confidence, bbox in zip(
-                detected["rec_texts"],
-                detected.get("rec_scores", []),
-                detected.get("rec_boxes", []),
-            ):
-                bbox_values = bbox.tolist() if hasattr(bbox, "tolist") else bbox
-                if len(bbox_values) == 4 and not isinstance(
-                    bbox_values[0], (list, tuple)
-                ):
-                    left, top, right, bottom = (int(value) for value in bbox_values)
-                    normalized_bbox = [
-                        [left, top],
-                        [right, top],
-                        [right, bottom],
-                        [left, bottom],
-                    ]
-                else:
-                    normalized_bbox = [
-                        [int(point[0]), int(point[1])] for point in bbox_values
-                    ]
-                lines.append(
+    lines: List[str] = []
+    scores: List[float] = []
+    bounding_boxes: List[dict] = []
+
+    for item in result:
+        if isinstance(item, dict):
+            rec_texts = item.get("rec_texts", [])
+            rec_scores = item.get("rec_scores", [])
+            rec_boxes = item.get("rec_boxes", [])
+
+            for index, line_text in enumerate(rec_texts):
+                score = float(rec_scores[index]) if index < len(rec_scores) else 0.0
+                raw_box = rec_boxes[index] if index < len(rec_boxes) else []
+                box = convert_box_format(raw_box)
+
+                lines.append(line_text)
+                scores.append(score)
+                bounding_boxes.append(
                     {
-                        "text": str(text),
-                        "confidence": round(float(confidence), 3),
-                        "bbox": normalized_bbox,
+                        "text": line_text,
+                        "confidence": round(score, 4),
+                        "bbox": box,
                     }
                 )
-                texts.append(str(text))
-                confidences.append(float(confidence))
-            return {
-                "text": "\n".join(texts).strip(),
-                "confidence": round(sum(confidences) / len(confidences), 3)
-                if confidences
-                else 0.0,
-                "bounding_boxes": lines,
-            }
-        if isinstance(detected, list):
-            for line in detected:
-                if not line:
-                    continue
-                if isinstance(line, (list, tuple)) and len(line) >= 2:
-                    text = line[1][0] if isinstance(line[1], (list, tuple)) else str(line[1])
-                    confidence = float(line[1][1]) if isinstance(line[1], (list, tuple)) and len(line[1]) > 1 else 0.0
-                    bbox = [[int(point[0]), int(point[1])] for point in line[0]] if isinstance(line[0], (list, tuple)) else []
-                    lines.append({
-                        "text": text,
-                        "confidence": round(confidence, 3),
-                        "bbox": bbox,
-                    })
-                    texts.append(text)
-                    confidences.append(confidence)
+        elif isinstance(item, (list, tuple)):
+            for element in item:
+                if (
+                    isinstance(element, (list, tuple))
+                    and len(element) == 2
+                    and isinstance(element[1], (list, tuple))
+                ):
+                    box = convert_box_format(element[0])
+                    text_tuple = element[1]
+                    line_text = text_tuple[0]
+                    score = float(text_tuple[1])
 
-    combined_text = "\n".join(texts).strip()
-    average_confidence = round(sum(confidences) / len(confidences), 3) if confidences else 0.0
+                    lines.append(line_text)
+                    scores.append(score)
+                    bounding_boxes.append(
+                        {
+                            "text": line_text,
+                            "confidence": round(score, 4),
+                            "bbox": box,
+                        }
+                    )
+
+    combined_text = "\n".join(lines)
+    average_confidence = float(np.mean(scores)) if scores else 0.0
 
     return {
         "text": combined_text,
-        "confidence": average_confidence,
-        "bounding_boxes": lines,
+        "confidence": round(average_confidence, 4),
+        "bounding_boxes": bounding_boxes,
     }
 
 
-def save_outputs(input_path: Path, page_number: int, output_data: dict) -> Tuple[Path, Path]:
-    """Save the OCR text and JSON outputs for a single page/image."""
+def convert_box_format(box_data: Any) -> list:
+    """Normalize bounding box points into a list of 4 [x, y] coordinates."""
+    if isinstance(box_data, np.ndarray):
+        box_data = box_data.tolist()
+
+    if (
+        isinstance(box_data, (list, tuple))
+        and len(box_data) == 4
+        and all(isinstance(point, (list, tuple)) and len(point) == 2 for point in box_data)
+    ):
+        return [[float(point[0]), float(point[1])] for point in box_data]
+
+    if (
+        isinstance(box_data, (list, tuple))
+        and len(box_data) == 4
+        and all(isinstance(val, (int, float)) for val in box_data)
+    ):
+        x1, y1, x2, y2 = [float(v) for v in box_data]
+        return [[x1, y1], [x2, y1], [x2, y2], [x1, y2]]
+
+    return []
+
+
+def save_outputs(
+    input_path: Path, page_number: int, output_data: dict
+) -> Tuple[Path, Path]:
+    """Save formatted OCR outputs as plain text and JSON files."""
+    ensure_output_dirs()
+
     stem = input_path.stem
     if page_number > 1:
-        text_file = TEXT_OUTPUT_DIR / f"{stem}_page_{page_number}.txt"
-        json_file = JSON_OUTPUT_DIR / f"{stem}_page_{page_number}.json"
+        text_filename = f"{stem}_page_{page_number}.txt"
+        json_filename = f"{stem}_page_{page_number}.json"
     else:
-        text_file = TEXT_OUTPUT_DIR / f"{stem}.txt"
-        json_file = JSON_OUTPUT_DIR / f"{stem}.json"
+        text_filename = f"{stem}.txt"
+        json_filename = f"{stem}.json"
 
-    text_file.write_text(output_data["text"], encoding="utf-8")
-    json_file.write_text(json.dumps(output_data, indent=2, ensure_ascii=False), encoding="utf-8")
-    return text_file, json_file
+    text_path = TEXT_OUTPUT_DIR / text_filename
+    json_path = JSON_OUTPUT_DIR / json_filename
+
+    text_path.write_text(output_data.get("text", ""), encoding="utf-8")
+    json_path.write_text(
+        json.dumps(output_data, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+
+    return text_path, json_path
 
 
-def parse_args() -> argparse.Namespace:
-    """Parse command-line arguments."""
-    parser = argparse.ArgumentParser(description="Run PaddleOCR on a PDF or image file")
-    parser.add_argument("input_file", help="Path to a PDF or image file")
+def parse_arguments() -> argparse.Namespace:
+    """Parse command-line arguments for single-file OCR processing."""
+    parser = argparse.ArgumentParser(
+        description="Run PaddleOCR on a PDF or image file and output extracted text and JSON."
+    )
+    parser.add_argument("input_path", type=str, help="Path to the PDF or image file")
     return parser.parse_args()
 
 
 def main() -> int:
-    """Entry point for the OCR sandbox script."""
-    args = parse_args()
-    input_path = Path(args.input_file).expanduser().resolve()
+    """CLI entry point for processing a single file."""
+    args = parse_arguments()
+    input_path = Path(args.input_path).resolve()
 
     if not input_path.exists():
-        print(f"Error: file not found: {input_path}", file=sys.stderr)
+        print(f"Error: Input file '{input_path}' does not exist.", file=sys.stderr)
         return 1
-
-    ensure_output_dirs()
 
     try:
         pages = load_pages(input_path)
-    except (RuntimeError, ValueError) as exc:
-        print(f"Error: {exc}", file=sys.stderr)
+    except Exception as exc:
+        print(f"Error loading pages from '{input_path}': {exc}", file=sys.stderr)
         return 1
 
     try:
-        ocr_engine = initialize_ocr()
-    except RuntimeError as exc:
-        print(f"Error: {exc}", file=sys.stderr)
+        ocr = initialize_ocr()
+    except Exception as exc:
+        print(f"Error initializing OCR engine: {exc}", file=sys.stderr)
         return 1
 
-    print(f"Processing: {input_path}")
+    print(f"Processing '{input_path.name}' ({len(pages)} page(s))...")
 
     for page_number, image in pages:
-        print(f"\n=== Page {page_number} ===")
-        try:
-            ocr_result = run_ocr(ocr_engine, image)
-        except Exception as exc:
-            print(f"Error processing page {page_number}: {exc}", file=sys.stderr)
-            continue
-
-        print(ocr_result["text"] or "No text detected.")
-
-        structured_result = {
+        result = run_ocr(ocr, image)
+        structured_output = {
             "file": str(input_path),
             "page_number": page_number,
-            "text": ocr_result["text"],
-            "confidence": ocr_result["confidence"],
-            "bounding_boxes": ocr_result["bounding_boxes"],
+            "text": result["text"],
+            "confidence": result["confidence"],
+            "bounding_boxes": result["bounding_boxes"],
         }
+        text_file, json_file = save_outputs(input_path, page_number, structured_output)
 
-        text_file, json_file = save_outputs(input_path, page_number, structured_result)
-        print(f"Saved text -> {text_file}")
-        print(f"Saved JSON -> {json_file}")
+        print(f"\n--- Page {page_number} ---")
+        print(result["text"])
+        print(f"\nSaved outputs:\n  Text -> {text_file}\n  JSON -> {json_file}")
 
     return 0
 

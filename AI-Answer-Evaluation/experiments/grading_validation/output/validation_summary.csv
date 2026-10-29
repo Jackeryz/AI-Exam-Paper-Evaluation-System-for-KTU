@@ -1,0 +1,23 @@
+Case ID,Category,Subject,Q#,Max Marks,Human Marks,AI Marks,Raw Error,Abs Error,Norm Error %,Exact Match,Within 0.5,Flagged,Latency (s)
+CASE-01,1. Fully correct answers,Constitution of India (EST 130),1(a),10.0,10.0,9.5,-0.5,0.5,5.0,False,True,False,22.016
+CASE-02,1. Fully correct answers,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,10.0,9.5,-0.5,0.5,5.0,False,True,False,0.224
+CASE-03,1. Fully correct answers,Basic Electrical Engineering (EST 100),3,5.0,5.0,5.0,0.0,0.0,0.0,True,True,False,0.135
+CASE-04,2. Partially correct answers,Constitution of India (EST 130),1(a),10.0,7.0,6.65,-0.35,0.35,3.5,False,True,False,0.141
+CASE-05,2. Partially correct answers,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,8.0,9.5,1.5,1.5,15.0,False,False,False,0.132
+CASE-06,2. Partially correct answers,Basic Electrical Engineering (EST 100),3,5.0,3.5,4.1,0.6,0.6,12.0,False,False,False,0.132
+CASE-07,3. Answers with correct concepts but missing explanations,Constitution of India (EST 130),1(a),10.0,4.5,5.0,0.5,0.5,5.0,False,True,False,0.119
+CASE-08,3. Answers with correct concepts but missing explanations,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,4.5,5.0,0.5,0.5,5.0,False,True,False,0.115
+CASE-09,4. Technically incorrect answers,Constitution of India (EST 130),1(a),10.0,1.0,1.5,0.5,0.5,5.0,False,True,True,0.146
+CASE-10,4. Technically incorrect answers,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,0.5,1.5,1.0,1.0,10.0,False,False,True,0.102
+CASE-11,4. Technically incorrect answers,Basic Electrical Engineering (EST 100),3,5.0,0.5,0.0,-0.5,0.5,10.0,False,True,True,0.11
+CASE-12,5. Answers with irrelevant content,Constitution of India (EST 130),1(a),10.0,0.0,0.0,0.0,0.0,0.0,True,True,True,0.116
+CASE-13,5. Answers with irrelevant content,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,0.0,0.0,0.0,0.0,0.0,True,True,True,0.105
+CASE-14,6. Blank answers,Constitution of India (EST 130),1(a),10.0,0.0,0.0,0.0,0.0,0.0,True,True,True,0.001
+CASE-15,6. Blank answers,Basic Electrical Engineering (EST 100),3,5.0,0.0,0.0,0.0,0.0,0.0,True,True,True,0.0
+CASE-16,7. Answers with alternative valid terminology,Constitution of India (EST 130),1(a),10.0,9.5,9.5,0.0,0.0,0.0,True,True,False,0.145
+CASE-17,7. Answers with alternative valid terminology,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,9.5,9.5,0.0,0.0,0.0,True,True,False,0.134
+CASE-18,"8. Answers with formulas, units or numerical reasoning",Basic Electrical Engineering (EST 100),3,5.0,5.0,5.0,0.0,0.0,0.0,True,True,False,0.371
+CASE-19,"8. Answers with formulas, units or numerical reasoning",Basic Electrical Engineering (EST 100),3,5.0,4.5,5.0,0.5,0.5,10.0,False,True,False,0.12
+CASE-20,9. Answers that match keywords but misunderstand the concept,Constitution of India (EST 130),1(a),10.0,2.0,1.5,-0.5,0.5,5.0,False,True,True,0.112
+CASE-21,9. Answers that match keywords but misunderstand the concept,Industrial Economics & Foreign Trade (HUT 300),2(a),10.0,2.5,0.0,-2.5,2.5,25.0,False,False,True,0.1
+CASE-22,10. Cases where the rubric or answer is ambiguous and teacher review is appropriate,Constitution of India (EST 130),1(a),10.0,5.0,6.65,1.65,1.65,16.5,False,False,True,0.101

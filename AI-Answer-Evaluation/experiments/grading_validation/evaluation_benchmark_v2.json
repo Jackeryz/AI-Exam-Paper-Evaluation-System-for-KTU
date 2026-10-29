@@ -1,0 +1,677 @@
+[
+  {
+    "id": "V2-CASE-01",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct comprehensive answers",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "A Stack is a linear data structure following the Last-In-First-Out (LIFO) principle. The primary operations are: 1. PUSH: inserts an element to the top of the stack with O(1) time complexity; 2. POP: removes and returns the top element from the stack with O(1) time complexity. It also supports PEEK to view the top element. Real-world applications include function call management / recursion stack in compilers, undo/redo operations in text editors, and syntax parsing / balanced parentheses checking.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "Last In First Out", "PUSH", "POP", "O(1)", "recursion", "undo"]
+    },
+    "student_answer": "A stack is a linear data structure operating under the LIFO (Last In First Out) principle, where insertions and deletions happen only at one end called the top. The two core operations are: PUSH which places an item on top of the stack in O(1) constant time, and POP which extracts the topmost element from the stack in O(1) time complexity. A real-world application is the execution call stack in runtime environments to manage function calls and recursion.",
+    "human_marks": 10.0,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 3.0,
+      "PUSH and POP Operations with O(1) Complexities": 4.0,
+      "Real-World Application Example": 3.0
+    },
+    "human_rationale": "Comprehensive, accurate answer addressing all rubric criteria with correct time complexities."
+  },
+  {
+    "id": "V2-CASE-02",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct concise answers",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "A Stack is a linear data structure following the Last-In-First-Out (LIFO) principle. PUSH adds an element to the top in O(1) time. POP removes the top element in O(1) time. Application: recursion call stack.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "PUSH", "POP", "O(1)", "recursion"]
+    },
+    "student_answer": "Stack is a LIFO linear data structure. PUSH inserts at top (O(1)). POP deletes from top (O(1)). Application: Call stack for recursion.",
+    "human_marks": 9.5,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 3.0,
+      "PUSH and POP Operations with O(1) Complexities": 3.5,
+      "Real-World Application Example": 3.0
+    },
+    "human_rationale": "Concise but precise. Contains all necessary concepts, complexities, and application."
+  },
+  {
+    "id": "V2-CASE-03",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "2. Partially correct answers (omission)",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "A Stack is a linear data structure following the LIFO principle. PUSH adds an element to the top in O(1). POP removes top in O(1). Application: function call stack.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "PUSH", "POP", "O(1)", "recursion"]
+    },
+    "student_answer": "A stack is a linear data structure following LIFO principle where data is pushed and popped from top in O(1) time. PUSH adds elements and POP removes elements from the top.",
+    "human_marks": 7.0,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 3.0,
+      "PUSH and POP Operations with O(1) Complexities": 4.0,
+      "Real-World Application Example": 0.0
+    },
+    "human_rationale": "Correctly defines stack and operations with complexities, but completely omits the application criterion."
+  },
+  {
+    "id": "V2-CASE-04",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "3. Technically incorrect / contradiction",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "A Stack is a linear data structure following the LIFO principle. PUSH adds an element to the top in O(1). POP removes top in O(1).",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "PUSH", "POP", "O(1)"]
+    },
+    "student_answer": "A stack is a First-In-First-Out (FIFO) data structure where elements are inserted at the back and removed from the front. PUSH adds elements in O(n) time and POP removes elements in O(n) time. Application is print spooling.",
+    "human_marks": 1.0,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 0.0,
+      "PUSH and POP Operations with O(1) Complexities": 0.5,
+      "Real-World Application Example": 0.5
+    },
+    "human_rationale": "Confuses Stack with Queue (claims FIFO instead of LIFO, and O(n) instead of O(1))."
+  },
+  {
+    "id": "V2-CASE-05",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "4. Answers with alternative valid terminology",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "A Stack is a linear data structure following LIFO principle. PUSH adds an element to the top in O(1). POP removes top in O(1). Application: compiler activation records.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "PUSH", "POP", "O(1)"]
+    },
+    "student_answer": "A stack is a sequential collection conforming to the last-arrived first-serviced discipline. Its primary mutation routines are top insertion (push) and top removal (pop), both executing in constant bounded time O(1). A prominent use-case is maintaining compiler activation records during subprogram invocations.",
+    "human_marks": 9.5,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 3.0,
+      "PUSH and POP Operations with O(1) Complexities": 4.0,
+      "Real-World Application Example": 2.5
+    },
+    "human_rationale": "Uses advanced academic vocabulary ('sequential collection', 'last-arrived first-serviced', 'constant bounded time', 'activation records') with exact technical validity."
+  },
+  {
+    "id": "V2-CASE-06",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct comprehensive answers",
+    "subject": "Database Management Systems (CST 202)",
+    "question_number": "2",
+    "question_text": "Explain the ACID properties of database transactions and describe the importance of Atomicity and Durability.",
+    "max_marks": 10.0,
+    "ideal_answer": "ACID properties ensure reliable processing of database transactions: 1. Atomicity: The all-or-nothing property; either all operations succeed or the transaction is rolled back; 2. Consistency: Database transitions from one valid state to another, satisfying all integrity constraints; 3. Isolation: Concurrent transactions execute independently without interference; 4. Durability: Once a transaction commits, its updates persist permanently even across power failures or system crashes.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Explanation of All Four ACID Properties": 4.0,
+        "Significance & Mechanism of Atomicity": 3.0,
+        "Significance & Mechanism of Durability": 3.0
+      },
+      "mandatory_keywords": ["ACID", "Atomicity", "Consistency", "Isolation", "Durability", "rollback", "commit", "non-volatile"]
+    },
+    "student_answer": "ACID properties define transaction guarantees in DBMS:\n1. Atomicity: Transactions are atomic (all-or-nothing). If a failure occurs before completion, all partial changes are rolled back.\n2. Consistency: Transactions maintain database integrity rules and constraints.\n3. Isolation: Multiple concurrent transactions occur independently without viewing intermediate dirty states.\n4. Durability: Committed data is permanently saved in non-volatile storage and survives system crashes.\nAtomicity prevents partial writes (e.g. money debited but not credited). Durability ensures committed state is never lost even if the server reboots.",
+    "human_marks": 10.0,
+    "human_criterion_marks": {
+      "Explanation of All Four ACID Properties": 4.0,
+      "Significance & Mechanism of Atomicity": 3.0,
+      "Significance & Mechanism of Durability": 3.0
+    },
+    "human_rationale": "Complete and accurate description of ACID properties with proper failure/recovery mechanisms."
+  },
+  {
+    "id": "V2-CASE-07",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "2. Partially correct answers (omission)",
+    "subject": "Database Management Systems (CST 202)",
+    "question_number": "2",
+    "question_text": "Explain the ACID properties of database transactions and describe the importance of Atomicity and Durability.",
+    "max_marks": 10.0,
+    "ideal_answer": "ACID properties: Atomicity (all-or-nothing), Consistency (integrity preserved), Isolation (concurrency control), Durability (persistence after commit).",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Explanation of All Four ACID Properties": 4.0,
+        "Significance & Mechanism of Atomicity": 3.0,
+        "Significance & Mechanism of Durability": 3.0
+      },
+      "mandatory_keywords": ["ACID", "Atomicity", "Consistency", "Isolation", "Durability"]
+    },
+    "student_answer": "ACID stands for Atomicity, Consistency, Isolation, and Durability. Atomicity means all or nothing where changes rollback on failure. Consistency preserves integrity. Isolation runs transactions concurrently. But I did not have time to explain durability.",
+    "human_marks": 6.5,
+    "human_criterion_marks": {
+      "Explanation of All Four ACID Properties": 3.5,
+      "Significance & Mechanism of Atomicity": 3.0,
+      "Significance & Mechanism of Durability": 0.0
+    },
+    "human_rationale": "Lists all 4 and details Atomicity, but omits Durability explanation."
+  },
+  {
+    "id": "V2-CASE-08",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "3. Technically incorrect / contradiction",
+    "subject": "Database Management Systems (CST 202)",
+    "question_number": "2",
+    "question_text": "Explain the ACID properties of database transactions and describe the importance of Atomicity and Durability.",
+    "max_marks": 10.0,
+    "ideal_answer": "Atomicity means all-or-nothing rollback. Durability means persistent storage after commit.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Explanation of All Four ACID Properties": 4.0,
+        "Significance & Mechanism of Atomicity": 3.0,
+        "Significance & Mechanism of Durability": 3.0
+      },
+      "mandatory_keywords": ["ACID", "Atomicity", "Consistency", "Isolation", "Durability"]
+    },
+    "student_answer": "Atomicity means transactions can be partially completed and saved halfway. Durability means data is stored only in temporary RAM and disappears when power goes off.",
+    "human_marks": 0.5,
+    "human_criterion_marks": {
+      "Explanation of All Four ACID Properties": 0.5,
+      "Significance & Mechanism of Atomicity": 0.0,
+      "Significance & Mechanism of Durability": 0.0
+    },
+    "human_rationale": "Directly contradicts database definitions: claims atomicity allows partial saves and durability means volatile temporary storage."
+  },
+  {
+    "id": "V2-CASE-09",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "5. OCR errors and character noise",
+    "subject": "Database Management Systems (CST 202)",
+    "question_number": "2",
+    "question_text": "Explain the ACID properties of database transactions and describe the importance of Atomicity and Durability.",
+    "max_marks": 10.0,
+    "ideal_answer": "Atomicity (all or nothing), Consistency, Isolation, Durability (permanent non-volatile commit).",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Explanation of All Four ACID Properties": 4.0,
+        "Significance & Mechanism of Atomicity": 3.0,
+        "Significance & Mechanism of Durability": 3.0
+      },
+      "mandatory_keywords": ["ACID", "Atomicity", "Consistency", "Isolation", "Durability", "rollback", "commit"]
+    },
+    "student_answer": "AC1D properties: At0micity (all-or-n0thing, r0llback on err0r), C0nsistency (valid db state), Is0lati0n (c0ncurrent execut1on), and Dura6ility (c0mmitted updates pers1st permanently in non-volatile storage).",
+    "human_marks": 9.5,
+    "human_criterion_marks": {
+      "Explanation of All Four ACID Properties": 4.0,
+      "Significance & Mechanism of Atomicity": 2.5,
+      "Significance & Mechanism of Durability": 3.0
+    },
+    "human_rationale": "OCR noise with digit substitutions (0 for o, 1 for i, 6 for b), but conceptually sound."
+  },
+  {
+    "id": "V2-CASE-10",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct comprehensive answers",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Kirchhoff's Current Law (KCL) and calculate the total equivalent resistance of three resistors (10 ohms, 20 ohms, and 20 ohms) connected in parallel.",
+    "max_marks": 5.0,
+    "ideal_answer": "Kirchhoff's Current Law (KCL) states that the algebraic sum of all currents entering and leaving a junction or node in an electrical circuit is equal to zero (sum of entering currents equals sum of leaving currents). For three resistors in parallel: 1/R_eq = 1/R1 + 1/R2 + 1/R3 = 1/10 + 1/20 + 1/20 = 2/20 + 1/20 + 1/20 = 4/20 = 1/5. Therefore, R_eq = 5 Ohms.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Kirchhoff's Current Law": 2.0,
+        "Parallel Resistance Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["Kirchhoff's Current Law", "KCL", "node", "algebraic sum", "zero", "1/Req", "5 Ohms"]
+    },
+    "student_answer": "Kirchhoff's Current Law (KCL) states that the algebraic sum of currents meeting at any node is zero; current entering equals current leaving. For parallel connection, 1/Req = 1/R1 + 1/R2 + 1/R3 = 1/10 + 1/20 + 1/20 = 4/20 = 1/5. Req = 5 Ohms (5 Ω).",
+    "human_marks": 5.0,
+    "human_criterion_marks": {
+      "Statement of Kirchhoff's Current Law": 2.0,
+      "Parallel Resistance Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 1.5
+    },
+    "human_rationale": "Flawless statement of KCL and exact parallel resistance computation with units."
+  },
+  {
+    "id": "V2-CASE-11",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct concise answers",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Kirchhoff's Current Law (KCL) and calculate the total equivalent resistance of three resistors (10 ohms, 20 ohms, and 20 ohms) connected in parallel.",
+    "max_marks": 5.0,
+    "ideal_answer": "KCL: Sum of currents at node is zero. 1/Req = 1/10 + 1/20 + 1/20 = 4/20 -> Req = 5 Ohms.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Kirchhoff's Current Law": 2.0,
+        "Parallel Resistance Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["KCL", "sum of currents", "node", "5 Ohms"]
+    },
+    "student_answer": "KCL: ΣI = 0 at any node. 1/Req = 1/10 + 1/20 + 1/20 = 4/20. Req = 5 Ω.",
+    "human_marks": 5.0,
+    "human_criterion_marks": {
+      "Statement of Kirchhoff's Current Law": 2.0,
+      "Parallel Resistance Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 1.5
+    },
+    "human_rationale": "Concise mathematical statement of KCL and exact numerical result."
+  },
+  {
+    "id": "V2-CASE-12",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "3. Formula error and calculation mistake",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Kirchhoff's Current Law (KCL) and calculate the total equivalent resistance of three resistors (10 ohms, 20 ohms, and 20 ohms) connected in parallel.",
+    "max_marks": 5.0,
+    "ideal_answer": "KCL: Sum of currents at node is zero. Parallel: 1/Req = 1/10 + 1/20 + 1/20 -> Req = 5 Ohms.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Kirchhoff's Current Law": 2.0,
+        "Parallel Resistance Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["KCL", "algebraic sum", "node", "1/Req", "5 Ohms"]
+    },
+    "student_answer": "KCL states that the algebraic sum of currents at a circuit node equals zero. For total resistance in parallel, Req = R1 + R2 + R3 = 10 + 20 + 20 = 50 Ohms.",
+    "human_marks": 2.0,
+    "human_criterion_marks": {
+      "Statement of Kirchhoff's Current Law": 2.0,
+      "Parallel Resistance Formula Selection": 0.0,
+      "Correct Numerical Calculation & Units": 0.0
+    },
+    "human_rationale": "Correct KCL definition, but applied series resistance formula (Req = R1+R2+R3) to parallel resistors, giving 50 ohms instead of 5 ohms."
+  },
+  {
+    "id": "V2-CASE-13",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct comprehensive answers",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "4",
+    "question_text": "Explain the Right to Constitutional Remedies under Article 32 and describe any three prerogative writs issued by the Supreme Court.",
+    "max_marks": 10.0,
+    "ideal_answer": "Article 32 guarantees the Right to Constitutional Remedies, regarded by Dr. B.R. Ambedkar as the 'heart and soul' of the Constitution. It empowers citizens to approach the Supreme Court directly for enforcement of Fundamental Rights. Three prerogative writs are: 1. Habeas Corpus: 'To have the body', issued against illegal detention to produce a detained person; 2. Mandamus: 'We command', directs a public official or authority to perform a mandatory statutory duty; 3. Quo-Warranto: 'By what authority', inquires into the legality of a person's claim to a public office.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Article 32 Concept & Constitutional Importance": 4.0,
+        "First Two Writs (e.g. Habeas Corpus & Mandamus)": 3.0,
+        "Third Writ (e.g. Quo-Warranto or Prohibition)": 3.0
+      },
+      "mandatory_keywords": ["Article 32", "constitutional remedies", "writs", "Habeas Corpus", "Mandamus", "Quo-Warranto", "heart and soul"]
+    },
+    "student_answer": "Article 32 provides the Right to Constitutional Remedies and was called the heart and soul of the Constitution by Dr. Ambedkar. It gives citizens the right to move the Supreme Court directly for the enforcement of Fundamental Rights. Three writs are: 1. Habeas Corpus: meaning 'to have the body', issued to release individuals illegally detained by state or private actors. 2. Mandamus: meaning 'we command', ordering a public official to perform their official legal duty. 3. Quo Warranto: questioning 'by what authority' an individual holds a public office.",
+    "human_marks": 10.0,
+    "human_criterion_marks": {
+      "Article 32 Concept & Constitutional Importance": 4.0,
+      "First Two Writs (e.g. Habeas Corpus & Mandamus)": 3.0,
+      "Third Writ (e.g. Quo-Warranto or Prohibition)": 3.0
+    },
+    "human_rationale": "Comprehensive explanation of Article 32 and accurate descriptions of all three writs."
+  },
+  {
+    "id": "V2-CASE-14",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "2. Partially correct answers (bullets without explanation)",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "4",
+    "question_text": "Explain the Right to Constitutional Remedies under Article 32 and describe any three prerogative writs issued by the Supreme Court.",
+    "max_marks": 10.0,
+    "ideal_answer": "Article 32 guarantees constitutional remedies. Writs: Habeas Corpus, Mandamus, Quo-Warranto.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Article 32 Concept & Constitutional Importance": 4.0,
+        "First Two Writs (e.g. Habeas Corpus & Mandamus)": 3.0,
+        "Third Writ (e.g. Quo-Warranto or Prohibition)": 3.0
+      },
+      "mandatory_keywords": ["Article 32", "remedies", "Habeas Corpus", "Mandamus", "Quo-Warranto"]
+    },
+    "student_answer": "- Article 32: remedies for fundamental rights\n- Heart and soul of Constitution\n- Writs:\n  1. Habeas Corpus\n  2. Mandamus\n  3. Quo Warranto",
+    "human_marks": 4.5,
+    "human_criterion_marks": {
+      "Article 32 Concept & Constitutional Importance": 2.0,
+      "First Two Writs (e.g. Habeas Corpus & Mandamus)": 1.5,
+      "Third Writ (e.g. Quo-Warranto or Prohibition)": 1.0
+    },
+    "human_rationale": "Merely lists writ names in bullet points without explaining what they mean, who issues them, or when they apply."
+  },
+  {
+    "id": "V2-CASE-15",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "3. Technically incorrect / contradiction",
+    "subject": "Constitution of India (EST 130)",
+    "question_number": "4",
+    "question_text": "Explain the Right to Constitutional Remedies under Article 32 and describe any three prerogative writs issued by the Supreme Court.",
+    "max_marks": 10.0,
+    "ideal_answer": "Article 32 enforces Fundamental Rights through writs.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Article 32 Concept & Constitutional Importance": 4.0,
+        "First Two Writs (e.g. Habeas Corpus & Mandamus)": 3.0,
+        "Third Writ (e.g. Quo-Warranto or Prohibition)": 3.0
+      },
+      "mandatory_keywords": ["Article 32", "Fundamental Rights", "writs"]
+    },
+    "student_answer": "Article 32 was created to enforce Directive Principles of State Policy (DPSPs), making DPSPs strictly justiciable in courts. Habeas Corpus is a writ used exclusively to punish criminals with life imprisonment without trial.",
+    "human_marks": 0.5,
+    "human_criterion_marks": {
+      "Article 32 Concept & Constitutional Importance": 0.5,
+      "First Two Writs (e.g. Habeas Corpus & Mandamus)": 0.0,
+      "Third Writ (e.g. Quo-Warranto or Prohibition)": 0.0
+    },
+    "human_rationale": "Contradicts constitutional law: DPSPs are non-justiciable (Article 37), and Habeas Corpus protects against illegal detention, not a punitive sanction."
+  },
+  {
+    "id": "V2-CASE-16",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct comprehensive answers",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "5",
+    "question_text": "Explain the concept of Price Elasticity of Demand (PED), write its formula, and distinguish between Elastic and Inelastic demand.",
+    "max_marks": 10.0,
+    "ideal_answer": "Price Elasticity of Demand (PED) measures the responsiveness or sensitivity of the quantity demanded of a good to a change in its price. Formula: e_p = (% change in quantity demanded) / (% change in price). Elastic demand occurs when |e_p| > 1, meaning quantity demanded changes by a greater proportion than price (flatter demand curve, luxury goods). Inelastic demand occurs when |e_p| < 1, meaning quantity demanded changes by a smaller proportion than price (steeper demand curve, necessities like salt or life-saving medicines).",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Price Elasticity of Demand": 3.0,
+        "Mathematical Formula of PED": 3.0,
+        "Distinction between Elastic & Inelastic Demand": 4.0
+      },
+      "mandatory_keywords": ["Price Elasticity of Demand", "PED", "responsiveness", "percentage change", "elastic", "inelastic"]
+    },
+    "student_answer": "Price Elasticity of Demand measures the degree of responsiveness of quantity demanded to changes in the price of a commodity. Formula: PED = (% change in quantity demanded) / (% change in price). Demand is Elastic when PED > 1, meaning consumers are very responsive and a small price rise causes a large drop in demand (e.g. luxury items). Demand is Inelastic when PED < 1, meaning consumer demand changes very little when price changes (e.g. basic necessities like salt and medicines).",
+    "human_marks": 10.0,
+    "human_criterion_marks": {
+      "Definition of Price Elasticity of Demand": 3.0,
+      "Mathematical Formula of PED": 3.0,
+      "Distinction between Elastic & Inelastic Demand": 4.0
+    },
+    "human_rationale": "Clear definition, exact percentage formula, and proper comparison with examples."
+  },
+  {
+    "id": "V2-CASE-17",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "1. Correct concise answers",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "5",
+    "question_text": "Explain the concept of Price Elasticity of Demand (PED), write its formula, and distinguish between Elastic and Inelastic demand.",
+    "max_marks": 10.0,
+    "ideal_answer": "PED measures demand responsiveness to price changes. Formula: %ΔQ / %ΔP. Elastic: |e| > 1. Inelastic: |e| < 1.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Price Elasticity of Demand": 3.0,
+        "Mathematical Formula of PED": 3.0,
+        "Distinction between Elastic & Inelastic Demand": 4.0
+      },
+      "mandatory_keywords": ["PED", "responsiveness", "% change", "elastic", "inelastic"]
+    },
+    "student_answer": "PED measures responsiveness of demand to price. Formula: e = (%ΔQ) / (%ΔP). Elastic demand: |e| > 1 (high sensitivity). Inelastic demand: |e| < 1 (low sensitivity).",
+    "human_marks": 9.5,
+    "human_criterion_marks": {
+      "Definition of Price Elasticity of Demand": 3.0,
+      "Mathematical Formula of PED": 3.0,
+      "Distinction between Elastic & Inelastic Demand": 3.5
+    },
+    "human_rationale": "Compact and precise mathematical explanation covering all rubric points."
+  },
+  {
+    "id": "V2-CASE-18",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "3. Inverted formula / contradiction",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "5",
+    "question_text": "Explain the concept of Price Elasticity of Demand (PED), write its formula, and distinguish between Elastic and Inelastic demand.",
+    "max_marks": 10.0,
+    "ideal_answer": "PED = %ΔQ / %ΔP. Elastic: e > 1. Inelastic: e < 1.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Price Elasticity of Demand": 3.0,
+        "Mathematical Formula of PED": 3.0,
+        "Distinction between Elastic & Inelastic Demand": 4.0
+      },
+      "mandatory_keywords": ["PED", "formula", "elastic", "inelastic"]
+    },
+    "student_answer": "PED formula is (% change in price) / (% change in quantity). Elastic demand means consumers buy the same quantity regardless of price changes (PED = 0). Inelastic demand means demand fluctuates wildly when price changes.",
+    "human_marks": 1.0,
+    "human_criterion_marks": {
+      "Definition of Price Elasticity of Demand": 1.0,
+      "Mathematical Formula of PED": 0.0,
+      "Distinction between Elastic & Inelastic Demand": 0.0
+    },
+    "human_rationale": "Inverted the formula (%ΔP / %ΔQ instead of %ΔQ / %ΔP) and reversed the definitions of elastic and inelastic demand."
+  },
+  {
+    "id": "V2-CASE-19",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "6. Blank answers",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "Stack is LIFO data structure with O(1) push and pop.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "PUSH", "POP"]
+    },
+    "student_answer": "",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 0.0,
+      "PUSH and POP Operations with O(1) Complexities": 0.0,
+      "Real-World Application Example": 0.0
+    },
+    "human_rationale": "Empty response. Zero marks."
+  },
+  {
+    "id": "V2-CASE-20",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "6. Whitespace only",
+    "subject": "Database Management Systems (CST 202)",
+    "question_number": "2",
+    "question_text": "Explain the ACID properties of database transactions and describe the importance of Atomicity and Durability.",
+    "max_marks": 10.0,
+    "ideal_answer": "ACID properties ensure reliable database transactions.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Explanation of All Four ACID Properties": 4.0,
+        "Significance & Mechanism of Atomicity": 3.0,
+        "Significance & Mechanism of Durability": 3.0
+      },
+      "mandatory_keywords": ["ACID", "Atomicity", "Durability"]
+    },
+    "student_answer": "   \n\t  \n  ",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Explanation of All Four ACID Properties": 0.0,
+      "Significance & Mechanism of Atomicity": 0.0,
+      "Significance & Mechanism of Durability": 0.0
+    },
+    "human_rationale": "Whitespace-only response. Zero marks."
+  },
+  {
+    "id": "V2-CASE-21",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "5. Answers with irrelevant content",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Kirchhoff's Current Law (KCL) and calculate the total equivalent resistance of three resistors (10 ohms, 20 ohms, and 20 ohms) connected in parallel.",
+    "max_marks": 5.0,
+    "ideal_answer": "KCL states sum of currents at node is zero. Equivalent resistance is 5 ohms.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Kirchhoff's Current Law": 2.0,
+        "Parallel Resistance Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["KCL", "current", "node", "5 Ohms"]
+    },
+    "student_answer": "Photosynthesis is the biological process by which green plants convert radiant solar energy into chemical energy stored in glucose molecules. Chlorophyll in leaves absorbs sunlight while water is absorbed by roots.",
+    "human_marks": 0.0,
+    "human_criterion_marks": {
+      "Statement of Kirchhoff's Current Law": 0.0,
+      "Parallel Resistance Formula Selection": 0.0,
+      "Correct Numerical Calculation & Units": 0.0
+    },
+    "human_rationale": "Completely off-topic biology text in an electrical engineering exam. Zero marks."
+  },
+  {
+    "id": "V2-CASE-22",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "9. Keyword cramming without conceptual coherence",
+    "subject": "Data Structures & Algorithms (CST 201)",
+    "question_number": "1",
+    "question_text": "Define a Stack Abstract Data Type (ADT). Explain the primary operations PUSH and POP with their time complexities, and state one real-world application.",
+    "max_marks": 10.0,
+    "ideal_answer": "Stack is LIFO with O(1) push and pop.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Stack & LIFO Principle": 3.0,
+        "PUSH and POP Operations with O(1) Complexities": 4.0,
+        "Real-World Application Example": 3.0
+      },
+      "mandatory_keywords": ["Stack", "LIFO", "PUSH", "POP", "O(1)", "recursion"]
+    },
+    "student_answer": "Stack ADT LIFO PUSH POP O(1) recursion algorithm complexity data structure top memory pointer array linked list function call execution stack frame undo redo syntax tree.",
+    "human_marks": 2.5,
+    "human_criterion_marks": {
+      "Definition of Stack & LIFO Principle": 1.0,
+      "PUSH and POP Operations with O(1) Complexities": 1.0,
+      "Real-World Application Example": 0.5
+    },
+    "human_rationale": "Word salad of relevant keywords without sentences, definitions, or grammatical meaning."
+  },
+  {
+    "id": "V2-CASE-23",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "4. Answers with alternative valid terminology",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Kirchhoff's Current Law (KCL) and calculate the total equivalent resistance of three resistors (10 ohms, 20 ohms, and 20 ohms) connected in parallel.",
+    "max_marks": 5.0,
+    "ideal_answer": "KCL: Point rule, sum of currents is zero. Req = 5 Ohms.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Kirchhoff's Current Law": 2.0,
+        "Parallel Resistance Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["KCL", "node", "current", "5 Ohms"]
+    },
+    "student_answer": "Kirchhoff's Junction Rule (First Law) is based on the principle of conservation of electric charge: the net influx of charge at any junction point equals the net efflux, meaning total incoming current equals total outgoing current. For parallel branches: G_eq = G1 + G2 + G3 = 1/10 + 1/20 + 1/20 = 0.2 Siemens. Thus R_eq = 1/G_eq = 1/0.2 = 5 Ω.",
+    "human_marks": 5.0,
+    "human_criterion_marks": {
+      "Statement of Kirchhoff's Current Law": 2.0,
+      "Parallel Resistance Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 1.5
+    },
+    "human_rationale": "Uses conductance (Siemens) method instead of direct reciprocal resistance, demonstrating high conceptual competence."
+  },
+  {
+    "id": "V2-CASE-24",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "2. Partially correct answers (calculation arithmetic slip)",
+    "subject": "Basic Electrical Engineering (EST 100)",
+    "question_number": "3",
+    "question_text": "State Kirchhoff's Current Law (KCL) and calculate the total equivalent resistance of three resistors (10 ohms, 20 ohms, and 20 ohms) connected in parallel.",
+    "max_marks": 5.0,
+    "ideal_answer": "KCL: Sum of currents is zero. Parallel: Req = 5 Ohms.",
+    "rubric": {
+      "total_marks": 5.0,
+      "sections": {
+        "Statement of Kirchhoff's Current Law": 2.0,
+        "Parallel Resistance Formula Selection": 1.5,
+        "Correct Numerical Calculation & Units": 1.5
+      },
+      "mandatory_keywords": ["KCL", "node", "1/Req", "5 Ohms"]
+    },
+    "student_answer": "KCL states the algebraic sum of currents entering a junction is zero. For parallel: 1/Req = 1/10 + 1/20 + 1/20 = 2/20 + 1/20 + 1/20 = 4/20. So 1/Req = 4/20. Req = 4/20 = 0.2 Ohms.",
+    "human_marks": 3.8,
+    "human_criterion_marks": {
+      "Statement of Kirchhoff's Current Law": 2.0,
+      "Parallel Resistance Formula Selection": 1.5,
+      "Correct Numerical Calculation & Units": 0.3
+    },
+    "human_rationale": "Correct KCL statement and correct formula (1/Req = 4/20), but forgot to invert 1/Req at the final step, writing 4/20=0.2 instead of 20/4=5."
+  },
+  {
+    "id": "V2-CASE-25",
+    "dataset_type": "SYNTHETIC_BENCHMARK_V2",
+    "category": "10. Ambiguous answer suitable for teacher review",
+    "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+    "question_number": "5",
+    "question_text": "Explain the concept of Price Elasticity of Demand (PED), write its formula, and distinguish between Elastic and Inelastic demand.",
+    "max_marks": 10.0,
+    "ideal_answer": "PED measures responsiveness of demand to price. %ΔQ / %ΔP.",
+    "rubric": {
+      "total_marks": 10.0,
+      "sections": {
+        "Definition of Price Elasticity of Demand": 3.0,
+        "Mathematical Formula of PED": 3.0,
+        "Distinction between Elastic & Inelastic Demand": 4.0
+      },
+      "mandatory_keywords": ["PED", "responsiveness", "elastic", "inelastic"]
+    },
+    "student_answer": "Elasticity is how stretchy demand is when price moves. Formula is change in quantity over change in price. If elasticity is big it is elastic like cars. If elasticity is small it is inelastic like water.",
+    "human_marks": 5.5,
+    "human_criterion_marks": {
+      "Definition of Price Elasticity of Demand": 2.0,
+      "Mathematical Formula of PED": 1.5,
+      "Distinction between Elastic & Inelastic Demand": 2.0
+    },
+    "human_rationale": "Colloquial terminology ('stretchy', 'big', 'small') without explicit percentage symbols (%ΔQ / %ΔP) or numeric thresholds (|e| > 1), but displays intuitive grasp."
+  }
+]

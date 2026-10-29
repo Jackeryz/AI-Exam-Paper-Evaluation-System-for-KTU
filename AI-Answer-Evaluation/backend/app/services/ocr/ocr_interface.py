@@ -45,14 +45,19 @@ class PaddleOCRService(OCRInterface):
         self._engine = None
 
     def _get_engine(self) -> Any:
-        """Lazy load the OCR engine from the existing experiments/ocr_sandbox."""
+        """Lazy load the OCR engine from the existing experiments/ocr_sandbox using PP-OCRv6."""
         if self._engine is None:
             try:
                 from experiments.ocr_sandbox.test_ocr import initialize_ocr
-                self._engine = initialize_ocr()
+                # Prefer PP-OCRv6 as primary production engine
+                self._engine = initialize_ocr(ocr_version="v6")
             except Exception as exc:
-                logger.warning(f"PaddleOCR engine load warning: {exc}. Falling back to sandbox engine.")
-                raise RuntimeError(f"Unable to initialize PaddleOCR engine: {exc}") from exc
+                logger.warning(f"PaddleOCR v6 load warning: {exc}. Trying fallback to default.")
+                try:
+                    from experiments.ocr_sandbox.test_ocr import initialize_ocr
+                    self._engine = initialize_ocr(ocr_version="v5")
+                except Exception as inner_exc:
+                    raise RuntimeError(f"Unable to initialize PaddleOCR engine: {inner_exc}") from inner_exc
         return self._engine
 
     def process_file(self, file_path: Path, page_number: int = 1) -> OCRResultData:
@@ -84,6 +89,44 @@ class PaddleOCRService(OCRInterface):
             page_number=page_number,
             bounding_boxes=bboxes,
         )
+
+    def process_all_pages(self, file_path: Path) -> Dict[str, Any]:
+        """Process all pages of a PDF/image, returning combined text, average confidence, bounding boxes, and page count."""
+        from experiments.ocr_sandbox.test_ocr import load_pages, run_ocr
+
+        pages = load_pages(Path(file_path))
+        if not pages:
+            raise ValueError(f"No pages could be extracted from {file_path}")
+
+        engine = self._get_engine()
+        combined_texts: List[str] = []
+        confidences: List[float] = []
+        all_bboxes: List[Dict[str, Any]] = []
+
+        for page_num, image in pages:
+            raw = run_ocr(engine, image)
+            txt = raw.get("text", "").strip()
+            if txt:
+                combined_texts.append(txt)
+            conf = float(raw.get("confidence", 0.0))
+            if conf > 0:
+                confidences.append(conf)
+            for b in raw.get("bounding_boxes", []):
+                all_bboxes.append({
+                    "page": page_num,
+                    "text": b.get("text", ""),
+                    "confidence": b.get("confidence", 0.0),
+                    "bbox": b.get("bbox", []),
+                })
+
+        avg_conf = sum(confidences) / len(confidences) if confidences else 0.0
+        return {
+            "text": "\n\n".join(combined_texts),
+            "confidence": round(avg_conf, 4),
+            "page_count": len(pages),
+            "bounding_boxes": all_bboxes,
+            "engine": "PP-OCRv6",
+        }
 
 
 class TrOCRService(OCRInterface):

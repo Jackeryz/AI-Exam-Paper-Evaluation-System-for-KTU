@@ -1,0 +1,316 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\DocScanner Aug 6, 2026 6-19 PM - Gouri Sreekumar.pdf",
+  "page_number": 1,
+  "text": "羊\npoist B\nProof\ndistaxe blw them\nat B.\nthe actior of f o the igid body\nCoosider a poist B which is at a dis d from the\nlixe of action of force F, 2 oppositely divected\ncollineou forces each of magitude f aod lixe ofactos\npauallel to the lixe of action of gives foce f at a\nave itroduced at B.\nThe force f at A axd oppositedly directed fora at \ncorsitute a coaple of momest ie. M= fxd\nmagoitude fxd.",
+  "confidence": 0.901,
+  "bounding_boxes": [
+    {
+      "text": "羊",
+      "confidence": 0.283,
+      "bbox": [
+        [
+          190.0,
+          0.0
+        ],
+        [
+          208.0,
+          0.0
+        ],
+        [
+          208.0,
+          17.0
+        ],
+        [
+          190.0,
+          17.0
+        ]
+      ]
+    },
+    {
+      "text": "poist B",
+      "confidence": 0.9043,
+      "bbox": [
+        [
+          1008.0,
+          6.0
+        ],
+        [
+          1131.0,
+          6.0
+        ],
+        [
+          1131.0,
+          77.0
+        ],
+        [
+          1008.0,
+          77.0
+        ]
+      ]
+    },
+    {
+      "text": "Proof",
+      "confidence": 0.9976,
+      "bbox": [
+        [
+          221.0,
+          95.0
+        ],
+        [
+          343.0,
+          95.0
+        ],
+        [
+          343.0,
+          154.0
+        ],
+        [
+          221.0,
+          154.0
+        ]
+      ]
+    },
+    {
+      "text": "distaxe blw them",
+      "confidence": 0.9244,
+      "bbox": [
+        [
+          225.0,
+          244.0
+        ],
+        [
+          535.0,
+          244.0
+        ],
+        [
+          535.0,
+          318.0
+        ],
+        [
+          225.0,
+          318.0
+        ]
+      ]
+    },
+    {
+      "text": "at B.",
+      "confidence": 0.9687,
+      "bbox": [
+        [
+          220.0,
+          398.0
+        ],
+        [
+          326.0,
+          398.0
+        ],
+        [
+          326.0,
+          440.0
+        ],
+        [
+          220.0,
+          440.0
+        ]
+      ]
+    },
+    {
+      "text": "the actior of f o the igid body",
+      "confidence": 0.9719,
+      "bbox": [
+        [
+          203.0,
+          628.0
+        ],
+        [
+          875.0,
+          628.0
+        ],
+        [
+          875.0,
+          737.0
+        ],
+        [
+          203.0,
+          737.0
+        ]
+      ]
+    },
+    {
+      "text": "Coosider a poist B which is at a dis d from the",
+      "confidence": 0.9629,
+      "bbox": [
+        [
+          208.0,
+          710.0
+        ],
+        [
+          1107.0,
+          710.0
+        ],
+        [
+          1107.0,
+          795.0
+        ],
+        [
+          208.0,
+          795.0
+        ]
+      ]
+    },
+    {
+      "text": "lixe of action of force F, 2 oppositely divected",
+      "confidence": 0.9477,
+      "bbox": [
+        [
+          208.0,
+          766.0
+        ],
+        [
+          1090.0,
+          766.0
+        ],
+        [
+          1090.0,
+          864.0
+        ],
+        [
+          208.0,
+          864.0
+        ]
+      ]
+    },
+    {
+      "text": "collineou forces each of magitude f aod lixe ofactos",
+      "confidence": 0.9061,
+      "bbox": [
+        [
+          209.0,
+          835.0
+        ],
+        [
+          1179.0,
+          835.0
+        ],
+        [
+          1179.0,
+          924.0
+        ],
+        [
+          209.0,
+          924.0
+        ]
+      ]
+    },
+    {
+      "text": "pauallel to the lixe of action of gives foce f at a",
+      "confidence": 0.944,
+      "bbox": [
+        [
+          205.0,
+          904.0
+        ],
+        [
+          1152.0,
+          904.0
+        ],
+        [
+          1152.0,
+          996.0
+        ],
+        [
+          205.0,
+          996.0
+        ]
+      ]
+    },
+    {
+      "text": "ave itroduced at B.",
+      "confidence": 0.9679,
+      "bbox": [
+        [
+          203.0,
+          985.0
+        ],
+        [
+          607.0,
+          985.0
+        ],
+        [
+          607.0,
+          1040.0
+        ],
+        [
+          203.0,
+          1040.0
+        ]
+      ]
+    },
+    {
+      "text": "The force f at A axd oppositedly directed fora at ",
+      "confidence": 0.9333,
+      "bbox": [
+        [
+          186.0,
+          1050.0
+        ],
+        [
+          1164.0,
+          1050.0
+        ],
+        [
+          1164.0,
+          1142.0
+        ],
+        [
+          186.0,
+          1142.0
+        ]
+      ]
+    },
+    {
+      "text": "corsitute a coaple of momest ie. M= fxd",
+      "confidence": 0.9141,
+      "bbox": [
+        [
+          180.0,
+          1114.0
+        ],
+        [
+          1027.0,
+          1114.0
+        ],
+        [
+          1027.0,
+          1230.0
+        ],
+        [
+          180.0,
+          1230.0
+        ]
+      ]
+    },
+    {
+      "text": "magoitude fxd.",
+      "confidence": 0.9883,
+      "bbox": [
+        [
+          178.0,
+          1382.0
+        ],
+        [
+          541.0,
+          1382.0
+        ],
+        [
+          541.0,
+          1475.0
+        ],
+        [
+          178.0,
+          1475.0
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+4. Experiments
+truths, CER is computed using the Levenshtein distance
+This section is dedicated to presenting the evaluation of
+which is the sum of the character substitutions (Sc), in-
+the lite transformer in the context of multi-script hand-
+sertions (Ic), deletions (Dc), divided by the total number
+writing recognition. We start by presenting the four used
+of the ground truth characters (Nc). The formula of this
+datasets: IAM [3], RIMES [4], KHATT [15], and Espos-
+metric is given respectively as below:
+alles [16]. We present an ablation study to evaluate the
+Dc + Sc + Ic
+proposed curriculum learning strategy and the transfer
+CER =
+(3)
+learning process. Finally, we compare our results to the
+Nc
+state-of-the-art approaches.
+4.1. Datasets description
+4.3. Evaluation of the curriculum learning strategy
+• IAM dataset contains forms of handwritten English
+In this section, we evaluate the interest of the proposed
+text created by 657 writers. The training set com-
+3-stages curriculum learning strategy on the IAM dataset
+prises 747 documents (6,482 lines, 55,081 words), the
+for both the lite and the large transformer architectures.
+validation set is composed of 116 documents (976
+The obtained results are given in Table 1. The curriculum
+lines, 8,895 words) and the test set contains 336 doc-
+learning strategy is carried out in three stages as described
+uments (2,915 lines, 25,920 words).
+in Section 3.3. The test set consists of the real pages of
+• RIMES is a popular handwriting dataset composed
+IAM with a resolution of (1024 × 1024px). In the first
+of gray-scale images of French handwritten text taken
+stage S1, the model was trained on small block images
+from scanned mail. The images have a resolution of
+with a size of 256 × 256 pixels containing few lines and few
+300 dpi. In the official split, there are 1,500 pages for
+words per line. The goal of this stage is to help the model
+training and 100 pages for evaluation. Segmentation
+learn the reading order on easy samples. A CER of 14.77%
+and transcription are provided at the page, line, and
+was obtained due to the domain shift between the training
+word levels. We kept the same split between training,
+and the test images in terms of resolution and quantity of
+validation, and testing at a page level.
+text. In the second stage S2, the model was fine-tuned
+on higher resolution images (1024 × 1024px) containing an
+• KHATT is a freely available Arabic handwriting
+increased number of lines and words per line . The aim of
+dataset. It consists of scanned handwritten pages
+this second pre-training stage is to improve the capacity
+with different writers, text, and resolutions. Pages
+of the model to deal with longer sequences corresponding
+segmentation into lines is also provided to allow the
+to more complex documents. A gain of 1.93 in terms of
+direct evaluation of recognition systems without lay-
+CER is obtained compared to the model trained on stage
+out analysis. We have used 1400 blocks for training,
+1. The third stage S3 consists of fine-tuning the model
+300 blocks for validation, and 300 blocks for testing.
+obtained in the previous stage on the real IAM dataset
+using the same image size as stage 2. This last training
+• Esposalles is a public dataset proposed in ICDAR
+stage improves the model performance and a gain of 6.44
+2017 competition on Information Extraction from His-
+in terms of CER is obtained compared to the model of the
+torical Handwritten Records (IEHHR) [30]. The
+previous stage.
+dataset contains 125 Spanish handwritten pages, con-
+taining 1221 marriage records. We have used 872
+records for training, 96 records for validation, and 253
+Table 1: Evaluation of the training strategy in terms of CER de-
+records for testing.
+pending on the transformer model size Lite/Large
+S1
+S2
+S3
+FS
+Lite
+Large
+4.2. Implementations details
+X
+14.77
+95.6
+The model was implemented using PyTorch and training
+X
+12.84
+43.16
+X
+6.4
+27
+was carried out using the Tesla T4 GPU. The lite trans-
+former architecture is composed of 2 transformer layers
+X
+13
+40
+with one head attention and a hidden size of 256. The
+large transformer is composed of 4 transformer layers with
+To highlight the importance of the curriculum learning
+8 heads and a hidden size of 512. ADAM optimizer was
+strategy, we have conducted another experiment where the
+utilized with a fixed learning rate of 0.0001. This learn-
+model is trained from scratch (FS) on only one stage us-
+ing rate is decreased to 0.00001 in the transfer learning
+ing all the training images used in the three stages. We
+stage. We do not use any synthetic data, external language
+obtained a CER of 13% which confirms the interest of
+model, or lexicon constraints. To prevent over-fitting, reg-
+the curriculum learning strategy which helps the model
+ularization techniques are applied like a dropout of 0.1.
+to learn the reading order and clearly improves its con-
+data augmentation, and early stopping.
+vergence. Finally, we can observe that the performance
+We used the standard Character Error Rate (CER) to
+of the lite transformer is better than the large transformer
+evaluate the quality of recognition. For a set of ground
+for all the training stages and scenarios. This confirms our
+5

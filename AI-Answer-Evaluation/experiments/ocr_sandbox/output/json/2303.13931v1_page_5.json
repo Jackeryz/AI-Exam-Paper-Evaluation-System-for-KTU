@@ -2,49 +2,49 @@
   "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\printed\\2303.13931v1.pdf",
   "page_number": 5,
   "text": "4. Experiments\ntruths, CER is computed using the Levenshtein distance\nThis section is dedicated to presenting the evaluation of\nwhich is the sum of the character substitutions (Sc), in-\nthe lite transformer in the context of multi-script hand-\nsertions (Ic), deletions (Dc), divided by the total number\nwriting recognition. We start by presenting the four used\nof the ground truth characters (N c). The formula of this\ndatasets: IAM [3], RIMES [4], KHATT [15], and Espos-\nmetric is given respectively as below:\nalles [16]. We present an ablation study to evaluate the\nDc + Sc + Ic\nproposed curriculum learning strategy and the transfer\nCER =\n(3)\nN c\nlearning process. Finally, we compare our results to the\nstate-of-the-art approaches.\n4.1. Datasets description\n4.3. Evaluation of the curriculum learning strategy\n• IAM dataset contains forms of handwritten English\nIn this section, we evaluate the interest of the proposed\ntext created by 657 writers. The training set com-\n3-stages curriculum learning strategy on the IAM dataset\nprises 747 documents (6,482 lines, 55,081 words), the\nfor both the lite and the large transformer architectures.\nvalidation set is composed of 116 documents (976\nThe obtained results are given in Table 1. The curriculum\nlines, 8,895 words) and the test set contains 336 doc-\nlearning strategy is carried out in three stages as described\numents (2,915 lines, 25,920 words).\nin Section 3.3. The test set consists of the real pages of\n• RIMES is a popular handwriting dataset composed\nIAM with a resolution of (1024 × 1024px). In the first\nof gray-scale images of French handwritten text taken\nstage S1, the model was trained on small block images\nfrom scanned mail. The images have a resolution of\nwith a size of 256 × 256 pixels containing few lines and few\n300 dpi. In the official split, there are 1,500 pages for\nwords per line. The goal of this stage is to help the model\ntraining and 100 pages for evaluation. Segmentation\nlearn the reading order on easy samples. A CER of 14.77%\nand transcription are provided at the page, line, and\nwas obtained due to the domain shift between the training\nword levels. We kept the same split between training,\nand the test images in terms of resolution and quantity of\nvalidation, and testing at a page level.\ntext. In the second stage S2, the model was fine-tuned\non higher resolution images (1024 × 1024px) containing an\n• KHATT is a freely available Arabic handwriting\nincreased number of lines and words per line . The aim of\ndataset. It consists of scanned handwritten pages\nthis second pre-training stage is to improve the capacity\nwith different writers, text, and resolutions. Pages\nof the model to deal with longer sequences corresponding\nsegmentation into lines is also provided to allow the\nto more complex documents. A gain of 1.93 in terms of\ndirect evaluation of recognition systems without lay-\nCER is obtained compared to the model trained on stage\nout analysis. We have used 1400 blocks for training,\n1. The third stage S3 consists of fine-tuning the model\n300 blocks for validation, and 300 blocks for testing.\nobtained in the previous stage on the real IAM dataset\nusing the same image size as stage 2. This last training\n• Esposalles is a public dataset proposed in ICDAR\nstage improves the model performance and a gain of 6.44\n2017 competition on Information Extraction from His-\nin terms of CER is obtained compared to the model of the\ntorical Handwritten Records (IEHHR) [30]. The\ndataset contains 125 Spanish handwritten pages, con-\nprevious stage.\ntaining 1221 marriage records. We have used 872\nrecords for training, 96 records for validation, and 253\nTable 1: Evaluation of the training strategy in terms of CER de-\nrecords for testing.\npending on the transformer model size Lite/Large\nS1\nS2\n\nS3\nFS\nLite\nLarge\n4.2. Implementations details\nX\n14.77\n95.6\nThe model was implemented using PyTorch and training\nX\n12.84\n43.16\nwas carried out using the Tesla T4 GPU. The lite trans-\nX\n6.4\n27\nformer architecture is composed of 2 transformer layers\nX\n13\n40\nwith one head attention and a hidden size of 256. The\nlarge transformer is composed of 4 transformer layers with\nTo highlight the importance of the curriculum learning\n8 heads and a hidden size of 512. ADAM optimizer was\nstrategy, we have conducted another experiment where the\nutilized with a fixed learning rate of 0.0001. This learn-\nmodel is trained from scratch (FS) on only one stage us-\ning rate is decreased to 0.00001 in the transfer learning\ning all the training images used in the three stages. We\nstage. We do not use any synthetic data, external language\nobtained a CER of 13% which confirms the interest of\nmodel, or lexicon constraints. To prevent over-fitting, reg-\nthe curriculum learning strategy which helps the model\nularization techniques are applied like a dropout of 0.1,\nto learn the reading order and clearly improves its con-\ndata augmentation, and early stopping.\nvergence. Finally, we can observe that the performance\nWe used the standard Character Error Rate (CER) to\nof the lite transformer is better than the large transformer\nevaluate the quality of recognition. For a set of ground\nfor all the training stages and scenarios. This confirms our\n5",
-  "confidence": 0.977,
+  "confidence": 0.9767,
   "bounding_boxes": [
     {
       "text": "4. Experiments",
-      "confidence": 1.0,
+      "confidence": 0.9998,
       "bbox": [
         [
-          76,
-          165
+          76.0,
+          165.0
         ],
         [
-          234,
-          165
+          234.0,
+          165.0
         ],
         [
-          234,
-          185
+          234.0,
+          185.0
         ],
         [
-          76,
-          185
+          76.0,
+          185.0
         ]
       ]
     },
     {
       "text": "truths, CER is computed using the Levenshtein distance",
-      "confidence": 0.986,
+      "confidence": 0.9859,
       "bbox": [
         [
-          612,
-          165
+          612.0,
+          165.0
         ],
         [
-          1117,
-          165
+          1117.0,
+          165.0
         ],
         [
-          1117,
-          186
+          1117.0,
+          186.0
         ],
         [
-          612,
-          186
+          612.0,
+          186.0
         ]
       ]
     },
@@ -53,42 +53,42 @@
       "confidence": 0.996,
       "bbox": [
         [
-          94,
-          194
+          94.0,
+          194.0
         ],
         [
-          579,
-          194
+          579.0,
+          194.0
         ],
         [
-          579,
-          213
+          579.0,
+          213.0
         ],
         [
-          94,
-          213
+          94.0,
+          213.0
         ]
       ]
     },
     {
       "text": "which is the sum of the character substitutions (Sc), in-",
-      "confidence": 0.993,
+      "confidence": 0.9932,
       "bbox": [
         [
-          612,
-          190
+          612.0,
+          190.0
         ],
         [
-          1113,
-          190
+          1113.0,
+          190.0
         ],
         [
-          1113,
-          209
+          1113.0,
+          209.0
         ],
         [
-          612,
-          209
+          612.0,
+          209.0
         ]
       ]
     },
@@ -97,42 +97,42 @@
       "confidence": 0.99,
       "bbox": [
         [
-          73,
-          216
+          73.0,
+          216.0
         ],
         [
-          577,
-          216
+          577.0,
+          216.0
         ],
         [
-          577,
-          237
+          577.0,
+          237.0
         ],
         [
-          73,
-          237
+          73.0,
+          237.0
         ]
       ]
     },
     {
       "text": "sertions (Ic), deletions (Dc), divided by the total number",
-      "confidence": 0.998,
+      "confidence": 0.9978,
       "bbox": [
         [
-          611,
-          213
+          611.0,
+          213.0
         ],
         [
-          1116,
-          213
+          1116.0,
+          213.0
         ],
         [
-          1116,
-          234
+          1116.0,
+          234.0
         ],
         [
-          611,
-          234
+          611.0,
+          234.0
         ]
       ]
     },
@@ -141,526 +141,526 @@
       "confidence": 0.986,
       "bbox": [
         [
-          74,
-          240
+          74.0,
+          240.0
         ],
         [
-          577,
-          240
+          577.0,
+          240.0
         ],
         [
-          577,
-          262
+          577.0,
+          262.0
         ],
         [
-          74,
-          262
+          74.0,
+          262.0
         ]
       ]
     },
     {
       "text": "of the ground truth characters (N c). The formula of this",
-      "confidence": 0.99,
+      "confidence": 0.9898,
       "bbox": [
         [
-          611,
-          236
+          611.0,
+          236.0
         ],
         [
-          1117,
-          236
+          1117.0,
+          236.0
         ],
         [
-          1117,
-          258
+          1117.0,
+          258.0
         ],
         [
-          611,
-          258
+          611.0,
+          258.0
         ]
       ]
     },
     {
       "text": "datasets: IAM [3], RIMES [4], KHATT [15], and Espos-",
-      "confidence": 0.983,
+      "confidence": 0.9829,
       "bbox": [
         [
-          73,
-          264
+          73.0,
+          264.0
         ],
         [
-          577,
-          264
+          577.0,
+          264.0
         ],
         [
-          577,
-          286
+          577.0,
+          286.0
         ],
         [
-          73,
-          286
+          73.0,
+          286.0
         ]
       ]
     },
     {
       "text": "metric is given respectively as below:",
-      "confidence": 0.983,
+      "confidence": 0.9834,
       "bbox": [
         [
-          612,
-          262
+          612.0,
+          262.0
         ],
         [
-          937,
-          262
+          937.0,
+          262.0
         ],
         [
-          937,
-          282
+          937.0,
+          282.0
         ],
         [
-          612,
-          282
+          612.0,
+          282.0
         ]
       ]
     },
     {
       "text": "alles [16]. We present an ablation study to evaluate the",
-      "confidence": 0.993,
+      "confidence": 0.9931,
       "bbox": [
         [
-          73,
-          290
+          73.0,
+          290.0
         ],
         [
-          578,
-          290
+          578.0,
+          290.0
         ],
         [
-          578,
-          310
+          578.0,
+          310.0
         ],
         [
-          73,
-          310
+          73.0,
+          310.0
         ]
       ]
     },
     {
       "text": "Dc + Sc + Ic",
-      "confidence": 0.997,
+      "confidence": 0.9969,
       "bbox": [
         [
-          841,
-          304
+          841.0,
+          304.0
         ],
         [
-          961,
-          304
+          961.0,
+          304.0
         ],
         [
-          961,
-          325
+          961.0,
+          325.0
         ],
         [
-          841,
-          325
+          841.0,
+          325.0
         ]
       ]
     },
     {
       "text": "proposed curriculum learning strategy and the transfer",
-      "confidence": 0.974,
+      "confidence": 0.9742,
       "bbox": [
         [
-          73,
-          312
+          73.0,
+          312.0
         ],
         [
-          578,
-          312
+          578.0,
+          312.0
         ],
         [
-          578,
-          337
+          578.0,
+          337.0
         ],
         [
-          73,
-          337
+          73.0,
+          337.0
         ]
       ]
     },
     {
       "text": "CER =",
-      "confidence": 0.986,
+      "confidence": 0.9855,
       "bbox": [
         [
-          765,
-          315
+          765.0,
+          315.0
         ],
         [
-          838,
-          315
+          838.0,
+          315.0
         ],
         [
-          838,
-          337
+          838.0,
+          337.0
         ],
         [
-          765,
-          337
+          765.0,
+          337.0
         ]
       ]
     },
     {
       "text": "(3)",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          1087,
-          315
+          1087.0,
+          315.0
         ],
         [
-          1117,
-          315
+          1117.0,
+          315.0
         ],
         [
-          1117,
-          342
+          1117.0,
+          342.0
         ],
         [
-          1087,
-          342
+          1087.0,
+          342.0
         ]
       ]
     },
     {
       "text": "N c",
-      "confidence": 0.907,
+      "confidence": 0.9066,
       "bbox": [
         [
-          882,
-          326
+          882.0,
+          326.0
         ],
         [
-          920,
-          326
+          920.0,
+          326.0
         ],
         [
-          920,
-          354
+          920.0,
+          354.0
         ],
         [
-          882,
-          354
+          882.0,
+          354.0
         ]
       ]
     },
     {
       "text": "learning process. Finally, we compare our results to the",
-      "confidence": 0.984,
+      "confidence": 0.9845,
       "bbox": [
         [
-          74,
-          338
+          74.0,
+          338.0
         ],
         [
-          577,
-          338
+          577.0,
+          338.0
         ],
         [
-          577,
-          357
+          577.0,
+          357.0
         ],
         [
-          74,
-          357
+          74.0,
+          357.0
         ]
       ]
     },
     {
       "text": "state-of-the-art approaches.",
-      "confidence": 0.998,
+      "confidence": 0.9978,
       "bbox": [
         [
-          73,
-          362
+          73.0,
+          362.0
         ],
         [
-          314,
-          362
+          314.0,
+          362.0
         ],
         [
-          314,
-          382
+          314.0,
+          382.0
         ],
         [
-          73,
-          382
+          73.0,
+          382.0
         ]
       ]
     },
     {
       "text": "4.1. Datasets description",
-      "confidence": 0.998,
+      "confidence": 0.9978,
       "bbox": [
         [
-          74,
-          394
+          74.0,
+          394.0
         ],
         [
-          297,
-          394
+          297.0,
+          394.0
         ],
         [
-          297,
-          414
+          297.0,
+          414.0
         ],
         [
-          74,
-          414
+          74.0,
+          414.0
         ]
       ]
     },
     {
       "text": "4.3. Evaluation of the curriculum learning strategy",
-      "confidence": 0.975,
+      "confidence": 0.9745,
       "bbox": [
         [
-          613,
-          400
+          613.0,
+          400.0
         ],
         [
-          1058,
-          400
+          1058.0,
+          400.0
         ],
         [
-          1058,
-          422
+          1058.0,
+          422.0
         ],
         [
-          613,
-          422
+          613.0,
+          422.0
         ]
       ]
     },
     {
       "text": "• IAM dataset contains forms of handwritten English",
-      "confidence": 0.982,
+      "confidence": 0.9819,
       "bbox": [
         [
-          96,
-          428
+          96.0,
+          428.0
         ],
         [
-          577,
-          428
+          577.0,
+          428.0
         ],
         [
-          577,
-          445
+          577.0,
+          445.0
         ],
         [
-          96,
-          445
+          96.0,
+          445.0
         ]
       ]
     },
     {
       "text": "In this section, we evaluate the interest of the proposed",
-      "confidence": 0.993,
+      "confidence": 0.9929,
       "bbox": [
         [
-          631,
-          434
+          631.0,
+          434.0
         ],
         [
-          1115,
-          434
+          1115.0,
+          434.0
         ],
         [
-          1115,
-          456
+          1115.0,
+          456.0
         ],
         [
-          631,
-          456
+          631.0,
+          456.0
         ]
       ]
     },
     {
       "text": "text created by 657 writers. The training set com-",
-      "confidence": 0.978,
+      "confidence": 0.9785,
       "bbox": [
         [
-          113,
-          449
+          113.0,
+          449.0
         ],
         [
-          578,
-          449
+          578.0,
+          449.0
         ],
         [
-          578,
-          471
+          578.0,
+          471.0
         ],
         [
-          113,
-          471
+          113.0,
+          471.0
         ]
       ]
     },
     {
       "text": "3-stages curriculum learning strategy on the IAM dataset",
-      "confidence": 0.991,
+      "confidence": 0.9907,
       "bbox": [
         [
-          611,
-          459
+          611.0,
+          459.0
         ],
         [
-          1115,
-          459
+          1115.0,
+          459.0
         ],
         [
-          1115,
-          480
+          1115.0,
+          480.0
         ],
         [
-          611,
-          480
+          611.0,
+          480.0
         ]
       ]
     },
     {
       "text": "prises 747 documents (6,482 lines, 55,081 words), the",
-      "confidence": 0.991,
+      "confidence": 0.9911,
       "bbox": [
         [
-          112,
-          471
+          112.0,
+          471.0
         ],
         [
-          579,
-          471
+          579.0,
+          471.0
         ],
         [
-          579,
-          496
+          579.0,
+          496.0
         ],
         [
-          112,
-          496
+          112.0,
+          496.0
         ]
       ]
     },
     {
       "text": "for both the lite and the large transformer architectures.",
-      "confidence": 0.989,
+      "confidence": 0.9887,
       "bbox": [
         [
-          611,
-          482
+          611.0,
+          482.0
         ],
         [
-          1115,
-          482
+          1115.0,
+          482.0
         ],
         [
-          1115,
-          503
+          1115.0,
+          503.0
         ],
         [
-          611,
-          503
+          611.0,
+          503.0
         ]
       ]
     },
     {
       "text": "validation set is composed of 116 documents (976",
-      "confidence": 0.979,
+      "confidence": 0.9788,
       "bbox": [
         [
-          115,
-          497
+          115.0,
+          497.0
         ],
         [
-          578,
-          497
+          578.0,
+          497.0
         ],
         [
-          578,
-          517
+          578.0,
+          517.0
         ],
         [
-          115,
-          517
+          115.0,
+          517.0
         ]
       ]
     },
     {
       "text": "The obtained results are given in Table 1. The curriculum",
-      "confidence": 0.979,
+      "confidence": 0.9795,
       "bbox": [
         [
-          612,
-          505
+          612.0,
+          505.0
         ],
         [
-          1115,
-          505
+          1115.0,
+          505.0
         ],
         [
-          1115,
-          528
+          1115.0,
+          528.0
         ],
         [
-          612,
-          528
+          612.0,
+          528.0
         ]
       ]
     },
     {
       "text": "lines, 8,895 words) and the test set contains 336 doc-",
-      "confidence": 0.986,
+      "confidence": 0.9857,
       "bbox": [
         [
-          113,
-          521
+          113.0,
+          521.0
         ],
         [
-          577,
-          521
+          577.0,
+          521.0
         ],
         [
-          577,
-          542
+          577.0,
+          542.0
         ],
         [
-          113,
-          542
+          113.0,
+          542.0
         ]
       ]
     },
     {
       "text": "learning strategy is carried out in three stages as described",
-      "confidence": 0.993,
+      "confidence": 0.9926,
       "bbox": [
         [
-          611,
-          530
+          611.0,
+          530.0
         ],
         [
-          1116,
-          530
+          1116.0,
+          530.0
         ],
         [
-          1116,
-          552
+          1116.0,
+          552.0
         ],
         [
-          611,
-          552
+          611.0,
+          552.0
         ]
       ]
     },
@@ -669,174 +669,174 @@
       "confidence": 0.992,
       "bbox": [
         [
-          114,
-          546
+          114.0,
+          546.0
         ],
         [
-          420,
-          546
+          420.0,
+          546.0
         ],
         [
-          420,
-          566
+          420.0,
+          566.0
         ],
         [
-          114,
-          566
+          114.0,
+          566.0
         ]
       ]
     },
     {
       "text": "in Section 3.3. The test set consists of the real pages of",
-      "confidence": 0.984,
+      "confidence": 0.9841,
       "bbox": [
         [
-          611,
-          556
+          611.0,
+          556.0
         ],
         [
-          1117,
-          556
+          1117.0,
+          556.0
         ],
         [
-          1117,
-          576
+          1117.0,
+          576.0
         ],
         [
-          611,
-          576
+          611.0,
+          576.0
         ]
       ]
     },
     {
       "text": "• RIMES is a popular handwriting dataset composed",
-      "confidence": 0.989,
+      "confidence": 0.9887,
       "bbox": [
         [
-          98,
-          584
+          98.0,
+          584.0
         ],
         [
-          577,
-          584
+          577.0,
+          584.0
         ],
         [
-          577,
-          606
+          577.0,
+          606.0
         ],
         [
-          98,
-          606
+          98.0,
+          606.0
         ]
       ]
     },
     {
       "text": "IAM with a resolution of (1024 × 1024px). In the first",
-      "confidence": 0.984,
+      "confidence": 0.9839,
       "bbox": [
         [
-          612,
-          580
+          612.0,
+          580.0
         ],
         [
-          1117,
-          580
+          1117.0,
+          580.0
         ],
         [
-          1117,
-          600
+          1117.0,
+          600.0
         ],
         [
-          612,
-          600
+          612.0,
+          600.0
         ]
       ]
     },
     {
       "text": "of gray-scale images of French handwritten text taken",
-      "confidence": 0.995,
+      "confidence": 0.9953,
       "bbox": [
         [
-          113,
-          609
+          113.0,
+          609.0
         ],
         [
-          578,
-          609
+          578.0,
+          609.0
         ],
         [
-          578,
-          631
+          578.0,
+          631.0
         ],
         [
-          113,
-          631
+          113.0,
+          631.0
         ]
       ]
     },
     {
       "text": "stage S1, the model was trained on small block images",
-      "confidence": 0.986,
+      "confidence": 0.9864,
       "bbox": [
         [
-          611,
-          603
+          611.0,
+          603.0
         ],
         [
-          1118,
-          603
+          1118.0,
+          603.0
         ],
         [
-          1118,
-          626
+          1118.0,
+          626.0
         ],
         [
-          611,
-          626
+          611.0,
+          626.0
         ]
       ]
     },
     {
       "text": "from scanned mail. The images have a resolution of",
-      "confidence": 0.991,
+      "confidence": 0.9915,
       "bbox": [
         [
-          114,
-          632
+          114.0,
+          632.0
         ],
         [
-          579,
-          632
+          579.0,
+          632.0
         ],
         [
-          579,
-          652
+          579.0,
+          652.0
         ],
         [
-          114,
-          652
+          114.0,
+          652.0
         ]
       ]
     },
     {
       "text": "with a size of 256 × 256 pixels containing few lines and few",
-      "confidence": 0.985,
+      "confidence": 0.9853,
       "bbox": [
         [
-          612,
-          628
+          612.0,
+          628.0
         ],
         [
-          1114,
-          628
+          1114.0,
+          628.0
         ],
         [
-          1114,
-          644
+          1114.0,
+          644.0
         ],
         [
-          612,
-          644
+          612.0,
+          644.0
         ]
       ]
     },
@@ -845,372 +845,372 @@
       "confidence": 0.964,
       "bbox": [
         [
-          114,
-          655
+          114.0,
+          655.0
         ],
         [
-          576,
-          655
+          576.0,
+          655.0
         ],
         [
-          576,
-          675
+          576.0,
+          675.0
         ],
         [
-          114,
-          675
+          114.0,
+          675.0
         ]
       ]
     },
     {
       "text": "words per line. The goal of this stage is to help the model",
-      "confidence": 0.971,
+      "confidence": 0.9711,
       "bbox": [
         [
-          614,
-          652
+          614.0,
+          652.0
         ],
         [
-          1115,
-          652
+          1115.0,
+          652.0
         ],
         [
-          1115,
-          669
+          1115.0,
+          669.0
         ],
         [
-          614,
-          669
+          614.0,
+          669.0
         ]
       ]
     },
     {
       "text": "training and 100 pages for evaluation. Segmentation",
-      "confidence": 0.99,
+      "confidence": 0.9897,
       "bbox": [
         [
-          115,
-          681
+          115.0,
+          681.0
         ],
         [
-          577,
-          681
+          577.0,
+          681.0
         ],
         [
-          577,
-          701
+          577.0,
+          701.0
         ],
         [
-          115,
-          701
+          115.0,
+          701.0
         ]
       ]
     },
     {
       "text": "learn the reading order on easy samples. A CER of 14.77%",
-      "confidence": 0.975,
+      "confidence": 0.9749,
       "bbox": [
         [
-          611,
-          673
+          611.0,
+          673.0
         ],
         [
-          1116,
-          673
+          1116.0,
+          673.0
         ],
         [
-          1116,
-          695
+          1116.0,
+          695.0
         ],
         [
-          611,
-          695
+          611.0,
+          695.0
         ]
       ]
     },
     {
       "text": "and transcription are provided at the page, line, and",
-      "confidence": 0.992,
+      "confidence": 0.9923,
       "bbox": [
         [
-          113,
-          704
+          113.0,
+          704.0
         ],
         [
-          578,
-          704
+          578.0,
+          704.0
         ],
         [
-          578,
-          725
+          578.0,
+          725.0
         ],
         [
-          113,
-          725
+          113.0,
+          725.0
         ]
       ]
     },
     {
       "text": "was obtained due to the domain shift between the training",
-      "confidence": 0.986,
+      "confidence": 0.9861,
       "bbox": [
         [
-          610,
-          697
+          610.0,
+          697.0
         ],
         [
-          1117,
-          697
+          1117.0,
+          697.0
         ],
         [
-          1117,
-          720
+          1117.0,
+          720.0
         ],
         [
-          610,
-          720
+          610.0,
+          720.0
         ]
       ]
     },
     {
       "text": "word levels. We kept the same split between training,",
-      "confidence": 0.988,
+      "confidence": 0.9884,
       "bbox": [
         [
-          115,
-          728
+          115.0,
+          728.0
         ],
         [
-          577,
-          728
+          577.0,
+          728.0
         ],
         [
-          577,
-          751
+          577.0,
+          751.0
         ],
         [
-          115,
-          751
+          115.0,
+          751.0
         ]
       ]
     },
     {
       "text": "and the test images in terms of resolution and quantity of",
-      "confidence": 0.959,
+      "confidence": 0.9592,
       "bbox": [
         [
-          612,
-          724
+          612.0,
+          724.0
         ],
         [
-          1115,
-          724
+          1115.0,
+          724.0
         ],
         [
-          1115,
-          741
+          1115.0,
+          741.0
         ],
         [
-          612,
-          741
+          612.0,
+          741.0
         ]
       ]
     },
     {
       "text": "validation, and testing at a page level.",
-      "confidence": 0.988,
+      "confidence": 0.9884,
       "bbox": [
         [
-          116,
-          753
+          116.0,
+          753.0
         ],
         [
-          449,
-          753
+          449.0,
+          753.0
         ],
         [
-          449,
-          772
+          449.0,
+          772.0
         ],
         [
-          116,
-          772
+          116.0,
+          772.0
         ]
       ]
     },
     {
       "text": "text. In the second stage S2, the model was fine-tuned",
-      "confidence": 0.994,
+      "confidence": 0.9941,
       "bbox": [
         [
-          612,
-          747
+          612.0,
+          747.0
         ],
         [
-          1117,
-          747
+          1117.0,
+          747.0
         ],
         [
-          1117,
-          767
+          1117.0,
+          767.0
         ],
         [
-          612,
-          767
+          612.0,
+          767.0
         ]
       ]
     },
     {
       "text": "on higher resolution images (1024 × 1024px) containing an",
-      "confidence": 0.988,
+      "confidence": 0.9879,
       "bbox": [
         [
-          611,
-          770
+          611.0,
+          770.0
         ],
         [
-          1117,
-          770
+          1117.0,
+          770.0
         ],
         [
-          1117,
-          791
+          1117.0,
+          791.0
         ],
         [
-          611,
-          791
+          611.0,
+          791.0
         ]
       ]
     },
     {
       "text": "• KHATT is a freely available Arabic handwriting",
-      "confidence": 0.988,
+      "confidence": 0.9885,
       "bbox": [
         [
-          94,
-          789
+          94.0,
+          789.0
         ],
         [
-          578,
-          789
+          578.0,
+          789.0
         ],
         [
-          578,
-          815
+          578.0,
+          815.0
         ],
         [
-          94,
-          815
+          94.0,
+          815.0
         ]
       ]
     },
     {
       "text": "increased number of lines and words per line . The aim of",
-      "confidence": 0.994,
+      "confidence": 0.9937,
       "bbox": [
         [
-          612,
-          794
+          612.0,
+          794.0
         ],
         [
-          1117,
-          794
+          1117.0,
+          794.0
         ],
         [
-          1117,
-          814
+          1117.0,
+          814.0
         ],
         [
-          612,
-          814
+          612.0,
+          814.0
         ]
       ]
     },
     {
       "text": "dataset. It consists of scanned handwritten pages",
-      "confidence": 0.994,
+      "confidence": 0.9942,
       "bbox": [
         [
-          112,
-          814
+          112.0,
+          814.0
         ],
         [
-          579,
-          814
+          579.0,
+          814.0
         ],
         [
-          579,
-          837
+          579.0,
+          837.0
         ],
         [
-          112,
-          837
+          112.0,
+          837.0
         ]
       ]
     },
     {
       "text": "this second pre-training stage is to improve the capacity",
-      "confidence": 0.996,
+      "confidence": 0.9959,
       "bbox": [
         [
-          611,
-          818
+          611.0,
+          818.0
         ],
         [
-          1115,
-          818
+          1115.0,
+          818.0
         ],
         [
-          1115,
-          840
+          1115.0,
+          840.0
         ],
         [
-          611,
-          840
+          611.0,
+          840.0
         ]
       ]
     },
     {
       "text": "with different writers, text, and resolutions. Pages",
-      "confidence": 0.984,
+      "confidence": 0.9845,
       "bbox": [
         [
-          113,
-          837
+          113.0,
+          837.0
         ],
         [
-          579,
-          837
+          579.0,
+          837.0
         ],
         [
-          579,
-          862
+          579.0,
+          862.0
         ],
         [
-          113,
-          862
+          113.0,
+          862.0
         ]
       ]
     },
     {
       "text": "of the model to deal with longer sequences corresponding",
-      "confidence": 0.991,
+      "confidence": 0.9909,
       "bbox": [
         [
-          611,
-          842
+          611.0,
+          842.0
         ],
         [
-          1117,
-          842
+          1117.0,
+          842.0
         ],
         [
-          1117,
-          864
+          1117.0,
+          864.0
         ],
         [
-          611,
-          864
+          611.0,
+          864.0
         ]
       ]
     },
@@ -1219,196 +1219,196 @@
       "confidence": 0.989,
       "bbox": [
         [
-          112,
-          864
+          112.0,
+          864.0
         ],
         [
-          579,
-          864
+          579.0,
+          864.0
         ],
         [
-          579,
-          885
+          579.0,
+          885.0
         ],
         [
-          112,
-          885
+          112.0,
+          885.0
         ]
       ]
     },
     {
       "text": "to more complex documents. A gain of 1.93 in terms of",
-      "confidence": 0.996,
+      "confidence": 0.9956,
       "bbox": [
         [
-          612,
-          869
+          612.0,
+          869.0
         ],
         [
-          1116,
-          869
+          1116.0,
+          869.0
         ],
         [
-          1116,
-          886
+          1116.0,
+          886.0
         ],
         [
-          612,
-          886
+          612.0,
+          886.0
         ]
       ]
     },
     {
       "text": "direct evaluation of recognition systems without lay-",
-      "confidence": 0.999,
+      "confidence": 0.9986,
       "bbox": [
         [
-          113,
-          887
+          113.0,
+          887.0
         ],
         [
-          577,
-          887
+          577.0,
+          887.0
         ],
         [
-          577,
-          909
+          577.0,
+          909.0
         ],
         [
-          113,
-          909
+          113.0,
+          909.0
         ]
       ]
     },
     {
       "text": "CER is obtained compared to the model trained on stage",
-      "confidence": 0.995,
+      "confidence": 0.9947,
       "bbox": [
         [
-          611,
-          890
+          611.0,
+          890.0
         ],
         [
-          1117,
-          890
+          1117.0,
+          890.0
         ],
         [
-          1117,
-          911
+          1117.0,
+          911.0
         ],
         [
-          611,
-          911
+          611.0,
+          911.0
         ]
       ]
     },
     {
       "text": "out analysis. We have used 1400 blocks for training,",
-      "confidence": 0.998,
+      "confidence": 0.9983,
       "bbox": [
         [
-          112,
-          910
+          112.0,
+          910.0
         ],
         [
-          578,
-          910
+          578.0,
+          910.0
         ],
         [
-          578,
-          933
+          578.0,
+          933.0
         ],
         [
-          112,
-          933
+          112.0,
+          933.0
         ]
       ]
     },
     {
       "text": "1. The third stage S3 consists of fine-tuning the model",
-      "confidence": 0.979,
+      "confidence": 0.9787,
       "bbox": [
         [
-          611,
-          913
+          611.0,
+          913.0
         ],
         [
-          1115,
-          913
+          1115.0,
+          913.0
         ],
         [
-          1115,
-          933
+          1115.0,
+          933.0
         ],
         [
-          611,
-          933
+          611.0,
+          933.0
         ]
       ]
     },
     {
       "text": "300 blocks for validation, and 300 blocks for testing.",
-      "confidence": 0.992,
+      "confidence": 0.9918,
       "bbox": [
         [
-          113,
-          934
+          113.0,
+          934.0
         ],
         [
-          571,
-          934
+          571.0,
+          934.0
         ],
         [
-          571,
-          957
+          571.0,
+          957.0
         ],
         [
-          113,
-          957
+          113.0,
+          957.0
         ]
       ]
     },
     {
       "text": "obtained in the previous stage on the real IAM dataset",
-      "confidence": 0.975,
+      "confidence": 0.9748,
       "bbox": [
         [
-          612,
-          938
+          612.0,
+          938.0
         ],
         [
-          1116,
-          938
+          1116.0,
+          938.0
         ],
         [
-          1116,
-          958
+          1116.0,
+          958.0
         ],
         [
-          612,
-          958
+          612.0,
+          958.0
         ]
       ]
     },
     {
       "text": "using the same image size as stage 2. This last training",
-      "confidence": 0.976,
+      "confidence": 0.9765,
       "bbox": [
         [
-          611,
-          961
+          611.0,
+          961.0
         ],
         [
-          1117,
-          961
+          1117.0,
+          961.0
         ],
         [
-          1117,
-          983
+          1117.0,
+          983.0
         ],
         [
-          611,
-          983
+          611.0,
+          983.0
         ]
       ]
     },
@@ -1417,64 +1417,64 @@
       "confidence": 0.972,
       "bbox": [
         [
-          99,
-          976
+          99.0,
+          976.0
         ],
         [
-          578,
-          976
+          578.0,
+          976.0
         ],
         [
-          578,
-          996
+          578.0,
+          996.0
         ],
         [
-          99,
-          996
+          99.0,
+          996.0
         ]
       ]
     },
     {
       "text": "stage improves the model performance and a gain of 6.44",
-      "confidence": 0.98,
+      "confidence": 0.9803,
       "bbox": [
         [
-          611,
-          985
+          611.0,
+          985.0
         ],
         [
-          1116,
-          985
+          1116.0,
+          985.0
         ],
         [
-          1116,
-          1006
+          1116.0,
+          1006.0
         ],
         [
-          611,
-          1006
+          611.0,
+          1006.0
         ]
       ]
     },
     {
       "text": "2017 competition on Information Extraction from His-",
-      "confidence": 0.994,
+      "confidence": 0.9943,
       "bbox": [
         [
-          113,
-          997
+          113.0,
+          997.0
         ],
         [
-          577,
-          997
+          577.0,
+          997.0
         ],
         [
-          577,
-          1019
+          577.0,
+          1019.0
         ],
         [
-          113,
-          1019
+          113.0,
+          1019.0
         ]
       ]
     },
@@ -1483,196 +1483,196 @@
       "confidence": 0.987,
       "bbox": [
         [
-          611,
-          1010
+          611.0,
+          1010.0
         ],
         [
-          1116,
-          1010
+          1116.0,
+          1010.0
         ],
         [
-          1116,
-          1030
+          1116.0,
+          1030.0
         ],
         [
-          611,
-          1030
+          611.0,
+          1030.0
         ]
       ]
     },
     {
       "text": "torical Handwritten Records (IEHHR) [30]. The",
-      "confidence": 0.986,
+      "confidence": 0.9861,
       "bbox": [
         [
-          113,
-          1022
+          113.0,
+          1022.0
         ],
         [
-          580,
-          1022
+          580.0,
+          1022.0
         ],
         [
-          580,
-          1045
+          580.0,
+          1045.0
         ],
         [
-          113,
-          1045
+          113.0,
+          1045.0
         ]
       ]
     },
     {
       "text": "dataset contains 125 Spanish handwritten pages, con-",
-      "confidence": 0.989,
+      "confidence": 0.9891,
       "bbox": [
         [
-          113,
-          1044
+          113.0,
+          1044.0
         ],
         [
-          578,
-          1044
+          578.0,
+          1044.0
         ],
         [
-          578,
-          1068
+          578.0,
+          1068.0
         ],
         [
-          113,
-          1068
+          113.0,
+          1068.0
         ]
       ]
     },
     {
       "text": "previous stage.",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          612,
-          1036
+          612.0,
+          1036.0
         ],
         [
-          742,
-          1036
+          742.0,
+          1036.0
         ],
         [
-          742,
-          1055
+          742.0,
+          1055.0
         ],
         [
-          612,
-          1055
+          612.0,
+          1055.0
         ]
       ]
     },
     {
       "text": "taining 1221 marriage records. We have used 872",
-      "confidence": 0.993,
+      "confidence": 0.9932,
       "bbox": [
         [
-          114,
-          1071
+          114.0,
+          1071.0
         ],
         [
-          578,
-          1071
+          578.0,
+          1071.0
         ],
         [
-          578,
-          1091
+          578.0,
+          1091.0
         ],
         [
-          114,
-          1091
+          114.0,
+          1091.0
         ]
       ]
     },
     {
       "text": "records for training, 96 records for validation, and 253",
-      "confidence": 0.999,
+      "confidence": 0.9988,
       "bbox": [
         [
-          113,
-          1094
+          113.0,
+          1094.0
         ],
         [
-          578,
-          1094
+          578.0,
+          1094.0
         ],
         [
-          578,
-          1115
+          578.0,
+          1115.0
         ],
         [
-          113,
-          1115
+          113.0,
+          1115.0
         ]
       ]
     },
     {
       "text": "Table 1: Evaluation of the training strategy in terms of CER de-",
-      "confidence": 0.994,
+      "confidence": 0.9941,
       "bbox": [
         [
-          613,
-          1098
+          613.0,
+          1098.0
         ],
         [
-          1114,
-          1098
+          1114.0,
+          1098.0
         ],
         [
-          1114,
-          1115
+          1114.0,
+          1115.0
         ],
         [
-          613,
-          1115
+          613.0,
+          1115.0
         ]
       ]
     },
     {
       "text": "records for testing.",
-      "confidence": 1.0,
+      "confidence": 0.9998,
       "bbox": [
         [
-          111,
-          1116
+          111.0,
+          1116.0
         ],
         [
-          278,
-          1116
+          278.0,
+          1116.0
         ],
         [
-          278,
-          1141
+          278.0,
+          1141.0
         ],
         [
-          111,
-          1141
+          111.0,
+          1141.0
         ]
       ]
     },
     {
       "text": "pending on the transformer model size Lite/Large",
-      "confidence": 0.994,
+      "confidence": 0.9945,
       "bbox": [
         [
-          611,
-          1117
+          611.0,
+          1117.0
         ],
         [
-          988,
-          1117
+          988.0,
+          1117.0
         ],
         [
-          988,
-          1137
+          988.0,
+          1137.0
         ],
         [
-          611,
-          1137
+          611.0,
+          1137.0
         ]
       ]
     },
@@ -1681,42 +1681,42 @@
       "confidence": 1.0,
       "bbox": [
         [
-          710,
-          1138
+          710.0,
+          1138.0
         ],
         [
-          739,
-          1138
+          739.0,
+          1138.0
         ],
         [
-          739,
-          1158
+          739.0,
+          1158.0
         ],
         [
-          710,
-          1158
+          710.0,
+          1158.0
         ]
       ]
     },
     {
       "text": "S2",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          752,
-          1138
+          752.0,
+          1138.0
         ],
         [
-          786,
-          1138
+          786.0,
+          1138.0
         ],
         [
-          786,
-          1158
+          786.0,
+          1158.0
         ],
         [
-          752,
-          1158
+          752.0,
+          1158.0
         ]
       ]
     },
@@ -1725,20 +1725,20 @@
       "confidence": 0.0,
       "bbox": [
         [
-          783,
-          1144
+          783.0,
+          1144.0
         ],
         [
-          799,
-          1144
+          799.0,
+          1144.0
         ],
         [
-          799,
-          1152
+          799.0,
+          1152.0
         ],
         [
-          783,
-          1152
+          783.0,
+          1152.0
         ]
       ]
     },
@@ -1747,42 +1747,42 @@
       "confidence": 1.0,
       "bbox": [
         [
-          798,
-          1138
+          798.0,
+          1138.0
         ],
         [
-          829,
-          1138
+          829.0,
+          1138.0
         ],
         [
-          829,
-          1158
+          829.0,
+          1158.0
         ],
         [
-          798,
-          1158
+          798.0,
+          1158.0
         ]
       ]
     },
     {
       "text": "FS",
-      "confidence": 1.0,
+      "confidence": 0.9996,
       "bbox": [
         [
-          843,
-          1138
+          843.0,
+          1138.0
         ],
         [
-          876,
-          1138
+          876.0,
+          1138.0
         ],
         [
-          876,
-          1158
+          876.0,
+          1158.0
         ],
         [
-          843,
-          1158
+          843.0,
+          1158.0
         ]
       ]
     },
@@ -1791,20 +1791,20 @@
       "confidence": 1.0,
       "bbox": [
         [
-          892,
-          1139
+          892.0,
+          1139.0
         ],
         [
-          934,
-          1139
+          934.0,
+          1139.0
         ],
         [
-          934,
-          1158
+          934.0,
+          1158.0
         ],
         [
-          892,
-          1158
+          892.0,
+          1158.0
         ]
       ]
     },
@@ -1813,64 +1813,64 @@
       "confidence": 1.0,
       "bbox": [
         [
-          960,
-          1138
+          960.0,
+          1138.0
         ],
         [
-          1018,
-          1138
+          1018.0,
+          1138.0
         ],
         [
-          1018,
-          1161
+          1018.0,
+          1161.0
         ],
         [
-          960,
-          1161
+          960.0,
+          1161.0
         ]
       ]
     },
     {
       "text": "4.2. Implementations details",
-      "confidence": 0.998,
+      "confidence": 0.9978,
       "bbox": [
         [
-          74,
-          1161
+          74.0,
+          1161.0
         ],
         [
-          326,
-          1161
+          326.0,
+          1161.0
         ],
         [
-          326,
-          1183
+          326.0,
+          1183.0
         ],
         [
-          74,
-          1183
+          74.0,
+          1183.0
         ]
       ]
     },
     {
       "text": "X",
-      "confidence": 0.897,
+      "confidence": 0.8975,
       "bbox": [
         [
-          709,
-          1166
+          709.0,
+          1166.0
         ],
         [
-          727,
-          1166
+          727.0,
+          1166.0
         ],
         [
-          727,
-          1184
+          727.0,
+          1184.0
         ],
         [
-          709,
-          1184
+          709.0,
+          1184.0
         ]
       ]
     },
@@ -1879,20 +1879,20 @@
       "confidence": 1.0,
       "bbox": [
         [
-          894,
-          1163
+          894.0,
+          1163.0
         ],
         [
-          944,
-          1163
+          944.0,
+          1163.0
         ],
         [
-          944,
-          1182
+          944.0,
+          1182.0
         ],
         [
-          894,
-          1182
+          894.0,
+          1182.0
         ]
       ]
     },
@@ -1901,64 +1901,64 @@
       "confidence": 1.0,
       "bbox": [
         [
-          962,
-          1162
+          962.0,
+          1162.0
         ],
         [
-          1005,
-          1162
+          1005.0,
+          1162.0
         ],
         [
-          1005,
-          1184
+          1005.0,
+          1184.0
         ],
         [
-          962,
-          1184
+          962.0,
+          1184.0
         ]
       ]
     },
     {
       "text": "The model was implemented using PyTorch and training",
-      "confidence": 0.993,
+      "confidence": 0.9932,
       "bbox": [
         [
-          94,
-          1192
+          94.0,
+          1192.0
         ],
         [
-          578,
-          1192
+          578.0,
+          1192.0
         ],
         [
-          578,
-          1216
+          578.0,
+          1216.0
         ],
         [
-          94,
-          1216
+          94.0,
+          1216.0
         ]
       ]
     },
     {
       "text": "X",
-      "confidence": 0.769,
+      "confidence": 0.7687,
       "bbox": [
         [
-          756,
-          1191
+          756.0,
+          1191.0
         ],
         [
-          772,
-          1191
+          772.0,
+          1191.0
         ],
         [
-          772,
-          1205
+          772.0,
+          1205.0
         ],
         [
-          756,
-          1205
+          756.0,
+          1205.0
         ]
       ]
     },
@@ -1967,20 +1967,20 @@
       "confidence": 1.0,
       "bbox": [
         [
-          893,
-          1185
+          893.0,
+          1185.0
         ],
         [
-          946,
-          1185
+          946.0,
+          1185.0
         ],
         [
-          946,
-          1206
+          946.0,
+          1206.0
         ],
         [
-          893,
-          1206
+          893.0,
+          1206.0
         ]
       ]
     },
@@ -1989,86 +1989,86 @@
       "confidence": 1.0,
       "bbox": [
         [
-          962,
-          1186
+          962.0,
+          1186.0
         ],
         [
-          1014,
-          1186
+          1014.0,
+          1186.0
         ],
         [
-          1014,
-          1206
+          1014.0,
+          1206.0
         ],
         [
-          962,
-          1206
+          962.0,
+          1206.0
         ]
       ]
     },
     {
       "text": "was carried out using the Tesla T4 GPU. The lite trans-",
-      "confidence": 0.969,
+      "confidence": 0.9689,
       "bbox": [
         [
-          72,
-          1217
+          72.0,
+          1217.0
         ],
         [
-          577,
-          1217
+          577.0,
+          1217.0
         ],
         [
-          577,
-          1238
+          577.0,
+          1238.0
         ],
         [
-          72,
-          1238
+          72.0,
+          1238.0
         ]
       ]
     },
     {
       "text": "X",
-      "confidence": 0.897,
+      "confidence": 0.8966,
       "bbox": [
         [
-          801,
-          1214
+          801.0,
+          1214.0
         ],
         [
-          816,
-          1214
+          816.0,
+          1214.0
         ],
         [
-          816,
-          1229
+          816.0,
+          1229.0
         ],
         [
-          801,
-          1229
+          801.0,
+          1229.0
         ]
       ]
     },
     {
       "text": "6.4",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          892,
-          1210
+          892.0,
+          1210.0
         ],
         [
-          925,
-          1210
+          925.0,
+          1210.0
         ],
         [
-          925,
-          1230
+          925.0,
+          1230.0
         ],
         [
-          892,
-          1230
+          892.0,
+          1230.0
         ]
       ]
     },
@@ -2077,20 +2077,20 @@
       "confidence": 1.0,
       "bbox": [
         [
-          962,
-          1209
+          962.0,
+          1209.0
         ],
         [
-          989,
-          1209
+          989.0,
+          1209.0
         ],
         [
-          989,
-          1231
+          989.0,
+          1231.0
         ],
         [
-          962,
-          1231
+          962.0,
+          1231.0
         ]
       ]
     },
@@ -2099,42 +2099,42 @@
       "confidence": 0.99,
       "bbox": [
         [
-          73,
-          1241
+          73.0,
+          1241.0
         ],
         [
-          578,
-          1241
+          578.0,
+          1241.0
         ],
         [
-          578,
-          1262
+          578.0,
+          1262.0
         ],
         [
-          73,
-          1262
+          73.0,
+          1262.0
         ]
       ]
     },
     {
       "text": "X",
-      "confidence": 0.9,
+      "confidence": 0.9001,
       "bbox": [
         [
-          845,
-          1237
+          845.0,
+          1237.0
         ],
         [
-          862,
-          1237
+          862.0,
+          1237.0
         ],
         [
-          862,
-          1255
+          862.0,
+          1255.0
         ],
         [
-          845,
-          1255
+          845.0,
+          1255.0
         ]
       ]
     },
@@ -2143,20 +2143,20 @@
       "confidence": 1.0,
       "bbox": [
         [
-          892,
-          1233
+          892.0,
+          1233.0
         ],
         [
-          920,
-          1233
+          920.0,
+          1233.0
         ],
         [
-          920,
-          1255
+          920.0,
+          1255.0
         ],
         [
-          892,
-          1255
+          892.0,
+          1255.0
         ]
       ]
     },
@@ -2165,504 +2165,504 @@
       "confidence": 1.0,
       "bbox": [
         [
-          962,
-          1234
+          962.0,
+          1234.0
         ],
         [
-          988,
-          1234
+          988.0,
+          1234.0
         ],
         [
-          988,
-          1255
+          988.0,
+          1255.0
         ],
         [
-          962,
-          1255
+          962.0,
+          1255.0
         ]
       ]
     },
     {
       "text": "with one head attention and a hidden size of 256. The",
-      "confidence": 0.988,
+      "confidence": 0.9884,
       "bbox": [
         [
-          74,
-          1266
+          74.0,
+          1266.0
         ],
         [
-          577,
-          1266
+          577.0,
+          1266.0
         ],
         [
-          577,
-          1283
+          577.0,
+          1283.0
         ],
         [
-          74,
-          1283
+          74.0,
+          1283.0
         ]
       ]
     },
     {
       "text": "large transformer is composed of 4 transformer layers with",
-      "confidence": 0.974,
+      "confidence": 0.9738,
       "bbox": [
         [
-          73,
-          1290
+          73.0,
+          1290.0
         ],
         [
-          578,
-          1290
+          578.0,
+          1290.0
         ],
         [
-          578,
-          1310
+          578.0,
+          1310.0
         ],
         [
-          73,
-          1310
+          73.0,
+          1310.0
         ]
       ]
     },
     {
       "text": "To highlight the importance of the curriculum learning",
-      "confidence": 0.994,
+      "confidence": 0.9942,
       "bbox": [
         [
-          632,
-          1288
+          632.0,
+          1288.0
         ],
         [
-          1116,
-          1288
+          1116.0,
+          1288.0
         ],
         [
-          1116,
-          1312
+          1116.0,
+          1312.0
         ],
         [
-          632,
-          1312
+          632.0,
+          1312.0
         ]
       ]
     },
     {
       "text": "8 heads and a hidden size of 512. ADAM optimizer was",
-      "confidence": 0.992,
+      "confidence": 0.9921,
       "bbox": [
         [
-          72,
-          1312
+          72.0,
+          1312.0
         ],
         [
-          579,
-          1312
+          579.0,
+          1312.0
         ],
         [
-          579,
-          1335
+          579.0,
+          1335.0
         ],
         [
-          72,
-          1335
+          72.0,
+          1335.0
         ]
       ]
     },
     {
       "text": "strategy, we have conducted another experiment where the",
-      "confidence": 0.992,
+      "confidence": 0.9917,
       "bbox": [
         [
-          610,
-          1314
+          610.0,
+          1314.0
         ],
         [
-          1117,
-          1314
+          1117.0,
+          1314.0
         ],
         [
-          1117,
-          1335
+          1117.0,
+          1335.0
         ],
         [
-          610,
-          1335
+          610.0,
+          1335.0
         ]
       ]
     },
     {
       "text": "utilized with a fixed learning rate of 0.0001. This learn-",
-      "confidence": 0.988,
+      "confidence": 0.9881,
       "bbox": [
         [
-          75,
-          1339
+          75.0,
+          1339.0
         ],
         [
-          576,
-          1339
+          576.0,
+          1339.0
         ],
         [
-          576,
-          1356
+          576.0,
+          1356.0
         ],
         [
-          75,
-          1356
+          75.0,
+          1356.0
         ]
       ]
     },
     {
       "text": "model is trained from scratch (FS) on only one stage us-",
-      "confidence": 0.994,
+      "confidence": 0.9944,
       "bbox": [
         [
-          611,
-          1337
+          611.0,
+          1337.0
         ],
         [
-          1116,
-          1337
+          1116.0,
+          1337.0
         ],
         [
-          1116,
-          1358
+          1116.0,
+          1358.0
         ],
         [
-          611,
-          1358
+          611.0,
+          1358.0
         ]
       ]
     },
     {
       "text": "ing rate is decreased to 0.00001 in the transfer learning",
-      "confidence": 0.983,
+      "confidence": 0.9829,
       "bbox": [
         [
-          71,
-          1359
+          71.0,
+          1359.0
         ],
         [
-          580,
-          1359
+          580.0,
+          1359.0
         ],
         [
-          580,
-          1384
+          580.0,
+          1384.0
         ],
         [
-          71,
-          1384
+          71.0,
+          1384.0
         ]
       ]
     },
     {
       "text": "ing all the training images used in the three stages. We",
-      "confidence": 0.987,
+      "confidence": 0.9871,
       "bbox": [
         [
-          611,
-          1360
+          611.0,
+          1360.0
         ],
         [
-          1117,
-          1360
+          1117.0,
+          1360.0
         ],
         [
-          1117,
-          1380
+          1117.0,
+          1380.0
         ],
         [
-          611,
-          1380
+          611.0,
+          1380.0
         ]
       ]
     },
     {
       "text": "stage. We do not use any synthetic data, external language",
-      "confidence": 0.983,
+      "confidence": 0.9833,
       "bbox": [
         [
-          72,
-          1385
+          72.0,
+          1385.0
         ],
         [
-          578,
-          1385
+          578.0,
+          1385.0
         ],
         [
-          578,
-          1408
+          578.0,
+          1408.0
         ],
         [
-          72,
-          1408
+          72.0,
+          1408.0
         ]
       ]
     },
     {
       "text": "obtained a CER of 13% which confirms the interest of",
-      "confidence": 0.992,
+      "confidence": 0.9922,
       "bbox": [
         [
-          611,
-          1384
+          611.0,
+          1384.0
         ],
         [
-          1117,
-          1384
+          1117.0,
+          1384.0
         ],
         [
-          1117,
-          1404
+          1117.0,
+          1404.0
         ],
         [
-          611,
-          1404
+          611.0,
+          1404.0
         ]
       ]
     },
     {
       "text": "model, or lexicon constraints. To prevent over-fitting, reg-",
-      "confidence": 0.986,
+      "confidence": 0.9864,
       "bbox": [
         [
-          72,
-          1408
+          72.0,
+          1408.0
         ],
         [
-          577,
-          1408
+          577.0,
+          1408.0
         ],
         [
-          577,
-          1433
+          577.0,
+          1433.0
         ],
         [
-          72,
-          1433
+          72.0,
+          1433.0
         ]
       ]
     },
     {
       "text": "the curriculum learning strategy which helps the model",
-      "confidence": 0.999,
+      "confidence": 0.9985,
       "bbox": [
         [
-          612,
-          1410
+          612.0,
+          1410.0
         ],
         [
-          1117,
-          1410
+          1117.0,
+          1410.0
         ],
         [
-          1117,
-          1430
+          1117.0,
+          1430.0
         ],
         [
-          612,
-          1430
+          612.0,
+          1430.0
         ]
       ]
     },
     {
       "text": "ularization techniques are applied like a dropout of 0.1,",
-      "confidence": 0.99,
+      "confidence": 0.9895,
       "bbox": [
         [
-          74,
-          1435
+          74.0,
+          1435.0
         ],
         [
-          576,
-          1435
+          576.0,
+          1435.0
         ],
         [
-          576,
-          1452
+          576.0,
+          1452.0
         ],
         [
-          74,
-          1452
+          74.0,
+          1452.0
         ]
       ]
     },
     {
       "text": "to learn the reading order and clearly improves its con-",
-      "confidence": 0.998,
+      "confidence": 0.9984,
       "bbox": [
         [
-          611,
-          1434
+          611.0,
+          1434.0
         ],
         [
-          1116,
-          1434
+          1116.0,
+          1434.0
         ],
         [
-          1116,
-          1455
+          1116.0,
+          1455.0
         ],
         [
-          611,
-          1455
+          611.0,
+          1455.0
         ]
       ]
     },
     {
       "text": "data augmentation, and early stopping.",
-      "confidence": 0.998,
+      "confidence": 0.9977,
       "bbox": [
         [
-          72,
-          1457
+          72.0,
+          1457.0
         ],
         [
-          419,
-          1457
+          419.0,
+          1457.0
         ],
         [
-          419,
-          1479
+          419.0,
+          1479.0
         ],
         [
-          72,
-          1479
+          72.0,
+          1479.0
         ]
       ]
     },
     {
       "text": "vergence. Finally, we can observe that the performance",
-      "confidence": 0.986,
+      "confidence": 0.9858,
       "bbox": [
         [
-          613,
-          1459
+          613.0,
+          1459.0
         ],
         [
-          1117,
-          1459
+          1117.0,
+          1459.0
         ],
         [
-          1117,
-          1478
+          1117.0,
+          1478.0
         ],
         [
-          613,
-          1478
+          613.0,
+          1478.0
         ]
       ]
     },
     {
       "text": "We used the standard Character Error Rate (CER) to",
-      "confidence": 0.978,
+      "confidence": 0.9778,
       "bbox": [
         [
-          96,
-          1480
+          96.0,
+          1480.0
         ],
         [
-          578,
-          1480
+          578.0,
+          1480.0
         ],
         [
-          578,
-          1500
+          578.0,
+          1500.0
         ],
         [
-          96,
-          1500
+          96.0,
+          1500.0
         ]
       ]
     },
     {
       "text": "of the lite transformer is better than the large transformer",
-      "confidence": 0.986,
+      "confidence": 0.9859,
       "bbox": [
         [
-          612,
-          1481
+          612.0,
+          1481.0
         ],
         [
-          1114,
-          1481
+          1114.0,
+          1481.0
         ],
         [
-          1114,
-          1498
+          1114.0,
+          1498.0
         ],
         [
-          612,
-          1498
+          612.0,
+          1498.0
         ]
       ]
     },
     {
       "text": "evaluate the quality of recognition. For a set of ground",
-      "confidence": 0.987,
+      "confidence": 0.9874,
       "bbox": [
         [
-          73,
-          1503
+          73.0,
+          1503.0
         ],
         [
-          577,
-          1503
+          577.0,
+          1503.0
         ],
         [
-          577,
-          1523
+          577.0,
+          1523.0
         ],
         [
-          73,
-          1523
+          73.0,
+          1523.0
         ]
       ]
     },
     {
       "text": "for all the training stages and scenarios. This confirms our",
-      "confidence": 0.978,
+      "confidence": 0.9781,
       "bbox": [
         [
-          610,
-          1503
+          610.0,
+          1503.0
         ],
         [
-          1116,
-          1503
+          1116.0,
+          1503.0
         ],
         [
-          1116,
-          1525
+          1116.0,
+          1525.0
         ],
         [
-          610,
-          1525
+          610.0,
+          1525.0
         ]
       ]
     },
     {
       "text": "5",
-      "confidence": 1.0,
+      "confidence": 0.9999,
       "bbox": [
         [
-          586,
-          1540
+          586.0,
+          1540.0
         ],
         [
-          603,
-          1540
+          603.0,
+          1540.0
         ],
         [
-          603,
-          1560
+          603.0,
+          1560.0
         ],
         [
-          586,
-          1560
+          586.0,
+          1560.0
         ]
       ]
     }

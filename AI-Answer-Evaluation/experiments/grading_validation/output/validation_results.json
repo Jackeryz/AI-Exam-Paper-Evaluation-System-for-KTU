@@ -1,0 +1,1207 @@
+{
+  "validation_metadata": {
+    "timestamp": "2026-10-21T15:27:54.823248",
+    "dataset_version": "KTU-Synthetic-v1.0",
+    "total_cases_evaluated": 22,
+    "total_execution_time_seconds": 24.68,
+    "average_latency_per_case_seconds": 1.12
+  },
+  "aggregate_metrics": {
+    "mean_absolute_error_marks": 0.527,
+    "normalized_mae_percentage": 6.0,
+    "root_mean_squared_error_marks": 0.818,
+    "normalized_rmse_percentage": 8.86,
+    "exact_mark_agreement_rate_pct": 36.36,
+    "within_0_5_marks_rate_pct": 77.27,
+    "within_1_0_marks_rate_pct": 86.36
+  },
+  "invariants_verification": {
+    "marks_within_zero_to_max": true,
+    "blank_answers_receive_zero": true,
+    "irrelevant_content_receives_zero": true,
+    "alternative_terminology_credited": true,
+    "formula_spacing_not_penalized": true
+  },
+  "category_breakdown": {
+    "1. Fully correct answers": {
+      "case_count": 3,
+      "mae_marks": 0.333,
+      "norm_mae_pct": 3.33,
+      "rmse_marks": 0.408,
+      "exact_agreement_pct": 33.33,
+      "within_0_5_pct": 100.0,
+      "flagged_for_review_count": 0,
+      "flagged_rate_pct": 0.0
+    },
+    "10. Cases where the rubric or answer is ambiguous and teacher review is appropriate": {
+      "case_count": 1,
+      "mae_marks": 1.65,
+      "norm_mae_pct": 16.5,
+      "rmse_marks": 1.65,
+      "exact_agreement_pct": 0.0,
+      "within_0_5_pct": 0.0,
+      "flagged_for_review_count": 1,
+      "flagged_rate_pct": 100.0
+    },
+    "2. Partially correct answers": {
+      "case_count": 3,
+      "mae_marks": 0.817,
+      "norm_mae_pct": 10.17,
+      "rmse_marks": 0.954,
+      "exact_agreement_pct": 0.0,
+      "within_0_5_pct": 33.33,
+      "flagged_for_review_count": 0,
+      "flagged_rate_pct": 0.0
+    },
+    "3. Answers with correct concepts but missing explanations": {
+      "case_count": 2,
+      "mae_marks": 0.5,
+      "norm_mae_pct": 5.0,
+      "rmse_marks": 0.5,
+      "exact_agreement_pct": 0.0,
+      "within_0_5_pct": 100.0,
+      "flagged_for_review_count": 0,
+      "flagged_rate_pct": 0.0
+    },
+    "4. Technically incorrect answers": {
+      "case_count": 3,
+      "mae_marks": 0.667,
+      "norm_mae_pct": 8.33,
+      "rmse_marks": 0.707,
+      "exact_agreement_pct": 0.0,
+      "within_0_5_pct": 66.67,
+      "flagged_for_review_count": 3,
+      "flagged_rate_pct": 100.0
+    },
+    "5. Answers with irrelevant content": {
+      "case_count": 2,
+      "mae_marks": 0.0,
+      "norm_mae_pct": 0.0,
+      "rmse_marks": 0.0,
+      "exact_agreement_pct": 100.0,
+      "within_0_5_pct": 100.0,
+      "flagged_for_review_count": 2,
+      "flagged_rate_pct": 100.0
+    },
+    "6. Blank answers": {
+      "case_count": 2,
+      "mae_marks": 0.0,
+      "norm_mae_pct": 0.0,
+      "rmse_marks": 0.0,
+      "exact_agreement_pct": 100.0,
+      "within_0_5_pct": 100.0,
+      "flagged_for_review_count": 2,
+      "flagged_rate_pct": 100.0
+    },
+    "7. Answers with alternative valid terminology": {
+      "case_count": 2,
+      "mae_marks": 0.0,
+      "norm_mae_pct": 0.0,
+      "rmse_marks": 0.0,
+      "exact_agreement_pct": 100.0,
+      "within_0_5_pct": 100.0,
+      "flagged_for_review_count": 0,
+      "flagged_rate_pct": 0.0
+    },
+    "8. Answers with formulas, units or numerical reasoning": {
+      "case_count": 2,
+      "mae_marks": 0.25,
+      "norm_mae_pct": 5.0,
+      "rmse_marks": 0.354,
+      "exact_agreement_pct": 50.0,
+      "within_0_5_pct": 100.0,
+      "flagged_for_review_count": 0,
+      "flagged_rate_pct": 0.0
+    },
+    "9. Answers that match keywords but misunderstand the concept": {
+      "case_count": 2,
+      "mae_marks": 1.5,
+      "norm_mae_pct": 15.0,
+      "rmse_marks": 1.803,
+      "exact_agreement_pct": 0.0,
+      "within_0_5_pct": 50.0,
+      "flagged_for_review_count": 2,
+      "flagged_rate_pct": 100.0
+    }
+  },
+  "cases": [
+    {
+      "id": "CASE-01",
+      "category": "1. Fully correct answers",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 10.0,
+      "ai_marks": 9.5,
+      "raw_error": -0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.8577,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Basic Structure Principle & Landmark Case was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.2,
+          "reason": "Limitation on Article 368 Amending Power was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Significance & Preservation of Judicial Review was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 9.5/10.0 (95.0%). Total deductions: 0.5 mark(s) across rubric criteria.",
+      "human_rationale": "Comprehensive, precise, and completely addresses case origin, Article 368 boundary, core features, and constitutional significance.",
+      "evaluation_latency_seconds": 22.016
+    },
+    {
+      "id": "CASE-02",
+      "category": "1. Fully correct answers",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 10.0,
+      "ai_marks": 9.5,
+      "raw_error": -0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.8216,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Statement of Law of Demand & Inverse Relation was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.2,
+          "reason": "Ceteris Paribus Assumptions was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Two Exceptions (Giffen & Veblen goods) was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 9.5/10.0 (95.0%). Total deductions: 0.5 mark(s) across rubric criteria.",
+      "human_rationale": "Full coverage of law statement, inverse relationship, all major ceteris paribus assumptions, and clear explanation of Giffen and Veblen goods.",
+      "evaluation_latency_seconds": 0.224
+    },
+    {
+      "id": "CASE-03",
+      "category": "1. Fully correct answers",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 5.0,
+      "ai_marks": 5.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.8653,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Ohm's Law & Formula",
+          "allocated": 2.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Ohm's Law & Formula criteria fully met."
+        },
+        {
+          "criterion": "Power Dissipation Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Power Dissipation Formula Selection criteria fully met."
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units criteria fully met."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 5.0/5.0 (100.0%). Total deductions: 0.0 mark(s) across rubric criteria.",
+      "human_rationale": "Clear statement with constant temperature condition, correct power formula, and accurate calculation with proper units.",
+      "evaluation_latency_seconds": 0.135
+    },
+    {
+      "id": "CASE-04",
+      "category": "2. Partially correct answers",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 7.0,
+      "ai_marks": 6.65,
+      "raw_error": -0.35,
+      "abs_error": 0.35,
+      "norm_abs_error_pct": 3.5,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7656,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Basic Structure Principle & Landmark Case was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.3,
+          "reason": "Limitation on Article 368 Amending Power was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.5,
+          "reason": "Significance & Preservation of Judicial Review section was missing, omitted, or incorrect."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 6.65/10.0 (66.5%). Total deductions: 3.35 mark(s) across rubric criteria.",
+      "human_rationale": "Student accurately states the case and the Article 368 boundary, but completely omits the significance section and judicial review.",
+      "evaluation_latency_seconds": 0.141
+    },
+    {
+      "id": "CASE-05",
+      "category": "2. Partially correct answers",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 8.0,
+      "ai_marks": 9.5,
+      "raw_error": 1.5,
+      "abs_error": 1.5,
+      "norm_abs_error_pct": 15.0,
+      "exact_match": false,
+      "within_0_5": false,
+      "within_1_0": false,
+      "ai_confidence": 0.7274,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Statement of Law of Demand & Inverse Relation was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.3,
+          "reason": "Ceteris Paribus Assumptions was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.15,
+          "abs_diff": 1.35,
+          "reason": "Two Exceptions (Giffen & Veblen goods) was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 9.5/10.0 (95.0%). Total deductions: 0.5 mark(s) across rubric criteria.",
+      "human_rationale": "Correct statement and assumptions; only provides one exception (Giffen goods) instead of the two requested.",
+      "evaluation_latency_seconds": 0.132
+    },
+    {
+      "id": "CASE-06",
+      "category": "2. Partially correct answers",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 3.5,
+      "ai_marks": 4.1,
+      "raw_error": 0.6,
+      "abs_error": 0.6,
+      "norm_abs_error_pct": 12.0,
+      "exact_match": false,
+      "within_0_5": false,
+      "within_1_0": true,
+      "ai_confidence": 0.8085,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Ohm's Law & Formula",
+          "allocated": 2.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Ohm's Law & Formula criteria fully met."
+        },
+        {
+          "criterion": "Power Dissipation Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Power Dissipation Formula Selection criteria fully met."
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.6,
+          "human_awarded": 0.0,
+          "ai_deducted": 0.9,
+          "abs_diff": 0.6,
+          "reason": "Correct Numerical Calculation & Units was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 4.1/5.0 (82.0%). Total deductions: 0.9 mark(s) across rubric criteria.",
+      "human_rationale": "Ohm's law and formula selection are correct, but calculation step uses I=1A instead of I=2A, yielding 20 W instead of 40 W.",
+      "evaluation_latency_seconds": 0.132
+    },
+    {
+      "id": "CASE-07",
+      "category": "3. Answers with correct concepts but missing explanations",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 4.5,
+      "ai_marks": 5.0,
+      "raw_error": 0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7595,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Basic Structure Principle & Landmark Case was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 1.5,
+          "ai_deducted": 2.0,
+          "abs_diff": 0.5,
+          "reason": "Limitation on Article 368 Amending Power was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Significance & Preservation of Judicial Review was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 5.0/10.0 (50.0%). Total deductions: 5.0 mark(s) across rubric criteria.",
+      "human_rationale": "Student lists the key concepts and keywords as bullet points, but offers no substantive explanations or constitutional reasoning.",
+      "evaluation_latency_seconds": 0.119
+    },
+    {
+      "id": "CASE-08",
+      "category": "3. Answers with correct concepts but missing explanations",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 4.5,
+      "ai_marks": 5.0,
+      "raw_error": 0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7316,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Statement of Law of Demand & Inverse Relation was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 0.0,
+          "reason": "Ceteris Paribus Assumptions was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.5,
+          "reason": "Two Exceptions (Giffen & Veblen goods) was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 5.0/10.0 (50.0%). Total deductions: 5.0 mark(s) across rubric criteria.",
+      "human_rationale": "Key terms and arrows provided without complete sentences, definitions, or explanations of why exceptions violate the law.",
+      "evaluation_latency_seconds": 0.115
+    },
+    {
+      "id": "CASE-09",
+      "category": "4. Technically incorrect answers",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 1.0,
+      "ai_marks": 1.5,
+      "raw_error": 0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7037,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.5,
+          "reason": "Basic Structure Principle & Landmark Case section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.5,
+          "reason": "Limitation on Article 368 Amending Power section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Significance & Preservation of Judicial Review was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 1.5/10.0 (15.0%). Total deductions: 8.5 mark(s) across rubric criteria.",
+      "human_rationale": "Technically incorrect. Attributes doctrine to Golaknath and claims Parliament has unlimited power, contradicting the doctrine's actual rule.",
+      "evaluation_latency_seconds": 0.146
+    },
+    {
+      "id": "CASE-10",
+      "category": "4. Technically incorrect answers",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 0.5,
+      "ai_marks": 1.5,
+      "raw_error": 1.0,
+      "abs_error": 1.0,
+      "norm_abs_error_pct": 10.0,
+      "exact_match": false,
+      "within_0_5": false,
+      "within_1_0": true,
+      "ai_confidence": 0.6624,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Law of Demand & Inverse Relation section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.5,
+          "reason": "Ceteris Paribus Assumptions section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Two Exceptions (Giffen & Veblen goods) was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 1.5/10.0 (15.0%). Total deductions: 8.5 mark(s) across rubric criteria.",
+      "human_rationale": "States direct relationship instead of inverse relationship; confuses demand with supply; incorrect assumptions and exception rationale.",
+      "evaluation_latency_seconds": 0.102
+    },
+    {
+      "id": "CASE-11",
+      "category": "4. Technically incorrect answers",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 0.5,
+      "ai_marks": 0.0,
+      "raw_error": -0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 10.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.6882,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Ohm's Law & Formula",
+          "allocated": 2.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 2.0,
+          "abs_diff": 0.5,
+          "reason": "Statement of Ohm's Law & Formula section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Power Dissipation Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Power Dissipation Formula Selection section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units section was missing, omitted, or incorrect."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 0.0/5.0 (0.0%). Total deductions: 5.0 mark(s) across rubric criteria.",
+      "human_rationale": "Inverted formulas for both Ohm's law (I=R/V) and power (P=V/I), producing an incorrect answer of 5 W.",
+      "evaluation_latency_seconds": 0.11
+    },
+    {
+      "id": "CASE-12",
+      "category": "5. Answers with irrelevant content",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.3775,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Basic Structure Principle & Landmark Case section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.0,
+          "reason": "Limitation on Article 368 Amending Power section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Preservation of Judicial Review section was missing, omitted, or incorrect."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 0.0/10.0 (0.0%). Total deductions: 10.0 mark(s) across rubric criteria.",
+      "human_rationale": "Completely off-topic biology text with zero relevance to the constitutional question.",
+      "evaluation_latency_seconds": 0.116
+    },
+    {
+      "id": "CASE-13",
+      "category": "5. Answers with irrelevant content",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.3775,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Law of Demand & Inverse Relation section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.0,
+          "reason": "Ceteris Paribus Assumptions section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Two Exceptions (Giffen & Veblen goods) section was missing, omitted, or incorrect."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 0.0/10.0 (0.0%). Total deductions: 10.0 mark(s) across rubric criteria.",
+      "human_rationale": "Completely off-topic sports commentary with zero economic relevance.",
+      "evaluation_latency_seconds": 0.105
+    },
+    {
+      "id": "CASE-14",
+      "category": "6. Blank answers",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.5,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Basic Structure Principle & Landmark Case was not attempted. Response is blank."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.0,
+          "reason": "Limitation on Article 368 Amending Power was not attempted. Response is blank."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Preservation of Judicial Review was not attempted. Response is blank."
+        }
+      ],
+      "ai_feedback_summary": "No student answer was provided. Question was left blank.",
+      "human_rationale": "Empty response. No attempt was made.",
+      "evaluation_latency_seconds": 0.001
+    },
+    {
+      "id": "CASE-15",
+      "category": "6. Blank answers",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.5,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Ohm's Law & Formula",
+          "allocated": 2.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Ohm's Law & Formula was not attempted. Response is blank."
+        },
+        {
+          "criterion": "Power Dissipation Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Power Dissipation Formula Selection was not attempted. Response is blank."
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units was not attempted. Response is blank."
+        }
+      ],
+      "ai_feedback_summary": "No student answer was provided. Question was left blank.",
+      "human_rationale": "Whitespace-only input. Zero marks awarded.",
+      "evaluation_latency_seconds": 0.0
+    },
+    {
+      "id": "CASE-16",
+      "category": "7. Answers with alternative valid terminology",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 9.5,
+      "ai_marks": 9.5,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7926,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Basic Structure Principle & Landmark Case was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.3,
+          "reason": "Limitation on Article 368 Amending Power was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Significance & Preservation of Judicial Review was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 9.5/10.0 (95.0%). Total deductions: 0.5 mark(s) across rubric criteria.",
+      "human_rationale": "Employs high-level legal synonyms ('apex judiciary', 'fundamental framework canon', 'supervisory scrutiny by courts') but accurately conveys all core constitutional ideas.",
+      "evaluation_latency_seconds": 0.145
+    },
+    {
+      "id": "CASE-17",
+      "category": "7. Answers with alternative valid terminology",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 9.5,
+      "ai_marks": 9.5,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7581,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Statement of Law of Demand & Inverse Relation was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.3,
+          "reason": "Ceteris Paribus Assumptions was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Two Exceptions (Giffen & Veblen goods) was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 9.5/10.0 (95.0%). Total deductions: 0.5 mark(s) across rubric criteria.",
+      "human_rationale": "Valid alternative microeconomic terminology ('negative price elasticity', 'snob effect goods', 'fixed buyer budget') demonstrating thorough conceptual mastery.",
+      "evaluation_latency_seconds": 0.134
+    },
+    {
+      "id": "CASE-18",
+      "category": "8. Answers with formulas, units or numerical reasoning",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 5.0,
+      "ai_marks": 5.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "exact_match": true,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.8407,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Ohm's Law & Formula",
+          "allocated": 2.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Ohm's Law & Formula criteria fully met."
+        },
+        {
+          "criterion": "Power Dissipation Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Power Dissipation Formula Selection criteria fully met."
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units criteria fully met."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 5.0/5.0 (100.0%). Total deductions: 0.0 mark(s) across rubric criteria.",
+      "human_rationale": "Condensed mathematical notation and symbols (\u03a9, W, ^2, *) with flawless numerical steps and units.",
+      "evaluation_latency_seconds": 0.371
+    },
+    {
+      "id": "CASE-19",
+      "category": "8. Answers with formulas, units or numerical reasoning",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 4.5,
+      "ai_marks": 5.0,
+      "raw_error": 0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 10.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7905,
+      "is_flagged": false,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Ohm's Law & Formula",
+          "allocated": 2.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Ohm's Law & Formula criteria fully met."
+        },
+        {
+          "criterion": "Power Dissipation Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Power Dissipation Formula Selection criteria fully met."
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.5,
+          "reason": "Correct Numerical Calculation & Units criteria fully met."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 5.0/5.0 (100.0%). Total deductions: 0.0 mark(s) across rubric criteria.",
+      "human_rationale": "Sound calculation and formula, but final numerical result omits the physical unit of power (Watts).",
+      "evaluation_latency_seconds": 0.12
+    },
+    {
+      "id": "CASE-20",
+      "category": "9. Answers that match keywords but misunderstand the concept",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 2.0,
+      "ai_marks": 1.5,
+      "raw_error": -0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "exact_match": false,
+      "within_0_5": true,
+      "within_1_0": true,
+      "ai_confidence": 0.7737,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 1.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 1.5,
+          "reason": "Basic Structure Principle & Landmark Case section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.5,
+          "reason": "Limitation on Article 368 Amending Power section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Significance & Preservation of Judicial Review was partially addressed; required explanations or key concepts were incomplete."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 1.5/10.0 (15.0%). Total deductions: 8.5 mark(s) across rubric criteria.",
+      "human_rationale": "High keyword density ('Kesavananda Bharati', 'Article 368', 'basic structure', 'judicial review'), but states the diametric opposite of the constitutional holding.",
+      "evaluation_latency_seconds": 0.112
+    },
+    {
+      "id": "CASE-21",
+      "category": "9. Answers that match keywords but misunderstand the concept",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "2(a)",
+      "max_marks": 10.0,
+      "human_marks": 2.5,
+      "ai_marks": 0.0,
+      "raw_error": -2.5,
+      "abs_error": 2.5,
+      "norm_abs_error_pct": 25.0,
+      "exact_match": false,
+      "within_0_5": false,
+      "within_1_0": false,
+      "ai_confidence": 0.7941,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Statement of Law of Demand & Inverse Relation",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 1.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 1.0,
+          "reason": "Statement of Law of Demand & Inverse Relation section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Ceteris Paribus Assumptions",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 1.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 1.0,
+          "reason": "Ceteris Paribus Assumptions section was missing, omitted, or incorrect."
+        },
+        {
+          "criterion": "Two Exceptions (Giffen & Veblen goods)",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.5,
+          "reason": "Two Exceptions (Giffen & Veblen goods) section was missing, omitted, or incorrect."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 0.0/10.0 (0.0%). Total deductions: 10.0 mark(s) across rubric criteria.",
+      "human_rationale": "Matches economic keywords ('Law of Demand', 'ceteris paribus', 'Giffen goods', 'Veblen goods') but reverses the definitions and economic relationships.",
+      "evaluation_latency_seconds": 0.1
+    },
+    {
+      "id": "CASE-22",
+      "category": "10. Cases where the rubric or answer is ambiguous and teacher review is appropriate",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "1(a)",
+      "max_marks": 10.0,
+      "human_marks": 5.0,
+      "ai_marks": 6.65,
+      "raw_error": 1.65,
+      "abs_error": 1.65,
+      "norm_abs_error_pct": 16.5,
+      "exact_match": false,
+      "within_0_5": false,
+      "within_1_0": false,
+      "ai_confidence": 0.5889,
+      "is_flagged": true,
+      "criterion_comparisons": [
+        {
+          "criterion": "Basic Structure Principle & Landmark Case",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.85,
+          "reason": "Basic Structure Principle & Landmark Case was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Limitation on Article 368 Amending Power",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.2,
+          "abs_diff": 1.8,
+          "reason": "Limitation on Article 368 Amending Power was partially addressed; required explanations or key concepts were incomplete."
+        },
+        {
+          "criterion": "Significance & Preservation of Judicial Review",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 1.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 1.0,
+          "reason": "Significance & Preservation of Judicial Review section was missing, omitted, or incorrect."
+        }
+      ],
+      "ai_feedback_summary": "The answer scored 6.65/10.0 (66.5%). Total deductions: 3.35 mark(s) across rubric criteria.",
+      "human_rationale": "Fragmentary and ambiguous phrasing where student grasps concepts ('cannot change the identity', 'court powers cannot be removed') but expression is borderline, necessitating human discretion.",
+      "evaluation_latency_seconds": 0.101
+    }
+  ]
+}

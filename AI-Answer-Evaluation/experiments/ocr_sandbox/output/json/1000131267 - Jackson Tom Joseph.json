@@ -1,0 +1,1372 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\1000131267 - Jackson Tom Joseph.jpg",
+  "page_number": 1,
+  "text": "amount of 02.\nam area of about o  which is\n1. How is eygem and carbon diecide\nmearly the sine of a ternnis court.\ntranported in human beings?\n15. what are the components of the\n01s mun\ntamport system in plants  what\nSo human beings, oxygem is carried.\nns.\nare the fundtions of theser componen?\nfrom the lungs ly the respiratory\naui\nAn The tio components are aylem and\na0s\nllood corpusctes. taimoglobin has a\nwery high ffinity for  eardon\n le an s i eto\ndioxide is imore soluble in water\n Xylem tissues which are made of\ntham oxygin. do, it is tranported in\ndead cells in the forum of syem\nthe dissoled foum in our body\nlessels and tracheids. It transpots\n\\\nwater and dissdved minerals from root\n.te are the lungs designed in hurmom\nto all the parts of the plant\nnow\nbeings to marimise the area o\nde\nam\nexchange of\nlom tussue i made up of ive tube\n\n9\nand compamion cells.  tranports\nP\nPraittinsoe rok\nfood mode in leaf to all the parts of\nS\nAns\nThere ore millions of avedli in the\n.\nP\n\nlung, it povides a large area fo\na plant.\nalg cedat besh n tua a\nthe exchange of\ngases. Far esample,\n pow are ater and minerals tramported\n\nRO\nL\nif all aliveali\n\nThe tioo humam\nfrom\nhung ere unjolded, the would \ngive\n ati ad an ta",
+  "confidence": 0.5958,
+  "bounding_boxes": [
+    {
+      "text": "amount of 02.",
+      "confidence": 0.8495,
+      "bbox": [
+        [
+          685.0,
+          513.0
+        ],
+        [
+          1356.0,
+          513.0
+        ],
+        [
+          1356.0,
+          662.0
+        ],
+        [
+          685.0,
+          662.0
+        ]
+      ]
+    },
+    {
+      "text": "am area of about o  which is",
+      "confidence": 0.6563,
+      "bbox": [
+        [
+          2500.0,
+          602.0
+        ],
+        [
+          3681.0,
+          602.0
+        ],
+        [
+          3681.0,
+          818.0
+        ],
+        [
+          2500.0,
+          818.0
+        ]
+      ]
+    },
+    {
+      "text": "1. How is eygem and carbon diecide",
+      "confidence": 0.6286,
+      "bbox": [
+        [
+          504.0,
+          651.0
+        ],
+        [
+          2099.0,
+          651.0
+        ],
+        [
+          2099.0,
+          878.0
+        ],
+        [
+          504.0,
+          878.0
+        ]
+      ]
+    },
+    {
+      "text": "mearly the sine of a ternnis court.",
+      "confidence": 0.6542,
+      "bbox": [
+        [
+          2478.0,
+          674.0
+        ],
+        [
+          3738.0,
+          674.0
+        ],
+        [
+          3738.0,
+          923.0
+        ],
+        [
+          2478.0,
+          923.0
+        ]
+      ]
+    },
+    {
+      "text": "tranported in human beings?",
+      "confidence": 0.7813,
+      "bbox": [
+        [
+          650.0,
+          753.0
+        ],
+        [
+          1907.0,
+          753.0
+        ],
+        [
+          1907.0,
+          955.0
+        ],
+        [
+          650.0,
+          955.0
+        ]
+      ]
+    },
+    {
+      "text": "15. what are the components of the",
+      "confidence": 0.7823,
+      "bbox": [
+        [
+          2335.0,
+          815.0
+        ],
+        [
+          3726.0,
+          815.0
+        ],
+        [
+          3726.0,
+          1064.0
+        ],
+        [
+          2335.0,
+          1064.0
+        ]
+      ]
+    },
+    {
+      "text": "01s mun",
+      "confidence": 0.4151,
+      "bbox": [
+        [
+          1460.0,
+          896.0
+        ],
+        [
+          2042.0,
+          896.0
+        ],
+        [
+          2042.0,
+          1036.0
+        ],
+        [
+          1460.0,
+          1036.0
+        ]
+      ]
+    },
+    {
+      "text": "tamport system in plants  what",
+      "confidence": 0.7135,
+      "bbox": [
+        [
+          2485.0,
+          921.0
+        ],
+        [
+          3728.0,
+          921.0
+        ],
+        [
+          3728.0,
+          1135.0
+        ],
+        [
+          2485.0,
+          1135.0
+        ]
+      ]
+    },
+    {
+      "text": "So human beings, oxygem is carried.",
+      "confidence": 0.7954,
+      "bbox": [
+        [
+          629.0,
+          936.0
+        ],
+        [
+          2125.0,
+          936.0
+        ],
+        [
+          2125.0,
+          1138.0
+        ],
+        [
+          629.0,
+          1138.0
+        ]
+      ]
+    },
+    {
+      "text": "ns.",
+      "confidence": 0.7527,
+      "bbox": [
+        [
+          390.0,
+          951.0
+        ],
+        [
+          575.0,
+          951.0
+        ],
+        [
+          575.0,
+          1053.0
+        ],
+        [
+          390.0,
+          1053.0
+        ]
+      ]
+    },
+    {
+      "text": "are the fundtions of theser componen?",
+      "confidence": 0.642,
+      "bbox": [
+        [
+          2480.0,
+          993.0
+        ],
+        [
+          3894.0,
+          993.0
+        ],
+        [
+          3894.0,
+          1257.0
+        ],
+        [
+          2480.0,
+          1257.0
+        ]
+      ]
+    },
+    {
+      "text": "from the lungs ly the respiratory",
+      "confidence": 0.7553,
+      "bbox": [
+        [
+          611.0,
+          1021.0
+        ],
+        [
+          2053.0,
+          1021.0
+        ],
+        [
+          2053.0,
+          1246.0
+        ],
+        [
+          611.0,
+          1246.0
+        ]
+      ]
+    },
+    {
+      "text": "aui",
+      "confidence": 0.3709,
+      "bbox": [
+        [
+          2386.0,
+          1108.0
+        ],
+        [
+          3080.0,
+          1108.0
+        ],
+        [
+          3080.0,
+          1224.0
+        ],
+        [
+          2386.0,
+          1224.0
+        ]
+      ]
+    },
+    {
+      "text": "An The tio components are aylem and",
+      "confidence": 0.7306,
+      "bbox": [
+        [
+          2266.0,
+          1150.0
+        ],
+        [
+          3816.0,
+          1150.0
+        ],
+        [
+          3816.0,
+          1412.0
+        ],
+        [
+          2266.0,
+          1412.0
+        ]
+      ]
+    },
+    {
+      "text": "a0s",
+      "confidence": 0.3466,
+      "bbox": [
+        [
+          3160.0,
+          1175.0
+        ],
+        [
+          3418.0,
+          1175.0
+        ],
+        [
+          3418.0,
+          1247.0
+        ],
+        [
+          3160.0,
+          1247.0
+        ]
+      ]
+    },
+    {
+      "text": "llood corpusctes. taimoglobin has a",
+      "confidence": 0.7179,
+      "bbox": [
+        [
+          596.0,
+          1209.0
+        ],
+        [
+          2112.0,
+          1209.0
+        ],
+        [
+          2112.0,
+          1419.0
+        ],
+        [
+          596.0,
+          1419.0
+        ]
+      ]
+    },
+    {
+      "text": "wery high ffinity for  eardon",
+      "confidence": 0.6443,
+      "bbox": [
+        [
+          585.0,
+          1308.0
+        ],
+        [
+          2031.0,
+          1308.0
+        ],
+        [
+          2031.0,
+          1518.0
+        ],
+        [
+          585.0,
+          1518.0
+        ]
+      ]
+    },
+    {
+      "text": " le an s i eto",
+      "confidence": 0.4928,
+      "bbox": [
+        [
+          2505.0,
+          1353.0
+        ],
+        [
+          3483.0,
+          1353.0
+        ],
+        [
+          3483.0,
+          1523.0
+        ],
+        [
+          2505.0,
+          1523.0
+        ]
+      ]
+    },
+    {
+      "text": "dioxide is imore soluble in water",
+      "confidence": 0.7947,
+      "bbox": [
+        [
+          582.0,
+          1404.0
+        ],
+        [
+          2021.0,
+          1404.0
+        ],
+        [
+          2021.0,
+          1589.0
+        ],
+        [
+          582.0,
+          1589.0
+        ]
+      ]
+    },
+    {
+      "text": " Xylem tissues which are made of",
+      "confidence": 0.7304,
+      "bbox": [
+        [
+          2381.0,
+          1431.0
+        ],
+        [
+          3738.0,
+          1431.0
+        ],
+        [
+          3738.0,
+          1646.0
+        ],
+        [
+          2381.0,
+          1646.0
+        ]
+      ]
+    },
+    {
+      "text": "tham oxygin. do, it is tranported in",
+      "confidence": 0.6883,
+      "bbox": [
+        [
+          551.0,
+          1500.0
+        ],
+        [
+          2076.0,
+          1500.0
+        ],
+        [
+          2076.0,
+          1696.0
+        ],
+        [
+          551.0,
+          1696.0
+        ]
+      ]
+    },
+    {
+      "text": "dead cells in the forum of syem",
+      "confidence": 0.6892,
+      "bbox": [
+        [
+          2474.0,
+          1508.0
+        ],
+        [
+          3775.0,
+          1508.0
+        ],
+        [
+          3775.0,
+          1753.0
+        ],
+        [
+          2474.0,
+          1753.0
+        ]
+      ]
+    },
+    {
+      "text": "the dissoled foum in our body",
+      "confidence": 0.6612,
+      "bbox": [
+        [
+          542.0,
+          1597.0
+        ],
+        [
+          1913.0,
+          1597.0
+        ],
+        [
+          1913.0,
+          1813.0
+        ],
+        [
+          542.0,
+          1813.0
+        ]
+      ]
+    },
+    {
+      "text": "lessels and tracheids. It transpots",
+      "confidence": 0.6852,
+      "bbox": [
+        [
+          2484.0,
+          1623.0
+        ],
+        [
+          3776.0,
+          1623.0
+        ],
+        [
+          3776.0,
+          1816.0
+        ],
+        [
+          2484.0,
+          1816.0
+        ]
+      ]
+    },
+    {
+      "text": "\\",
+      "confidence": 0.1468,
+      "bbox": [
+        [
+          2332.0,
+          1705.0
+        ],
+        [
+          2476.0,
+          1705.0
+        ],
+        [
+          2476.0,
+          1801.0
+        ],
+        [
+          2332.0,
+          1801.0
+        ]
+      ]
+    },
+    {
+      "text": "water and dissdved minerals from root",
+      "confidence": 0.7328,
+      "bbox": [
+        [
+          2472.0,
+          1703.0
+        ],
+        [
+          3905.0,
+          1703.0
+        ],
+        [
+          3905.0,
+          1919.0
+        ],
+        [
+          2472.0,
+          1919.0
+        ]
+      ]
+    },
+    {
+      "text": ".te are the lungs designed in hurmom",
+      "confidence": 0.6173,
+      "bbox": [
+        [
+          355.0,
+          1774.0
+        ],
+        [
+          2134.0,
+          1774.0
+        ],
+        [
+          2134.0,
+          2008.0
+        ],
+        [
+          355.0,
+          2008.0
+        ]
+      ]
+    },
+    {
+      "text": "to all the parts of the plant",
+      "confidence": 0.839,
+      "bbox": [
+        [
+          2461.0,
+          1791.0
+        ],
+        [
+          3601.0,
+          1791.0
+        ],
+        [
+          3601.0,
+          2011.0
+        ],
+        [
+          2461.0,
+          2011.0
+        ]
+      ]
+    },
+    {
+      "text": "now",
+      "confidence": 0.7412,
+      "bbox": [
+        [
+          2308.0,
+          1812.0
+        ],
+        [
+          2466.0,
+          1812.0
+        ],
+        [
+          2466.0,
+          1897.0
+        ],
+        [
+          2308.0,
+          1897.0
+        ]
+      ]
+    },
+    {
+      "text": "beings to marimise the area o",
+      "confidence": 0.627,
+      "bbox": [
+        [
+          511.0,
+          1884.0
+        ],
+        [
+          1989.0,
+          1884.0
+        ],
+        [
+          1989.0,
+          2104.0
+        ],
+        [
+          511.0,
+          2104.0
+        ]
+      ]
+    },
+    {
+      "text": "de",
+      "confidence": 0.6638,
+      "bbox": [
+        [
+          2384.0,
+          1910.0
+        ],
+        [
+          2447.0,
+          1910.0
+        ],
+        [
+          2447.0,
+          1978.0
+        ],
+        [
+          2384.0,
+          1978.0
+        ]
+      ]
+    },
+    {
+      "text": "am",
+      "confidence": 0.8322,
+      "bbox": [
+        [
+          2754.0,
+          1946.0
+        ],
+        [
+          2977.0,
+          1946.0
+        ],
+        [
+          2977.0,
+          2014.0
+        ],
+        [
+          2754.0,
+          2014.0
+        ]
+      ]
+    },
+    {
+      "text": "exchange of",
+      "confidence": 0.8983,
+      "bbox": [
+        [
+          483.0,
+          1971.0
+        ],
+        [
+          1063.0,
+          1971.0
+        ],
+        [
+          1063.0,
+          2186.0
+        ],
+        [
+          483.0,
+          2186.0
+        ]
+      ]
+    },
+    {
+      "text": "lom tussue i made up of ive tube",
+      "confidence": 0.5871,
+      "bbox": [
+        [
+          2458.0,
+          1979.0
+        ],
+        [
+          3875.0,
+          1979.0
+        ],
+        [
+          3875.0,
+          2187.0
+        ],
+        [
+          2458.0,
+          2187.0
+        ]
+      ]
+    },
+    {
+      "text": "",
+      "confidence": 0.0,
+      "bbox": [
+        [
+          3136.0,
+          1978.0
+        ],
+        [
+          3230.0,
+          1978.0
+        ],
+        [
+          3230.0,
+          2012.0
+        ],
+        [
+          3136.0,
+          2012.0
+        ]
+      ]
+    },
+    {
+      "text": "9",
+      "confidence": 0.1463,
+      "bbox": [
+        [
+          3304.0,
+          1990.0
+        ],
+        [
+          3403.0,
+          1990.0
+        ],
+        [
+          3403.0,
+          2030.0
+        ],
+        [
+          3304.0,
+          2030.0
+        ]
+      ]
+    },
+    {
+      "text": "and compamion cells.  tranports",
+      "confidence": 0.8543,
+      "bbox": [
+        [
+          2460.0,
+          2075.0
+        ],
+        [
+          3916.0,
+          2075.0
+        ],
+        [
+          3916.0,
+          2273.0
+        ],
+        [
+          2460.0,
+          2273.0
+        ]
+      ]
+    },
+    {
+      "text": "P",
+      "confidence": 0.3475,
+      "bbox": [
+        [
+          3432.0,
+          2097.0
+        ],
+        [
+          3458.0,
+          2097.0
+        ],
+        [
+          3458.0,
+          2104.0
+        ],
+        [
+          3432.0,
+          2104.0
+        ]
+      ]
+    },
+    {
+      "text": "Praittinsoe rok",
+      "confidence": 0.5476,
+      "bbox": [
+        [
+          1263.0,
+          2142.0
+        ],
+        [
+          1976.0,
+          2142.0
+        ],
+        [
+          1976.0,
+          2266.0
+        ],
+        [
+          1263.0,
+          2266.0
+        ]
+      ]
+    },
+    {
+      "text": "food mode in leaf to all the parts of",
+      "confidence": 0.8143,
+      "bbox": [
+        [
+          2456.0,
+          2167.0
+        ],
+        [
+          3999.0,
+          2167.0
+        ],
+        [
+          3999.0,
+          2393.0
+        ],
+        [
+          2456.0,
+          2393.0
+        ]
+      ]
+    },
+    {
+      "text": "S",
+      "confidence": 0.3637,
+      "bbox": [
+        [
+          3381.0,
+          2174.0
+        ],
+        [
+          3400.0,
+          2174.0
+        ],
+        [
+          3400.0,
+          2181.0
+        ],
+        [
+          3381.0,
+          2181.0
+        ]
+      ]
+    },
+    {
+      "text": "Ans",
+      "confidence": 0.7556,
+      "bbox": [
+        [
+          231.0,
+          2192.0
+        ],
+        [
+          407.0,
+          2192.0
+        ],
+        [
+          407.0,
+          2303.0
+        ],
+        [
+          231.0,
+          2303.0
+        ]
+      ]
+    },
+    {
+      "text": "There ore millions of avedli in the",
+      "confidence": 0.7305,
+      "bbox": [
+        [
+          458.0,
+          2184.0
+        ],
+        [
+          2016.0,
+          2184.0
+        ],
+        [
+          2016.0,
+          2399.0
+        ],
+        [
+          458.0,
+          2399.0
+        ]
+      ]
+    },
+    {
+      "text": ".",
+      "confidence": 0.3437,
+      "bbox": [
+        [
+          3432.0,
+          2197.0
+        ],
+        [
+          3465.0,
+          2197.0
+        ],
+        [
+          3465.0,
+          2204.0
+        ],
+        [
+          3432.0,
+          2204.0
+        ]
+      ]
+    },
+    {
+      "text": "P",
+      "confidence": 0.1964,
+      "bbox": [
+        [
+          3500.0,
+          2205.0
+        ],
+        [
+          3527.0,
+          2205.0
+        ],
+        [
+          3527.0,
+          2212.0
+        ],
+        [
+          3500.0,
+          2212.0
+        ]
+      ]
+    },
+    {
+      "text": "",
+      "confidence": 0.0,
+      "bbox": [
+        [
+          3510.0,
+          2196.0
+        ],
+        [
+          3519.0,
+          2196.0
+        ],
+        [
+          3519.0,
+          2205.0
+        ],
+        [
+          3510.0,
+          2205.0
+        ]
+      ]
+    },
+    {
+      "text": "lung, it povides a large area fo",
+      "confidence": 0.6318,
+      "bbox": [
+        [
+          444.0,
+          2293.0
+        ],
+        [
+          2153.0,
+          2293.0
+        ],
+        [
+          2153.0,
+          2521.0
+        ],
+        [
+          444.0,
+          2521.0
+        ]
+      ]
+    },
+    {
+      "text": "a plant.",
+      "confidence": 0.9166,
+      "bbox": [
+        [
+          2452.0,
+          2277.0
+        ],
+        [
+          2807.0,
+          2277.0
+        ],
+        [
+          2807.0,
+          2419.0
+        ],
+        [
+          2452.0,
+          2419.0
+        ]
+      ]
+    },
+    {
+      "text": "alg cedat besh n tua a",
+      "confidence": 0.4861,
+      "bbox": [
+        [
+          2519.0,
+          2364.0
+        ],
+        [
+          3821.0,
+          2364.0
+        ],
+        [
+          3821.0,
+          2539.0
+        ],
+        [
+          2519.0,
+          2539.0
+        ]
+      ]
+    },
+    {
+      "text": "the exchange of",
+      "confidence": 0.9061,
+      "bbox": [
+        [
+          449.0,
+          2408.0
+        ],
+        [
+          1330.0,
+          2408.0
+        ],
+        [
+          1330.0,
+          2559.0
+        ],
+        [
+          449.0,
+          2559.0
+        ]
+      ]
+    },
+    {
+      "text": "gases. Far esample,",
+      "confidence": 0.7188,
+      "bbox": [
+        [
+          1261.0,
+          2453.0
+        ],
+        [
+          2113.0,
+          2453.0
+        ],
+        [
+          2113.0,
+          2609.0
+        ],
+        [
+          1261.0,
+          2609.0
+        ]
+      ]
+    },
+    {
+      "text": " pow are ater and minerals tramported",
+      "confidence": 0.5753,
+      "bbox": [
+        [
+          2288.0,
+          2452.0
+        ],
+        [
+          4053.0,
+          2452.0
+        ],
+        [
+          4053.0,
+          2672.0
+        ],
+        [
+          2288.0,
+          2672.0
+        ]
+      ]
+    },
+    {
+      "text": "",
+      "confidence": 0.0,
+      "bbox": [
+        [
+          1058.0,
+          2477.0
+        ],
+        [
+          1095.0,
+          2477.0
+        ],
+        [
+          1095.0,
+          2484.0
+        ],
+        [
+          1058.0,
+          2484.0
+        ]
+      ]
+    },
+    {
+      "text": "RO",
+      "confidence": 0.1383,
+      "bbox": [
+        [
+          1062.0,
+          2481.0
+        ],
+        [
+          1083.0,
+          2481.0
+        ],
+        [
+          1083.0,
+          2488.0
+        ],
+        [
+          1062.0,
+          2488.0
+        ]
+      ]
+    },
+    {
+      "text": "L",
+      "confidence": 0.1568,
+      "bbox": [
+        [
+          850.0,
+          2491.0
+        ],
+        [
+          863.0,
+          2491.0
+        ],
+        [
+          863.0,
+          2498.0
+        ],
+        [
+          850.0,
+          2498.0
+        ]
+      ]
+    },
+    {
+      "text": "if all aliveali",
+      "confidence": 0.8388,
+      "bbox": [
+        [
+          440.0,
+          2511.0
+        ],
+        [
+          1055.0,
+          2511.0
+        ],
+        [
+          1055.0,
+          2661.0
+        ],
+        [
+          440.0,
+          2661.0
+        ]
+      ]
+    },
+    {
+      "text": "",
+      "confidence": 0.0,
+      "bbox": [
+        [
+          1171.0,
+          2507.0
+        ],
+        [
+          1197.0,
+          2507.0
+        ],
+        [
+          1197.0,
+          2514.0
+        ],
+        [
+          1171.0,
+          2514.0
+        ]
+      ]
+    },
+    {
+      "text": "The tioo humam",
+      "confidence": 0.7608,
+      "bbox": [
+        [
+          1287.0,
+          2537.0
+        ],
+        [
+          1990.0,
+          2537.0
+        ],
+        [
+          1990.0,
+          2698.0
+        ],
+        [
+          1287.0,
+          2698.0
+        ]
+      ]
+    },
+    {
+      "text": "from",
+      "confidence": 0.9604,
+      "bbox": [
+        [
+          1074.0,
+          2555.0
+        ],
+        [
+          1345.0,
+          2555.0
+        ],
+        [
+          1345.0,
+          2659.0
+        ],
+        [
+          1074.0,
+          2659.0
+        ]
+      ]
+    },
+    {
+      "text": "hung ere unjolded, the would ",
+      "confidence": 0.6139,
+      "bbox": [
+        [
+          409.0,
+          2615.0
+        ],
+        [
+          2004.0,
+          2615.0
+        ],
+        [
+          2004.0,
+          2849.0
+        ],
+        [
+          409.0,
+          2849.0
+        ]
+      ]
+    },
+    {
+      "text": "give",
+      "confidence": 0.986,
+      "bbox": [
+        [
+          1921.0,
+          2692.0
+        ],
+        [
+          2106.0,
+          2692.0
+        ],
+        [
+          2106.0,
+          2832.0
+        ],
+        [
+          1921.0,
+          2832.0
+        ]
+      ]
+    },
+    {
+      "text": " ati ad an ta",
+      "confidence": 0.4856,
+      "bbox": [
+        [
+          2581.0,
+          2696.0
+        ],
+        [
+          3811.0,
+          2696.0
+        ],
+        [
+          3811.0,
+          2827.0
+        ],
+        [
+          2581.0,
+          2827.0
+        ]
+      ]
+    }
+  ]
+}

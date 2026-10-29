@@ -1,0 +1,155 @@
+Table 3: Comparison with transformer models on the test set of the IAM dataset.
+Architecture
+Using
+Number
+System
+CER
+heads
+hidden size
+external data
+of parameters transformer
+layers
+FPHR [6]
+6
+4
+260
+yes
+6.3 M
+6.3
+FPHR [6]
+6
+4
+260
+No
+6.3 M
+6.7
+DAN [7]
+4
+8
+256
+yes
+7.6 M
+-
+Ours
+2
+1
+256
+No
+3.9 M
+6.4
+competitive performance without the need for line segmen-
+Table 4: Comparison on the IAM dataset of the lite transformer with
+tation.
+the state-of-the-art approaches.
+Type
+Architecture
+CER
+Bluche et al [5]
+11.1
+Table 5: Evaluation of the lite transformer on the test set of RIMES
+2011 dataset
+Paragraph level
+Bluche et al [10]
+7.9
+Type
+Architecture
+CER
+Bluche et al* [10]
+5.5
+Yousef et al [29]
+4.7
+Coquenet et al [21]
+4.17
+Page level
+Bluche et al [10]
+2.9
+Chowdhury [17]
+8.10
+Ours
+2.9
+Line level
+Bluche et al [5]
+7.00
+Coquenet et al [7]
+1.82
+Kang et al [18]
+7.62
+Coquenet et al [23]
+3.04
+Page level
+Bluche et al [5]
+16.2
+Line level
+Coquenet et al [7]
+2.63
+Carbonell [19]
+15.6
+Puigcerver et al [25]
+2.3
+FPHR [6]
+6.7
+Wigington et al* [20]
+6.4
+Finally, we present in Table 6 the results on the KHATT
+Ours
+6.4
+dataset. Compared to models that require segmentation
+System using external language model
+at line level [26, 27, 28], our model achieves the best per-
+formance with a CER of 13.48%. This result confirms the
+Table 4 provides the results on the IAM dataset. As one
+ability of our model to recognize other handwritten scripts
+can notice, our lite transformer model surpasses line-based
+by applying a simple transfer-learning process using only
+methods that use accurate localization information during
+page-level labeled images.
+training and shows competitive results compared to page
+and paragraph levels-based systems.
+Table 6: Evaluation of the lite transformer on the test set of KHATT
+In table 3, we concentrate on the comparison with state-
+dataset.
+of-the-art approaches based on transformer architecture.
+Type
+Architecture
+CER
+A special focus is given to the number of parameters in
+DeepKHATT [26]
+24.2
+each model and to the kind of data used in the train-
+Line level
+DeepLearnig based Arabic script [27]
+19.98
+ing stage. Models proposed in [7, 6] have implemented
+CNN+BLSTM [28]
+15.8
+larger transformer-based architectures, compared to our
+lite model. To train such models, a huge amount of data
+Page level Ours
+13.48
+has been collected (up to 47 M text images in [6]), includ-
+ing synthetic text images. It is interesting to highlight that
+our proposed lite transformer model achieves almost the
+5. Conclusion
+same performance with a lower quantity of training data
+In this paper, we proposed MSdocTr-Lite, a lite trans-
+and fewer model parameters. Furthermore, using the same
+former model for full-page multi-script handwriting recog-
+data, our model takes 569 seconds per epoch compared to
+nition. To solve the common problem of data scarcity,
+940 and 862 seconds per epoch when trained with [6, 7]
+MSdocTr-Lite can be trained on a reasonable amount of
+respectively.
+data thanks to its light architecture. Contrary to the ex-
+Next, we present our results on the RIMES dataset in
+isting segmentation-based approaches, the model can be
+comparison to the state-of-the-art approaches in Table 5.
+easily fine-tuned on different scripts without using any
+It can be seen that models from [22, 23, 25, 7] require the
+segmentation label thanks to a simple transfer learning
+segmentation bounding boxes annotation to be trained,
+process.
+which is cost-effective. While the models from [21, 7] and
+Interesting results have been obtained by MSdocTr-
+the lite transformer are trained on page level to reach a
+Lite on English, French, Arabic, and Spanish handwrit-
+7

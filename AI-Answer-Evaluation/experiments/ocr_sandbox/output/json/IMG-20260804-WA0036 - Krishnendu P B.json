@@ -1,0 +1,514 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\IMG-20260804-WA0036 - Krishnendu P B.jpg",
+  "page_number": 1,
+  "text": "ang hind of sypathy and kindness to it. Io Wis\namazement and wonder his coife suggested an\nk made him sich and held him to lead a\nluxarious life. pelayo quit his job and bilds a\nnew lage house.\nElisenda\n1C\nElisenda is a clever Tady.She descuibed as a\nselfish character in the stouy. she thought of\nmaking money using the old man exchibit- A\ncas the seflection of her practical mindedness.\nInstead of treating the angel with sympathy, she\ncoas crael to him. she Iept fim in weeched\nconditions and charged an edmission fee to see\nhim. she used the money to buld a lauge\nmanison and so thlead a luxwious life  But\nthey\nlater she felt it was a barden. she was\nquite selieved when of flew away. she never\nexpussed her sympathy and kindness to him.1\nshows her indfference and greed fos money\nand fame Her action and attitude aeffect her\npractical mindedness",
+  "confidence": 0.9044,
+  "bounding_boxes": [
+    {
+      "text": "ang hind of sypathy and kindness to it. Io Wis",
+      "confidence": 0.8885,
+      "bbox": [
+        [
+          48.0,
+          70.0
+        ],
+        [
+          623.0,
+          70.0
+        ],
+        [
+          623.0,
+          149.0
+        ],
+        [
+          48.0,
+          149.0
+        ]
+      ]
+    },
+    {
+      "text": "amazement and wonder his coife suggested an",
+      "confidence": 0.953,
+      "bbox": [
+        [
+          53.0,
+          105.0
+        ],
+        [
+          622.0,
+          105.0
+        ],
+        [
+          622.0,
+          182.0
+        ],
+        [
+          53.0,
+          182.0
+        ]
+      ]
+    },
+    {
+      "text": "k made him sich and held him to lead a",
+      "confidence": 0.9129,
+      "bbox": [
+        [
+          52.0,
+          173.0
+        ],
+        [
+          605.0,
+          173.0
+        ],
+        [
+          605.0,
+          245.0
+        ],
+        [
+          52.0,
+          245.0
+        ]
+      ]
+    },
+    {
+      "text": "luxarious life. pelayo quit his job and bilds a",
+      "confidence": 0.8808,
+      "bbox": [
+        [
+          56.0,
+          216.0
+        ],
+        [
+          646.0,
+          216.0
+        ],
+        [
+          646.0,
+          285.0
+        ],
+        [
+          56.0,
+          285.0
+        ]
+      ]
+    },
+    {
+      "text": "new lage house.",
+      "confidence": 0.9375,
+      "bbox": [
+        [
+          60.0,
+          273.0
+        ],
+        [
+          277.0,
+          273.0
+        ],
+        [
+          277.0,
+          328.0
+        ],
+        [
+          60.0,
+          328.0
+        ]
+      ]
+    },
+    {
+      "text": "Elisenda",
+      "confidence": 0.9601,
+      "bbox": [
+        [
+          63.0,
+          369.0
+        ],
+        [
+          170.0,
+          369.0
+        ],
+        [
+          170.0,
+          416.0
+        ],
+        [
+          63.0,
+          416.0
+        ]
+      ]
+    },
+    {
+      "text": "1C",
+      "confidence": 0.5537,
+      "bbox": [
+        [
+          493.0,
+          400.0
+        ],
+        [
+          504.0,
+          400.0
+        ],
+        [
+          504.0,
+          409.0
+        ],
+        [
+          493.0,
+          409.0
+        ]
+      ]
+    },
+    {
+      "text": "Elisenda is a clever Tady.She descuibed as a",
+      "confidence": 0.8956,
+      "bbox": [
+        [
+          143.0,
+          402.0
+        ],
+        [
+          661.0,
+          402.0
+        ],
+        [
+          661.0,
+          457.0
+        ],
+        [
+          143.0,
+          457.0
+        ]
+      ]
+    },
+    {
+      "text": "selfish character in the stouy. she thought of",
+      "confidence": 0.9535,
+      "bbox": [
+        [
+          62.0,
+          443.0
+        ],
+        [
+          632.0,
+          443.0
+        ],
+        [
+          632.0,
+          500.0
+        ],
+        [
+          62.0,
+          500.0
+        ]
+      ]
+    },
+    {
+      "text": "making money using the old man exchibit- A",
+      "confidence": 0.9525,
+      "bbox": [
+        [
+          63.0,
+          482.0
+        ],
+        [
+          634.0,
+          482.0
+        ],
+        [
+          634.0,
+          538.0
+        ],
+        [
+          63.0,
+          538.0
+        ]
+      ]
+    },
+    {
+      "text": "cas the seflection of her practical mindedness.",
+      "confidence": 0.9348,
+      "bbox": [
+        [
+          59.0,
+          520.0
+        ],
+        [
+          646.0,
+          520.0
+        ],
+        [
+          646.0,
+          575.0
+        ],
+        [
+          59.0,
+          575.0
+        ]
+      ]
+    },
+    {
+      "text": "Instead of treating the angel with sympathy, she",
+      "confidence": 0.9699,
+      "bbox": [
+        [
+          61.0,
+          563.0
+        ],
+        [
+          659.0,
+          563.0
+        ],
+        [
+          659.0,
+          618.0
+        ],
+        [
+          61.0,
+          618.0
+        ]
+      ]
+    },
+    {
+      "text": "coas crael to him. she Iept fim in weeched",
+      "confidence": 0.8934,
+      "bbox": [
+        [
+          62.0,
+          612.0
+        ],
+        [
+          648.0,
+          612.0
+        ],
+        [
+          648.0,
+          657.0
+        ],
+        [
+          62.0,
+          657.0
+        ]
+      ]
+    },
+    {
+      "text": "conditions and charged an edmission fee to see",
+      "confidence": 0.9535,
+      "bbox": [
+        [
+          63.0,
+          656.0
+        ],
+        [
+          655.0,
+          656.0
+        ],
+        [
+          655.0,
+          699.0
+        ],
+        [
+          63.0,
+          699.0
+        ]
+      ]
+    },
+    {
+      "text": "him. she used the money to buld a lauge",
+      "confidence": 0.9369,
+      "bbox": [
+        [
+          61.0,
+          692.0
+        ],
+        [
+          644.0,
+          692.0
+        ],
+        [
+          644.0,
+          748.0
+        ],
+        [
+          61.0,
+          748.0
+        ]
+      ]
+    },
+    {
+      "text": "manison and so thlead a luxwious life  But",
+      "confidence": 0.904,
+      "bbox": [
+        [
+          57.0,
+          732.0
+        ],
+        [
+          655.0,
+          732.0
+        ],
+        [
+          655.0,
+          793.0
+        ],
+        [
+          57.0,
+          793.0
+        ]
+      ]
+    },
+    {
+      "text": "they",
+      "confidence": 0.9954,
+      "bbox": [
+        [
+          267.0,
+          734.0
+        ],
+        [
+          311.0,
+          734.0
+        ],
+        [
+          311.0,
+          753.0
+        ],
+        [
+          267.0,
+          753.0
+        ]
+      ]
+    },
+    {
+      "text": "later she felt it was a barden. she was",
+      "confidence": 0.8889,
+      "bbox": [
+        [
+          64.0,
+          774.0
+        ],
+        [
+          627.0,
+          774.0
+        ],
+        [
+          627.0,
+          832.0
+        ],
+        [
+          64.0,
+          832.0
+        ]
+      ]
+    },
+    {
+      "text": "quite selieved when of flew away. she never",
+      "confidence": 0.878,
+      "bbox": [
+        [
+          65.0,
+          815.0
+        ],
+        [
+          669.0,
+          815.0
+        ],
+        [
+          669.0,
+          879.0
+        ],
+        [
+          65.0,
+          879.0
+        ]
+      ]
+    },
+    {
+      "text": "expussed her sympathy and kindness to him.1",
+      "confidence": 0.9035,
+      "bbox": [
+        [
+          59.0,
+          857.0
+        ],
+        [
+          676.0,
+          857.0
+        ],
+        [
+          676.0,
+          924.0
+        ],
+        [
+          59.0,
+          924.0
+        ]
+      ]
+    },
+    {
+      "text": "shows her indfference and greed fos money",
+      "confidence": 0.8429,
+      "bbox": [
+        [
+          62.0,
+          897.0
+        ],
+        [
+          662.0,
+          897.0
+        ],
+        [
+          662.0,
+          971.0
+        ],
+        [
+          62.0,
+          971.0
+        ]
+      ]
+    },
+    {
+      "text": "and fame Her action and attitude aeffect her",
+      "confidence": 0.8839,
+      "bbox": [
+        [
+          60.0,
+          942.0
+        ],
+        [
+          637.0,
+          942.0
+        ],
+        [
+          637.0,
+          1012.0
+        ],
+        [
+          60.0,
+          1012.0
+        ]
+      ]
+    },
+    {
+      "text": "practical mindedness",
+      "confidence": 0.9289,
+      "bbox": [
+        [
+          63.0,
+          991.0
+        ],
+        [
+          300.0,
+          991.0
+        ],
+        [
+          300.0,
+          1035.0
+        ],
+        [
+          63.0,
+          1035.0
+        ]
+      ]
+    }
+  ]
+}

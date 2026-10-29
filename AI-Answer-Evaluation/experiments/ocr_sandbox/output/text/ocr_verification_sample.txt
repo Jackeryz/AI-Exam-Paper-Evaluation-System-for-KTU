@@ -1,0 +1,80 @@
+MSdocTr-Lite: A Lite Transformer for Full Page Multi-script Handwriting
+Recognition
+Marwa Dhiafa,b,c,*, Ahmed Cheikh Rouhoua, Yousri Kessentinib,c, Sinda Ben Salema
+aInstaDeep
+bDigital Research Center of Sfax, Sfax 3021, Tunisia
+cSM@RTS : Laboratory of Signals, systeMs, aRtificial Intelligence and neTworkS
+Abstract
+2023
+The Transformer has quickly become the dominant architecture for various pattern recognition tasks due to its capacity
+for long-range representation. However, transformers are data-hungry models and need large datasets for training. In
+Handwritten Text Recognition (HTR), collecting a massive amount of labeled data is a complicated and expensive task.
+In this paper, we propose a lite transformer architecture for full-page multi-script handwriting recognition. The proposed
+Mr
+model comes with three advantages: First, to solve the common problem of data scarcity, we propose a lite transformer
+model that can be trained on a reasonable amount of data, which is the case of most HTR public datasets, without the
+need for external data. Second, it can learn the reading order at page-level thanks to a curriculum learning strategy,
+I7
+allowing it to avoid line segmentation errors, exploit a larger context and reduce the need for costly segmentation
+annotations. Third, it can be easily adapted to other scripts by applying a simple transfer-learning process using only
+page-level labeled images. Extensive experiments on different datasets with different scripts (French, English, Spanish,
+c]
+and Arabic) show the effectiveness of the proposed model.
+Keywords: Seq2Seq model, page-level recognition, Handwritten Text Recognition, Multi-script, Transformer, Transfer
+Learning
+1. Introduction
+have been introduced, where word images are extracted
+Handwritten Text Recognition (HTR) aims to transform
+from the document before feeding them into an HTR sys-
+scanned handwritten documents into machine-encoded
+tem. But, this kind of approach faced some problems due
+text. HTR is still a hard problem due to the high vari-
+to the irregularity of the inter-space and the intra-space
+ance of writing styles, illegible handwriting, poor quality,
+between words.
+ETZ:ZX10
+and degradation. Furthermore, each handwritten script
+In the last decade, word segmentation-based approaches
+has specific properties (writing direction, character shapes,
+[31] were abandoned in favor of text line recognition
+ligatures, etc) making the problem more challenging.
+[2, 24, 10]: a document can be segmented into individual
+Current HTR models are leading to an acceptable per-
+lines to surpass any inconsistency between words and have
+formance [1], especially for modern documents with legi-
+more context. This kind of approach generally achieves
+ble handwriting styles, known languages, vocabulary, and
+state-of-the-art performance for mostly all types of docu-
+syntax. However, most of these systems rely on a seg-
+ments (modern, historical, multi-script, etc) [3, 4], with-
+mentation phase before the recognition task. The segmen-
+out suffering the heavy burden of character/word segmen-
+tation consists of partitioning the document images into
+tation. Despite their success, line segmentation is also
+homogeneous components (characters, words, or lines).
+challenging due to non-uniform text line skew/slant or
+Early HTR approaches have applied segmentation tech-
+closely situated and touching text lines. Such problems
+niques to extract character-level images from documents.
+can considerably affect the performance at the recogni-
+These techniques suffer from a deficiency in performance
+tion stage. With the recent success of deep learning, the
+accuracy as the segmentation generally fails due to the
+HTR community started exploring handwriting recogni-
+cursive and unconstrained nature of the handwriting. To
+tion at the paragraph or page level to avoid any interme-
+overcome this problem, word-based segmentation methods
+diate segmentation pre-processing step. In [5] an archi-
+tecture for paragraph-level HTR with the use of Multi-
+Dimensional Long Short-Term Memory Recurrent Neural
+*Corresponding author
+Networks (MDLSTM) and the attention mechanism was
+Email addresses: marwa.dhiaf.doc@enetcom.usf.tn (Marwa
+proposed. However, they later abandoned this approach
+Dhiaf), a. cheikhrouhou@instadeep. com (Ahmed Cheikh Rouhou).
+yousri.kessentini@crns.rnrt.tn (Yousri Kessentini),
+due to high memory requirements, the lack of GPU ac-
+s.bensalem@instadeep.com (Sinda Ben Salem)
+celeration for the training of MDLSTM, and intractable
+Preprint submitted to Pattern Recognition Letters
+March 27, 2023

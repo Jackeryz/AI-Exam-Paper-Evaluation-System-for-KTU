@@ -1,0 +1,470 @@
+{
+  "file": "C:\\Users\\HP\\OneDrive\\Desktop\\project\\AI-Answer-Evaluation\\experiments\\ocr_sandbox\\input\\handwritten\\IMG-20260804-WA0035 - Krishnendu P B.jpg",
+  "page_number": 1,
+  "text": "Unit: TV. Woodland Whispers\n/2025\nhapter:1\nShakuntalam\nmday\nSammary\nThe play shakuntalam wrillen by\nKalldasa vividly pictures how oc ancestors\nlived in harmony with mother nature. The\nplay shoces as how we can co-exist coith\nnature.The play begins woith chasing a deer\nIn the forest. His charioteer drives the\nchariot. The admines the beacity of the deer\nHe is about to shoot the deer.Then a voice\nwaans him not to hill it.The deer belonged\nto a hermitage. The two hermits appeared\nthere and explaind that the deer is protected.\nThey tell him that ceapors shocild be cused\nto protect the innocent and not to baam\nthe weak. The king respect their coords.The\nheamits bless him. They invite hir to Sage Kanw",
+  "confidence": 0.9132,
+  "bounding_boxes": [
+    {
+      "text": "Unit: TV. Woodland Whispers",
+      "confidence": 0.9037,
+      "bbox": [
+        [
+          86.0,
+          121.0
+        ],
+        [
+          546.0,
+          121.0
+        ],
+        [
+          546.0,
+          180.0
+        ],
+        [
+          86.0,
+          180.0
+        ]
+      ]
+    },
+    {
+      "text": "/2025",
+      "confidence": 0.7824,
+      "bbox": [
+        [
+          0.0,
+          161.0
+        ],
+        [
+          59.0,
+          161.0
+        ],
+        [
+          59.0,
+          219.0
+        ],
+        [
+          0.0,
+          219.0
+        ]
+      ]
+    },
+    {
+      "text": "hapter:1",
+      "confidence": 0.9222,
+      "bbox": [
+        [
+          60.0,
+          194.0
+        ],
+        [
+          270.0,
+          194.0
+        ],
+        [
+          270.0,
+          243.0
+        ],
+        [
+          60.0,
+          243.0
+        ]
+      ]
+    },
+    {
+      "text": "Shakuntalam",
+      "confidence": 0.9491,
+      "bbox": [
+        [
+          250.0,
+          185.0
+        ],
+        [
+          461.0,
+          185.0
+        ],
+        [
+          461.0,
+          233.0
+        ],
+        [
+          250.0,
+          233.0
+        ]
+      ]
+    },
+    {
+      "text": "mday",
+      "confidence": 0.6629,
+      "bbox": [
+        [
+          0.0,
+          189.0
+        ],
+        [
+          84.0,
+          189.0
+        ],
+        [
+          84.0,
+          268.0
+        ],
+        [
+          0.0,
+          268.0
+        ]
+      ]
+    },
+    {
+      "text": "Sammary",
+      "confidence": 0.932,
+      "bbox": [
+        [
+          65.0,
+          280.0
+        ],
+        [
+          185.0,
+          280.0
+        ],
+        [
+          185.0,
+          327.0
+        ],
+        [
+          65.0,
+          327.0
+        ]
+      ]
+    },
+    {
+      "text": "The play shakuntalam wrillen by",
+      "confidence": 0.9282,
+      "bbox": [
+        [
+          149.0,
+          311.0
+        ],
+        [
+          588.0,
+          311.0
+        ],
+        [
+          588.0,
+          364.0
+        ],
+        [
+          149.0,
+          364.0
+        ]
+      ]
+    },
+    {
+      "text": "Kalldasa vividly pictures how oc ancestors",
+      "confidence": 0.9104,
+      "bbox": [
+        [
+          69.0,
+          357.0
+        ],
+        [
+          626.0,
+          357.0
+        ],
+        [
+          626.0,
+          416.0
+        ],
+        [
+          69.0,
+          416.0
+        ]
+      ]
+    },
+    {
+      "text": "lived in harmony with mother nature. The",
+      "confidence": 0.9454,
+      "bbox": [
+        [
+          69.0,
+          397.0
+        ],
+        [
+          646.0,
+          397.0
+        ],
+        [
+          646.0,
+          466.0
+        ],
+        [
+          69.0,
+          466.0
+        ]
+      ]
+    },
+    {
+      "text": "play shoces as how we can co-exist coith",
+      "confidence": 0.946,
+      "bbox": [
+        [
+          69.0,
+          439.0
+        ],
+        [
+          662.0,
+          439.0
+        ],
+        [
+          662.0,
+          511.0
+        ],
+        [
+          69.0,
+          511.0
+        ]
+      ]
+    },
+    {
+      "text": "nature.The play begins woith chasing a deer",
+      "confidence": 0.9576,
+      "bbox": [
+        [
+          71.0,
+          490.0
+        ],
+        [
+          649.0,
+          490.0
+        ],
+        [
+          649.0,
+          551.0
+        ],
+        [
+          71.0,
+          551.0
+        ]
+      ]
+    },
+    {
+      "text": "In the forest. His charioteer drives the",
+      "confidence": 0.9562,
+      "bbox": [
+        [
+          71.0,
+          544.0
+        ],
+        [
+          593.0,
+          544.0
+        ],
+        [
+          593.0,
+          599.0
+        ],
+        [
+          71.0,
+          599.0
+        ]
+      ]
+    },
+    {
+      "text": "chariot. The admines the beacity of the deer",
+      "confidence": 0.947,
+      "bbox": [
+        [
+          70.0,
+          596.0
+        ],
+        [
+          664.0,
+          596.0
+        ],
+        [
+          664.0,
+          652.0
+        ],
+        [
+          70.0,
+          652.0
+        ]
+      ]
+    },
+    {
+      "text": "He is about to shoot the deer.Then a voice",
+      "confidence": 0.9844,
+      "bbox": [
+        [
+          69.0,
+          651.0
+        ],
+        [
+          648.0,
+          651.0
+        ],
+        [
+          648.0,
+          696.0
+        ],
+        [
+          69.0,
+          696.0
+        ]
+      ]
+    },
+    {
+      "text": "waans him not to hill it.The deer belonged",
+      "confidence": 0.9705,
+      "bbox": [
+        [
+          65.0,
+          699.0
+        ],
+        [
+          658.0,
+          699.0
+        ],
+        [
+          658.0,
+          752.0
+        ],
+        [
+          65.0,
+          752.0
+        ]
+      ]
+    },
+    {
+      "text": "to a hermitage. The two hermits appeared",
+      "confidence": 0.9372,
+      "bbox": [
+        [
+          65.0,
+          749.0
+        ],
+        [
+          654.0,
+          749.0
+        ],
+        [
+          654.0,
+          813.0
+        ],
+        [
+          65.0,
+          813.0
+        ]
+      ]
+    },
+    {
+      "text": "there and explaind that the deer is protected.",
+      "confidence": 0.9042,
+      "bbox": [
+        [
+          65.0,
+          800.0
+        ],
+        [
+          695.0,
+          800.0
+        ],
+        [
+          695.0,
+          863.0
+        ],
+        [
+          65.0,
+          863.0
+        ]
+      ]
+    },
+    {
+      "text": "They tell him that ceapors shocild be cused",
+      "confidence": 0.9036,
+      "bbox": [
+        [
+          66.0,
+          853.0
+        ],
+        [
+          672.0,
+          853.0
+        ],
+        [
+          672.0,
+          919.0
+        ],
+        [
+          66.0,
+          919.0
+        ]
+      ]
+    },
+    {
+      "text": "to protect the innocent and not to baam",
+      "confidence": 0.9461,
+      "bbox": [
+        [
+          62.0,
+          912.0
+        ],
+        [
+          660.0,
+          912.0
+        ],
+        [
+          660.0,
+          975.0
+        ],
+        [
+          62.0,
+          975.0
+        ]
+      ]
+    },
+    {
+      "text": "the weak. The king respect their coords.The",
+      "confidence": 0.8769,
+      "bbox": [
+        [
+          57.0,
+          967.0
+        ],
+        [
+          696.0,
+          967.0
+        ],
+        [
+          696.0,
+          1036.0
+        ],
+        [
+          57.0,
+          1036.0
+        ]
+      ]
+    },
+    {
+      "text": "heamits bless him. They invite hir to Sage Kanw",
+      "confidence": 0.9123,
+      "bbox": [
+        [
+          62.0,
+          1038.0
+        ],
+        [
+          715.0,
+          1038.0
+        ],
+        [
+          715.0,
+          1092.0
+        ],
+        [
+          62.0,
+          1092.0
+        ]
+      ]
+    }
+  ]
+}

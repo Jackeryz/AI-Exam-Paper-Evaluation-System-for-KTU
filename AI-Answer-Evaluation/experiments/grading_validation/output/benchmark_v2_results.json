@@ -1,0 +1,1332 @@
+{
+  "benchmark_version": "v2",
+  "timestamp": "2026-10-21T15:28:32.197542",
+  "total_cases": 25,
+  "total_runtime_seconds": 28.07,
+  "mean_absolute_error": 1.304,
+  "root_mean_squared_error": 2.078,
+  "exact_agreement_count": 3,
+  "exact_agreement_rate": 12.0,
+  "within_0_5_marks_count": 13,
+  "within_0_5_marks_rate": 52.0,
+  "within_1_0_marks_count": 16,
+  "within_1_0_marks_rate": 64.0,
+  "within_1_5_marks_count": 18,
+  "within_1_5_marks_rate": 72.0,
+  "invariants": {
+    "all_marks_within_bounds": true,
+    "blank_answers_zero_and_flagged": true,
+    "irrelevant_content_zero": true
+  },
+  "detailed_results": [
+    {
+      "id": "V2-CASE-01",
+      "category": "1. Correct comprehensive answers",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 10.0,
+      "ai_marks": 9.7,
+      "raw_error": -0.3,
+      "abs_error": 0.3,
+      "norm_abs_error_pct": 3.0,
+      "confidence_score": 0.84,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Definition of Stack & LIFO Principle was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "A stack is a linear data structure operating under the LIFO (Last In First Out) principle, where insertions and deletions happen only at one end called the top"
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 4.0,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "PUSH and POP Operations with O(1) Complexities criteria fully met.",
+          "evidence": "The two core operations are: PUSH which places an item on top of the stack in O(1) constant time, and POP which extracts the topmost element from the stack in O(1) time complexity"
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Real-World Application Example was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "The two core operations are: PUSH which places an item on top of the stack in O(1) constant time, and POP which extracts the topmost element from the stack in O(1) time complexity"
+        }
+      ],
+      "feedback": "The answer scored 9.7/10.0 (97.0%). Total deductions: 0.3 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Stack & LIFO Principle to gain full marks.; Provide complete details for Real-World Application Example to gain full marks.",
+      "human_rationale": "Comprehensive, accurate answer addressing all rubric criteria with correct time complexities.",
+      "latency_seconds": 25.037
+    },
+    {
+      "id": "V2-CASE-02",
+      "category": "1. Correct concise answers",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 9.5,
+      "ai_marks": 6.85,
+      "raw_error": -2.65,
+      "abs_error": 2.65,
+      "norm_abs_error_pct": 26.5,
+      "confidence_score": 0.8629,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Definition of Stack & LIFO Principle was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Stack is a LIFO linear data structure"
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 4.0,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.5,
+          "reason": "PUSH and POP Operations with O(1) Complexities criteria fully met.",
+          "evidence": "PUSH inserts at top (O(1))"
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 3.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 3.0,
+          "reason": "Real-World Application Example section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 6.85/10.0 (68.5%). Total deductions: 3.15 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Stack & LIFO Principle to gain full marks.; Include the required Real-World Application Example section as defined in the rubric.",
+      "human_rationale": "Concise but precise. Contains all necessary concepts, complexities, and application.",
+      "latency_seconds": 0.105
+    },
+    {
+      "id": "V2-CASE-03",
+      "category": "2. Partially correct answers (omission)",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 7.0,
+      "ai_marks": 5.5,
+      "raw_error": -1.5,
+      "abs_error": 1.5,
+      "norm_abs_error_pct": 15.0,
+      "confidence_score": 0.8287,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 3.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Definition of Stack & LIFO Principle was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "A stack is a linear data structure following LIFO principle where data is pushed and popped from top in O(1) time"
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 4.0,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "PUSH and POP Operations with O(1) Complexities criteria fully met.",
+          "evidence": "A stack is a linear data structure following LIFO principle where data is pushed and popped from top in O(1) time"
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Real-World Application Example section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 5.5/10.0 (55.0%). Total deductions: 4.5 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Stack & LIFO Principle to gain full marks.; Include the required Real-World Application Example section as defined in the rubric.",
+      "human_rationale": "Correctly defines stack and operations with complexities, but completely omits the application criterion.",
+      "latency_seconds": 0.1
+    },
+    {
+      "id": "V2-CASE-04",
+      "category": "3. Technically incorrect / contradiction",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 1.0,
+      "ai_marks": 0.4,
+      "raw_error": -0.6,
+      "abs_error": 0.6,
+      "norm_abs_error_pct": 6.0,
+      "confidence_score": 0.7593,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [
+        "Student asserts Stack is FIFO (First-In-First-Out), which defines a Queue."
+      ],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Definition of Stack & LIFO Principle section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 0.4,
+          "human_awarded": 0.5,
+          "ai_deducted": 3.6,
+          "abs_diff": 0.1,
+          "reason": "PUSH and POP Operations with O(1) Complexities was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "PUSH adds elements in O(n) time and POP removes elements in O(n) time"
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.5,
+          "reason": "Real-World Application Example section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 0.4/10.0 (4.0%). Total deductions: 9.6 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Include the required Definition of Stack & LIFO Principle section as defined in the rubric.; Provide complete details for PUSH and POP Operations with O(1) Complexities to gain full marks.; Include the required Real-World Application Example section as defined in the rubric.",
+      "human_rationale": "Confuses Stack with Queue (claims FIFO instead of LIFO, and O(n) instead of O(1)).",
+      "latency_seconds": 0.11
+    },
+    {
+      "id": "V2-CASE-05",
+      "category": "4. Answers with alternative valid terminology",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 9.5,
+      "ai_marks": 5.5,
+      "raw_error": -4.0,
+      "abs_error": 4.0,
+      "norm_abs_error_pct": 40.0,
+      "confidence_score": 0.841,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 3.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Definition of Stack & LIFO Principle was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Its primary mutation routines are top insertion (push) and top removal (pop), both executing in constant bounded time O(1)"
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 4.0,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "PUSH and POP Operations with O(1) Complexities criteria fully met.",
+          "evidence": "Its primary mutation routines are top insertion (push) and top removal (pop), both executing in constant bounded time O(1)"
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 2.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 2.5,
+          "reason": "Real-World Application Example section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 5.5/10.0 (55.0%). Total deductions: 4.5 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Stack & LIFO Principle to gain full marks.; Include the required Real-World Application Example section as defined in the rubric.",
+      "human_rationale": "Uses advanced academic vocabulary ('sequential collection', 'last-arrived first-serviced', 'constant bounded time', 'activation records') with exact technical validity.",
+      "latency_seconds": 0.117
+    },
+    {
+      "id": "V2-CASE-06",
+      "category": "1. Correct comprehensive answers",
+      "subject": "Database Management Systems (CST 202)",
+      "question_number": "2",
+      "max_marks": 10.0,
+      "human_marks": 10.0,
+      "ai_marks": 5.0,
+      "raw_error": -5.0,
+      "abs_error": 5.0,
+      "norm_abs_error_pct": 50.0,
+      "confidence_score": 0.8285,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Explanation of All Four ACID Properties",
+          "allocated": 4.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 4.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 2.0,
+          "reason": "Explanation of All Four ACID Properties was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Durability: Committed data is permanently saved in non-volatile storage and survives system crashes"
+        },
+        {
+          "criterion": "Significance & Mechanism of Atomicity",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 3.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Significance & Mechanism of Atomicity was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Durability: Committed data is permanently saved in non-volatile storage and survives system crashes"
+        },
+        {
+          "criterion": "Significance & Mechanism of Durability",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 3.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Significance & Mechanism of Durability was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Durability: Committed data is permanently saved in non-volatile storage and survives system crashes"
+        }
+      ],
+      "feedback": "The answer scored 5.0/10.0 (50.0%). Total deductions: 5.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Explanation of All Four ACID Properties to gain full marks.; Provide complete details for Significance & Mechanism of Atomicity to gain full marks.; Provide complete details for Significance & Mechanism of Durability to gain full marks.",
+      "human_rationale": "Complete and accurate description of ACID properties with proper failure/recovery mechanisms.",
+      "latency_seconds": 0.171
+    },
+    {
+      "id": "V2-CASE-07",
+      "category": "2. Partially correct answers (omission)",
+      "subject": "Database Management Systems (CST 202)",
+      "question_number": "2",
+      "max_marks": 10.0,
+      "human_marks": 6.5,
+      "ai_marks": 6.65,
+      "raw_error": 0.15,
+      "abs_error": 0.15,
+      "norm_abs_error_pct": 1.5,
+      "confidence_score": 0.8377,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Explanation of All Four ACID Properties",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.3,
+          "reason": "Explanation of All Four ACID Properties was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "ACID stands for Atomicity, Consistency, Isolation, and Durability"
+        },
+        {
+          "criterion": "Significance & Mechanism of Atomicity",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Significance & Mechanism of Atomicity was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "ACID stands for Atomicity, Consistency, Isolation, and Durability"
+        },
+        {
+          "criterion": "Significance & Mechanism of Durability",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Mechanism of Durability section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 6.65/10.0 (66.5%). Total deductions: 3.35 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Explanation of All Four ACID Properties to gain full marks.; Provide complete details for Significance & Mechanism of Atomicity to gain full marks.; Include the required Significance & Mechanism of Durability section as defined in the rubric.",
+      "human_rationale": "Lists all 4 and details Atomicity, but omits Durability explanation.",
+      "latency_seconds": 0.131
+    },
+    {
+      "id": "V2-CASE-08",
+      "category": "3. Technically incorrect / contradiction",
+      "subject": "Database Management Systems (CST 202)",
+      "question_number": "2",
+      "max_marks": 10.0,
+      "human_marks": 0.5,
+      "ai_marks": 0.0,
+      "raw_error": -0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "confidence_score": 0.7158,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [
+        "Student states transactions can be partially completed and saved, violating Atomicity.",
+        "Student states data is stored in temporary volatile RAM, violating Durability."
+      ],
+      "criterion_deductions": [
+        {
+          "criterion": "Explanation of All Four ACID Properties",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.5,
+          "reason": "Explanation of All Four ACID Properties section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Significance & Mechanism of Atomicity",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Mechanism of Atomicity section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Significance & Mechanism of Durability",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Mechanism of Durability section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 0.0/10.0 (0.0%). Total deductions: 10.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Include the required Explanation of All Four ACID Properties section as defined in the rubric.; Include the required Significance & Mechanism of Atomicity section as defined in the rubric.; Include the required Significance & Mechanism of Durability section as defined in the rubric.",
+      "human_rationale": "Directly contradicts database definitions: claims atomicity allows partial saves and durability means volatile temporary storage.",
+      "latency_seconds": 0.111
+    },
+    {
+      "id": "V2-CASE-09",
+      "category": "5. OCR errors and character noise",
+      "subject": "Database Management Systems (CST 202)",
+      "question_number": "2",
+      "max_marks": 10.0,
+      "human_marks": 9.5,
+      "ai_marks": 3.5,
+      "raw_error": -6.0,
+      "abs_error": 6.0,
+      "norm_abs_error_pct": 60.0,
+      "confidence_score": 0.6359,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Explanation of All Four ACID Properties",
+          "allocated": 4.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 4.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 2.0,
+          "reason": "Explanation of All Four ACID Properties was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "AC1D properties: At0micity (all-or-n0thing, r0llback on err0r), C0nsistency (valid db state), Is0lati0n (c0ncurrent execut1on), and Dura6ility (c0mmitted updates pers1st permanently in non-volatile storage)"
+        },
+        {
+          "criterion": "Significance & Mechanism of Atomicity",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 2.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 2.5,
+          "reason": "Significance & Mechanism of Atomicity section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Significance & Mechanism of Durability",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 3.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "Significance & Mechanism of Durability was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "AC1D properties: At0micity (all-or-n0thing, r0llback on err0r), C0nsistency (valid db state), Is0lati0n (c0ncurrent execut1on), and Dura6ility (c0mmitted updates pers1st permanently in non-volatile storage)"
+        }
+      ],
+      "feedback": "The answer scored 3.5/10.0 (35.0%). Total deductions: 6.5 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Explanation of All Four ACID Properties to gain full marks.; Include the required Significance & Mechanism of Atomicity section as defined in the rubric.; Provide complete details for Significance & Mechanism of Durability to gain full marks.",
+      "human_rationale": "OCR noise with digit substitutions (0 for o, 1 for i, 6 for b), but conceptually sound.",
+      "latency_seconds": 0.112
+    },
+    {
+      "id": "V2-CASE-10",
+      "category": "1. Correct comprehensive answers",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 5.0,
+      "ai_marks": 4.9,
+      "raw_error": -0.1,
+      "abs_error": 0.1,
+      "norm_abs_error_pct": 2.0,
+      "confidence_score": 0.8658,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Statement of Kirchhoff's Current Law",
+          "allocated": 2.0,
+          "ai_awarded": 1.9,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.1,
+          "abs_diff": 0.1,
+          "reason": "Statement of Kirchhoff's Current Law was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Kirchhoff's Current Law (KCL) states that the algebraic sum of currents meeting at any node is zero; current entering equals current leaving"
+        },
+        {
+          "criterion": "Parallel Resistance Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Parallel Resistance Formula Selection criteria fully met.",
+          "evidence": "Kirchhoff's Current Law (KCL) states that the algebraic sum of currents meeting at any node is zero; current entering equals current leaving"
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units criteria fully met.",
+          "evidence": "Kirchhoff's Current Law (KCL) states that the algebraic sum of currents meeting at any node is zero; current entering equals current leaving"
+        }
+      ],
+      "feedback": "The answer scored 4.9/5.0 (98.0%). Total deductions: 0.1 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Statement of Kirchhoff's Current Law to gain full marks.",
+      "human_rationale": "Flawless statement of KCL and exact parallel resistance computation with units.",
+      "latency_seconds": 0.161
+    },
+    {
+      "id": "V2-CASE-11",
+      "category": "1. Correct concise answers",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 5.0,
+      "ai_marks": 3.0,
+      "raw_error": -2.0,
+      "abs_error": 2.0,
+      "norm_abs_error_pct": 40.0,
+      "confidence_score": 0.7887,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Statement of Kirchhoff's Current Law",
+          "allocated": 2.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 2.0,
+          "reason": "Statement of Kirchhoff's Current Law section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Parallel Resistance Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Parallel Resistance Formula Selection criteria fully met.",
+          "evidence": "KCL: \u03a3I = 0 at any node"
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units criteria fully met.",
+          "evidence": "KCL: \u03a3I = 0 at any node"
+        }
+      ],
+      "feedback": "The answer scored 3.0/5.0 (60.0%). Total deductions: 2.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Include the required Statement of Kirchhoff's Current Law section as defined in the rubric.",
+      "human_rationale": "Concise mathematical statement of KCL and exact numerical result.",
+      "latency_seconds": 0.115
+    },
+    {
+      "id": "V2-CASE-12",
+      "category": "3. Formula error and calculation mistake",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 2.0,
+      "ai_marks": 1.9,
+      "raw_error": -0.1,
+      "abs_error": 0.1,
+      "norm_abs_error_pct": 2.0,
+      "confidence_score": 0.8602,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Statement of Kirchhoff's Current Law",
+          "allocated": 2.0,
+          "ai_awarded": 1.9,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.1,
+          "abs_diff": 0.1,
+          "reason": "Statement of Kirchhoff's Current Law was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "KCL states that the algebraic sum of currents at a circuit node equals zero"
+        },
+        {
+          "criterion": "Parallel Resistance Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Parallel Resistance Formula Selection section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units section was missing, omitted, or incorrect.",
+          "evidence": "KCL states that the algebraic sum of currents at a circuit node equals zero"
+        }
+      ],
+      "feedback": "The answer scored 1.9/5.0 (38.0%). Total deductions: 3.1 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Statement of Kirchhoff's Current Law to gain full marks.; Include the required Parallel Resistance Formula Selection section as defined in the rubric.; Include the required Correct Numerical Calculation & Units section as defined in the rubric.",
+      "human_rationale": "Correct KCL definition, but applied series resistance formula (Req = R1+R2+R3) to parallel resistors, giving 50 ohms instead of 5 ohms.",
+      "latency_seconds": 0.116
+    },
+    {
+      "id": "V2-CASE-13",
+      "category": "1. Correct comprehensive answers",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "4",
+      "max_marks": 10.0,
+      "human_marks": 10.0,
+      "ai_marks": 9.5,
+      "raw_error": -0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "confidence_score": 0.859,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Article 32 Concept & Constitutional Importance",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.2,
+          "reason": "Article 32 Concept & Constitutional Importance was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Article 32 provides the Right to Constitutional Remedies and was called the heart and soul of the Constitution by Dr"
+        },
+        {
+          "criterion": "First Two Writs (e.g. Habeas Corpus & Mandamus)",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "First Two Writs (e.g. Habeas Corpus & Mandamus) was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Article 32 provides the Right to Constitutional Remedies and was called the heart and soul of the Constitution by Dr"
+        },
+        {
+          "criterion": "Third Writ (e.g. Quo-Warranto or Prohibition)",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Third Writ (e.g. Quo-Warranto or Prohibition) was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Article 32 provides the Right to Constitutional Remedies and was called the heart and soul of the Constitution by Dr"
+        }
+      ],
+      "feedback": "The answer scored 9.5/10.0 (95.0%). Total deductions: 0.5 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Article 32 Concept & Constitutional Importance to gain full marks.; Provide complete details for First Two Writs (e.g. Habeas Corpus & Mandamus) to gain full marks.; Provide complete details for Third Writ (e.g. Quo-Warranto or Prohibition) to gain full marks.",
+      "human_rationale": "Comprehensive explanation of Article 32 and accurate descriptions of all three writs.",
+      "latency_seconds": 0.182
+    },
+    {
+      "id": "V2-CASE-14",
+      "category": "2. Partially correct answers (bullets without explanation)",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "4",
+      "max_marks": 10.0,
+      "human_marks": 4.5,
+      "ai_marks": 5.0,
+      "raw_error": 0.5,
+      "abs_error": 0.5,
+      "norm_abs_error_pct": 5.0,
+      "confidence_score": 0.8513,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Article 32 Concept & Constitutional Importance",
+          "allocated": 4.0,
+          "ai_awarded": 2.0,
+          "human_awarded": 2.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 0.0,
+          "reason": "Article 32 Concept & Constitutional Importance was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "- Article 32: remedies for fundamental rights"
+        },
+        {
+          "criterion": "First Two Writs (e.g. Habeas Corpus & Mandamus)",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "First Two Writs (e.g. Habeas Corpus & Mandamus) was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "- Article 32: remedies for fundamental rights"
+        },
+        {
+          "criterion": "Third Writ (e.g. Quo-Warranto or Prohibition)",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.5,
+          "reason": "Third Writ (e.g. Quo-Warranto or Prohibition) was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "- Article 32: remedies for fundamental rights"
+        }
+      ],
+      "feedback": "The answer scored 5.0/10.0 (50.0%). Total deductions: 5.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Article 32 Concept & Constitutional Importance to gain full marks.; Provide complete details for First Two Writs (e.g. Habeas Corpus & Mandamus) to gain full marks.; Provide complete details for Third Writ (e.g. Quo-Warranto or Prohibition) to gain full marks.",
+      "human_rationale": "Merely lists writ names in bullet points without explaining what they mean, who issues them, or when they apply.",
+      "latency_seconds": 0.11
+    },
+    {
+      "id": "V2-CASE-15",
+      "category": "3. Technically incorrect / contradiction",
+      "subject": "Constitution of India (EST 130)",
+      "question_number": "4",
+      "max_marks": 10.0,
+      "human_marks": 0.5,
+      "ai_marks": 1.5,
+      "raw_error": 1.0,
+      "abs_error": 1.0,
+      "norm_abs_error_pct": 10.0,
+      "confidence_score": 0.6883,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [
+        "Student claims Article 32 enforces Directive Principles of State Policy (DPSPs), which are non-justiciable under Article 37."
+      ],
+      "criterion_deductions": [
+        {
+          "criterion": "Article 32 Concept & Constitutional Importance",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.5,
+          "reason": "Article 32 Concept & Constitutional Importance section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "First Two Writs (e.g. Habeas Corpus & Mandamus)",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 1.5,
+          "reason": "First Two Writs (e.g. Habeas Corpus & Mandamus) was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Article 32 was created to enforce Directive Principles of State Policy (DPSPs), making DPSPs strictly justiciable in courts"
+        },
+        {
+          "criterion": "Third Writ (e.g. Quo-Warranto or Prohibition)",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Third Writ (e.g. Quo-Warranto or Prohibition) section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 1.5/10.0 (15.0%). Total deductions: 8.5 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Include the required Article 32 Concept & Constitutional Importance section as defined in the rubric.; Provide complete details for First Two Writs (e.g. Habeas Corpus & Mandamus) to gain full marks.; Include the required Third Writ (e.g. Quo-Warranto or Prohibition) section as defined in the rubric.",
+      "human_rationale": "Contradicts constitutional law: DPSPs are non-justiciable (Article 37), and Habeas Corpus protects against illegal detention, not a punitive sanction.",
+      "latency_seconds": 0.129
+    },
+    {
+      "id": "V2-CASE-16",
+      "category": "1. Correct comprehensive answers",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "5",
+      "max_marks": 10.0,
+      "human_marks": 10.0,
+      "ai_marks": 9.65,
+      "raw_error": -0.35,
+      "abs_error": 0.35,
+      "norm_abs_error_pct": 3.5,
+      "confidence_score": 0.8281,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Price Elasticity of Demand",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Definition of Price Elasticity of Demand was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Price Elasticity of Demand measures the degree of responsiveness of quantity demanded to changes in the price of a commodity"
+        },
+        {
+          "criterion": "Mathematical Formula of PED",
+          "allocated": 3.0,
+          "ai_awarded": 3.0,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Mathematical Formula of PED criteria fully met.",
+          "evidence": "Demand is Inelastic when PED < 1, meaning consumer demand changes very little when price changes (e"
+        },
+        {
+          "criterion": "Distinction between Elastic & Inelastic Demand",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 4.0,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.2,
+          "reason": "Distinction between Elastic & Inelastic Demand was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Demand is Inelastic when PED < 1, meaning consumer demand changes very little when price changes (e"
+        }
+      ],
+      "feedback": "The answer scored 9.65/10.0 (96.5%). Total deductions: 0.35 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Price Elasticity of Demand to gain full marks.; Provide complete details for Distinction between Elastic & Inelastic Demand to gain full marks.",
+      "human_rationale": "Clear definition, exact percentage formula, and proper comparison with examples.",
+      "latency_seconds": 0.193
+    },
+    {
+      "id": "V2-CASE-17",
+      "category": "1. Correct concise answers",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "5",
+      "max_marks": 10.0,
+      "human_marks": 9.5,
+      "ai_marks": 9.65,
+      "raw_error": 0.15,
+      "abs_error": 0.15,
+      "norm_abs_error_pct": 1.5,
+      "confidence_score": 0.8206,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Price Elasticity of Demand",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.15,
+          "reason": "Definition of Price Elasticity of Demand was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "PED measures responsiveness of demand to price"
+        },
+        {
+          "criterion": "Mathematical Formula of PED",
+          "allocated": 3.0,
+          "ai_awarded": 3.0,
+          "human_awarded": 3.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Mathematical Formula of PED criteria fully met.",
+          "evidence": "PED measures responsiveness of demand to price"
+        },
+        {
+          "criterion": "Distinction between Elastic & Inelastic Demand",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 3.5,
+          "ai_deducted": 0.2,
+          "abs_diff": 0.3,
+          "reason": "Distinction between Elastic & Inelastic Demand was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Inelastic demand: |e| < 1 (low sensitivity)"
+        }
+      ],
+      "feedback": "The answer scored 9.65/10.0 (96.5%). Total deductions: 0.35 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Price Elasticity of Demand to gain full marks.; Provide complete details for Distinction between Elastic & Inelastic Demand to gain full marks.",
+      "human_rationale": "Compact and precise mathematical explanation covering all rubric points.",
+      "latency_seconds": 0.115
+    },
+    {
+      "id": "V2-CASE-18",
+      "category": "3. Inverted formula / contradiction",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "5",
+      "max_marks": 10.0,
+      "human_marks": 1.0,
+      "ai_marks": 3.0,
+      "raw_error": 2.0,
+      "abs_error": 2.0,
+      "norm_abs_error_pct": 20.0,
+      "confidence_score": 0.831,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [
+        "Student reverses the definitions of elastic and inelastic demand."
+      ],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Price Elasticity of Demand",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 1.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 1.0,
+          "reason": "Definition of Price Elasticity of Demand section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Mathematical Formula of PED",
+          "allocated": 3.0,
+          "ai_awarded": 3.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 3.0,
+          "reason": "Mathematical Formula of PED criteria fully met.",
+          "evidence": "PED formula is (% change in price) / (% change in quantity)"
+        },
+        {
+          "criterion": "Distinction between Elastic & Inelastic Demand",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.0,
+          "reason": "Distinction between Elastic & Inelastic Demand section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 3.0/10.0 (30.0%). Total deductions: 7.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Include the required Definition of Price Elasticity of Demand section as defined in the rubric.; Include the required Distinction between Elastic & Inelastic Demand section as defined in the rubric.",
+      "human_rationale": "Inverted the formula (%\u0394P / %\u0394Q instead of %\u0394Q / %\u0394P) and reversed the definitions of elastic and inelastic demand.",
+      "latency_seconds": 0.357
+    },
+    {
+      "id": "V2-CASE-19",
+      "category": "6. Blank answers",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "confidence_score": 0.5,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_BLANK_INTERCEPT",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Definition of Stack & LIFO Principle was not attempted. Response is blank.",
+          "evidence": null
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.0,
+          "reason": "PUSH and POP Operations with O(1) Complexities was not attempted. Response is blank.",
+          "evidence": null
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Real-World Application Example was not attempted. Response is blank.",
+          "evidence": null
+        }
+      ],
+      "feedback": "No student answer was provided. Question was left blank.",
+      "improvement_suggestions": "Attempt all questions to earn credit.",
+      "human_rationale": "Empty response. Zero marks.",
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "V2-CASE-20",
+      "category": "6. Whitespace only",
+      "subject": "Database Management Systems (CST 202)",
+      "question_number": "2",
+      "max_marks": 10.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "confidence_score": 0.5,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_BLANK_INTERCEPT",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Explanation of All Four ACID Properties",
+          "allocated": 4.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 4.0,
+          "abs_diff": 0.0,
+          "reason": "Explanation of All Four ACID Properties was not attempted. Response is blank.",
+          "evidence": null
+        },
+        {
+          "criterion": "Significance & Mechanism of Atomicity",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Mechanism of Atomicity was not attempted. Response is blank.",
+          "evidence": null
+        },
+        {
+          "criterion": "Significance & Mechanism of Durability",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.0,
+          "reason": "Significance & Mechanism of Durability was not attempted. Response is blank.",
+          "evidence": null
+        }
+      ],
+      "feedback": "No student answer was provided. Question was left blank.",
+      "improvement_suggestions": "Attempt all questions to earn credit.",
+      "human_rationale": "Whitespace-only response. Zero marks.",
+      "latency_seconds": 0.0
+    },
+    {
+      "id": "V2-CASE-21",
+      "category": "5. Answers with irrelevant content",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 0.0,
+      "ai_marks": 0.0,
+      "raw_error": 0.0,
+      "abs_error": 0.0,
+      "norm_abs_error_pct": 0.0,
+      "confidence_score": 0.5169,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Statement of Kirchhoff's Current Law",
+          "allocated": 2.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 2.0,
+          "abs_diff": 0.0,
+          "reason": "Statement of Kirchhoff's Current Law section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Parallel Resistance Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Parallel Resistance Formula Selection section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.0,
+          "reason": "Correct Numerical Calculation & Units section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 0.0/5.0 (0.0%). Total deductions: 5.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Include the required Statement of Kirchhoff's Current Law section as defined in the rubric.; Include the required Parallel Resistance Formula Selection section as defined in the rubric.; Include the required Correct Numerical Calculation & Units section as defined in the rubric.",
+      "human_rationale": "Completely off-topic biology text in an electrical engineering exam. Zero marks.",
+      "latency_seconds": 0.113
+    },
+    {
+      "id": "V2-CASE-22",
+      "category": "9. Keyword cramming without conceptual coherence",
+      "subject": "Data Structures & Algorithms (CST 201)",
+      "question_number": "1",
+      "max_marks": 10.0,
+      "human_marks": 2.5,
+      "ai_marks": 5.5,
+      "raw_error": 3.0,
+      "abs_error": 3.0,
+      "norm_abs_error_pct": 30.0,
+      "confidence_score": 0.8325,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Stack & LIFO Principle",
+          "allocated": 3.0,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.0,
+          "ai_deducted": 1.5,
+          "abs_diff": 0.5,
+          "reason": "Definition of Stack & LIFO Principle was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Stack ADT LIFO PUSH POP O(1) recursion algorithm complexity data structure top memory pointer array linked list function call execution stack frame undo redo syntax tree"
+        },
+        {
+          "criterion": "PUSH and POP Operations with O(1) Complexities",
+          "allocated": 4.0,
+          "ai_awarded": 4.0,
+          "human_awarded": 1.0,
+          "ai_deducted": 0.0,
+          "abs_diff": 3.0,
+          "reason": "PUSH and POP Operations with O(1) Complexities criteria fully met.",
+          "evidence": "Stack ADT LIFO PUSH POP O(1) recursion algorithm complexity data structure top memory pointer array linked list function call execution stack frame undo redo syntax tree"
+        },
+        {
+          "criterion": "Real-World Application Example",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 0.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 0.5,
+          "reason": "Real-World Application Example section was missing, omitted, or incorrect.",
+          "evidence": null
+        }
+      ],
+      "feedback": "The answer scored 5.5/10.0 (55.0%). Total deductions: 4.5 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Stack & LIFO Principle to gain full marks.; Include the required Real-World Application Example section as defined in the rubric.",
+      "human_rationale": "Word salad of relevant keywords without sentences, definitions, or grammatical meaning.",
+      "latency_seconds": 0.107
+    },
+    {
+      "id": "V2-CASE-23",
+      "category": "4. Answers with alternative valid terminology",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 5.0,
+      "ai_marks": 4.0,
+      "raw_error": -1.0,
+      "abs_error": 1.0,
+      "norm_abs_error_pct": 20.0,
+      "confidence_score": 0.6866,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Statement of Kirchhoff's Current Law",
+          "allocated": 2.0,
+          "ai_awarded": 1.9,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.1,
+          "abs_diff": 0.1,
+          "reason": "Statement of Kirchhoff's Current Law was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Kirchhoff's Junction Rule (First Law) is based on the principle of conservation of electric charge: the net influx of charge at any junction point equals the net efflux, meaning total incoming current equals total outgoing current"
+        },
+        {
+          "criterion": "Parallel Resistance Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Parallel Resistance Formula Selection criteria fully met.",
+          "evidence": "Kirchhoff's Junction Rule (First Law) is based on the principle of conservation of electric charge: the net influx of charge at any junction point equals the net efflux, meaning total incoming current equals total outgoing current"
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.6,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.9,
+          "abs_diff": 0.9,
+          "reason": "Correct Numerical Calculation & Units was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Kirchhoff's Junction Rule (First Law) is based on the principle of conservation of electric charge: the net influx of charge at any junction point equals the net efflux, meaning total incoming current equals total outgoing current"
+        }
+      ],
+      "feedback": "The answer scored 4.0/5.0 (80.0%). Total deductions: 1.0 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Statement of Kirchhoff's Current Law to gain full marks.; Provide complete details for Correct Numerical Calculation & Units to gain full marks.",
+      "human_rationale": "Uses conductance (Siemens) method instead of direct reciprocal resistance, demonstrating high conceptual competence.",
+      "latency_seconds": 0.148
+    },
+    {
+      "id": "V2-CASE-24",
+      "category": "2. Partially correct answers (calculation arithmetic slip)",
+      "subject": "Basic Electrical Engineering (EST 100)",
+      "question_number": "3",
+      "max_marks": 5.0,
+      "human_marks": 3.8,
+      "ai_marks": 3.85,
+      "raw_error": 0.05,
+      "abs_error": 0.05,
+      "norm_abs_error_pct": 1.0,
+      "confidence_score": 0.7287,
+      "is_flagged": false,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Statement of Kirchhoff's Current Law",
+          "allocated": 2.0,
+          "ai_awarded": 1.9,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.1,
+          "abs_diff": 0.1,
+          "reason": "Statement of Kirchhoff's Current Law was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "KCL states the algebraic sum of currents entering a junction is zero"
+        },
+        {
+          "criterion": "Parallel Resistance Formula Selection",
+          "allocated": 1.5,
+          "ai_awarded": 1.5,
+          "human_awarded": 1.5,
+          "ai_deducted": 0.0,
+          "abs_diff": 0.0,
+          "reason": "Parallel Resistance Formula Selection criteria fully met.",
+          "evidence": "For parallel: 1/Req = 1/10 + 1/20 + 1/20 = 2/20 + 1/20 + 1/20 = 4/20"
+        },
+        {
+          "criterion": "Correct Numerical Calculation & Units",
+          "allocated": 1.5,
+          "ai_awarded": 0.45,
+          "human_awarded": 0.3,
+          "ai_deducted": 1.05,
+          "abs_diff": 0.15,
+          "reason": "Correct Numerical Calculation & Units was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "KCL states the algebraic sum of currents entering a junction is zero"
+        }
+      ],
+      "feedback": "The answer scored 3.85/5.0 (77.0%). Total deductions: 1.15 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Statement of Kirchhoff's Current Law to gain full marks.; Provide complete details for Correct Numerical Calculation & Units to gain full marks.",
+      "human_rationale": "Correct KCL statement and correct formula (1/Req = 4/20), but forgot to invert 1/Req at the final step, writing 4/20=0.2 instead of 20/4=5.",
+      "latency_seconds": 0.112
+    },
+    {
+      "id": "V2-CASE-25",
+      "category": "10. Ambiguous answer suitable for teacher review",
+      "subject": "Industrial Economics & Foreign Trade (HUT 300)",
+      "question_number": "5",
+      "max_marks": 10.0,
+      "human_marks": 5.5,
+      "ai_marks": 6.65,
+      "raw_error": 1.15,
+      "abs_error": 1.15,
+      "norm_abs_error_pct": 11.5,
+      "confidence_score": 0.6658,
+      "is_flagged": true,
+      "evaluation_method": "DETERMINISTIC_HEURISTIC_FALLBACK",
+      "contradictions": [],
+      "criterion_deductions": [
+        {
+          "criterion": "Definition of Price Elasticity of Demand",
+          "allocated": 3.0,
+          "ai_awarded": 2.85,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.15,
+          "abs_diff": 0.85,
+          "reason": "Definition of Price Elasticity of Demand was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "Elasticity is how stretchy demand is when price moves"
+        },
+        {
+          "criterion": "Mathematical Formula of PED",
+          "allocated": 3.0,
+          "ai_awarded": 0.0,
+          "human_awarded": 1.5,
+          "ai_deducted": 3.0,
+          "abs_diff": 1.5,
+          "reason": "Mathematical Formula of PED section was missing, omitted, or incorrect.",
+          "evidence": null
+        },
+        {
+          "criterion": "Distinction between Elastic & Inelastic Demand",
+          "allocated": 4.0,
+          "ai_awarded": 3.8,
+          "human_awarded": 2.0,
+          "ai_deducted": 0.2,
+          "abs_diff": 1.8,
+          "reason": "Distinction between Elastic & Inelastic Demand was partially addressed; required explanations or key concepts were incomplete.",
+          "evidence": "If elasticity is small it is inelastic like water"
+        }
+      ],
+      "feedback": "The answer scored 6.65/10.0 (66.5%). Total deductions: 3.35 mark(s) across rubric criteria.",
+      "improvement_suggestions": "Provide complete details for Definition of Price Elasticity of Demand to gain full marks.; Include the required Mathematical Formula of PED section as defined in the rubric.; Provide complete details for Distinction between Elastic & Inelastic Demand to gain full marks.",
+      "human_rationale": "Colloquial terminology ('stretchy', 'big', 'small') without explicit percentage symbols (%\u0394Q / %\u0394P) or numeric thresholds (|e| > 1), but displays intuitive grasp.",
+      "latency_seconds": 0.112
+    }
+  ]
+}
